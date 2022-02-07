@@ -29,7 +29,6 @@
 "block.addsynth_materials.amethyst_ore": "アメジスト鉱石",
 
 "item.addsynth_materials.tin_ingot": "T錫インゴット",
-"item.addsynth_materials.copper_ingot": "銅インゴット",
 "item.addsynth_materials.aluminum_ingot": "アルミニウムインゴット",
 "item.addsynth_materials.steel_ingot": "スチールインゴット",
 "item.addsynth_materials.bronze_ingot": "ブロンズインゴット",
@@ -38,7 +37,6 @@
 "item.addsynth_materials.titanium_ingot": "チタンインゴット",
 
 "block.addsynth_materials.tin_block": "錫ブロック",
-"block.addsynth_materials.copper_block": "銅ブロック",
 "block.addsynth_materials.aluminum_block": "アルミニウムブロック",
 "block.addsynth_materials.steel_block": "スチールブロック",
 "block.addsynth_materials.bronze_block": "ブロンズブロック",
@@ -47,7 +45,6 @@
 "block.addsynth_materials.titanium_block": "チタンブロック",
 
 "block.addsynth_materials.tin_ore": "錫鉱",
-"block.addsynth_materials.copper_ore": "銅鉱石",
 "block.addsynth_materials.aluminum_ore": "アルミニウム鉱石",
 "block.addsynth_materials.silver_ore": "シルバー鉱石",
 "block.addsynth_materials.platinum_ore": "プラチナ鉱石",

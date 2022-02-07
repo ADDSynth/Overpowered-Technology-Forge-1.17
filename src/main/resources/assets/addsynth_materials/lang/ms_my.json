@@ -29,7 +29,6 @@
 "block.addsynth_materials.amethyst_ore": "Bijah Amethyst",
 
 "item.addsynth_materials.tin_ingot": "Timah",
-"item.addsynth_materials.copper_ingot": "Tembaga",
 "item.addsynth_materials.aluminum_ingot": "Aluminum Ingot",
 "item.addsynth_materials.steel_ingot": "Keluli",
 "item.addsynth_materials.bronze_ingot": "Gangsa",
@@ -38,7 +37,6 @@
 "item.addsynth_materials.titanium_ingot": "Titanium Ingot",
 
 "block.addsynth_materials.tin_block": "Blok Timah",
-"block.addsynth_materials.copper_block": "Blok Tembaga",
 "block.addsynth_materials.aluminum_block": "Aluminum Blok",
 "block.addsynth_materials.steel_block": "Blok Keluli",
 "block.addsynth_materials.bronze_block": "Blok Gangsa",
@@ -47,7 +45,6 @@
 "block.addsynth_materials.titanium_block": "Titanium Blok",
 
 "block.addsynth_materials.tin_ore": "Bijih Timah",
-"block.addsynth_materials.copper_ore": "Bijih Tembaga",
 "block.addsynth_materials.aluminum_ore": "Bijih Aluminum",
 "block.addsynth_materials.silver_ore": "Bijih Perak",
 "block.addsynth_materials.platinum_ore": "Platinum Bijih",

@@ -29,7 +29,6 @@
 "block.addsynth_materials.amethyst_ore": "Minerale di ametista",
 
 "item.addsynth_materials.tin_ingot": "Lingotto di stagno",
-"item.addsynth_materials.copper_ingot": "Lingotto di rame",
 "item.addsynth_materials.aluminum_ingot": "Lingotto di alluminio",
 "item.addsynth_materials.steel_ingot": "Lingotto d'acciaio",
 "item.addsynth_materials.bronze_ingot": "Lingotto di bronzo",
@@ -38,7 +37,6 @@
 "item.addsynth_materials.titanium_ingot": "Lingotto di titanio",
 
 "block.addsynth_materials.tin_block": "Blocco di latta",
-"block.addsynth_materials.copper_block": "Blocco di rame",
 "block.addsynth_materials.aluminum_block": "Blocco di alluminio",
 "block.addsynth_materials.steel_block": "Blocco di acciaio",
 "block.addsynth_materials.bronze_block": "Blocco di bronzo",
@@ -47,7 +45,6 @@
 "block.addsynth_materials.titanium_block": "Blocco di titanio",
 
 "block.addsynth_materials.tin_ore": "Minerale di stagno",
-"block.addsynth_materials.copper_ore": "Minerale di rame",
 "block.addsynth_materials.aluminum_ore": "Minerale di alluminio",
 "block.addsynth_materials.silver_ore": "Minerale di argento",
 "block.addsynth_materials.platinum_ore": "Minerale di platino",

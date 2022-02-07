@@ -3,9 +3,7 @@
   "values": [
     "addsynth_materials:tin_block",
     "addsynth_materials:aluminum_block",
-    "addsynth_materials:copper_block",
     "addsynth_materials:tin_ore",
-    "addsynth_materials:aluminum_ore",
-    "addsynth_materials:copper_ore"
+    "addsynth_materials:aluminum_ore"
   ]
 }

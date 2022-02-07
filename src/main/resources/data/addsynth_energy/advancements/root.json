@@ -19,7 +19,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "forge:ingots/copper"
+            "item": "minecraft:copper_ingot"
           }
         ]
       }
@@ -29,7 +29,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "forge:ores/copper"
+            "item": "minecraft:copper_ore"
           }
         ]
       }

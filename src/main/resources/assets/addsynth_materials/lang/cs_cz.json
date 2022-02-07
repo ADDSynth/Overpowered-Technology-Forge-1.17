@@ -29,7 +29,6 @@
 "block.addsynth_materials.amethyst_ore": "Ametystová ruda",
 
 "item.addsynth_materials.tin_ingot": "Cínové Ingoty",
-"item.addsynth_materials.copper_ingot": "Měděný Ingoty",
 "item.addsynth_materials.aluminum_ingot": "Hliníkové Ingoty",
 "item.addsynth_materials.steel_ingot": "Ocelové Ingoty",
 "item.addsynth_materials.bronze_ingot": "Bronzová ingota",
@@ -38,7 +37,6 @@
 "item.addsynth_materials.titanium_ingot": "Titanové ingoty",
 
 "block.addsynth_materials.tin_block": "Cínový blok",
-"block.addsynth_materials.copper_block": "Měděný blok",
 "block.addsynth_materials.aluminum_block": "Hliníkový blok",
 "block.addsynth_materials.steel_block": "Ocelové bloky",
 "block.addsynth_materials.bronze_block": "Bronzový blok",
@@ -47,7 +45,6 @@
 "block.addsynth_materials.titanium_block": "Titanový blok",
 
 "block.addsynth_materials.tin_ore": "Cínová ruda",
-"block.addsynth_materials.copper_ore": "Měděná ruda",
 "block.addsynth_materials.aluminum_ore": "Hliníková ruda",
 "block.addsynth_materials.silver_ore": "Stříbrná ruda",
 "block.addsynth_materials.platinum_ore": "Platinová ruda",

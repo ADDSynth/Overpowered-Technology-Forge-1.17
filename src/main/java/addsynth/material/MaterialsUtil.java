@@ -2,6 +2,7 @@ package addsynth.material;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
 import javax.annotation.Nullable;
 import addsynth.core.ADDSynthCore;
 import net.minecraft.resources.ResourceLocation;
@@ -10,7 +11,9 @@ import net.minecraft.tags.Tag;
 import net.minecraft.tags.TagCollection;
 import net.minecraft.tags.TagContainer;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.event.TagsUpdatedEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -57,7 +60,9 @@ public final class MaterialsUtil {
 // =======================================================================================
 
   public static final Collection<Item> getOres(){
-    return Tags.Items.ORES.getValues();
+    final HashSet<Item> ore_list = new HashSet<>(Tags.Items.ORES.getValues());
+    ore_list.add(Blocks.COPPER_ORE.asItem());
+    return ore_list;
   }
 
   public static final Tag<Item> getTag(final ResourceLocation tag_id){
@@ -202,8 +207,11 @@ public final class MaterialsUtil {
   }
 
   @Nullable
+  @Deprecated
   public static final Collection<Item> getCopperIngots(){
-    return getItemCollection(new ResourceLocation("forge:ingots/copper"));
+    final ArrayList<Item> copper_ingots = new ArrayList<>();
+    copper_ingots.add(Items.COPPER_INGOT);
+    return copper_ingots;
   }
 
   @Nullable

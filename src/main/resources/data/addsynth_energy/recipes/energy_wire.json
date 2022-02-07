@@ -10,7 +10,7 @@
       "tag": "minecraft:wool"
     },
     "c": {
-      "tag": "forge:ingots/copper"
+      "item": "minecraft:copper_ingot"
     }
   },
   "result": {

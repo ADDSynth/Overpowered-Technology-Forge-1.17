@@ -29,7 +29,6 @@
 "block.addsynth_materials.amethyst_ore": "Αμέθυστος μεταλλεύματος",
 
 "item.addsynth_materials.tin_ingot": "Κανέλα",
-"item.addsynth_materials.copper_ingot": "Χαλκός",
 "item.addsynth_materials.aluminum_ingot": "Αλουμινίου",
 "item.addsynth_materials.steel_ingot": "Ατσάλινη μπάρα",
 "item.addsynth_materials.bronze_ingot": "Χάλκινο μπάρ",
@@ -38,7 +37,6 @@
 "item.addsynth_materials.titanium_ingot": "Τιτάνιο μπαρ",
 
 "block.addsynth_materials.tin_block": "κασσίτερο μπλοκ",
-"block.addsynth_materials.copper_block": "Μπλοκ χαλκού",
 "block.addsynth_materials.aluminum_block": "Μπλοκ αλουμινίου",
 "block.addsynth_materials.steel_block": "Μπλοκ χάλυβα",
 "block.addsynth_materials.bronze_block": "Χάλκινο μπλοκ",
@@ -47,7 +45,6 @@
 "block.addsynth_materials.titanium_block": "Μπλοκ τιτανίου",
 
 "block.addsynth_materials.tin_ore": "ωμό κασσίτερο",
-"block.addsynth_materials.copper_ore": "μεταλλεύματος χαλκού",
 "block.addsynth_materials.aluminum_ore": "ακατέργαστο αργίλιο",
 "block.addsynth_materials.silver_ore": "ακατέργαστο ασήμι",
 "block.addsynth_materials.platinum_ore": "μεταλλεύματος λευκοχρύσου",

@@ -29,7 +29,6 @@
 "block.addsynth_materials.amethyst_ore": "Amethyst Erz",
 
 "item.addsynth_materials.tin_ingot": "Zinn Barren",
-"item.addsynth_materials.copper_ingot": "Kupferbarren",
 "item.addsynth_materials.aluminum_ingot": "Aluminiumbarren",
 "item.addsynth_materials.steel_ingot": "Stahlbarren",
 "item.addsynth_materials.bronze_ingot": "Bronzebarren",
@@ -38,7 +37,6 @@
 "item.addsynth_materials.titanium_ingot": "Titanbarren",
 
 "block.addsynth_materials.tin_block": "Zinn-Block",
-"block.addsynth_materials.copper_block": "Kupferblock",
 "block.addsynth_materials.aluminum_block": "Aluminiumblock",
 "block.addsynth_materials.steel_block": "Stahlblock",
 "block.addsynth_materials.bronze_block": "Bronze Block",
@@ -47,7 +45,6 @@
 "block.addsynth_materials.titanium_block": "Titanblock",
 
 "block.addsynth_materials.tin_ore": "Zinn-Erz",
-"block.addsynth_materials.copper_ore": "Kupfererz",
 "block.addsynth_materials.aluminum_ore": "Aluminium-Erz",
 "block.addsynth_materials.silver_ore": "Silber Erz",
 "block.addsynth_materials.platinum_ore": "Platin-Erz",

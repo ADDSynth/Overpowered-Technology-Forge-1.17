@@ -19,8 +19,9 @@ public final class Material {
 
   // vanilla
   public static final OreMaterial COAL         = new OreMaterial("coal",     Items.COAL,         Blocks.COAL_BLOCK,    Blocks.COAL_ORE);
-  public static final Metal       IRON         = new Metal(      "iron",     Items.IRON_INGOT,   Blocks.IRON_BLOCK,    Blocks.IRON_ORE, Items.IRON_NUGGET);
-  public static final Metal       GOLD         = new Metal(      "gold",     Items.GOLD_INGOT,   Blocks.GOLD_BLOCK,    Blocks.GOLD_ORE, Items.GOLD_NUGGET);
+  public static final Metal       IRON         = new Metal(      "iron",     Items.IRON_INGOT,   Blocks.IRON_BLOCK,    Blocks.IRON_ORE,   Items.IRON_NUGGET);
+  public static final Metal       COPPER       = new Metal(      "copper",   Items.COPPER_INGOT, Blocks.COPPER_BLOCK,  Blocks.COPPER_ORE, null);
+  public static final Metal       GOLD         = new Metal(      "gold",     Items.GOLD_INGOT,   Blocks.GOLD_BLOCK,    Blocks.GOLD_ORE,   Items.GOLD_NUGGET);
   public static final Gem         LAPIS_LAZULI = new Gem(        "lapis",    Items.LAPIS_LAZULI, Blocks.LAPIS_BLOCK,   Blocks.LAPIS_ORE); // OreDictionary Name
   public static final OreMaterial REDSTONE     = new OreMaterial("redstone", Items.REDSTONE,     Blocks.REDSTONE_BLOCK,Blocks.REDSTONE_ORE);
   public static final Gem         DIAMOND      = new Gem(        "diamond",  Items.DIAMOND,      Blocks.DIAMOND_BLOCK, Blocks.DIAMOND_ORE);
@@ -51,7 +52,6 @@ public final class Material {
   
   // common metals
   public static final Metal ALUMINUM = new Metal("aluminum", MaterialColor.ICE,          MiningStrength.STONE);
-  public static final Metal COPPER   = new Metal("copper",   MaterialColor.COLOR_ORANGE, MiningStrength.STONE);
   public static final Metal LEAD     = new Metal("lead",     MaterialColor.STONE,        MiningStrength.STONE);
   public static final Metal NICKEL   = new Metal("nickel",   MaterialColor.METAL,        MiningStrength.STONE);
   public static final Metal TIN      = new Metal("tin",      MaterialColor.METAL,        MiningStrength.STONE);

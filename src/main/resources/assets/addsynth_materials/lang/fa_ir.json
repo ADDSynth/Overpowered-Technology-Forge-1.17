@@ -29,7 +29,6 @@
 "block.addsynth_materials.amethyst_ore": "یاقوت ارغوانی",
 
 "item.addsynth_materials.tin_ingot": "شمش قلع",
-"item.addsynth_materials.copper_ingot": "شمش مس",
 "item.addsynth_materials.aluminum_ingot": "شمش آلومینیوم",
 "item.addsynth_materials.steel_ingot": "شمش فولاد",
 "item.addsynth_materials.bronze_ingot": "شمش برنز",
@@ -38,7 +37,6 @@
 "item.addsynth_materials.titanium_ingot": "شمش تیتانیوم",
 
 "block.addsynth_materials.tin_block": "بلوک قلع",
-"block.addsynth_materials.copper_block": "بلوک مس",
 "block.addsynth_materials.aluminum_block": "بلوک آلومینیوم",
 "block.addsynth_materials.steel_block": "بلوک فولاد",
 "block.addsynth_materials.bronze_block": "بلوک برنز",
@@ -47,7 +45,6 @@
 "block.addsynth_materials.titanium_block": "تیتانیوم بلوک",
 
 "block.addsynth_materials.tin_ore": "قلع خام",
-"block.addsynth_materials.copper_ore": "سنگ معدن مس",
 "block.addsynth_materials.aluminum_ore": "سنگ معدن آلومینیوم",
 "block.addsynth_materials.silver_ore": "نقره ای خام",
 "block.addsynth_materials.platinum_ore": "سنگ معدن پلاتین",

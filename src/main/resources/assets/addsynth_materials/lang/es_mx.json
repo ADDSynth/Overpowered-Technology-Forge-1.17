@@ -29,7 +29,6 @@
 "block.addsynth_materials.amethyst_ore": "Mineral de amatista",
 
 "item.addsynth_materials.tin_ingot": "Lingotes de estaño",
-"item.addsynth_materials.copper_ingot": "Lingote de cobre",
 "item.addsynth_materials.aluminum_ingot": "Lingote de aluminio",
 "item.addsynth_materials.steel_ingot": "Lingote de acero",
 "item.addsynth_materials.bronze_ingot": "Lingote de bronce",
@@ -38,7 +37,6 @@
 "item.addsynth_materials.titanium_ingot": "Lingote de titanio",
 
 "block.addsynth_materials.tin_block": "Bloque de estaño",
-"block.addsynth_materials.copper_block": "Bloque de cobre",
 "block.addsynth_materials.aluminum_block": "Bloque de aluminio",
 "block.addsynth_materials.steel_block": "Bloque de acero",
 "block.addsynth_materials.bronze_block": "Bloque de bronce",
@@ -47,7 +45,6 @@
 "block.addsynth_materials.titanium_block": "Bloque de titanio",
 
 "block.addsynth_materials.tin_ore": "Mineral de estaño",
-"block.addsynth_materials.copper_ore": "Mineral de cobre",
 "block.addsynth_materials.aluminum_ore": "Mineral de aluminio",
 "block.addsynth_materials.silver_ore": "Mineral de plata",
 "block.addsynth_materials.platinum_ore": "Mineral de platino",

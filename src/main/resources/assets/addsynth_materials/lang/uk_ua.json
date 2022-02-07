@@ -29,7 +29,6 @@
 "block.addsynth_materials.amethyst_ore": "Аметист руда",
 
 "item.addsynth_materials.tin_ingot": "Олов'яний злиток",
-"item.addsynth_materials.copper_ingot": "Мідний злиток",
 "item.addsynth_materials.aluminum_ingot": "Алюмінієвий злиток",
 "item.addsynth_materials.steel_ingot": "Сталевий злиток",
 "item.addsynth_materials.bronze_ingot": "Бронзовий злиток",
@@ -38,7 +37,6 @@
 "item.addsynth_materials.titanium_ingot": "Титановий злиток",
 
 "block.addsynth_materials.tin_block": "олов'яний блок",
-"block.addsynth_materials.copper_block": "Мідний блок",
 "block.addsynth_materials.aluminum_block": "Алюмінієвий блок",
 "block.addsynth_materials.steel_block": "Сталевий блок",
 "block.addsynth_materials.bronze_block": "Бронзовий блок",
@@ -47,7 +45,6 @@
 "block.addsynth_materials.titanium_block": "Титановий блок",
 
 "block.addsynth_materials.tin_ore": "Олов'яні руди",
-"block.addsynth_materials.copper_ore": "Мідна руда",
 "block.addsynth_materials.aluminum_ore": "Алюмінієві руди",
 "block.addsynth_materials.silver_ore": "Срібна руда",
 "block.addsynth_materials.platinum_ore": "Платинова руда",

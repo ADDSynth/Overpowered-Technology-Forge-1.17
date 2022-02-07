@@ -29,7 +29,6 @@
 "block.addsynth_materials.amethyst_ore": "Ametiszt érc",
 
 "item.addsynth_materials.tin_ingot": "Ónöntvény",
-"item.addsynth_materials.copper_ingot": "Réz",
 "item.addsynth_materials.aluminum_ingot": "Alumínium",
 "item.addsynth_materials.steel_ingot": "Acél",
 "item.addsynth_materials.bronze_ingot": "Bronz bár",
@@ -38,7 +37,6 @@
 "item.addsynth_materials.titanium_ingot": "Titán",
 
 "block.addsynth_materials.tin_block": "Ónblokk",
-"block.addsynth_materials.copper_block": "Réz blokk",
 "block.addsynth_materials.aluminum_block": "Alumínium blokk",
 "block.addsynth_materials.steel_block": "Acél blokk",
 "block.addsynth_materials.bronze_block": "Bronz blokk",
@@ -47,7 +45,6 @@
 "block.addsynth_materials.titanium_block": "Titán blokk",
 
 "block.addsynth_materials.tin_ore": "ónérc",
-"block.addsynth_materials.copper_ore": "Rézérc",
 "block.addsynth_materials.aluminum_ore": "Alumíniumérc",
 "block.addsynth_materials.silver_ore": "Ezüstérc",
 "block.addsynth_materials.platinum_ore": "Platinumérc",

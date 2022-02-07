@@ -29,7 +29,6 @@
 "block.addsynth_materials.amethyst_ore": "جمشت خام",
 
 "item.addsynth_materials.tin_ingot": "القصدير سبيكة",
-"item.addsynth_materials.copper_ingot": "سبيكة نحاس",
 "item.addsynth_materials.aluminum_ingot": "سبائك الألومنيوم",
 "item.addsynth_materials.steel_ingot": "الصلب سبيكة",
 "item.addsynth_materials.bronze_ingot": "سبيكة البرونز",
@@ -38,7 +37,6 @@
 "item.addsynth_materials.titanium_ingot": "سبائك التيتانيوم",
 
 "block.addsynth_materials.tin_block": "القصدير بلوك",
-"block.addsynth_materials.copper_block": "كتلة النحاس",
 "block.addsynth_materials.aluminum_block": "كتلة الألومنيوم",
 "block.addsynth_materials.steel_block": "كتلة الصلب",
 "block.addsynth_materials.bronze_block": "كتلة برونزية",
@@ -47,7 +45,6 @@
 "block.addsynth_materials.titanium_block": "كتلة التيتانيوم",
 
 "block.addsynth_materials.tin_ore": "خام القصدير",
-"block.addsynth_materials.copper_ore": "خام النحاس",
 "block.addsynth_materials.aluminum_ore": "خام الألومنيوم",
 "block.addsynth_materials.silver_ore": "خام الفضة",
 "block.addsynth_materials.platinum_ore": "خام البلاتين",

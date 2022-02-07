@@ -42,7 +42,6 @@ public final class MaterialsRegister {
     
     // metal blocks
     game.register(Material.TIN.block);
-    game.register(Material.COPPER.block);
     game.register(Material.ALUMINUM.block);
     game.register(Material.STEEL.block);
     game.register(Material.BRONZE.block);
@@ -52,7 +51,6 @@ public final class MaterialsRegister {
     
     // metal ores
     game.register(Material.TIN.ore);
-    game.register(Material.COPPER.ore);
     game.register(Material.ALUMINUM.ore);
     game.register(Material.SILVER.ore);
     game.register(Material.PLATINUM.ore);
@@ -90,7 +88,6 @@ public final class MaterialsRegister {
 
     // metal ingots
     game.register(Material.TIN.ingot);
-    game.register(Material.COPPER.ingot);
     game.register(Material.ALUMINUM.ingot);
     game.register(Material.STEEL.ingot); // Now that I have the MaterialsCompat.SteelModAbsent() function, I could prevent registering Steel if I wanted to.
     game.register(Material.BRONZE.ingot);
@@ -100,7 +97,6 @@ public final class MaterialsRegister {
     
     // metal blocks
     game.register(Material.TIN.block_item);
-    game.register(Material.COPPER.block_item);
     game.register(Material.ALUMINUM.block_item);
     game.register(Material.STEEL.block_item);
     game.register(Material.BRONZE.block_item);
@@ -110,7 +106,6 @@ public final class MaterialsRegister {
     
     // metal ores
     game.register(ADDSynthMaterials.registry.getItemBlock(Material.TIN.ore));
-    game.register(ADDSynthMaterials.registry.getItemBlock(Material.COPPER.ore));
     game.register(ADDSynthMaterials.registry.getItemBlock(Material.ALUMINUM.ore));
     game.register(ADDSynthMaterials.registry.getItemBlock(Material.SILVER.ore));
     game.register(ADDSynthMaterials.registry.getItemBlock(Material.PLATINUM.ore));

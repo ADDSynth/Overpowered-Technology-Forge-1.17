@@ -29,7 +29,6 @@
 "block.addsynth_materials.amethyst_ore": "Ruda ametystu",
 
 "item.addsynth_materials.tin_ingot": "Cyna wlewki",
-"item.addsynth_materials.copper_ingot": "Miedź wlewka",
 "item.addsynth_materials.aluminum_ingot": "Wlewki aluminiowe",
 "item.addsynth_materials.steel_ingot": "Stalowe wlewki",
 "item.addsynth_materials.bronze_ingot": "Brązowy wlewek",
@@ -38,7 +37,6 @@
 "item.addsynth_materials.titanium_ingot": "Wlewek tytanu",
 
 "block.addsynth_materials.tin_block": "blaszany blok",
-"block.addsynth_materials.copper_block": "Blok miedzi",
 "block.addsynth_materials.aluminum_block": "Blok aluminiowy",
 "block.addsynth_materials.steel_block": "Blok stalowy",
 "block.addsynth_materials.bronze_block": "Blok z brązu",
@@ -47,7 +45,6 @@
 "block.addsynth_materials.titanium_block": "blok tytanowy",
 
 "block.addsynth_materials.tin_ore": "Ruda cyny",
-"block.addsynth_materials.copper_ore": "Ruda miedzi",
 "block.addsynth_materials.aluminum_ore": "Ruda aluminium",
 "block.addsynth_materials.silver_ore": "Ruda srebra",
 "block.addsynth_materials.platinum_ore": "Ruda platyny",

@@ -29,7 +29,6 @@
 "block.addsynth_materials.amethyst_ore": "Amethyst Ore",
 
 "item.addsynth_materials.tin_ingot": "Tin Ingot",
-"item.addsynth_materials.copper_ingot": "Copper Ingot",
 "item.addsynth_materials.aluminum_ingot": "Aluminum Ingot",
 "item.addsynth_materials.steel_ingot": "Steel Ingot",
 "item.addsynth_materials.bronze_ingot": "Bronze Ingot",
@@ -38,7 +37,6 @@
 "item.addsynth_materials.titanium_ingot": "Titanium Ingot",
 
 "block.addsynth_materials.tin_block": "Tin Block",
-"block.addsynth_materials.copper_block": "Copper Block",
 "block.addsynth_materials.aluminum_block": "Aluminum Block",
 "block.addsynth_materials.steel_block": "Steel Block",
 "block.addsynth_materials.bronze_block": "Bronze Block",
@@ -47,7 +45,6 @@
 "block.addsynth_materials.titanium_block": "Titanium Block",
 
 "block.addsynth_materials.tin_ore": "Tin Ore",
-"block.addsynth_materials.copper_ore": "Copper Ore",
 "block.addsynth_materials.aluminum_ore": "Aluminum Ore",
 "block.addsynth_materials.silver_ore": "Silver Ore",
 "block.addsynth_materials.platinum_ore": "Platinum Ore",

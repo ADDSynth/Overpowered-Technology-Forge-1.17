@@ -29,7 +29,6 @@
 "block.addsynth_materials.amethyst_ore": "Ametist Cevheri",
 
 "item.addsynth_materials.tin_ingot": "Teneke Külçe",
-"item.addsynth_materials.copper_ingot": "Bakır Külçe",
 "item.addsynth_materials.aluminum_ingot": "Alüminyum Külçe",
 "item.addsynth_materials.steel_ingot": "Çelik külçe",
 "item.addsynth_materials.bronze_ingot": "Bronz külçe",
@@ -38,7 +37,6 @@
 "item.addsynth_materials.titanium_ingot": "Titanyum Külçe",
 
 "block.addsynth_materials.tin_block": "Teneke Blok",
-"block.addsynth_materials.copper_block": "Bakır Blok",
 "block.addsynth_materials.aluminum_block": "Alüminyum blok",
 "block.addsynth_materials.steel_block": "Çelik blok",
 "block.addsynth_materials.bronze_block": "Bronz blok",
@@ -47,7 +45,6 @@
 "block.addsynth_materials.titanium_block": "Titanyum Blok",
 
 "block.addsynth_materials.tin_ore": "Kalay cevheri",
-"block.addsynth_materials.copper_ore": "Bakır cevheri",
 "block.addsynth_materials.aluminum_ore": "Alüminyum Cevheri",
 "block.addsynth_materials.silver_ore": "Gümüş cevheri",
 "block.addsynth_materials.platinum_ore": "Platin Cevheri",

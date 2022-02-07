@@ -29,7 +29,6 @@
 "block.addsynth_materials.amethyst_ore": "சுகந்தியும் தாது",
 
 "item.addsynth_materials.tin_ingot": "டின் இங்காட்",
-"item.addsynth_materials.copper_ingot": "காப்பர் இங்காட்",
 "item.addsynth_materials.aluminum_ingot": "அலுமினிய இங்காட்",
 "item.addsynth_materials.steel_ingot": "ஸ்டீல் இங்காட்",
 "item.addsynth_materials.bronze_ingot": "வெண்கலம் இங்காட்",
@@ -38,7 +37,6 @@
 "item.addsynth_materials.titanium_ingot": "டைட்டானியம் இங்காட்",
 
 "block.addsynth_materials.tin_block": "டின் பிளாக்",
-"block.addsynth_materials.copper_block": "காப்பர் பிளாக்",
 "block.addsynth_materials.aluminum_block": "அலுமினிய பிளாக்",
 "block.addsynth_materials.steel_block": "ஸ்டீல் பிளாக்",
 "block.addsynth_materials.bronze_block": "வெண்கல பிளாக்",
@@ -47,7 +45,6 @@
 "block.addsynth_materials.titanium_block": "டைட்டானியம் பிளாக்",
 
 "block.addsynth_materials.tin_ore": "தகரம் தாது",
-"block.addsynth_materials.copper_ore": "செப்பு தாது",
 "block.addsynth_materials.aluminum_ore": "அலுமினியம் தாது",
 "block.addsynth_materials.silver_ore": "வெள்ளி தாது",
 "block.addsynth_materials.platinum_ore": "பிளாட்டினம் தாது",

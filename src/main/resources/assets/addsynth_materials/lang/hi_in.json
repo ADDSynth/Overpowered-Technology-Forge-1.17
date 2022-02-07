@@ -29,7 +29,6 @@
 "block.addsynth_materials.amethyst_ore": "एमेथिस्ट अयस्क",
 
 "item.addsynth_materials.tin_ingot": "टिन इंगट",
-"item.addsynth_materials.copper_ingot": "तांबे का पिंड",
 "item.addsynth_materials.aluminum_ingot": "एल्यूमिनियम इनगट",
 "item.addsynth_materials.steel_ingot": "स्टील इनगट",
 "item.addsynth_materials.bronze_ingot": "कांस्य इनगट",
@@ -38,7 +37,6 @@
 "item.addsynth_materials.titanium_ingot": "टाइटेनियम पिंड",
 
 "block.addsynth_materials.tin_block": "टिन ब्लॉक",
-"block.addsynth_materials.copper_block": "कॉपर ब्लॉक",
 "block.addsynth_materials.aluminum_block": "एल्यूमिनियम ब्लॉक",
 "block.addsynth_materials.steel_block": "स्टील ब्लॉक",
 "block.addsynth_materials.bronze_block": "कांस्य ब्लॉक",
@@ -47,7 +45,6 @@
 "block.addsynth_materials.titanium_block": "टाइटेनियम ब्लॉक",
 
 "block.addsynth_materials.tin_ore": "टिन अयस्क",
-"block.addsynth_materials.copper_ore": "तांबा अयस्क",
 "block.addsynth_materials.aluminum_ore": "एल्यूमिनियम अयस्क",
 "block.addsynth_materials.silver_ore": "रजत अयस्क",
 "block.addsynth_materials.platinum_ore": "प्लेटिनम अयस्क",

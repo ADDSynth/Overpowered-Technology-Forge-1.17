@@ -29,7 +29,6 @@
 "block.addsynth_materials.amethyst_ore": "자 수정 광석",
 
 "item.addsynth_materials.tin_ingot": "주석 잉곳",
-"item.addsynth_materials.copper_ingot": "구리 잉곳",
 "item.addsynth_materials.aluminum_ingot": "알루미늄 잉곳",
 "item.addsynth_materials.steel_ingot": "강철 주괴",
 "item.addsynth_materials.bronze_ingot": "브론즈 잉곳",
@@ -38,7 +37,6 @@
 "item.addsynth_materials.titanium_ingot": "티타늄 잉곳",
 
 "block.addsynth_materials.tin_block": "주석 블록",
-"block.addsynth_materials.copper_block": "구리 블록",
 "block.addsynth_materials.aluminum_block": "알루미늄 블록",
 "block.addsynth_materials.steel_block": "강철 블록",
 "block.addsynth_materials.bronze_block": "청동 블록",
@@ -47,7 +45,6 @@
 "block.addsynth_materials.titanium_block": "티타늄 블록",
 
 "block.addsynth_materials.tin_ore": "주석 광석",
-"block.addsynth_materials.copper_ore": "구리 광석",
 "block.addsynth_materials.aluminum_ore": "알루미늄 광석",
 "block.addsynth_materials.silver_ore": "은 광석",
 "block.addsynth_materials.platinum_ore": "백금 광석",

@@ -29,7 +29,6 @@
 "block.addsynth_materials.amethyst_ore": "紫水晶礦石",
 
 "item.addsynth_materials.tin_ingot": "錫錠",
-"item.addsynth_materials.copper_ingot": "銅錠",
 "item.addsynth_materials.aluminum_ingot": "鋁錠",
 "item.addsynth_materials.steel_ingot": "鋼錠",
 "item.addsynth_materials.bronze_ingot": "青銅錠",
@@ -38,7 +37,6 @@
 "item.addsynth_materials.titanium_ingot": "鈦錠",
 
 "block.addsynth_materials.tin_block": "錫塊",
-"block.addsynth_materials.copper_block": "銅塊",
 "block.addsynth_materials.aluminum_block": "鋁塊",
 "block.addsynth_materials.steel_block": "鋼塊",
 "block.addsynth_materials.bronze_block": "青銅塊",
@@ -47,7 +45,6 @@
 "block.addsynth_materials.titanium_block": "鈦塊",
 
 "block.addsynth_materials.tin_ore": "錫礦石",
-"block.addsynth_materials.copper_ore": "銅礦石",
 "block.addsynth_materials.aluminum_ore": "鋁礦石",
 "block.addsynth_materials.silver_ore": "銀礦石",
 "block.addsynth_materials.platinum_ore": "鉑礦石",

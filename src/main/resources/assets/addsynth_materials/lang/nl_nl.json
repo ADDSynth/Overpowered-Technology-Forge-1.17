@@ -29,7 +29,6 @@
 "block.addsynth_materials.amethyst_ore": "Amethist erts",
 
 "item.addsynth_materials.tin_ingot": "Blik",
-"item.addsynth_materials.copper_ingot": "Koper",
 "item.addsynth_materials.aluminum_ingot": "Aluminum Ingot",
 "item.addsynth_materials.steel_ingot": "Staal",
 "item.addsynth_materials.bronze_ingot": "Bronzen",
@@ -38,7 +37,6 @@
 "item.addsynth_materials.titanium_ingot": "Titanium Ingot",
 
 "block.addsynth_materials.tin_block": "Blikken blok",
-"block.addsynth_materials.copper_block": "Koperen blok",
 "block.addsynth_materials.aluminum_block": "Aluminium blok",
 "block.addsynth_materials.steel_block": "Stalen blok",
 "block.addsynth_materials.bronze_block": "Bronze Block",
@@ -47,7 +45,6 @@
 "block.addsynth_materials.titanium_block": "Titanium Blok",
 
 "block.addsynth_materials.tin_ore": "Tinerts",
-"block.addsynth_materials.copper_ore": "Kopererts",
 "block.addsynth_materials.aluminum_ore": "Aluminiumerts",
 "block.addsynth_materials.silver_ore": "zilvererts",
 "block.addsynth_materials.platinum_ore": "platina erts",

@@ -29,7 +29,6 @@
 "block.addsynth_materials.amethyst_ore": "ametist brut",
 
 "item.addsynth_materials.tin_ingot": "Staniu lingou",
-"item.addsynth_materials.copper_ingot": "Cupru lingou",
 "item.addsynth_materials.aluminum_ingot": "Lingoul de aluminiu",
 "item.addsynth_materials.steel_ingot": "Oțel lingou",
 "item.addsynth_materials.bronze_ingot": "Lingou de bronz",
@@ -38,7 +37,6 @@
 "item.addsynth_materials.titanium_ingot": "Lingou de titan",
 
 "block.addsynth_materials.tin_block": "staniu bloc",
-"block.addsynth_materials.copper_block": "bloc de cupru",
 "block.addsynth_materials.aluminum_block": "bloc de aluminiu",
 "block.addsynth_materials.steel_block": "bloc de oțel",
 "block.addsynth_materials.bronze_block": "bloc de bronz",
@@ -47,7 +45,6 @@
 "block.addsynth_materials.titanium_block": "bloc de titan",
 
 "block.addsynth_materials.tin_ore": "Minereu de staniu",
-"block.addsynth_materials.copper_ore": "Minereu de cupru",
 "block.addsynth_materials.aluminum_ore": "Minereu de Aluminiu",
 "block.addsynth_materials.silver_ore": "minereu de argint",
 "block.addsynth_materials.platinum_ore": "minereu de platină",

@@ -53,10 +53,6 @@ public final class OreGenerator {
           generate_ore(generation_settings, Material.TIN, WorldgenConfig.tin_ore_size.get(), WorldgenConfig.tin_spawn_tries.get(),
                              WorldgenConfig.tin_min_height.get(), WorldgenConfig.tin_max_height.get());
         }
-        if(WorldgenConfig.generate_copper.get()){
-          generate_ore(generation_settings, Material.COPPER, WorldgenConfig.copper_ore_size.get(), WorldgenConfig.copper_spawn_tries.get(),
-                             WorldgenConfig.copper_min_height.get(), WorldgenConfig.copper_max_height.get());
-        }
         if(WorldgenConfig.generate_aluminum.get()){
           generate_ore(generation_settings, Material.ALUMINUM, WorldgenConfig.aluminum_ore_size.get(), WorldgenConfig.aluminum_spawn_tries.get(),
                              WorldgenConfig.aluminum_min_height.get(), WorldgenConfig.aluminum_max_height.get());

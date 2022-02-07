@@ -1,7 +1,9 @@
 {
   "type": "addsynth_energy:compressor",
   "ingredients": [
-    {"tag": "forge:ingots/copper"}
+    {
+      "item": "minecraft:copper_ingot"
+    }
   ],
   "result": {
     "item": "addsynth_materials:copper_plate"

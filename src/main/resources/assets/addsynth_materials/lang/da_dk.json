@@ -29,7 +29,6 @@
 "block.addsynth_materials.amethyst_ore": "Ametystmalm",
 
 "item.addsynth_materials.tin_ingot": "Tin Ingot",
-"item.addsynth_materials.copper_ingot": "Kobberstænger",
 "item.addsynth_materials.aluminum_ingot": "Aluminiumbørste",
 "item.addsynth_materials.steel_ingot": "Stålstang",
 "item.addsynth_materials.bronze_ingot": "Bronze Ingot",
@@ -38,7 +37,6 @@
 "item.addsynth_materials.titanium_ingot": "Titanium Ingot",
 
 "block.addsynth_materials.tin_block": "Tin Blok",
-"block.addsynth_materials.copper_block": "Kobberblok",
 "block.addsynth_materials.aluminum_block": "Aluminum Blok",
 "block.addsynth_materials.steel_block": "Stålblok",
 "block.addsynth_materials.bronze_block": "Bronze Blok",
@@ -47,7 +45,6 @@
 "block.addsynth_materials.titanium_block": "Titanium Blok",
 
 "block.addsynth_materials.tin_ore": "Tin malm",
-"block.addsynth_materials.copper_ore": "Kobbermalm",
 "block.addsynth_materials.aluminum_ore": "Aluminiummalm",
 "block.addsynth_materials.silver_ore": "Sølvmalm",
 "block.addsynth_materials.platinum_ore": "Platinmalm",

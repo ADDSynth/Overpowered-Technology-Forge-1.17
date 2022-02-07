@@ -29,7 +29,6 @@
 "block.addsynth_materials.amethyst_ore": "Ametista Minério",
 
 "item.addsynth_materials.tin_ingot": "Lata",
-"item.addsynth_materials.copper_ingot": "Cobre",
 "item.addsynth_materials.aluminum_ingot": "Lingote de alumínio",
 "item.addsynth_materials.steel_ingot": "Lingote de aço",
 "item.addsynth_materials.bronze_ingot": "Lingote de Bronze",
@@ -38,7 +37,6 @@
 "item.addsynth_materials.titanium_ingot": "Lingote De Titânio",
 
 "block.addsynth_materials.tin_block": "Bloco de lata",
-"block.addsynth_materials.copper_block": "Bloco de cobre",
 "block.addsynth_materials.aluminum_block": "Bloco de alumínio",
 "block.addsynth_materials.steel_block": "Bloco de aço",
 "block.addsynth_materials.bronze_block": "Bloco de bronze",
@@ -47,7 +45,6 @@
 "block.addsynth_materials.titanium_block": "Bloco de titânio",
 
 "block.addsynth_materials.tin_ore": "Minério de estanho",
-"block.addsynth_materials.copper_ore": "Minério de cobre",
 "block.addsynth_materials.aluminum_ore": "Minério de alumínio",
 "block.addsynth_materials.silver_ore": "Minério de prata",
 "block.addsynth_materials.platinum_ore": "Minério de platina",

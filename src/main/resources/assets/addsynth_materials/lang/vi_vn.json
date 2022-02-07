@@ -29,7 +29,6 @@
 "block.addsynth_materials.amethyst_ore": "Quặng thạch anh tím",
 
 "item.addsynth_materials.tin_ingot": "Thiếc thỏi",
-"item.addsynth_materials.copper_ingot": "Thỏi đồng",
 "item.addsynth_materials.aluminum_ingot": "Thỏi nhôm",
 "item.addsynth_materials.steel_ingot": "Thép",
 "item.addsynth_materials.bronze_ingot": "Bronze [cần dịch]",
@@ -38,7 +37,6 @@
 "item.addsynth_materials.titanium_ingot": "Thỏi titan",
 
 "block.addsynth_materials.tin_block": "Khối thiếc",
-"block.addsynth_materials.copper_block": "Khối đồng",
 "block.addsynth_materials.aluminum_block": "Khối nhôm",
 "block.addsynth_materials.steel_block": "Khối thép",
 "block.addsynth_materials.bronze_block": "Bronze Block [cần dịch]",
@@ -47,7 +45,6 @@
 "block.addsynth_materials.titanium_block": "Khối titan",
 
 "block.addsynth_materials.tin_ore": "Quặng thiếc",
-"block.addsynth_materials.copper_ore": "Quặng đồng",
 "block.addsynth_materials.aluminum_ore": "Quặng nhôm",
 "block.addsynth_materials.silver_ore": "bạc nguyên",
 "block.addsynth_materials.platinum_ore": "Quặng bạch kim",

@@ -101,12 +101,6 @@ public final class WorldgenConfig {
   public static ForgeConfigSpec.IntValue tin_spawn_tries;
   public static ForgeConfigSpec.IntValue tin_ore_size;
 
-  public static ForgeConfigSpec.BooleanValue generate_copper;
-  public static ForgeConfigSpec.IntValue copper_min_height;
-  public static ForgeConfigSpec.IntValue copper_max_height;
-  public static ForgeConfigSpec.IntValue copper_spawn_tries;
-  public static ForgeConfigSpec.IntValue copper_ore_size;
-
   public static ForgeConfigSpec.BooleanValue generate_aluminum;
   public static ForgeConfigSpec.IntValue aluminum_min_height;
   public static ForgeConfigSpec.IntValue aluminum_max_height;
@@ -188,14 +182,6 @@ public final class WorldgenConfig {
     tin_max_height  = worldgen(builder, "maximum height", DEFAULT_COMMON_METAL_MAX_HEIGHT);
     tin_spawn_tries = tries(builder, DEFAULT_COMMON_METAL_TRIES);
     tin_ore_size    = size(builder, DEFAULT_COMMON_METAL_ORE_SIZE);
-    builder.pop();
-
-    builder.push("Copper Ore");
-    generate_copper    = builder.define("generate", true);
-    copper_min_height  = worldgen(builder, "minimum height", DEFAULT_MIN_HEIGHT);
-    copper_max_height  = worldgen(builder, "maximum height", DEFAULT_COMMON_METAL_MAX_HEIGHT);
-    copper_spawn_tries = tries(builder, DEFAULT_COMMON_METAL_TRIES);
-    copper_ore_size    = size(builder, DEFAULT_COMMON_METAL_ORE_SIZE);
     builder.pop();
 
     builder.push("Aluminum Ore");
