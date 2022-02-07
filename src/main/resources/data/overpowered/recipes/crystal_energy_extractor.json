@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "aea",
+    "sgs",
+    "aca"
+  ],
+  "key": {
+    "a": {
+      "tag": "forge:plates/aluminum"
+    },
+    "s": {
+      "item": "overpowered:scanning_laser"
+    },
+    "e": {
+      "tag": "forge:ender_pearls"
+    },
+    "c": {
+      "item": "addsynth_energy:circuit_tier_3"
+    },
+    "g": {
+      "tag": "forge:glass_panes/colorless"
+    }
+  },
+  "result": {
+    "item": "overpowered:crystal_energy_extractor"
+  }
+}

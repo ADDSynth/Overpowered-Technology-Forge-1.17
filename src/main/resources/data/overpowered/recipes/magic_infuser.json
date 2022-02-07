@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "aea",
+    "bcb",
+    "aea"
+  ],
+  "key": {
+    "a": {
+      "tag": "forge:plates/aluminum"
+    },
+    "b": {
+      "item": "minecraft:bookshelf"
+    },
+    "c": {
+      "item": "addsynth_energy:circuit_tier_5"
+    },
+    "e": {
+      "item": "overpowered:energy_crystal"
+    }
+  },
+  "result": {
+    "item": "overpowered:magic_infuser"
+  }
+}

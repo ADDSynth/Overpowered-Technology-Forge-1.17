@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "addsynth_energy:electric_furnace"
+    },
+    "title": {
+      "translate": "advancements.addsynth_energy.electric_furnace.title"
+    },
+    "description": {
+      "translate": "advancements.addsynth_energy.electric_furnace.description"
+    }
+  },
+  "parent": "addsynth_energy:compressor",
+  "criteria": {
+    "electric_furnace": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "addsynth_energy:electric_furnace"
+          }
+        ]
+      }
+    }
+  },
+  "conditions": [
+    {
+      "type": "forge:item_exists",
+      "item": "addsynth_energy:electric_furnace"
+    }
+  ]
+}

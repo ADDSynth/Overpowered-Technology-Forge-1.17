@@ -1,0 +1,43 @@
+{
+  "parent": "overpowered:recipes/root",
+  "criteria": {
+    "circuit": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "addsynth_energy:circuit_tier_8"
+          }
+        ]
+      }
+    },
+    "has_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "overpowered:plasma"
+      }
+    },
+    "has_plasma": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "overpowered:plasma"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "circuit",
+      "has_recipe",
+      "has_plasma"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "overpowered:plasma"
+    ]
+  }
+}

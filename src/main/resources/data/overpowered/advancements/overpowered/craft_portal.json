@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "overpowered:portal_control_panel"
+    },
+    "title": {
+      "translate": "advancements.overpowered.craft_portal.title"
+    },
+    "description": {
+      "translate": "advancements.overpowered.craft_portal.description"
+    }
+  },
+  "parent": "overpowered:overpowered/energy_crystal",
+  "criteria": {
+    "portal": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "overpowered:portal_control_panel"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "overpowered:magic_infuser"
+    },
+    "title": {
+      "translate": "advancements.overpowered.magic_infuser.title"
+    },
+    "description": {
+      "translate": "advancements.overpowered.magic_infuser.description"
+    }
+  },
+  "parent": "overpowered:overpowered/energy_crystal",
+  "criteria": {
+    "magic_infuser": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "overpowered:magic_infuser"
+          }
+        ]
+      }
+    }
+  },
+  "conditions": [
+    {
+      "type": "forge:item_exists",
+      "item": "overpowered:magic_infuser"
+    }
+  ]
+}

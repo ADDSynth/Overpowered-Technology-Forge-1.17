@@ -1,0 +1,73 @@
+{
+  "parent": "overpowered:recipes/root",
+  "criteria": {
+    "ender_pearl": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:ender_pearls"
+          }
+        ]
+      }
+    },
+    "void_crystal": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "overpowered:void_crystal"
+          }
+        ]
+      }
+    },
+    "plasma": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "overpowered:plasma"
+          }
+        ]
+      }
+    },
+    "has_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "overpowered:dimensional_anchor"
+      }
+    },
+    "has_alternate_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "overpowered:dimensional_anchor_alternate"
+      }
+    },
+    "has_dimensional_anchor": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "overpowered:dimensional_anchor"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "ender_pearl",
+      "void_crystal",
+      "plasma",
+      "has_recipe",
+      "has_alternate_recipe",
+      "has_dimensional_anchor"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "overpowered:dimensional_anchor",
+      "overpowered:dimensional_anchor_alternate"
+    ]
+  }
+}

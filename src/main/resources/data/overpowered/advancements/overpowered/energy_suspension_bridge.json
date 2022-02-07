@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "overpowered:energy_suspension_bridge"
+    },
+    "title": {
+      "translate": "advancements.overpowered.energy_suspension_bridge.title"
+    },
+    "description": {
+      "translate": "advancements.overpowered.energy_suspension_bridge.description"
+    }
+  },
+  "parent": "overpowered:overpowered/root",
+  "criteria": {
+    "energy_suspension_bridge": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "overpowered:energy_suspension_bridge"
+          }
+        ]
+      }
+    }
+  },
+  "conditions": [
+    {
+      "type": "forge:item_exists",
+      "item": "overpowered:energy_suspension_bridge"
+    }
+  ]
+}
