@@ -48,7 +48,9 @@ public final class TileLaser extends TileBase implements ITickingTileEntity {
 
   @Override
   @SuppressWarnings("null")
-  public final void serverTick(){ // FIX: make this better, first check level is not null, then save a local variable. Remove suppress null warnings.
+  public final void serverTick(){
+    // FIX: Make TileLaser.tick better, first check level is not null, then save a local variable. Remove
+    //      suppress null warnings. Possibly add a seperate Fusion Laser Block that doesn't spawn a TileEntity.
     if(first_tick){
       if(level.isClientSide == false){
         final BlockState block_state = getBlockState();

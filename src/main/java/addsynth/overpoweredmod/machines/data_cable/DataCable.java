@@ -7,20 +7,22 @@ import addsynth.core.util.block.BlockShape;
 import addsynth.energy.lib.blocks.Wire;
 import addsynth.overpoweredmod.OverpoweredTechnology;
 import addsynth.overpoweredmod.assets.CreativeTabs;
+import addsynth.overpoweredmod.registers.Tiles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public final class DataCable extends Wire implements EntityBlock {
+public final class DataCable extends Wire {
 
   private static final double min_wire_size =  5.5 / 16;
   private static final double max_wire_size = 10.5 / 16;
@@ -70,6 +72,12 @@ public final class DataCable extends Wire implements EntityBlock {
   @Nullable
   public final BlockEntity newBlockEntity(BlockPos position, BlockState blockstate){
     return new TileDataCable(position, blockstate);
+  }
+
+  @Override
+  @Nullable
+  public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level world, BlockState blockstate, BlockEntityType<T> type){
+    return standardTicker(world, type, Tiles.DATA_CABLE);
   }
 
   @Override

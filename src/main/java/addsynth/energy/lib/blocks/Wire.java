@@ -1,6 +1,7 @@
 package addsynth.energy.lib.blocks;
 
 import javax.annotation.Nullable;
+import addsynth.core.blocks.TileEntityBlock;
 import addsynth.core.util.block.BlockShape;
 import addsynth.core.util.constants.DirectionConstant;
 import net.minecraft.core.BlockPos;
@@ -20,7 +21,7 @@ import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public abstract class Wire extends Block implements SimpleWaterloggedBlock {
+public abstract class Wire extends TileEntityBlock implements SimpleWaterloggedBlock {
 
   // http://mcforge.readthedocs.io/en/latest/blocks/states/
 

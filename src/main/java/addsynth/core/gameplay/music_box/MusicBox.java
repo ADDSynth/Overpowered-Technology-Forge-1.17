@@ -2,11 +2,11 @@ package addsynth.core.gameplay.music_box;
 
 import javax.annotation.Nullable;
 import addsynth.core.ADDSynthCore;
+import addsynth.core.blocks.TileEntityBlock;
 import addsynth.core.gameplay.Core;
 import addsynth.core.gameplay.client.GuiProvider;
 import addsynth.core.gameplay.registers.Tiles;
 import addsynth.core.util.game.MinecraftUtility;
-import addsynth.core.util.game.tileentity.TileEntityUtil;
 import addsynth.core.util.player.PlayerUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -16,7 +16,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
@@ -26,7 +25,7 @@ import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
 import net.minecraft.world.phys.BlockHitResult;
 
-public final class MusicBox extends BaseEntityBlock {
+public final class MusicBox extends TileEntityBlock {
 
   public MusicBox(String name){
     super(Block.Properties.of(Material.WOOD, MaterialColor.WOOD).strength(0.8f));
@@ -48,10 +47,7 @@ public final class MusicBox extends BaseEntityBlock {
   @Override
   @Nullable
   public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level world, BlockState blockstate, BlockEntityType<T> type){
-    if(world.isClientSide == false){
-      return createTickerHelper(type, Tiles.MUSIC_BOX, TileEntityUtil::tick);
-    }
-    return null;
+    return standardTicker(world, type, Tiles.MUSIC_BOX);
   }
 
   @Override

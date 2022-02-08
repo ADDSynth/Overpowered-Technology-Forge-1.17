@@ -1,9 +1,9 @@
 package addsynth.energy.lib.blocks;
 
+import addsynth.core.blocks.TileEntityBlock;
 import addsynth.core.inventory.IInventoryUser;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -16,7 +16,7 @@ import net.minecraft.world.level.material.MaterialColor;
  *     their individual blocks using that mod's {@link addsynth.core.game.RegistryUtil} instance.
  * @author ADDSynth
  */
-public abstract class MachineBlock extends BaseEntityBlock {
+public abstract class MachineBlock extends TileEntityBlock {
 
   /** Specify your own Block Properties. Required if block is transparent! */
   public MachineBlock(final Block.Properties properties){

@@ -5,6 +5,7 @@ import javax.annotation.Nullable;
 import addsynth.core.util.game.MinecraftUtility;
 import addsynth.energy.ADDSynthEnergy;
 import addsynth.energy.lib.blocks.MachineBlock;
+import addsynth.energy.registers.Tiles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
@@ -18,6 +19,8 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.MaterialColor;
 import net.minecraft.world.phys.BlockHitResult;
@@ -39,6 +42,12 @@ public final class CompressorBlock extends MachineBlock {
   @Nullable
   public final BlockEntity newBlockEntity(BlockPos position, BlockState blockstate){
     return new TileCompressor(position, blockstate);
+  }
+
+  @Override
+  @Nullable
+  public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level world, BlockState blockstate, BlockEntityType<T> type){
+    return standardTicker(world, type, Tiles.COMPRESSOR);
   }
 
   @Override

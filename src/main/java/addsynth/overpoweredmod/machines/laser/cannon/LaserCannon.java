@@ -2,6 +2,7 @@ package addsynth.overpoweredmod.machines.laser.cannon;
 
 import java.util.List;
 import javax.annotation.Nullable;
+import addsynth.core.blocks.TileEntityBlock;
 import addsynth.core.util.block.BlockShape;
 import addsynth.core.util.constants.DirectionConstant;
 import addsynth.core.util.world.WorldUtil;
@@ -9,6 +10,7 @@ import addsynth.overpoweredmod.OverpoweredTechnology;
 import addsynth.overpoweredmod.assets.CreativeTabs;
 import addsynth.overpoweredmod.game.core.Laser;
 import addsynth.overpoweredmod.game.core.Machines;
+import addsynth.overpoweredmod.registers.Tiles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
@@ -22,10 +24,11 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -39,7 +42,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public final class LaserCannon extends Block implements SimpleWaterloggedBlock, EntityBlock {
+public final class LaserCannon extends TileEntityBlock implements SimpleWaterloggedBlock {
 
   public static final DirectionProperty FACING = BlockStateProperties.FACING; // Data Cable uses this block property.
   private static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
@@ -186,6 +189,12 @@ public final class LaserCannon extends Block implements SimpleWaterloggedBlock, 
   @Nullable
   public final BlockEntity newBlockEntity(BlockPos position, BlockState blockstate){
     return color == -1 ? null : new TileLaser(position, blockstate);
+  }
+
+  @Override
+  @Nullable
+  public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level world, BlockState blockstate, BlockEntityType<T> type){
+    return color == -1 ? null : standardTicker(world, type, Tiles.LASER);
   }
 
   @Override

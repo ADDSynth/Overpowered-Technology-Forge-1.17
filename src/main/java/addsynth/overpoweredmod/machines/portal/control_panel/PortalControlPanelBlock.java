@@ -7,6 +7,7 @@ import addsynth.energy.lib.blocks.MachineBlock;
 import addsynth.overpoweredmod.OverpoweredTechnology;
 import addsynth.overpoweredmod.assets.CreativeTabs;
 import addsynth.overpoweredmod.machines.data_cable.DataCable;
+import addsynth.overpoweredmod.registers.Tiles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
@@ -24,6 +25,8 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
@@ -51,6 +54,12 @@ public final class PortalControlPanelBlock extends MachineBlock {
   @Nullable
   public final BlockEntity newBlockEntity(BlockPos position, BlockState blockstate){
     return new TilePortalControlPanel(position, blockstate);
+  }
+
+  @Override
+  @Nullable
+  public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level world, BlockState blockstate, BlockEntityType<T> type){
+    return standardTicker(world, type, Tiles.PORTAL_CONTROL_PANEL);
   }
 
   @Override

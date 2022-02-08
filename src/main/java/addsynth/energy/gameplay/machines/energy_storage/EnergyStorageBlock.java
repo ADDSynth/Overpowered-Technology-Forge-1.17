@@ -5,6 +5,7 @@ import javax.annotation.Nullable;
 import addsynth.core.util.game.MinecraftUtility;
 import addsynth.energy.ADDSynthEnergy;
 import addsynth.energy.lib.blocks.MachineBlock;
+import addsynth.energy.registers.Tiles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
@@ -20,6 +21,8 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
@@ -42,6 +45,12 @@ public final class EnergyStorageBlock extends MachineBlock {
   @Nullable
   public final BlockEntity newBlockEntity(BlockPos position, BlockState blockstate){
     return new TileEnergyStorage(position, blockstate);
+  }
+
+  @Override
+  @Nullable
+  public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level world, BlockState blockstate, BlockEntityType<T> type){
+    return standardTicker(world, type, Tiles.ENERGY_CONTAINER);
   }
 
   @Override

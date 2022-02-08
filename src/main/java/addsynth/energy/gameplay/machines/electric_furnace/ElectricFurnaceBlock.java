@@ -5,6 +5,7 @@ import javax.annotation.Nullable;
 import addsynth.core.util.game.MinecraftUtility;
 import addsynth.energy.ADDSynthEnergy;
 import addsynth.energy.lib.blocks.MachineBlock;
+import addsynth.energy.registers.Tiles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
@@ -22,6 +23,8 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
@@ -48,6 +51,12 @@ public final class ElectricFurnaceBlock extends MachineBlock {
   @Nullable
   public final BlockEntity newBlockEntity(BlockPos position, BlockState blockstate){
     return new TileElectricFurnace(position, blockstate);
+  }
+
+  @Override
+  @Nullable
+  public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level world, BlockState blockstate, BlockEntityType<T> type){
+    return standardTicker(world, type, Tiles.ELECTRIC_FURNACE);
   }
 
   @Override

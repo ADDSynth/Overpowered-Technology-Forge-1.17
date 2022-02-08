@@ -3,7 +3,6 @@ package addsynth.energy.gameplay.machines.universal_energy_interface;
 import java.util.List;
 import javax.annotation.Nullable;
 import addsynth.core.util.game.MinecraftUtility;
-import addsynth.core.util.game.tileentity.TileEntityUtil;
 import addsynth.energy.ADDSynthEnergy;
 import addsynth.energy.lib.blocks.MachineBlock;
 import addsynth.energy.registers.Tiles;
@@ -48,10 +47,7 @@ public final class UniversalEnergyInterfaceBlock extends MachineBlock {
   @Override
   @Nullable
   public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level world, BlockState blockstate, BlockEntityType<T> type){
-    if(world.isClientSide == false){
-      return createTickerHelper(type, Tiles.UNIVERSAL_ENERGY_INTERFACE, TileEntityUtil::tick);
-    }
-    return null;
+    return standardTicker(world, type, Tiles.UNIVERSAL_ENERGY_INTERFACE);
   }
 
   @Override

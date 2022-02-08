@@ -1,7 +1,9 @@
 package addsynth.overpoweredmod.machines.portal.rift;
 
 import javax.annotation.Nullable;
+import addsynth.core.blocks.TileEntityBlock;
 import addsynth.overpoweredmod.OverpoweredTechnology;
+import addsynth.overpoweredmod.registers.Tiles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.MinecraftServer;
@@ -12,8 +14,9 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
@@ -23,7 +26,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public final class PortalEnergyBlock extends Block implements EntityBlock {
+public final class PortalEnergyBlock extends TileEntityBlock {
 
   // NOTE: well, after seeing a YouTube video, I was going to make this extend from the Vanilla PortalBlock class,
   //       but I want this to have a TileEntity, then just implement ITileProvider?
@@ -71,6 +74,12 @@ public final class PortalEnergyBlock extends Block implements EntityBlock {
   @Nullable
   public final BlockEntity newBlockEntity(BlockPos position, BlockState blockstate){
     return new TilePortal(position, blockstate);
+  }
+
+  @Override
+  @Nullable
+  public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level world, BlockState blockstate, BlockEntityType<T> type){
+    return standardTicker(world, type, Tiles.PORTAL_BLOCK);
   }
 
   // Portal Energy block doesn't need it for some reason?

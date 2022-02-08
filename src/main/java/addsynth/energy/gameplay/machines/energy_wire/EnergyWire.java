@@ -6,19 +6,21 @@ import addsynth.energy.ADDSynthEnergy;
 import addsynth.energy.lib.blocks.Wire;
 import addsynth.energy.lib.energy_network.tiles.AbstractEnergyNetworkTile;
 import addsynth.energy.lib.main.IEnergyUser;
+import addsynth.energy.registers.Tiles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
 
-public final class EnergyWire extends Wire implements EntityBlock {
+public final class EnergyWire extends Wire {
 
   public EnergyWire(final String name){
     super(Block.Properties.of(Material.WOOL, MaterialColor.COLOR_GRAY).strength(0.1f, 0.0f));
@@ -44,6 +46,12 @@ public final class EnergyWire extends Wire implements EntityBlock {
   @Nullable
   public final BlockEntity newBlockEntity(BlockPos position, BlockState blockstate){
     return new TileEnergyWire(position, blockstate);
+  }
+
+  @Override
+  @Nullable
+  public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level world, BlockState blockstate, BlockEntityType<T> type){
+    return standardTicker(world, type, Tiles.ENERGY_WIRE);
   }
 
   /** Starting in Minecraft 1.11, {@link Level#setBlockEntity(BlockEntity)} no longer calls

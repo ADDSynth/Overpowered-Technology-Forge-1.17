@@ -22,11 +22,15 @@ public class TileEntityUtil {
    * @since Minecraft 1.17
    */
   public static final <T extends BlockEntity & ITickingTileEntity> void tick(Level world, BlockPos position, BlockState state, T tile){
-    tile.serverTick();
+    if(tile != null){
+      tile.serverTick();
+    }
   }
 
   public static final <T extends BlockEntity & IClientTick> void clientTick(Level world, BlockPos position, BlockState state, T tile){
-    tile.clientTick();
+    if(tile != null){
+      tile.clientTick();
+    }
   }
 
 }
