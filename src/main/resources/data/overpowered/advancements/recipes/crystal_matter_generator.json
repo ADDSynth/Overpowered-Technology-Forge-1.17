@@ -16,7 +16,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:nullified_power_core"
+            "items": [
+              "overpowered:nullified_power_core"
+            ]
           }
         ]
       }
@@ -32,7 +34,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:crystal_matter_generator"
+            "items": [
+              "overpowered:crystal_matter_generator"
+            ]
           }
         ]
       }

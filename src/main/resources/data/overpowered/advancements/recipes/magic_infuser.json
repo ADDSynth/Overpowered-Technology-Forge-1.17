@@ -6,7 +6,9 @@
       "conditions": {
         "items": [
           {
-            "item": "minecraft:bookshelf"
+            "items": [
+              "minecraft:bookshelf"
+            ]
           }
         ]
       }
@@ -16,7 +18,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:energy_crystal"
+            "items": [
+              "overpowered:energy_crystal"
+            ]
           }
         ]
       }
@@ -36,7 +40,9 @@
       "conditions": {
         "items": [
           {
-            "item": "addsynth_energy:circuit_tier_5"
+            "items": [
+              "addsynth_energy:circuit_tier_5"
+            ]
           }
         ]
       }
@@ -52,7 +58,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:magic_infuser"
+            "items": [
+              "overpowered:magic_infuser"
+            ]
           }
         ]
       }

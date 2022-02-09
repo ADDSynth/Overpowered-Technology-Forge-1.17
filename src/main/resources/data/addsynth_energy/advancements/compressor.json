@@ -17,7 +17,9 @@
       "conditions": {
         "items": [
           {
-            "item": "addsynth_energy:compressor"
+            "items": [
+              "addsynth_energy:compressor"
+            ]
           }
         ]
       }

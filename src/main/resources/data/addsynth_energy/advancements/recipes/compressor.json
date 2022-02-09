@@ -16,7 +16,9 @@
       "conditions": {
         "items": [
           {
-            "item": "minecraft:anvil"
+            "items": [
+              "minecraft:anvil"
+            ]
           }
         ]
       }
@@ -26,7 +28,9 @@
       "conditions": {
         "items": [
           {
-            "item": "addsynth_energy:power_core"
+            "items": [
+              "addsynth_energy:power_core"
+            ]
           }
         ]
       }
@@ -42,7 +46,9 @@
       "conditions": {
         "items": [
           {
-            "item": "addsynth_energy:compressor"
+            "items": [
+              "addsynth_energy:compressor"
+            ]
           }
         ]
       }

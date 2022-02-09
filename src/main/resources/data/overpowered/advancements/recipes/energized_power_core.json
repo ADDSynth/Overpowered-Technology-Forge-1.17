@@ -6,7 +6,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:energy_crystal"
+            "items": [
+              "overpowered:energy_crystal"
+            ]
           }
         ]
       }
@@ -22,7 +24,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:energized_power_core"
+            "items": [
+              "overpowered:energized_power_core"
+            ]
           }
         ]
       }

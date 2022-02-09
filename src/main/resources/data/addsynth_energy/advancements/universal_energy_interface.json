@@ -17,7 +17,9 @@
       "conditions": {
         "items": [
           {
-            "item": "addsynth_energy:universal_energy_interface"
+            "items": [
+              "addsynth_energy:universal_energy_interface"
+            ]
           }
         ]
       }

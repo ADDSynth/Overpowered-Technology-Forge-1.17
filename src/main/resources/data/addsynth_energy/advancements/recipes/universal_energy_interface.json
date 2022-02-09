@@ -6,7 +6,9 @@
       "conditions": {
         "items": [
           {
-            "item": "addsynth_energy:energy_wire"
+            "items": [
+              "addsynth_energy:energy_wire"
+            ]
           }
         ]
       }
@@ -36,7 +38,9 @@
       "conditions": {
         "items": [
           {
-            "item": "addsynth_energy:advanced_power_core"
+            "items": [
+              "addsynth_energy:advanced_power_core"
+            ]
           }
         ]
       }
@@ -52,7 +56,9 @@
       "conditions": {
         "items": [
           {
-            "item": "addsynth_energy:universal_energy_interface"
+            "items": [
+              "addsynth_energy:universal_energy_interface"
+            ]
           }
         ]
       }

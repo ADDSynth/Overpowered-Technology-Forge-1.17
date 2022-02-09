@@ -17,7 +17,9 @@
       "conditions": {
         "items": [
           {
-            "item": "addsynth_energy:energy_storage"
+            "items": [
+              "addsynth_energy:energy_storage"
+            ]
           }
         ]
       }

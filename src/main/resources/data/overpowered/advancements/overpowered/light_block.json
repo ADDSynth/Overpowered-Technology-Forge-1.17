@@ -17,7 +17,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:light_block"
+            "items": [
+              "overpowered:light_block"
+            ]
           }
         ]
       }

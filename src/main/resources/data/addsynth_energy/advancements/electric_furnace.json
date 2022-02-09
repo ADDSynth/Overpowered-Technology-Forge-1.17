@@ -17,7 +17,9 @@
       "conditions": {
         "items": [
           {
-            "item": "addsynth_energy:electric_furnace"
+            "items": [
+              "addsynth_energy:electric_furnace"
+            ]
           }
         ]
       }

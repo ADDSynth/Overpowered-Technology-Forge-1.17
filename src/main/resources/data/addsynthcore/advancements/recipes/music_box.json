@@ -6,7 +6,9 @@
       "conditions": {
         "items": [
           {
-            "item": "minecraft:note_block"
+            "items": [
+              "minecraft:note_block"
+            ]
           }
         ]
       }
@@ -22,7 +24,9 @@
       "conditions": {
         "items": [
           {
-            "item": "addsynthcore:music_box"
+            "items": [
+              "addsynthcore:music_box"
+            ]
           }
         ]
       }

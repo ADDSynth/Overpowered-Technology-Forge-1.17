@@ -17,7 +17,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:dimensional_anchor"
+            "items": [
+              "overpowered:dimensional_anchor"
+            ]
           }
         ]
       }

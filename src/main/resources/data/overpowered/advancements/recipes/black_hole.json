@@ -6,7 +6,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:fusion_core"
+            "items": [
+              "overpowered:fusion_core"
+            ]
           }
         ]
       }
@@ -22,7 +24,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:black_hole"
+            "items": [
+              "overpowered:black_hole"
+            ]
           }
         ]
       }

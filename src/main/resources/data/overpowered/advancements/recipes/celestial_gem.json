@@ -92,7 +92,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:celestial_gem"
+            "items": [
+              "overpowered:celestial_gem"
+            ]
           }
         ]
       }

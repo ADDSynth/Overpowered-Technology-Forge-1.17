@@ -6,7 +6,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:plasma"
+            "items": [
+              "overpowered:plasma"
+            ]
           }
         ]
       }
@@ -22,7 +24,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:fusion_core"
+            "items": [
+              "overpowered:fusion_core"
+            ]
           }
         ]
       }

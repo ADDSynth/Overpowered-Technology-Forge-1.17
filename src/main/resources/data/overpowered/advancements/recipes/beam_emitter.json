@@ -16,7 +16,9 @@
       "conditions": {
         "items": [
           {
-            "item": "addsynth_energy:power_core"
+            "items": [
+              "addsynth_energy:power_core"
+            ]
           }
         ]
       }
@@ -32,7 +34,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:beam_emitter"
+            "items": [
+              "overpowered:beam_emitter"
+            ]
           }
         ]
       }

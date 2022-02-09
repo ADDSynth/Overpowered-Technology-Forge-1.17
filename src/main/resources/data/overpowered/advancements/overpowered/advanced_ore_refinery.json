@@ -17,7 +17,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:advanced_ore_refinery"
+            "items": [
+              "overpowered:advanced_ore_refinery"
+            ]
           }
         ]
       }

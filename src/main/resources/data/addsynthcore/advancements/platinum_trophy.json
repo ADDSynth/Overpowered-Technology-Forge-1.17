@@ -18,7 +18,9 @@
       "conditions": {
         "items": [
           {
-            "item": "addsynthcore:platinum_trophy"
+            "items": [
+              "addsynthcore:platinum_trophy"
+            ]
           }
         ]
       }

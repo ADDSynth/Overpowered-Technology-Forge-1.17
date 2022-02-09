@@ -17,7 +17,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:energy_suspension_bridge"
+            "items": [
+              "overpowered:energy_suspension_bridge"
+            ]
           }
         ]
       }

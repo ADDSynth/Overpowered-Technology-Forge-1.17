@@ -18,7 +18,9 @@
       "conditions": {
         "items": [
           {
-            "item": "addsynthcore:silver_trophy"
+            "items": [
+              "addsynthcore:silver_trophy"
+            ]
           }
         ]
       }

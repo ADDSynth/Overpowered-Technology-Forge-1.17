@@ -16,7 +16,9 @@
       "conditions": {
         "items": [
           {
-            "item": "addsynthcore:trophy_base"
+            "items": [
+              "addsynthcore:trophy_base"
+            ]
           }
         ]
       }
@@ -32,7 +34,9 @@
       "conditions": {
         "items": [
           {
-            "item": "addsynthcore:bronze_trophy"
+            "items": [
+              "addsynthcore:bronze_trophy"
+            ]
           }
         ]
       }

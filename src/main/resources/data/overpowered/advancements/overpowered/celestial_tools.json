@@ -17,7 +17,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:celestial_sword"
+            "items": [
+              "overpowered:celestial_sword"
+            ]
           }
         ]
       }
@@ -27,7 +29,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:celestial_shovel"
+            "items": [
+              "overpowered:celestial_shovel"
+            ]
           }
         ]
       }
@@ -37,7 +41,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:celestial_axe"
+            "items": [
+              "overpowered:celestial_axe"
+            ]
           }
         ]
       }
@@ -47,7 +53,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:celestial_pickaxe"
+            "items": [
+              "overpowered:celestial_pickaxe"
+            ]
           }
         ]
       }
@@ -57,7 +65,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:celestial_hoe"
+            "items": [
+              "overpowered:celestial_hoe"
+            ]
           }
         ]
       }

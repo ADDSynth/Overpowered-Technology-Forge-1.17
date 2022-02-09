@@ -17,7 +17,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:inverter"
+            "items": [
+              "overpowered:inverter"
+            ]
           }
         ]
       }

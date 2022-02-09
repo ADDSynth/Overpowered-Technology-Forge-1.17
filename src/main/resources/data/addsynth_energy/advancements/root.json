@@ -19,7 +19,9 @@
       "conditions": {
         "items": [
           {
-            "item": "minecraft:copper_ingot"
+            "items": [
+              "minecraft:copper_ingot"
+            ]
           }
         ]
       }
@@ -29,7 +31,9 @@
       "conditions": {
         "items": [
           {
-            "item": "minecraft:copper_ore"
+            "items": [
+              "minecraft:copper_ore"
+            ]
           }
         ]
       }

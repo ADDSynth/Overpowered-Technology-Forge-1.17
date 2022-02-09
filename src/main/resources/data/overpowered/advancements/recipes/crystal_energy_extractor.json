@@ -6,7 +6,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:energy_crystal"
+            "items": [
+              "overpowered:energy_crystal"
+            ]
           }
         ]
       }
@@ -26,7 +28,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:scanning_laser"
+            "items": [
+              "overpowered:scanning_laser"
+            ]
           }
         ]
       }
@@ -36,7 +40,9 @@
       "conditions": {
         "items": [
           {
-            "item": "addsynth_energy:circuit_tier_3"
+            "items": [
+              "addsynth_energy:circuit_tier_3"
+            ]
           }
         ]
       }
@@ -62,7 +68,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:crystal_energy_extractor"
+            "items": [
+              "overpowered:crystal_energy_extractor"
+            ]
           }
         ]
       }

@@ -6,7 +6,9 @@
       "conditions": {
         "items": [
           {
-            "item": "minecraft:paper"
+            "items": [
+              "minecraft:paper"
+            ]
           }
         ]
       }
@@ -72,7 +74,9 @@
       "conditions": {
         "items": [
           {
-            "item": "addsynth_energy:circuit_tier_1"
+            "items": [
+              "addsynth_energy:circuit_tier_1"
+            ]
           }
         ]
       }

@@ -6,7 +6,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:void_crystal"
+            "items": [
+              "overpowered:void_crystal"
+            ]
           }
         ]
       }
@@ -22,7 +24,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:inverter"
+            "items": [
+              "overpowered:inverter"
+            ]
           }
         ]
       }

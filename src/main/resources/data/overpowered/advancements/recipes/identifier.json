@@ -16,7 +16,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:data_cable"
+            "items": [
+              "overpowered:data_cable"
+            ]
           }
         ]
       }
@@ -26,7 +28,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:scanning_laser"
+            "items": [
+              "overpowered:scanning_laser"
+            ]
           }
         ]
       }
@@ -36,7 +40,9 @@
       "conditions": {
         "items": [
           {
-            "item": "addsynth_energy:circuit_tier_5"
+            "items": [
+              "addsynth_energy:circuit_tier_5"
+            ]
           }
         ]
       }
@@ -46,7 +52,9 @@
       "conditions": {
         "items": [
           {
-            "item": "addsynth_energy:advanced_power_core"
+            "items": [
+              "addsynth_energy:advanced_power_core"
+            ]
           }
         ]
       }
@@ -62,7 +70,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:identifier"
+            "items": [
+              "overpowered:identifier"
+            ]
           }
         ]
       }

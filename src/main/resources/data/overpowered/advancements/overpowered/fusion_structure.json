@@ -17,7 +17,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:fusion_energy_converter"
+            "items": [
+              "overpowered:fusion_energy_converter"
+            ]
           }
         ]
       }
@@ -27,7 +29,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:fusion_control_unit"
+            "items": [
+              "overpowered:fusion_control_unit"
+            ]
           }
         ]
       }
@@ -37,7 +41,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:fusion_control_laser"
+            "items": [
+              "overpowered:fusion_control_laser"
+            ]
           }
         ]
       }
@@ -47,7 +53,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:fusion_chamber"
+            "items": [
+              "overpowered:fusion_chamber"
+            ]
           }
         ]
       }

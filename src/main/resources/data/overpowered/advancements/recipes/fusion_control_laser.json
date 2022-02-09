@@ -6,7 +6,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:focus_lens"
+            "items": [
+              "overpowered:focus_lens"
+            ]
           }
         ]
       }
@@ -16,7 +18,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:scanning_laser"
+            "items": [
+              "overpowered:scanning_laser"
+            ]
           }
         ]
       }
@@ -26,7 +30,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:data_cable"
+            "items": [
+              "overpowered:data_cable"
+            ]
           }
         ]
       }
@@ -52,7 +58,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:fusion_control_laser"
+            "items": [
+              "overpowered:fusion_control_laser"
+            ]
           }
         ]
       }

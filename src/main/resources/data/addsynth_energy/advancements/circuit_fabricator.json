@@ -17,7 +17,9 @@
       "conditions": {
         "items": [
           {
-            "item": "addsynth_energy:circuit_fabricator"
+            "items": [
+              "addsynth_energy:circuit_fabricator"
+            ]
           }
         ]
       }

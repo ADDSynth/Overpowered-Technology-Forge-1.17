@@ -16,7 +16,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:nullified_power_core"
+            "items": [
+              "overpowered:nullified_power_core"
+            ]
           }
         ]
       }
@@ -38,7 +40,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:fusion_energy_converter"
+            "items": [
+              "overpowered:fusion_energy_converter"
+            ]
           }
         ]
       }

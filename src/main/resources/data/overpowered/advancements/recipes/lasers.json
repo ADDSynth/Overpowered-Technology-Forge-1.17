@@ -6,7 +6,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:beam_emitter"
+            "items": [
+              "overpowered:beam_emitter"
+            ]
           }
         ]
       }
@@ -16,7 +18,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:focus_lens"
+            "items": [
+              "overpowered:focus_lens"
+            ]
           }
         ]
       }
@@ -26,7 +30,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:laser_housing"
+            "items": [
+              "overpowered:laser_housing"
+            ]
           }
         ]
       }

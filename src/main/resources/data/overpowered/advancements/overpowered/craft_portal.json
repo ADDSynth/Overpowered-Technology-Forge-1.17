@@ -17,7 +17,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:portal_control_panel"
+            "items": [
+              "overpowered:portal_control_panel"
+            ]
           }
         ]
       }

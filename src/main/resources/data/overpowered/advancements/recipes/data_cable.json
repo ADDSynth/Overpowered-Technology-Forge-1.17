@@ -6,7 +6,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:energy_crystal_shards"
+            "items": [
+              "overpowered:energy_crystal_shards"
+            ]
           }
         ]
       }
@@ -22,7 +24,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:data_cable"
+            "items": [
+              "overpowered:data_cable"
+            ]
           }
         ]
       }

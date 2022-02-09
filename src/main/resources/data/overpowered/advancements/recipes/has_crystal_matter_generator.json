@@ -6,7 +6,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:crystal_matter_generator"
+            "items": [
+              "overpowered:crystal_matter_generator"
+            ]
           }
         ]
       }

@@ -16,7 +16,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:beam_emitter"
+            "items": [
+              "overpowered:beam_emitter"
+            ]
           }
         ]
       }
@@ -26,7 +28,9 @@
       "conditions": {
         "items": [
           {
-            "item": "addsynth_energy:circuit_tier_6"
+            "items": [
+              "addsynth_energy:circuit_tier_6"
+            ]
           }
         ]
       }
@@ -42,7 +46,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:energy_suspension_bridge"
+            "items": [
+              "overpowered:energy_suspension_bridge"
+            ]
           }
         ]
       }

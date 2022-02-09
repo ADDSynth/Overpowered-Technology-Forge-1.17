@@ -16,7 +16,9 @@
       "conditions": {
         "items": [
           {
-            "item": "minecraft:copper_ingot"
+            "items": [
+              "minecraft:copper_ingot"
+            ]
           }
         ]
       }
@@ -32,7 +34,9 @@
       "conditions": {
         "items": [
           {
-            "item": "addsynth_energy:energy_wire"
+            "items": [
+              "addsynth_energy:energy_wire"
+            ]
           }
         ]
       }

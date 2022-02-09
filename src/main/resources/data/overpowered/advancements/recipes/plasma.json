@@ -6,7 +6,9 @@
       "conditions": {
         "items": [
           {
-            "item": "addsynth_energy:circuit_tier_8"
+            "items": [
+              "addsynth_energy:circuit_tier_8"
+            ]
           }
         ]
       }
@@ -22,7 +24,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:plasma"
+            "items": [
+              "overpowered:plasma"
+            ]
           }
         ]
       }

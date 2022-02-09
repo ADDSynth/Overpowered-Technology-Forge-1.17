@@ -17,7 +17,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:null_block"
+            "items": [
+              "overpowered:null_block"
+            ]
           }
         ]
       }

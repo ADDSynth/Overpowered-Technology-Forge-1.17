@@ -6,7 +6,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:beam_emitter"
+            "items": [
+              "overpowered:beam_emitter"
+            ]
           }
         ]
       }
@@ -32,7 +34,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:energy_grid"
+            "items": [
+              "overpowered:energy_grid"
+            ]
           }
         ]
       }

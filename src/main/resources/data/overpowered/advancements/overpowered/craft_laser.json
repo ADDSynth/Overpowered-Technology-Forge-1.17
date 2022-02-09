@@ -17,7 +17,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:laser_housing"
+            "items": [
+              "overpowered:laser_housing"
+            ]
           }
         ]
       }

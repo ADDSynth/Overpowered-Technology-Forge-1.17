@@ -17,7 +17,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:void_sword"
+            "items": [
+              "overpowered:void_sword"
+            ]
           }
         ]
       }
@@ -27,7 +29,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:void_shovel"
+            "items": [
+              "overpowered:void_shovel"
+            ]
           }
         ]
       }
@@ -37,7 +41,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:void_axe"
+            "items": [
+              "overpowered:void_axe"
+            ]
           }
         ]
       }
@@ -47,7 +53,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:void_pickaxe"
+            "items": [
+              "overpowered:void_pickaxe"
+            ]
           }
         ]
       }
@@ -57,7 +65,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:void_hoe"
+            "items": [
+              "overpowered:void_hoe"
+            ]
           }
         ]
       }

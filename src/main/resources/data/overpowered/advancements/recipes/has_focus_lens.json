@@ -6,7 +6,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:focus_lens"
+            "items": [
+              "overpowered:focus_lens"
+            ]
           }
         ]
       }

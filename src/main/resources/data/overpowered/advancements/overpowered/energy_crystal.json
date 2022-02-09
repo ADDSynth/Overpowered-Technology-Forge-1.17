@@ -18,7 +18,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:energy_crystal"
+            "items": [
+              "overpowered:energy_crystal"
+            ]
           }
         ]
       }

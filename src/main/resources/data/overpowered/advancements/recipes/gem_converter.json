@@ -16,7 +16,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:energy_crystal_shards"
+            "items": [
+              "overpowered:energy_crystal_shards"
+            ]
           }
         ]
       }
@@ -26,7 +28,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:scanning_laser"
+            "items": [
+              "overpowered:scanning_laser"
+            ]
           }
         ]
       }
@@ -36,7 +40,9 @@
       "conditions": {
         "items": [
           {
-            "item": "addsynth_energy:circuit_tier_4"
+            "items": [
+              "addsynth_energy:circuit_tier_4"
+            ]
           }
         ]
       }
@@ -52,7 +58,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:gem_converter"
+            "items": [
+              "overpowered:gem_converter"
+            ]
           }
         ]
       }

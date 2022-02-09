@@ -6,7 +6,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:red_lens"
+            "items": [
+              "overpowered:red_lens"
+            ]
           }
         ]
       }
@@ -22,7 +24,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:red_laser"
+            "items": [
+              "overpowered:red_laser"
+            ]
           }
         ]
       }

@@ -6,7 +6,9 @@
       "conditions": {
         "items": [
           {
-            "item": "addsynth_energy:circuit_tier_6"
+            "items": [
+              "addsynth_energy:circuit_tier_6"
+            ]
           }
         ]
       }
@@ -16,7 +18,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:data_cable"
+            "items": [
+              "overpowered:data_cable"
+            ]
           }
         ]
       }
@@ -46,7 +50,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:portal_frame"
+            "items": [
+              "overpowered:portal_frame"
+            ]
           }
         ]
       }
@@ -62,7 +68,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:portal_control_panel"
+            "items": [
+              "overpowered:portal_control_panel"
+            ]
           }
         ]
       }

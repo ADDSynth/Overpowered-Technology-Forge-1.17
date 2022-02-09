@@ -6,7 +6,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:celestial_gem"
+            "items": [
+              "overpowered:celestial_gem"
+            ]
           }
         ]
       }
@@ -22,7 +24,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:energy_crystal"
+            "items": [
+              "overpowered:energy_crystal"
+            ]
           }
         ]
       }

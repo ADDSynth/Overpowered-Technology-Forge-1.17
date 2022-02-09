@@ -17,7 +17,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:black_hole"
+            "items": [
+              "overpowered:black_hole"
+            ]
           }
         ]
       }

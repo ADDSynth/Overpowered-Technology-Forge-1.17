@@ -42,7 +42,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:iron_frame_block"
+            "items": [
+              "overpowered:iron_frame_block"
+            ]
           }
         ]
       }

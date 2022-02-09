@@ -16,7 +16,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:void_crystal"
+            "items": [
+              "overpowered:void_crystal"
+            ]
           }
         ]
       }
@@ -26,7 +28,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:plasma"
+            "items": [
+              "overpowered:plasma"
+            ]
           }
         ]
       }
@@ -48,7 +52,9 @@
       "conditions": {
         "items": [
           {
-            "item": "overpowered:dimensional_anchor"
+            "items": [
+              "overpowered:dimensional_anchor"
+            ]
           }
         ]
       }
