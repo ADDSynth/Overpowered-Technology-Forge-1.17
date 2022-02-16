@@ -95,7 +95,7 @@ public final class GuiLaserHousing extends GuiEnergyBase<TileLaserHousing, Conta
     addRenderableWidget(new OnOffSwitch<>(this.leftPos + 6, this.topPos + 17, tile)); // OPTIMIZE: On/Off switch position should be standardized.
     addRenderableWidget(new AutoShutoffCheckbox<TileLaserHousing>(this.leftPos + check_box_x, this.topPos + check_box_y, tile));
     
-    this.text_box = new LaserDistanceTextField(this.font,this.leftPos + text_box_x,this.topPos + text_box_y,text_box_width,text_box_height, tile);
+    this.text_box = new LaserDistanceTextField(this.font, this.leftPos + text_box_x, this.topPos + text_box_y, text_box_width, text_box_height, tile);
     addWidget(text_box);
   }
 
@@ -112,7 +112,6 @@ public final class GuiLaserHousing extends GuiEnergyBase<TileLaserHousing, Conta
 
   @Override
   public final void containerTick(){
-    super.tick();
     if(text_box != null){
       text_box.tick();
     }
@@ -121,7 +120,7 @@ public final class GuiLaserHousing extends GuiEnergyBase<TileLaserHousing, Conta
   @Override
   public final void render(PoseStack matrix, final int mouseX, final int mouseY, final float partialTicks){
     super.render(matrix, mouseX, mouseY, partialTicks);
-    if(text_box != null){
+    if(text_box != null){ // See how Minecraft draws the TextBox on the Anvil screen.
       text_box.render(matrix, mouseX, mouseY, partialTicks); // FIX: Text Box is not properly added to the list of widgets, that's why I have to render it manually.
     }
   }
