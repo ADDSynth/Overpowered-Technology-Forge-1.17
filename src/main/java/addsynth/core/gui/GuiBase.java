@@ -33,6 +33,7 @@ public abstract class GuiBase extends Screen {
     
     drawGuiForegroundLayer(matrix, mouse_x, mouse_y);
     posestack.popPose();
+    RenderSystem.applyModelViewMatrix();
     RenderSystem.enableDepthTest();
   }
 
