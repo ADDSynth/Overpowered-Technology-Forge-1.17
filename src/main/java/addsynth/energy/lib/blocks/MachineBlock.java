@@ -25,7 +25,7 @@ public abstract class MachineBlock extends TileEntityBlock {
 
   /** Standard constructor. SoundType = Metal, and standard block hardness. */
   public MachineBlock(final MaterialColor color){
-    super(Block.Properties.of(Material.METAL, color).sound(SoundType.METAL).strength(3.5f, 6.0f));
+    super(Block.Properties.of(Material.METAL, color).sound(SoundType.METAL).strength(1.5f, 6.0f));
   }
 
   @Override
