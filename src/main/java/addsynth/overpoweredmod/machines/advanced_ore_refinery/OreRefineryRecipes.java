@@ -1,12 +1,14 @@
 package addsynth.overpoweredmod.machines.advanced_ore_refinery;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import addsynth.core.items.ItemUtil;
 import addsynth.core.recipe.RecipeUtil;
 import addsynth.material.MaterialsUtil;
 import addsynth.overpoweredmod.OverpoweredTechnology;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 
 public final class OreRefineryRecipes {
 
@@ -28,7 +30,12 @@ public final class OreRefineryRecipes {
       recipes.clear();
       final ArrayList<Item> list = new ArrayList<Item>(100);
       ItemStack result_check;
-      for(final Item item : MaterialsUtil.getOres()){
+      Collection<Item> ores = MaterialsUtil.getOres();
+      // Manually Add Raw Iron, Raw Copper, and Raw Gold for the Minecraft 1.17+ versions
+      ores.add(Items.RAW_IRON);
+      ores.add(Items.RAW_COPPER);
+      ores.add(Items.RAW_GOLD);
+      for(final Item item : ores){
         if(RecipeUtil.isFurnaceIngredient(item)){
           result_check = RecipeUtil.getFurnaceRecipeResult(item);
           if(result_check.isEmpty() == false){
