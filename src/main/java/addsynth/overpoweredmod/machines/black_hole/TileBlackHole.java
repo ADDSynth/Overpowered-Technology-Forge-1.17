@@ -161,7 +161,7 @@ public final class TileBlackHole extends BlockEntity implements ITickingTileEnti
 
   @SuppressWarnings("null")
   private final void delete_entities(){
-    for(final Entity entity : level.getEntitiesOfClass(Entity.class, entity_area, null)){
+    for(final Entity entity : level.getEntitiesOfClass(Entity.class, entity_area, (Entity) -> {return true;})){
       if(MathUtility.get_distance(center_x, center_y, center_z, entity.getX(), entity.getY(), entity.getZ()) <= radius){
         if(entity instanceof Player){ // server players
           final Player player = (Player)entity;
