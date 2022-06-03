@@ -1,7 +1,7 @@
 package addsynth.core.container.slots;
 
 import javax.annotation.Nonnull;
-import addsynth.core.inventory.IInputInventory;
+import addsynth.core.game.inventory.IInputInventory;
 import net.minecraft.world.inventory.FurnaceFuelSlot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;

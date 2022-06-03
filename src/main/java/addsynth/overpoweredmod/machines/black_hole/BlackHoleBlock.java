@@ -1,7 +1,7 @@
 package addsynth.overpoweredmod.machines.black_hole;
 
 import javax.annotation.Nullable;
-import addsynth.core.blocks.TileEntityBlock;
+import addsynth.core.game.blocks.TileEntityBlock;
 import addsynth.overpoweredmod.OverpoweredTechnology;
 import addsynth.overpoweredmod.registers.Tiles;
 import net.minecraft.core.BlockPos;

@@ -2,7 +2,7 @@ package addsynth.core.gameplay.music_box;
 
 import javax.annotation.Nullable;
 import addsynth.core.ADDSynthCore;
-import addsynth.core.blocks.TileEntityBlock;
+import addsynth.core.game.blocks.TileEntityBlock;
 import addsynth.core.gameplay.Core;
 import addsynth.core.gameplay.client.GuiProvider;
 import addsynth.core.gameplay.registers.Tiles;

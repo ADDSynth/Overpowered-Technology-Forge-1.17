@@ -1,7 +1,7 @@
 package addsynth.overpoweredmod.machines.laser.beam;
 
 import javax.annotation.Nullable;
-import addsynth.core.blocks.TileEntityBlock;
+import addsynth.core.game.blocks.TileEntityBlock;
 import addsynth.overpoweredmod.OverpoweredTechnology;
 import addsynth.overpoweredmod.assets.DamageSources;
 import addsynth.overpoweredmod.config.Config;

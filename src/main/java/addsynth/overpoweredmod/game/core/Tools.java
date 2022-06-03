@@ -1,8 +1,8 @@
 package addsynth.overpoweredmod.game.core;
 
-import addsynth.core.items.ArmorMaterial;
-import addsynth.core.items.EquipmentType;
-import addsynth.core.items.Toolset;
+import addsynth.core.game.items.ArmorMaterial;
+import addsynth.core.game.items.EquipmentType;
+import addsynth.core.game.items.Toolset;
 import addsynth.overpoweredmod.Debug;
 import addsynth.overpoweredmod.items.tools.*;
 import addsynth.overpoweredmod.items.UnidentifiedItem;

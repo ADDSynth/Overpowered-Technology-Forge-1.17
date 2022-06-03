@@ -1,7 +1,7 @@
 package addsynth.energy.lib.blocks;
 
-import addsynth.core.blocks.TileEntityBlock;
-import addsynth.core.inventory.IInventoryUser;
+import addsynth.core.game.blocks.TileEntityBlock;
+import addsynth.core.game.inventory.IInventoryUser;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;

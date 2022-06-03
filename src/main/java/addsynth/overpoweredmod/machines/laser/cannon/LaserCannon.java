@@ -2,7 +2,7 @@ package addsynth.overpoweredmod.machines.laser.cannon;
 
 import java.util.List;
 import javax.annotation.Nullable;
-import addsynth.core.blocks.TileEntityBlock;
+import addsynth.core.game.blocks.TileEntityBlock;
 import addsynth.core.util.block.BlockShape;
 import addsynth.core.util.constants.DirectionConstant;
 import addsynth.core.util.world.WorldUtil;

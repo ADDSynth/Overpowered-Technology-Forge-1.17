@@ -1,6 +1,6 @@
 package addsynth.overpoweredmod.machines.portal.rift;
 
-import addsynth.core.tiles.TileBase;
+import addsynth.core.game.tiles.TileBase;
 import addsynth.core.util.game.tileentity.ITickingTileEntity;
 import addsynth.overpoweredmod.registers.Tiles;
 import net.minecraft.core.BlockPos;

@@ -1,7 +1,7 @@
 package addsynth.energy.lib.blocks;
 
 import javax.annotation.Nullable;
-import addsynth.core.blocks.TileEntityBlock;
+import addsynth.core.game.blocks.TileEntityBlock;
 import addsynth.core.util.block.BlockShape;
 import addsynth.core.util.constants.DirectionConstant;
 import net.minecraft.core.BlockPos;

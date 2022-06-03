@@ -1,6 +1,6 @@
 package addsynth.core.container;
 
-import addsynth.core.inventory.IStorageInventory;
+import addsynth.core.game.inventory.IStorageInventory;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.MenuType;

@@ -1,7 +1,7 @@
 package addsynth.overpoweredmod.items;
 
-import addsynth.core.items.ArmorMaterial;
-import addsynth.core.items.EquipmentType;
+import addsynth.core.game.items.ArmorMaterial;
+import addsynth.core.game.items.EquipmentType;
 import addsynth.overpoweredmod.assets.CreativeTabs;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
