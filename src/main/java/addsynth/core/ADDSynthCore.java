@@ -27,6 +27,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
+import net.minecraftforge.fmlserverevents.FMLServerStartedEvent;
 import net.minecraftforge.fmlserverevents.FMLServerStartingEvent;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
@@ -62,6 +63,7 @@ public final class ADDSynthCore {
     bus.addListener(ADDSynthCore::main_setup);
     bus.addListener(ADDSynthCore::client_setup);
     MinecraftForge.EVENT_BUS.addListener(ADDSynthCore::onServerStarting);
+    MinecraftForge.EVENT_BUS.addListener(ADDSynthCore::onServerStarted);
     MinecraftForge.EVENT_BUS.addListener(ADDSynthCore::registerCommands);
 
     init_config();
@@ -117,6 +119,12 @@ public final class ADDSynthCore {
     // TODO: I can customize recipes here?
     // TODO: change the recipes of the Trophies to use ingots instead of metal plates, if no plates exist.
     // And if I can do that, go ahead and reimplement the ability to disable the Trophy base item.
+  }
+
+  public static void onServerStarted(final FMLServerStartedEvent event){
+    if(Compatability.PROJECT_E.loaded){
+      // EMCValue.check_emc_values();
+    }
   }
 
   public static final void registerCommands(final RegisterCommandsEvent event){
