@@ -96,6 +96,10 @@ public abstract class GuiEnergyBase<T extends BlockEntity & IEnergyUser, C exten
     GuiUtil.draw_text_left(matrix, status_text+": "+status, 6, y);
   }
 
+  protected final void draw_status(PoseStack matrix, final String status, final int x, final int y){
+    GuiUtil.draw_text_left(matrix, status_text+": "+status, x, y);
+  }
+
   protected final void draw_status_below_switch(PoseStack matrix, final String status){
     GuiUtil.draw_text_left(matrix, status_text+": "+status, 6, 37);
   }
