@@ -18,8 +18,10 @@ import net.minecraft.world.level.block.state.BlockState;
 
 public final class TileElectricFurnace extends TileAlwaysOnMachine implements MenuProvider {
 
+  private static final MachineData machine_data = new MachineData(MachineType.ALWAYS_ON, 200, 5, 0, 0);
+
   public TileElectricFurnace(BlockPos position, BlockState blockstate){
-    super(Tiles.ELECTRIC_FURNACE, position, blockstate, 1, get_filter(), 1, new MachineData(MachineType.ALWAYS_ON, 200, 5, 0, 0));
+    super(Tiles.ELECTRIC_FURNACE, position, blockstate, 1, get_filter(), 1, machine_data);
     inventory.setRecipeProvider(RecipeUtil::getFurnaceResult);
   }
 

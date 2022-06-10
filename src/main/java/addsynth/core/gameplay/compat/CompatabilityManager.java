@@ -13,5 +13,4 @@ public final class CompatabilityManager {
   public static final void run_data_compatability(){ // DELETE
   }
 
-  // PRIORITY All versions. Use the Set&lt;Block&gt; field in the Scythe Tool class, that is exactly how vanilla defines blocks.
 }

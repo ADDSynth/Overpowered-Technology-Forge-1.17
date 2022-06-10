@@ -72,16 +72,16 @@ public final class OnOffSwitch<T extends BlockEntity & ISwitchableMachine> exten
     if(tile != null){
       if(tile.get_switch_state()){
         setMessage(new TextComponent(on_text));
-        this.drawCenteredString(matrix, fontrenderer, on_text, x + 20, y + 4, text_color);
+        drawCenteredString(matrix, fontrenderer, on_text, x + 20, y + 4, text_color);
         // TODO: detect state changes and call setMessage() to change what the narrator says when players mouse over this button.
       }
       else{
         setMessage(new TextComponent(off_text));
-        this.drawCenteredString(matrix, fontrenderer, off_text, x + 14, y + 4, text_color);
+        drawCenteredString(matrix, fontrenderer, off_text, x + 14, y + 4, text_color);
       }
     }
     else{
-      this.drawCenteredString(matrix, fontrenderer, "[null]", x + (this.width / 2), y + 4, text_color);
+      drawCenteredString(matrix, fontrenderer, "[null]", x + (this.width / 2), y + 4, text_color);
     }
   }
 

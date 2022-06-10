@@ -13,12 +13,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.level.block.state.BlockState;
 
-/**
- *  The Advanced Ore Refinery sort of acts like a Furnace, in that it essentially smelts things.
- *  But it doesn't smelt everything like a Furnace does, it accepts all items but it will only
- *  work on Ores. After an ore is done being worked on it will return its smelted output in the
- *  multiplied factor amount.
- */
+/** Doubles the output of any ores. Works with ores from other mods as well. Only works with ores. */
 public final class TileAdvancedOreRefinery extends TileAlwaysOnMachine implements MenuProvider {
 
   public TileAdvancedOreRefinery(BlockPos position, BlockState blockstate){

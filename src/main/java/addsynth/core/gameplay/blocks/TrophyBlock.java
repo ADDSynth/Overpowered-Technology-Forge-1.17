@@ -38,7 +38,8 @@ public final class TrophyBlock extends Block implements SimpleWaterloggedBlock {
   }
 
   @Override
-  @Nullable // TODO: Add suppressWarning("resource")
+  @Nullable
+  @SuppressWarnings("resource")
   public BlockState getStateForPlacement(final BlockPlaceContext context){
     final Level world = context.getLevel();
     final BlockPos position  = context.getClickedPos();
