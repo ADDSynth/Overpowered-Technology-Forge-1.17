@@ -1,16 +1,16 @@
 package addsynth.overpoweredmod.machines.portal.control_panel;
 
-import addsynth.core.gui.util.GuiUtil;
 import addsynth.core.gui.widgets.buttons.AdjustableButton;
+import addsynth.core.gui.widgets.item.IngredientWidgetGroup;
 import addsynth.core.util.StringUtil;
 import addsynth.energy.lib.gui.GuiEnergyBase;
 import addsynth.energy.lib.gui.widgets.AutoShutoffCheckbox;
 import addsynth.energy.lib.gui.widgets.EnergyProgressBar;
 import addsynth.energy.lib.gui.widgets.OnOffSwitch;
 import addsynth.energy.lib.gui.widgets.WorkProgressBar;
+import addsynth.material.MaterialsUtil;
 import addsynth.overpoweredmod.OverpoweredTechnology;
 import addsynth.overpoweredmod.game.NetworkHandler;
-import addsynth.overpoweredmod.game.core.Gems;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.network.chat.Component;
@@ -23,17 +23,7 @@ public final class GuiPortalControlPanel extends GuiEnergyBase<TilePortalControl
   private static final ResourceLocation portal_control_panel_gui_texture =
     new ResourceLocation(OverpoweredTechnology.MOD_ID,"textures/gui/portal_control_panel.png");
 
-  // It's efficient to create each ItemStack only ONCE when the gui is constructed then pass it as a reference when drawing the ItemStack.
-  private static final ItemStack[] gem_block = new ItemStack[] {
-    new ItemStack(Gems.RUBY.block_item,1),
-    new ItemStack(Gems.TOPAZ.block_item,1),
-    new ItemStack(Gems.CITRINE.block_item,1),
-    new ItemStack(Gems.EMERALD.block_item,1),
-    new ItemStack(Gems.DIAMOND.block_item,1),
-    new ItemStack(Gems.SAPPHIRE.block_item,1),
-    new ItemStack(Gems.AMETHYST.block_item,1),
-    new ItemStack(Gems.QUARTZ.block_item,1)
-  };
+  private static final IngredientWidgetGroup gem_blocks = new IngredientWidgetGroup(8);
 
   private static final int checkbox_x = 80;
   private static final int checkbox_y = 19;
@@ -88,6 +78,20 @@ public final class GuiPortalControlPanel extends GuiEnergyBase<TilePortalControl
     addRenderableWidget(new OnOffSwitch<>(this.leftPos + 6, this.topPos + 19, tile));
     addRenderableWidget(new AutoShutoffCheckbox<TilePortalControlPanel>(this.leftPos + checkbox_x, this.topPos + checkbox_y, tile));
     addRenderableWidget(new GeneratePortalButton(this.leftPos + button_x, this.topPos + button_y, tile));
+    
+    // Set Portal Control Panel Gui Displayed ItemStacks
+    final ItemStack[][] portal_control_panel_displayed_itemstacks = {
+      MaterialsUtil.getRubyBlocksIngredient().getItems(),     MaterialsUtil.getTopazBlocksIngredient().getItems(),
+      MaterialsUtil.getCitrineBlocksIngredient().getItems(),  MaterialsUtil.getEmeraldBlocksIngredient().getItems(),
+      MaterialsUtil.getDiamondBlocksIngredient().getItems(),  MaterialsUtil.getSapphireBlocksIngredient().getItems(),
+      MaterialsUtil.getAmethystBlocksIngredient().getItems(), MaterialsUtil.getQuartzBlocksIngredient().getItems()
+    };
+    gem_blocks.setRecipe(portal_control_panel_displayed_itemstacks);
+  }
+
+  @Override
+  protected void containerTick(){
+    gem_blocks.tick();
   }
 
   @Override
@@ -124,8 +128,8 @@ public final class GuiPortalControlPanel extends GuiEnergyBase<TilePortalControl
       for(i = 0; i < 4; i++){
         index = (j*4) + i;
         x = this.leftPos + image_x + (i * space_x);
-        y = this.topPos + image_y + (j * space_y);
-        GuiUtil.drawItemStack(gem_block[index], x, y);
+        y = this.topPos  + image_y + (j * space_y);
+        gem_blocks.drawIngredient(index, x, y);
       }
     }
     RenderSystem.setShaderTexture(0, gui_icons);
@@ -140,6 +144,24 @@ public final class GuiPortalControlPanel extends GuiEnergyBase<TilePortalControl
         else{
           blit(matrix, x, y, 80, 0, 16, 16);
         }
+      }
+    }
+  }
+
+  @Override
+  protected void renderTooltip(PoseStack matrix, int mouse_x, int mouse_y){
+    super.renderTooltip(matrix, mouse_x, mouse_y);
+    int i;
+    int j;
+    int index;
+    int x;
+    int y;
+    for(j = 0; j < 2; j++){
+      for(i = 0; i < 4; i++){
+        index = (j*4) + i;
+        x = this.leftPos + image_x + (i * space_x);
+        y = this.topPos  + image_y + (j * space_y);
+        gem_blocks.drawTooltip(matrix, this, index, x, y, mouse_x, mouse_y);
       }
     }
   }

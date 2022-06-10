@@ -1,5 +1,6 @@
-package addsynth.core.gui;
+package addsynth.core.gui.widgets.item;
 
+import javax.annotation.Nonnull;
 import addsynth.core.gui.util.GuiUtil;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.gui.screens.Screen;
@@ -9,7 +10,9 @@ import net.minecraft.world.item.crafting.Ingredient;
 public final class IngredientWidget {
 
   private int index;
-  private final ItemStack[] stacks;
+  private ItemStack[] stacks;
+  
+  public IngredientWidget(){}
   
   public IngredientWidget(final ItemStack[] ingredients){
     this.stacks = ingredients;
@@ -20,24 +23,36 @@ public final class IngredientWidget {
   }
 
   public final void update(){
-    index += 1;
-    if(index >= stacks.length){
-      index = 0;
+    if(stacks != null){
+      index += 1;
+      if(index >= stacks.length){
+        index = 0;
+      }
     }
   }
 
-  public final void draw(int x, int y){
-    GuiUtil.drawItemStack(stacks[index], x, y);
+  public final void setIngredient(@Nonnull ItemStack[] ingredient){
+    stacks = ingredient;
+    index = 0;
   }
 
-  public final ItemStack getItemStack(){
-    return stacks[index];
+  public final void setIngredient(@Nonnull Ingredient ingredient){
+    stacks = ingredient.getItems();
+    index = 0;
+  }
+
+  public final void draw(int x, int y){
+    if(stacks != null){
+      GuiUtil.drawItemStack(stacks[index], x, y);
+    }
   }
 
   /** This must be called in the ContainerScreen.renderHoveredToolTip() method.<br>
    *  You must add <code>guiLeft</code> and <code>guiTop</code> to the x and y coordinates. */
   public final void drawTooltip(PoseStack matrix, final Screen screen, final int x, final int y, final int mouse_x, final int mouse_y){
-    GuiUtil.drawItemTooltip(matrix, screen, stacks[index], x, y, mouse_x, mouse_y);
+    if(stacks != null){
+      GuiUtil.drawItemTooltip(matrix, screen, stacks[index], x, y, mouse_x, mouse_y);
+    }
   }
 
 }
