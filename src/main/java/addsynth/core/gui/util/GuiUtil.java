@@ -38,14 +38,19 @@ public final class GuiUtil {
   public final int guiHeight;
 
   /** Left edge of gui. For use in drawing graphics, NOT text! */
+  @Deprecated
   public final int guiLeft;
   /** Right edge of gui. For use in drawing graphics, NOT text! */
+  @Deprecated
   public final int guiRight;
   /** Center of gui. For use in drawing graphics, NOT text! */
+  @Deprecated
   public final int guiCenter;
   /** Top edge of gui. For use in drawing graphics, NOT text! */
+  @Deprecated
   public final int guiTop;
   /** Bottom edge of gui. For use in drawing graphics, NOT text! */
+  @Deprecated
   public final int guiBottom;
 
 
@@ -55,6 +60,7 @@ public final class GuiUtil {
   public final int right_edge;
 
   @SuppressWarnings("resource")
+  @Deprecated
   public GuiUtil(final ResourceLocation gui_texture, final int gui_width, final int gui_height){
     GUI_TEXTURE = gui_texture;
     guiWidth    = gui_width;
