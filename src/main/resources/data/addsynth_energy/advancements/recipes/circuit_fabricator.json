@@ -43,18 +43,6 @@
         ]
       }
     },
-    "crafting_table": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "minecraft:crafting_table"
-            ]
-          }
-        ]
-      }
-    },
     "has_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
@@ -80,7 +68,6 @@
       "steel_plate",
       "green_circuit",
       "silicon",
-      "crafting_table",
       "has_recipe",
       "has_circuit_fabricator"
     ]
