@@ -1,7 +1,9 @@
 package addsynth.core.gui.widgets.buttons;
 
 import javax.annotation.Nonnull;
+import addsynth.core.ADDSynthCore;
 import addsynth.core.gui.widgets.WidgetUtil;
+import addsynth.core.util.StringUtil;
 import com.mojang.blaze3d.platform.GlStateManager;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
@@ -26,7 +28,10 @@ public abstract class AdjustableButton extends AbstractButton {
    * @param height
    */
   public AdjustableButton(int x, int y, int width, int height){
-    super(x, y, width, height, new TextComponent(""));
+    super(x, y, width, Math.min(height, max_height), new TextComponent(""));
+    if(height > max_height){
+      ADDSynthCore.log.warn(StringUtil.build("Cannot set height of ", AdjustableButton.class.getSimpleName(), " higher than ", Integer.toString(max_height), "."));
+    }
   }
 
   /**
@@ -38,7 +43,10 @@ public abstract class AdjustableButton extends AbstractButton {
    * @param buttonText
    */
   public AdjustableButton(int x, int y, int width, int height, @Nonnull String buttonText){
-    super(x, y, width, height, new TextComponent(buttonText));
+    super(x, y, width, Math.min(height, max_height), new TextComponent(buttonText));
+    if(height > max_height){
+      ADDSynthCore.log.warn(StringUtil.build("Cannot set height of ", AdjustableButton.class.getSimpleName(), " higher than ", Integer.toString(max_height), "."));
+    }
   }
 
     /**
