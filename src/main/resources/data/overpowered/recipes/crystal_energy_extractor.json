@@ -1,8 +1,8 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "aea",
-    "sgs",
+    "asa",
+    "wgw",
     "aca"
   ],
   "key": {
@@ -10,13 +10,13 @@
       "tag": "forge:plates/aluminum"
     },
     "s": {
-      "item": "overpowered:scanning_laser"
+      "item": "overpowered:matter_energy_converter"
     },
-    "e": {
-      "tag": "forge:ender_pearls"
+    "w": {
+      "item": "addsynth_energy:energy_wire"
     },
     "c": {
-      "item": "addsynth_energy:circuit_tier_3"
+      "item": "addsynth_energy:circuit_tier_5"
     },
     "g": {
       "tag": "forge:glass_panes/colorless"

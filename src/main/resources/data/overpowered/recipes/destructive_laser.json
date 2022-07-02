@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "overpowered:beam_emitter"},
+    {"item": "overpowered:beam_emitter"},
+    {"item": "overpowered:beam_emitter"}
+  ],
+  "result": {
+    "item": "overpowered:destructive_laser"
+  }
+}

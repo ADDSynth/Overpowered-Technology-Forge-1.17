@@ -25,8 +25,16 @@
 "item.overpowered.nullified_power_core": "Nnúcleo de poder nulo",
 "item.overpowered.energy_grid": "Grade de energia",
 "item.overpowered.vacuum_container": "Recipiente de Vácuo",
+
 "item.overpowered.beam_emitter": "Emissor de feixe",
+"item.overpowered.destructive_laser": "High-Intensity Laser",
+"item.overpowered.heavy_light_emitter": "Heavy Light Emitter",
+"item.overpowered.stabalizer": "Stabalizer",
 "item.overpowered.scanning_laser": "Scanning Laser",
+"item.overpowered.matter_energy_converter": "Matter/Energy Converter",
+"item.overpowered.high_frequency_beam": "High-Frequency Beam",
+"gui.overpowered.tooltip.wavelength": "Wavelength",
+
 "item.overpowered.plasma": "Plasma",
 "item.overpowered.fusion_core": "Núcleo de Fusão",
 "item.overpowered.dimensional_anchor": "Âncora dimensional",

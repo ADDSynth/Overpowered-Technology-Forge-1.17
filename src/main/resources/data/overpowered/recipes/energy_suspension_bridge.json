@@ -10,7 +10,7 @@
       "tag": "forge:plates/steel"
     },
     "l": {
-      "item": "overpowered:beam_emitter"
+      "item": "overpowered:heavy_light_emitter"
     },
     "c": {
       "item": "addsynth_energy:circuit_tier_5"

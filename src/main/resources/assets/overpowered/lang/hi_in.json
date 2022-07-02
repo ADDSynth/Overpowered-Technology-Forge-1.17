@@ -25,8 +25,16 @@
 "item.overpowered.nullified_power_core": "नलिफाइड पावर कोर",
 "item.overpowered.energy_grid": "ऊर्जा ग्रिड",
 "item.overpowered.vacuum_container": "वैक्यूम कंटेनर",
+
 "item.overpowered.beam_emitter": "बीम एमिटर",
+"item.overpowered.destructive_laser": "High-Intensity Laser",
+"item.overpowered.heavy_light_emitter": "Heavy Light Emitter",
+"item.overpowered.stabalizer": "Stabalizer",
 "item.overpowered.scanning_laser": "Scanning Laser",
+"item.overpowered.matter_energy_converter": "Matter/Energy Converter",
+"item.overpowered.high_frequency_beam": "High-Frequency Beam",
+"gui.overpowered.tooltip.wavelength": "Wavelength",
+
 "item.overpowered.plasma": "Plasma",
 "item.overpowered.fusion_core": "फ्यूजन कोर",
 "item.overpowered.dimensional_anchor": "आयामी एंकर",

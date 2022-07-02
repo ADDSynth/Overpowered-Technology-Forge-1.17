@@ -25,8 +25,16 @@
 "item.overpowered.nullified_power_core": "miez de putere negativ",
 "item.overpowered.energy_grid": "Grilă energetică",
 "item.overpowered.vacuum_container": "rezervor de vid",
+
 "item.overpowered.beam_emitter": "Emițător de fascicul",
+"item.overpowered.destructive_laser": "High-Intensity Laser",
+"item.overpowered.heavy_light_emitter": "Heavy Light Emitter",
+"item.overpowered.stabalizer": "Stabalizer",
 "item.overpowered.scanning_laser": "Scanning Laser",
+"item.overpowered.matter_energy_converter": "Matter/Energy Converter",
+"item.overpowered.high_frequency_beam": "High-Frequency Beam",
+"gui.overpowered.tooltip.wavelength": "Wavelength",
+
 "item.overpowered.plasma": "Plasma",
 "item.overpowered.fusion_core": "miez de fuziune",
 "item.overpowered.dimensional_anchor": "Ancora dimensională",

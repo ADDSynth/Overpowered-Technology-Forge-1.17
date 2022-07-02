@@ -25,8 +25,16 @@
 "item.overpowered.nullified_power_core": "πυρήνα αρνητικής ισχύος",
 "item.overpowered.energy_grid": "Ενεργειακό δίκτυο",
 "item.overpowered.vacuum_container": "Δοχείο κενού",
+
 "item.overpowered.beam_emitter": "εκπομπό δέσμης",
+"item.overpowered.destructive_laser": "High-Intensity Laser",
+"item.overpowered.heavy_light_emitter": "Heavy Light Emitter",
+"item.overpowered.stabalizer": "Stabalizer",
 "item.overpowered.scanning_laser": "Scanning Laser",
+"item.overpowered.matter_energy_converter": "Matter/Energy Converter",
+"item.overpowered.high_frequency_beam": "High-Frequency Beam",
+"gui.overpowered.tooltip.wavelength": "Wavelength",
+
 "item.overpowered.plasma": "Plasma",
 "item.overpowered.fusion_core": "Πυρήνα σύντηξης",
 "item.overpowered.dimensional_anchor": "Διαστατική άγκυρα",

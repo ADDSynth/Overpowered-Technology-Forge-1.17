@@ -1,4 +1,6 @@
 v1.5 - TBD
+NEW:
+  Added 5 new beam emitter type items.
 
 
 

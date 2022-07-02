@@ -25,8 +25,16 @@
 "item.overpowered.nullified_power_core": "எதிர்மறை சக்தி மையம்",
 "item.overpowered.energy_grid": "எரிசக்தி கட்டம்",
 "item.overpowered.vacuum_container": "வெற்றிடக் கொள்கலன்",
+
 "item.overpowered.beam_emitter": "பீம் எமிட்டர்",
+"item.overpowered.destructive_laser": "High-Intensity Laser",
+"item.overpowered.heavy_light_emitter": "Heavy Light Emitter",
+"item.overpowered.stabalizer": "Stabalizer",
 "item.overpowered.scanning_laser": "Scanning Laser",
+"item.overpowered.matter_energy_converter": "Matter/Energy Converter",
+"item.overpowered.high_frequency_beam": "High-Frequency Beam",
+"gui.overpowered.tooltip.wavelength": "Wavelength",
+
 "item.overpowered.plasma": "Plasma",
 "item.overpowered.fusion_core": "ஃப்யூஷன் கோர்",
 "item.overpowered.dimensional_anchor": "பரிமாண ஆங்கர்",

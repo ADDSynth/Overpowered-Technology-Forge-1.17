@@ -25,8 +25,16 @@
 "item.overpowered.nullified_power_core": "음의 전력 코어",
 "item.overpowered.energy_grid": "에너지 그리드",
 "item.overpowered.vacuum_container": "진공 용기",
+
 "item.overpowered.beam_emitter": "빔 이미 터",
+"item.overpowered.destructive_laser": "High-Intensity Laser",
+"item.overpowered.heavy_light_emitter": "Heavy Light Emitter",
+"item.overpowered.stabalizer": "Stabalizer",
 "item.overpowered.scanning_laser": "Scanning Laser",
+"item.overpowered.matter_energy_converter": "Matter/Energy Converter",
+"item.overpowered.high_frequency_beam": "High-Frequency Beam",
+"gui.overpowered.tooltip.wavelength": "Wavelength",
+
 "item.overpowered.plasma": "Plasma",
 "item.overpowered.fusion_core": "퓨전 코어",
 "item.overpowered.dimensional_anchor": "차원 앵커",

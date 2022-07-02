@@ -25,8 +25,16 @@
 "item.overpowered.nullified_power_core": "lõi điện âm",
 "item.overpowered.energy_grid": "Lưới năng lượng",
 "item.overpowered.vacuum_container": "thùng chứa chân không",
+
 "item.overpowered.beam_emitter": "Phát xạ chùm",
+"item.overpowered.destructive_laser": "High-Intensity Laser",
+"item.overpowered.heavy_light_emitter": "Heavy Light Emitter",
+"item.overpowered.stabalizer": "Stabalizer",
 "item.overpowered.scanning_laser": "Scanning Laser",
+"item.overpowered.matter_energy_converter": "Matter/Energy Converter",
+"item.overpowered.high_frequency_beam": "High-Frequency Beam",
+"gui.overpowered.tooltip.wavelength": "Wavelength",
+
 "item.overpowered.plasma": "Plasma",
 "item.overpowered.fusion_core": "lõi nhiệt hạch",
 "item.overpowered.dimensional_anchor": "Neo chiều",
