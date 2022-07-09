@@ -49,6 +49,7 @@
 "block.overpowered.portal": "Portal to the Unknown Dimension",
 "block.overpowered.portal_frame": "포털 프레임",
 "block.overpowered.portal_control_panel": "포털 제어판",
+"block.overpowered.plasma_generator": "Plasma Generator",
 "block.overpowered.crystal_matter_generator": "수정 물질 생성기",
 "block.overpowered.advanced_ore_refinery": "광석 정제소",
 

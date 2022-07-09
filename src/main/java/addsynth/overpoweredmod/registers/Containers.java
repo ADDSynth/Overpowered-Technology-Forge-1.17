@@ -10,6 +10,7 @@ import addsynth.overpoweredmod.machines.identifier.ContainerIdentifier;
 import addsynth.overpoweredmod.machines.inverter.ContainerInverter;
 import addsynth.overpoweredmod.machines.laser.machine.ContainerLaserHousing;
 import addsynth.overpoweredmod.machines.magic_infuser.ContainerMagicInfuser;
+import addsynth.overpoweredmod.machines.plasma_generator.ContainerPlasmaGenerator;
 import addsynth.overpoweredmod.machines.portal.control_panel.ContainerPortalControlPanel;
 import addsynth.overpoweredmod.machines.portal.frame.ContainerPortalFrame;
 import addsynth.overpoweredmod.machines.suspension_bridge.ContainerSuspensionBridge;
@@ -57,6 +58,9 @@ public final class Containers {
 
   public static final MenuType<ContainerFusionChamber> FUSION_CHAMBER =
     new MenuType<>((IContainerFactory<ContainerFusionChamber>)ContainerFusionChamber::new);
+
+  public static final MenuType<ContainerPlasmaGenerator> PLASMA_GENERATOR =
+    new MenuType<>((IContainerFactory<ContainerPlasmaGenerator>)ContainerPlasmaGenerator::new);
 
   static {
     Debug.log_setup_info(Containers.class.getName()+" class finished loading.");

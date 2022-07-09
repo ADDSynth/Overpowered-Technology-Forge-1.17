@@ -50,6 +50,7 @@ public final class Names {
   public static final ResourceLocation ADVANCED_ORE_REFINERY    = new ResourceLocation(OverpoweredTechnology.MOD_ID, "advanced_ore_refinery");
   public static final ResourceLocation CRYSTAL_MATTER_GENERATOR = new ResourceLocation(OverpoweredTechnology.MOD_ID, "crystal_matter_generator");
   public static final ResourceLocation ENERGY_SUSPENSION_BRIDGE = new ResourceLocation(OverpoweredTechnology.MOD_ID, "energy_suspension_bridge");
+  public static final ResourceLocation PLASMA_GENERATOR         = new ResourceLocation(OverpoweredTechnology.MOD_ID, "plasma_generator");
 
   public static final ResourceLocation PORTAL_CONTROL_PANEL     = new ResourceLocation(OverpoweredTechnology.MOD_ID, "portal_control_panel");
   public static final ResourceLocation PORTAL_FRAME             = new ResourceLocation(OverpoweredTechnology.MOD_ID, "portal_frame");

@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "sms",
+    "tct",
+    "ses"
+  ],
+  "key": {
+    "s": {
+      "tag": "forge:plates/silver"
+    },
+    "e": {
+      "item": "overpowered:energized_power_core"
+    },
+    "c": {
+      "item": "addsynth_energy:circuit_tier_8"
+    },
+    "t": {
+      "item": "overpowered:stabalizer"
+    },
+    "m": {
+      "item": "overpowered:matter_energy_converter"
+    }
+  },
+  "result": {
+    "item": "overpowered:plasma_generator"
+  }
+}

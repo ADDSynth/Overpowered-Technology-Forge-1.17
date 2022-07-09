@@ -26,19 +26,19 @@ public abstract class AbstractContainer extends AbstractContainerMenu {
   }
 
   protected final void make_player_inventory(Inventory player_inventory){
-    make_player_inventory(player_inventory,8,84);
+    make_player_inventory(player_inventory, 8, 84);
   }
 
   protected final void make_player_inventory(Inventory player_inventory, int x, int y){
     int i;
     int j;
-    for (j = 0; j < 3; j++) {
-      for (i = 0; i < 9; i++) {
-        addSlot(new Slot(player_inventory, i + 9 + (j * 9), x + (i*18), y + (j*18)));
+    for(j = 0; j < 3; j++){
+      for(i = 0; i < 9; i++){
+        addSlot(new Slot(player_inventory, i + 9 + (j*9), x + (i*18), y + (j*18)));
       }
     }
-    for (i = 0; i < 9; i++) {
-        addSlot(new Slot(player_inventory, i, x + (i*18), y + 58));
+    for(i = 0; i < 9; i++){
+      addSlot(new Slot(player_inventory, i, x + (i*18), y + 58));
     }  
   }
 

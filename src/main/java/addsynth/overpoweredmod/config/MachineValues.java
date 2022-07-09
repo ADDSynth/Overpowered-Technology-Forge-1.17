@@ -22,7 +22,9 @@ public final class MachineValues {
 
   // Passive Machines
   public static final MachineDataConfig crystal_matter_generator =
-    new MachineDataConfig(MachineType.PASSIVE, 16000,  31.25, 0,  600); // 500,000 energy for 1 shard every 13.3 minutes
+    new MachineDataConfig(MachineType.PASSIVE, 16_000,  31.25, 0,  600); // 500,000 energy for 1 shard every 13.3 minutes
+  public static final MachineDataConfig plasma_generator =
+    new MachineDataConfig(MachineType.PASSIVE, 24_000, 4, 0.08, 300); // 4 energy per tick for 20 minutes = 96,000 Energy
 
   // Manual Activation Machines
   public static final MachineDataConfig portal =
@@ -101,6 +103,10 @@ public final class MachineValues {
     required_energy_per_laser_distance = builder.defineInRange("Energy per Laser Distance",
                                               DEFAULT_ENERGY_PER_LASER_DISTANCE, 0, Integer.MAX_VALUE);
     laser_max_receive = builder.defineInRange("Max Receive Per Tick", DEFAULT_LASER_MAX_RECEIVE, 1, Integer.MAX_VALUE);
+    builder.pop();
+
+    builder.push("Plasma Generator");
+    plasma_generator.build(builder);
     builder.pop();
     
     builder.push("Crystal Matter Generator");

@@ -63,6 +63,7 @@ public final class Registers {
         game.register(Portal.unknown_leaves);
       }
     }
+    game.register(Machines.plasma_generator);
     if(Features.crystal_matter_generator.get()){ game.register(Machines.crystal_matter_generator); }
     if(Features.advanced_ore_refinery.get()){ game.register(Machines.advanced_ore_refinery); }
     if(Features.lasers.get()){
@@ -133,6 +134,7 @@ public final class Registers {
       game.register(OverpoweredTechnology.registry.getItemBlock(Machines.portal_frame));
       // MAYBE: register Item versions of the unknown / weird tree  (but item order is specific. don't register them here.)
     }
+    game.register(OverpoweredTechnology.registry.getItemBlock(Machines.plasma_generator));
     if(Features.crystal_matter_generator.get()){ game.register(OverpoweredTechnology.registry.getItemBlock(Machines.crystal_matter_generator)); }
     if(Features.advanced_ore_refinery.get()){ game.register(OverpoweredTechnology.registry.getItemBlock(Machines.advanced_ore_refinery)); }
     
@@ -181,7 +183,7 @@ public final class Registers {
     /*
       https://github.com/MinecraftForge/MinecraftForge/pull/4681#issuecomment-405115908
       TODO: If anyone needs an example of how to fix the warning caused by this change without breaking old saved games,
-      I (someone else) just updated all of McJty's mods to use a DataFixer to do so.
+      I (not ADDSynth, someone else) just updated all of McJty's mods to use a DataFixer to do so.
     */
     final IForgeRegistry<BlockEntityType<?>> game = event.getRegistry();
 
@@ -198,6 +200,7 @@ public final class Registers {
     RegistryUtil.register(game, Tiles.PORTAL_CONTROL_PANEL,       Names.PORTAL_CONTROL_PANEL);
     RegistryUtil.register(game, Tiles.PORTAL_FRAME,               Names.PORTAL_FRAME);
     RegistryUtil.register(game, Tiles.PORTAL_BLOCK,               Names.PORTAL_RIFT);
+    RegistryUtil.register(game, Tiles.PLASMA_GENERATOR,           Names.PLASMA_GENERATOR);
     RegistryUtil.register(game, Tiles.CRYSTAL_MATTER_REPLICATOR,  Names.CRYSTAL_MATTER_GENERATOR);
     RegistryUtil.register(game, Tiles.ADVANCED_ORE_REFINERY,      Names.ADVANCED_ORE_REFINERY);
     RegistryUtil.register(game, Tiles.FUSION_ENERGY_CONVERTER,    Names.FUSION_CONVERTER);
@@ -218,6 +221,7 @@ public final class Registers {
     RegistryUtil.register(game, Containers.MAGIC_INFUSER,              Names.MAGIC_INFUSER);
     RegistryUtil.register(game, Containers.ENERGY_SUSPENSION_BRIDGE,   Names.ENERGY_SUSPENSION_BRIDGE);
     RegistryUtil.register(game, Containers.LASER_HOUSING,              Names.LASER_HOUSING);
+    RegistryUtil.register(game, Containers.PLASMA_GENERATOR,           Names.PLASMA_GENERATOR);
     RegistryUtil.register(game, Containers.ADVANCED_ORE_REFINERY,      Names.ADVANCED_ORE_REFINERY);
     RegistryUtil.register(game, Containers.CRYSTAL_MATTER_GENERATOR,   Names.CRYSTAL_MATTER_GENERATOR);
     RegistryUtil.register(game, Containers.FUSION_CHAMBER,             Names.FUSION_CHAMBER);
