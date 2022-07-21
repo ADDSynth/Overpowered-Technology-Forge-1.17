@@ -166,10 +166,10 @@ repositories {
   //   name "BlameJared"
   //   url "https://maven.blamejared.com"
   // }
-  // maven {
-  //   name "The Illusive C4"
-  //   url "https://maven.theillusivec4.top/"
-  // }
+  maven {
+    name "TheIllusiveC4"
+    url "https://maven.theillusivec4.top/"
+  }
   // maven {
   //   name "tterrag"
   //   url "https://maven.tterrag.com/"
@@ -206,6 +206,9 @@ dependencies {
     // compileOnly "moze_intel.projecte:projecte-${mc_version}:${projecte_version}:api"
     // compileOnly "curse.maven:projecte-226410:3223221:api"
     compileOnly "appeng:appliedenergistics2:${applied_energistics_version}:api"
+
+    runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:${mc_version}-${curios_version}")
+    compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:${mc_version}-${curios_version}:api")
 }
 
 // Example for how to get properties into the manifest for reading at runtime.

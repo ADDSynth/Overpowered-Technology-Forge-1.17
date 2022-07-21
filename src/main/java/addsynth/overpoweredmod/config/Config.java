@@ -52,6 +52,8 @@ public final class Config {
   private static final int DEFAULT_ENERGY_BRIDGE_DISTANCE = 250;
   public static ForgeConfigSpec.ConfigValue<Integer> energy_bridge_max_distance;
 
+  public static ForgeConfigSpec.BooleanValue rings_have_particle_effects;
+
   // Undead
   public static ForgeConfigSpec.BooleanValue drop_for_zombie;
   public static ForgeConfigSpec.BooleanValue drop_for_zombie_villager;
@@ -170,6 +172,10 @@ public final class Config {
       "This determines the maximum distance Energy Suspension Bridges can reach. Energy Suspension Bridges only\n"+
       "connect to other Energy Suspension Bridges if they are within range. Increasing this may increase load on\n"+
       "your computer's processor.").defineInRange("Maximum Distance", DEFAULT_ENERGY_BRIDGE_DISTANCE, 20, 500);
+    builder.pop();
+
+    builder.push("Other");
+      rings_have_particle_effects = builder.define("Rings Have Particle Effects", false);
     builder.pop();
 
     builder.push("Unidentified Mob Drops");

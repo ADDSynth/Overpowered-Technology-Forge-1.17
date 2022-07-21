@@ -3,7 +3,14 @@ NEW:
   Added 5 new beam emitter type items.
   Added Plasma Generator machine.
    - Deleted the crafting recipe for Plasma that was added in the previous version.
+  ReAdded Ring drops, if you have the Curios mod loaded.
+   - Added the ability to disable Rings.
 CHANGED:
+  Increased the chance to drop an Unidentified Ring when killing enemy mobs.
+  The Dimensional Anchor is now registered as a Curios Charm, if you
+    have the Curios mod installed.
+FIXED:
+  Fixed Unidentified Chainmail armor dropping as often as Gold armor.
 
 
 

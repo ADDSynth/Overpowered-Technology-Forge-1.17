@@ -3,6 +3,7 @@ package addsynth.overpoweredmod.compatability.jei;
 import java.util.ArrayList;
 import addsynth.overpoweredmod.Debug;
 import addsynth.overpoweredmod.OverpoweredTechnology;
+import addsynth.overpoweredmod.compatability.CompatabilityManager;
 import addsynth.overpoweredmod.game.core.Init;
 import addsynth.overpoweredmod.game.core.Laser;
 import addsynth.overpoweredmod.game.core.Machines;
@@ -39,6 +40,12 @@ public final class OverpoweredJEI implements IModPlugin {
   public void onRuntimeAvailable(IJeiRuntime jeiRuntime){
     final ArrayList<ItemStack> blacklist = new ArrayList<>(1);
     blacklist.add(new ItemStack(Portal.portal_image));
+    if(CompatabilityManager.are_rings_enabled()){
+      blacklist.add(new ItemStack(Tools.magic_ring[0]));
+      blacklist.add(new ItemStack(Tools.magic_ring[1]));
+      blacklist.add(new ItemStack(Tools.magic_ring[2]));
+      blacklist.add(new ItemStack(Tools.magic_ring[3]));
+    }
     jeiRuntime.getIngredientManager().removeIngredientsAtRuntime(VanillaTypes.ITEM, blacklist);
   }
 

@@ -1,7 +1,6 @@
 package addsynth.overpoweredmod;
 
 import java.io.File;
-import addsynth.core.compat.Compatibility;
 import addsynth.core.game.RegistryUtil;
 import addsynth.core.recipe.RecipeUtil;
 import addsynth.core.util.CommonUtil;
@@ -9,7 +8,7 @@ import addsynth.core.util.constants.DevStage;
 import addsynth.core.util.game.Game;
 import addsynth.material.MaterialsUtil;
 import addsynth.overpoweredmod.assets.CustomStats;
-import addsynth.overpoweredmod.compatability.*;
+import addsynth.overpoweredmod.compatability.CompatabilityManager;
 import addsynth.overpoweredmod.config.*;
 import addsynth.overpoweredmod.game.NetworkHandler;
 import addsynth.overpoweredmod.game.core.Init;
@@ -42,7 +41,6 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.config.ModConfigEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
 import org.apache.logging.log4j.Logger;
@@ -68,7 +66,7 @@ public class OverpoweredTechnology {
     final IEventBus bus = context.getModEventBus();
     bus.addListener(OverpoweredTechnology::main_setup);
     bus.addListener(OverpoweredTechnology::client_setup);
-    bus.addListener(OverpoweredTechnology::inter_mod_communications);
+    bus.addListener(CompatabilityManager::inter_mod_communications);
     init_config();
     OverpoweredTechnology.log.info("Done constructing "+OverpoweredTechnology.class.getSimpleName()+" class object.");
   }
@@ -107,7 +105,6 @@ public class OverpoweredTechnology {
     RecipeUtil.registerResponder(Filters::regenerate_machine_filters);
     MaterialsUtil.registerResponder(OreRefineryRecipes::refresh_ore_refinery_recipes);
     MaterialsUtil.registerResponder(Filters::regenerate_machine_filters);
-    event.enqueueWork(CompatabilityManager::init_mod_compatability);
     
     // Register Stats
     // Can't add Overpowered Technology Name to stats because then the text overlaps the stat values.
@@ -117,12 +114,6 @@ public class OverpoweredTechnology {
     // Game.registerCustomStat(BLACK_HOLE_EVENTS);
     
     log.info("Finished "+MOD_NAME+" main setup.");
-  }
-
-  private static final void inter_mod_communications(final InterModEnqueueEvent event){
-    if(Compatibility.PROJECT_E.loaded){
-      ProjectE.register_emc_values();
-    }
   }
 
   private static final void client_setup(final FMLClientSetupEvent event){

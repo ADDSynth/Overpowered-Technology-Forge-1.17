@@ -101,14 +101,14 @@
 "item.overpowered.unidentified_diamond_leggings": "미확인의 다이아몬드 다리 보호구",
 "item.overpowered.unidentified_diamond_boots": "미확인 된 다이아몬드 장화",
 
-"item.overpowered.ring_common": "미확인 반지",
-"item.overpowered.ring_good": "미확인 반지",
-"item.overpowered.ring_rare": "미확인 반지",
-"item.overpowered.ring_unique": "미확인 반지",
-"item.overpowered.magic_ring_common": "반지",
-"item.overpowered.magic_ring_good": "반지",
-"item.overpowered.magic_ring_rare": "반지",
-"item.overpowered.magic_ring_unique": "반지",
+"item.overpowered.unidentified_ring_0": "미확인 반지",
+"item.overpowered.unidentified_ring_1": "미확인 반지",
+"item.overpowered.unidentified_ring_2": "미확인 반지",
+"item.overpowered.unidentified_ring_3": "미확인 반지",
+"item.overpowered.magic_ring_0": "반지",
+"item.overpowered.magic_ring_1": "반지",
+"item.overpowered.magic_ring_2": "반지",
+"item.overpowered.magic_ring_3": "반지",
 
 
 

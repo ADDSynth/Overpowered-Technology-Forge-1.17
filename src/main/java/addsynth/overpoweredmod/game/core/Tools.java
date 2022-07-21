@@ -4,7 +4,9 @@ import addsynth.core.game.items.ArmorMaterial;
 import addsynth.core.game.items.EquipmentType;
 import addsynth.core.game.items.Toolset;
 import addsynth.overpoweredmod.Debug;
+import addsynth.overpoweredmod.compatability.CompatabilityManager;
 import addsynth.overpoweredmod.items.tools.*;
+import addsynth.overpoweredmod.items.Ring;
 import addsynth.overpoweredmod.items.UnidentifiedItem;
 import net.minecraft.world.item.Item;
 
@@ -42,9 +44,19 @@ public final class Tools {
     }
   }
 
-  // TODO: in Overpowered version 1.5, add Rings back using the new Baubles API: Curios
-  //         https://www.curseforge.com/minecraft/mc-mods/curios
-  // available only for Minecraft versions 1.14 and up.
+  public static final Item[] ring = CompatabilityManager.are_rings_enabled() ? new Item[] {
+    new UnidentifiedItem(0),
+    new UnidentifiedItem(1),
+    new UnidentifiedItem(2),
+    new UnidentifiedItem(3)
+  } : null;
+
+  public static final Item[] magic_ring = CompatabilityManager.are_rings_enabled() ? new Item[] {
+    new Ring(0),
+    new Ring(1),
+    new Ring(2),
+    new Ring(3)
+  } : null;
 
   static {
     Debug.log_setup_info("Finished loading Tools class.");

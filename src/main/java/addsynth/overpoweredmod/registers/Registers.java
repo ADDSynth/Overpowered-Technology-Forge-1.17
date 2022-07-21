@@ -4,6 +4,7 @@ import addsynth.core.game.RegistryUtil;
 import addsynth.overpoweredmod.Debug;
 import addsynth.overpoweredmod.OverpoweredTechnology;
 import addsynth.overpoweredmod.assets.Sounds;
+import addsynth.overpoweredmod.compatability.CompatabilityManager;
 import addsynth.overpoweredmod.config.Features;
 import addsynth.overpoweredmod.game.Names;
 import addsynth.overpoweredmod.game.core.*;
@@ -169,6 +170,10 @@ public final class Registers {
     if(Features.identifier.get()){
       for(Item[] armor_set : Tools.unidentified_armor){
         for(Item armor : armor_set){ game.register(armor); }
+      }
+      if(CompatabilityManager.are_rings_enabled()){
+        for(Item ring : Tools.ring){       game.register(ring); }
+        for(Item ring : Tools.magic_ring){ game.register(ring); }
       }
     }
     

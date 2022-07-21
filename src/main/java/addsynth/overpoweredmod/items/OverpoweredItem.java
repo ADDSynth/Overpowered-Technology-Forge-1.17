@@ -16,4 +16,9 @@ public class OverpoweredItem extends Item {
     OverpoweredTechnology.registry.register_item(this, name);
   }
 
+  public OverpoweredItem(final String name, final Item.Properties properties){
+    super(properties);
+    OverpoweredTechnology.registry.register_item(this, name);
+  }
+
 }

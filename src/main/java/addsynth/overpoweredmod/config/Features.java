@@ -42,6 +42,7 @@ public final class Features {
   public static ForgeConfigSpec.BooleanValue dimensional_anchor;
 
   public static ForgeConfigSpec.BooleanValue unknown_dimension;
+  public static ForgeConfigSpec.BooleanValue rings;
 
   private static final Pair<Features, ForgeConfigSpec> SPEC_PAIR = new ForgeConfigSpec.Builder().configure(Features::new);
   public static final Features INSTANCE = SPEC_PAIR.getLeft();
@@ -72,6 +73,9 @@ public final class Features {
     celestial_tools    = builder.define("Celestial Tools", true);
     void_tools         = builder.define("Void Tools", true);
     dimensional_anchor = builder.define("Dimensional Anchor", true);
+    rings = builder.comment(
+      "Set this to false to force disable the Rings, even if you have the Curios mod installed.\n"+
+      "To enable rings, you also need to have the Identifier enabled.").define("Rings", true);
     builder.pop();
 
     builder.push("Machines");

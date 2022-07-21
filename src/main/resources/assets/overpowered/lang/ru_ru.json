@@ -101,14 +101,14 @@
 "item.overpowered.unidentified_diamond_leggings": "Неопознанные алмазные поножи",
 "item.overpowered.unidentified_diamond_boots": "Неопознанные алмазные сапоги",
 
-"item.overpowered.ring_common": "Неопознанное Кольцо",
-"item.overpowered.ring_good": "Неопознанное Кольцо",
-"item.overpowered.ring_rare": "Неопознанное Кольцо",
-"item.overpowered.ring_unique": "Неопознанное Кольцо",
-"item.overpowered.magic_ring_common": "Кольцо",
-"item.overpowered.magic_ring_good": "Кольцо",
-"item.overpowered.magic_ring_rare": "Кольцо",
-"item.overpowered.magic_ring_unique": "Кольцо",
+"item.overpowered.unidentified_ring_0": "Неопознанное Кольцо",
+"item.overpowered.unidentified_ring_1": "Неопознанное Кольцо",
+"item.overpowered.unidentified_ring_2": "Неопознанное Кольцо",
+"item.overpowered.unidentified_ring_3": "Неопознанное Кольцо",
+"item.overpowered.magic_ring_0": "Кольцо",
+"item.overpowered.magic_ring_1": "Кольцо",
+"item.overpowered.magic_ring_2": "Кольцо",
+"item.overpowered.magic_ring_3": "Кольцо",
 
 
 

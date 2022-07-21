@@ -1,9 +1,9 @@
 package addsynth.overpoweredmod.assets;
 
-import addsynth.core.compat.Compatibility;
 import addsynth.core.game.items.ArmorMaterial;
 import addsynth.overpoweredmod.Debug;
 import addsynth.overpoweredmod.OverpoweredTechnology;
+import addsynth.overpoweredmod.compatability.CompatabilityManager;
 import addsynth.overpoweredmod.config.Config;
 import addsynth.overpoweredmod.config.Features;
 import addsynth.overpoweredmod.game.core.Tools;
@@ -30,19 +30,31 @@ public final class LootTables {
   private static final float default_spawn_chance = 1.0f / 100.0f; // before, it was just with rings and it was 1 / 15 chance.
   private static final float spawn_chance = default_spawn_chance;
 
-  private static final int master_armor_weight = 4;
-  private static final int unidentified_armor_weight = 5;
-  private static final int leather_weight   = master_armor_weight * 10;
-  private static final int gold_weight      = master_armor_weight * 6;
-  private static final int chainmail_weight = master_armor_weight * 6;
-  private static final int iron_weight      = master_armor_weight * 3;
-  private static final int diamond_weight   = master_armor_weight * 1;
-  
-  private static final int ring_weight = 1;
-  private static final int common_ring_weight = 10;
-  private static final int good_ring_weight = 6;
-  private static final int rare_ring_weight = 3;
-  private static final int unique_ring_weight = 1;
+  private static final int armor_weight = 3;
+  private static final int leather_weight   = armor_weight * 10;
+  private static final int gold_weight      = armor_weight * 6;
+  private static final int chainmail_weight = armor_weight * 3;
+  private static final int iron_weight      = armor_weight * 3;
+  private static final int diamond_weight   = armor_weight * 1;
+  private static final int ring_weight      = 1;
+  /*
+  Without Rings:
+      Leather: 10 / 23 (43%)
+         Gold:  6 / 23 (26%)
+    Chainmail:  3 / 23 (13%)
+         Iron:  3 / 23 (13%)
+      Diamond:  1 / 23 ( 4%)
+  With Rings:
+    Armor: 69 / 73 (95%)
+        Leather: 30 / 73 (41%)
+           Gold: 18 / 73 (25%)
+      Chainmail:  9 / 73 (12%)
+           Iron:  9 / 73 (12%)
+        Diamond:  3 / 73 ( 4%)
+    Rings:  4 / 73 (5%)
+  You get 1 custom loot drop every 100 mobs on average.
+  You get 1 Ring every 1,825 mobs on average.
+  */
 
   private static final LootPool custom_loot_pool = build_loot_pool();
   
@@ -68,6 +80,12 @@ public final class LootTables {
     loot.add(LootItem.lootTableItem(Tools.unidentified_armor[ArmorMaterial.DIAMOND.ordinal()][1]).setWeight(diamond_weight));
     loot.add(LootItem.lootTableItem(Tools.unidentified_armor[ArmorMaterial.DIAMOND.ordinal()][2]).setWeight(diamond_weight));
     loot.add(LootItem.lootTableItem(Tools.unidentified_armor[ArmorMaterial.DIAMOND.ordinal()][3]).setWeight(diamond_weight));
+    if(CompatabilityManager.are_rings_enabled()){
+      loot.add(LootItem.lootTableItem(Tools.ring[0]).setWeight(ring_weight));
+      loot.add(LootItem.lootTableItem(Tools.ring[1]).setWeight(ring_weight));
+      loot.add(LootItem.lootTableItem(Tools.ring[2]).setWeight(ring_weight));
+      loot.add(LootItem.lootTableItem(Tools.ring[3]).setWeight(ring_weight));
+    }
     loot.when(LootItemKilledByPlayerCondition.killedByPlayer());
     loot.when(LootItemRandomChanceCondition.randomChance(spawn_chance));
     loot.name("overpowered_custom_loot_table");
@@ -86,36 +104,36 @@ public final class LootTables {
           OverpoweredTechnology.log.info("Loading Loot Table: "+name);
         }
         final String mob = name.substring(prefix.length());
-        boolean add_rings = false;
-        if(mob.equals("zombie")            && Config.drop_for_zombie.get()){            add_rings = true; }
-        if(mob.equals("zombie_villager")   && Config.drop_for_zombie_villager.get()){   add_rings = true; }
-        if(mob.equals("husk")              && Config.drop_for_husk.get()){              add_rings = true; }
-        if(mob.equals("spider")            && Config.drop_for_spider.get()){            add_rings = true; }
-        if(mob.equals("cave_spider")       && Config.drop_for_cave_spider.get()){       add_rings = true; }
-        if(mob.equals("creeper")           && Config.drop_for_creeper.get()){           add_rings = true; }
-        if(mob.equals("skeleton")          && Config.drop_for_skeleton.get()){          add_rings = true; }
-        if(mob.equals("zombie_pigman")     && Config.drop_for_zombie_pigman.get()){     add_rings = true; }
-        if(mob.equals("blaze")             && Config.drop_for_blaze.get()){             add_rings = true; }
-        if(mob.equals("witch")             && Config.drop_for_witch.get()){             add_rings = true; }
-        if(mob.equals("ghast")             && Config.drop_for_ghast.get()){             add_rings = true; }
-        if(mob.equals("enderman")          && Config.drop_for_enderman.get()){          add_rings = true; }
-        if(mob.equals("stray")             && Config.drop_for_stray.get()){             add_rings = true; }
-        if(mob.equals("guardian")          && Config.drop_for_guardian.get()){          add_rings = true; }
-        if(mob.equals("elder_guardian")    && Config.drop_for_elder_guardian.get()){    add_rings = true; }
-        if(mob.equals("wither_skeleton")   && Config.drop_for_wither_skeleton.get()){   add_rings = true; }
-        if(mob.equals("magma_cube")        && Config.drop_for_magma_cube.get()){        add_rings = true; }
-        if(mob.equals("shulker")           && Config.drop_for_shulker.get()){           add_rings = true; }
-        if(mob.equals("vex")               && Config.drop_for_vex.get()){               add_rings = true; }
-        if(mob.equals("evoker")            && Config.drop_for_evoker.get()){            add_rings = true; }
-        if(mob.equals("vindicator")        && Config.drop_for_vindicator.get()){        add_rings = true; }
-        if(mob.equals("illusioner")        && Config.drop_for_illusioner.get()){        add_rings = true; }
-        if(mob.equals("drowned")           && Config.drop_for_drowned.get()){           add_rings = true; }
-        if(mob.equals("phantom")           && Config.drop_for_phantom.get()){           add_rings = true; }
-        if(mob.equals("skeleton_horse")    && Config.drop_for_skeleton_horse.get()){    add_rings = true; }
-        if(mob.equals("pillager")          && Config.drop_for_pillager.get()){          add_rings = true; }
-        if(mob.equals("ravager")           && Config.drop_for_ravager.get()){           add_rings = true; }
+        boolean add_loot_drops = false;
+        if(mob.equals("zombie")            && Config.drop_for_zombie.get()){            add_loot_drops = true; }
+        if(mob.equals("zombie_villager")   && Config.drop_for_zombie_villager.get()){   add_loot_drops = true; }
+        if(mob.equals("husk")              && Config.drop_for_husk.get()){              add_loot_drops = true; }
+        if(mob.equals("spider")            && Config.drop_for_spider.get()){            add_loot_drops = true; }
+        if(mob.equals("cave_spider")       && Config.drop_for_cave_spider.get()){       add_loot_drops = true; }
+        if(mob.equals("creeper")           && Config.drop_for_creeper.get()){           add_loot_drops = true; }
+        if(mob.equals("skeleton")          && Config.drop_for_skeleton.get()){          add_loot_drops = true; }
+        if(mob.equals("zombie_pigman")     && Config.drop_for_zombie_pigman.get()){     add_loot_drops = true; }
+        if(mob.equals("blaze")             && Config.drop_for_blaze.get()){             add_loot_drops = true; }
+        if(mob.equals("witch")             && Config.drop_for_witch.get()){             add_loot_drops = true; }
+        if(mob.equals("ghast")             && Config.drop_for_ghast.get()){             add_loot_drops = true; }
+        if(mob.equals("enderman")          && Config.drop_for_enderman.get()){          add_loot_drops = true; }
+        if(mob.equals("stray")             && Config.drop_for_stray.get()){             add_loot_drops = true; }
+        if(mob.equals("guardian")          && Config.drop_for_guardian.get()){          add_loot_drops = true; }
+        if(mob.equals("elder_guardian")    && Config.drop_for_elder_guardian.get()){    add_loot_drops = true; }
+        if(mob.equals("wither_skeleton")   && Config.drop_for_wither_skeleton.get()){   add_loot_drops = true; }
+        if(mob.equals("magma_cube")        && Config.drop_for_magma_cube.get()){        add_loot_drops = true; }
+        if(mob.equals("shulker")           && Config.drop_for_shulker.get()){           add_loot_drops = true; }
+        if(mob.equals("vex")               && Config.drop_for_vex.get()){               add_loot_drops = true; }
+        if(mob.equals("evoker")            && Config.drop_for_evoker.get()){            add_loot_drops = true; }
+        if(mob.equals("vindicator")        && Config.drop_for_vindicator.get()){        add_loot_drops = true; }
+        if(mob.equals("illusioner")        && Config.drop_for_illusioner.get()){        add_loot_drops = true; }
+        if(mob.equals("drowned")           && Config.drop_for_drowned.get()){           add_loot_drops = true; }
+        if(mob.equals("phantom")           && Config.drop_for_phantom.get()){           add_loot_drops = true; }
+        if(mob.equals("skeleton_horse")    && Config.drop_for_skeleton_horse.get()){    add_loot_drops = true; }
+        if(mob.equals("pillager")          && Config.drop_for_pillager.get()){          add_loot_drops = true; }
+        if(mob.equals("ravager")           && Config.drop_for_ravager.get()){           add_loot_drops = true; }
 
-        if(add_rings){
+        if(add_loot_drops){
           event.getTable().addPool(custom_loot_pool);
           if(debug_loot_tables){
             OverpoweredTechnology.log.info("Successfully injected custom loot pool into Loot Table for: "+mob);
