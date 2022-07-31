@@ -31,12 +31,14 @@
 "item.overpowered.heavy_light_emitter": "Heavy Light Emitter",
 "item.overpowered.stabalizer": "Stabalizer",
 "item.overpowered.scanning_laser": "Scanning Laser",
-"item.overpowered.matter_energy_converter": "Matter/Energy Converter",
+"item.overpowered.matter_energy_transformer": "Matter/Energy Transformer",
 "item.overpowered.high_frequency_beam": "High-Frequency Beam",
 "gui.overpowered.tooltip.wavelength": "Wavelength",
 
 "item.overpowered.plasma": "Plasma",
 "item.overpowered.fusion_core": "هسته فیوژن",
+"item.overpowered.matter_energy_converter": "Matter/Energy Converter",
+"item.overpowered.dimensional_flux": "Dimensional Flux",
 "item.overpowered.dimensional_anchor": "لنگر ابعاد",
 
 "block.overpowered.data_cable": "کابل داده",

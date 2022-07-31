@@ -1,5 +1,6 @@
 v1.5 - TBD
 NEW:
+  Added new items.
   Added 5 new beam emitter type items.
   Added Plasma Generator machine.
    - Deleted the crafting recipe for Plasma that was added in the previous version.

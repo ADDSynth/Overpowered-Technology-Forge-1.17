@@ -21,15 +21,17 @@ public final class Names {
   public static final ResourceLocation IRON_FRAME_BLOCK      = new ResourceLocation(OverpoweredTechnology.MOD_ID, "iron_frame_block");
   public static final ResourceLocation BLACK_HOLE            = new ResourceLocation(OverpoweredTechnology.MOD_ID, "black_hole");
 
-  public static final ResourceLocation POWER_CORE            = new ResourceLocation(OverpoweredTechnology.MOD_ID, "power_core");
-  public static final ResourceLocation ADVANCED_POWER_CORE   = new ResourceLocation(OverpoweredTechnology.MOD_ID, "advanced_power_core");
   public static final ResourceLocation ENERGIZED_POWER_CORE  = new ResourceLocation(OverpoweredTechnology.MOD_ID, "energized_power_core");
   public static final ResourceLocation NULLIFIED_POWER_CORE  = new ResourceLocation(OverpoweredTechnology.MOD_ID, "nullified_power_core");
   public static final ResourceLocation ENERGY_GRID           = new ResourceLocation(OverpoweredTechnology.MOD_ID, "energy_grid");
   public static final ResourceLocation SEALED_CONTAINER      = new ResourceLocation(OverpoweredTechnology.MOD_ID, "sealed_container");
+
   public static final ResourceLocation BEAM_EMITTER          = new ResourceLocation(OverpoweredTechnology.MOD_ID, "beam_emitter");
+
   public static final ResourceLocation PLASMA                = new ResourceLocation(OverpoweredTechnology.MOD_ID, "plasma");
   public static final ResourceLocation FUSION_CORE           = new ResourceLocation(OverpoweredTechnology.MOD_ID, "fusion_core");
+  public static final ResourceLocation MATTER_ENERGY_CONVERTER = new ResourceLocation(OverpoweredTechnology.MOD_ID, "matter_energy_converter");
+  public static final ResourceLocation DIMENSIONAL_FLUX      = new ResourceLocation(OverpoweredTechnology.MOD_ID, "dimensional_flux");
   public static final ResourceLocation DIMENSIONAL_ANCHOR    = new ResourceLocation(OverpoweredTechnology.MOD_ID, "dimensional_anchor");
 
   public static final ResourceLocation FOCUS_LENS            = new ResourceLocation(OverpoweredTechnology.MOD_ID, "focus_lens");

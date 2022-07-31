@@ -7,6 +7,8 @@ public final class EnergyItems {
 
   public static final Item            power_core               = register("power_core");
   public static final Item            advanced_power_core      = register("advanced_power_core");
+  public static final Item            power_regulator          = register("power_regulator");
+  
   public static final Item            circuit_tier_1           = register("circuit_tier_1");
   public static final Item            circuit_tier_2           = register("circuit_tier_2");
   public static final Item            circuit_tier_3           = register("circuit_tier_3");

@@ -54,6 +54,7 @@ public final class Registers {
 
     game.register(EnergyItems.power_core);
     game.register(EnergyItems.advanced_power_core);
+    game.register(EnergyItems.power_regulator);
     game.register(EnergyItems.circuit_tier_1);
     game.register(EnergyItems.circuit_tier_2);
     game.register(EnergyItems.circuit_tier_3);

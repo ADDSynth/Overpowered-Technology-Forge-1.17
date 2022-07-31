@@ -113,7 +113,7 @@ public final class Registers {
     game.register(ModItems.heavy_light_emitter);
     game.register(ModItems.stabalizer);
     game.register(ModItems.scanning_laser);
-    game.register(ModItems.matter_energy_converter);
+    game.register(ModItems.matter_energy_transformer);
     game.register(ModItems.high_frequency_beam);
     
     for(Lens lens : Lens.values()){
@@ -121,6 +121,8 @@ public final class Registers {
     }
     game.register(ModItems.plasma);
     game.register(ModItems.fusion_core);
+    game.register(ModItems.matter_energy_converter);
+    game.register(ModItems.dimensional_flux);
     if(Features.dimensional_anchor.get()){ game.register(ModItems.dimensional_anchor); }
     
     game.register(OverpoweredTechnology.registry.getItemBlock(Wires.data_cable));
