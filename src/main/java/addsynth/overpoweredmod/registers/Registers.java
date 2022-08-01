@@ -111,7 +111,7 @@ public final class Registers {
     game.register(ModItems.beam_emitter);
     game.register(ModItems.destructive_laser);
     game.register(ModItems.heavy_light_emitter);
-    game.register(ModItems.stabalizer);
+    game.register(ModItems.energy_stabilizer);
     game.register(ModItems.scanning_laser);
     game.register(ModItems.matter_energy_transformer);
     game.register(ModItems.high_frequency_beam);

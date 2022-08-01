@@ -21,7 +21,7 @@ public final class ModItems {
   public static final Item beam_emitter              = new OverpoweredItem("beam_emitter");
   public static final Item destructive_laser         = new OverpoweredItem("destructive_laser");
   public static final Item heavy_light_emitter       = new OverpoweredItem("heavy_light_emitter");
-  public static final Item stabalizer                = new OverpoweredItem("stabalizer");
+  public static final Item energy_stabilizer         = new OverpoweredItem("energy_stabilizer");
   public static final Item scanning_laser            = new OverpoweredItem("scanning_laser");
   public static final Item matter_energy_transformer = new OverpoweredItem("matter_energy_transformer");
   public static final Item high_frequency_beam       = new OverpoweredItem("high_frequency_beam");
