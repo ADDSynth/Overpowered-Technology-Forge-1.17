@@ -102,7 +102,7 @@ public final class BridgeNetwork extends BlockNetwork<TileSuspensionBridge> {
     // This is a copy of the BlockMath.is_full_rectangle() function, but
     // keep this as is because we set important variables for this class.
     valid_shape = true;
-    final BlockPos[] positions = BlockMath.get_min_max_positions(blocks.getPositions());
+    final BlockPos[] positions = BlockMath.get_min_max_positions(blocks.getBlockPositions());
     int x;
     int y;
     int z;
@@ -368,7 +368,7 @@ public final class BridgeNetwork extends BlockNetwork<TileSuspensionBridge> {
         tile.update_data();
       }
     }
-    final SyncClientBridgeMessage msg = new SyncClientBridgeMessage(blocks.getPositions(), bridge_message, message);
+    final SyncClientBridgeMessage msg = new SyncClientBridgeMessage(blocks.getBlockPositions(), bridge_message, message);
     NetworkUtil.send_to_clients_in_world(NetworkHandler.INSTANCE, world, msg);
   }
 

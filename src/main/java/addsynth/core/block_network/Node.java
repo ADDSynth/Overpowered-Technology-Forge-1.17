@@ -29,6 +29,18 @@ public class Node {
     this.tile = tile;
   }
 
+  /** @deprecated This constructor is not recommended because programmers could create nodes with
+   *    a block type that might not be the block we find in the BlockPosition.
+   * @param position
+   * @param block
+   */
+  @Deprecated
+  public Node(final BlockPos position, final Block block){
+    this.position = position;
+    this.block = block;
+    this.tile = null;
+  }
+
   public Node(final BlockPos position, @Nonnull final BlockEntity tile){
     this.position = position;
     this.block = tile.getBlockState().getBlock();

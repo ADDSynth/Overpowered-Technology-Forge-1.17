@@ -62,12 +62,15 @@ public final class DataCableNetwork extends BlockNetwork<TileDataCable> {
 
   @Override
   public final void neighbor_was_changed(final BlockPos current_position, final BlockPos position_of_neighbor){
+    // Is this optimized? Wouldn't it be better just to call updateBlockNetwork() regardless?
     Block block = world.getBlockState(position_of_neighbor).getBlock();
     if(block == Machines.fusion_converter || block == Machines.fusion_control_unit){
+      // If a Fusion Converter or Fusion Control Unit was added.
       updateBlockNetwork(current_position);
       return;
     }
     boolean update = false;
+    // Check all positions of scanning units and fusion energy converters and make sure they still exist there.
     if(update == false){
       for(BlockPos position : scanning_units){
         if(world.getBlockState(position).getBlock() != Machines.fusion_control_unit){

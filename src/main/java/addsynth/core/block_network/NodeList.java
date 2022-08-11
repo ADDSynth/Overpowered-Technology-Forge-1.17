@@ -20,7 +20,7 @@ public final class NodeList extends HashSet<Node> {
     addAll(hash_set);
   }
 
-  public final ArrayList<BlockPos> getPositions(){
+  public final ArrayList<BlockPos> getBlockPositions(){
     final ArrayList<BlockPos> positions = new ArrayList<>(100);
     for(final Node node : this){
       if(node.isInvalid() == false){
@@ -96,6 +96,11 @@ public final class NodeList extends HashSet<Node> {
         ((IBlockNetworkUser)node.getTile()).setBlockNetwork(network);
       }
     });
+  }
+
+  @Override
+  public final Node[] toArray(){
+    return toArray(new Node[size()]);
   }
 
 }

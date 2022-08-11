@@ -162,7 +162,7 @@ public final class LaserNetwork extends BlockNetwork<TileLaserHousing> {
   }
   
   public final void updateClient(){ // (client can determine the information)
-    final LaserClientSyncMessage message = new LaserClientSyncMessage(blocks.getPositions(), number_of_lasers);
+    final LaserClientSyncMessage message = new LaserClientSyncMessage(blocks.getBlockPositions(), number_of_lasers);
     NetworkUtil.send_to_clients_in_world(NetworkHandler.INSTANCE, world, message);
   }
 
@@ -174,7 +174,7 @@ public final class LaserNetwork extends BlockNetwork<TileLaserHousing> {
       tile.activate(this.laser_distance);
     });
     
-    final double[] center_position = BlockMath.getExactCenter(blocks.getPositions());
+    final double[] center_position = BlockMath.getExactCenter(blocks.getBlockPositions());
     world.playSound(null, center_position[0], center_position[1], center_position[2], Sounds.laser_fire_sound, SoundSource.AMBIENT, 2.0f, 1.0f);
     awardPlayers();
     
