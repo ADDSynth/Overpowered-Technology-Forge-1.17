@@ -12,6 +12,12 @@ CHANGED:
     have the Curios mod installed.
 FIXED:
   Fixed Unidentified Chainmail armor dropping as often as Gold armor.
+  Optimized Lasers:
+    - Doesn't use any TileEntities at all, so there should be much less lag.
+    - Lasers stay in-world if you log out and get back in again.
+    - Lasers beams continue moving even if the Laser is removed.
+  Fixed Laser machines counting adjacent lasers even though they weren't attached
+    or the proper laser type.
 
 
 

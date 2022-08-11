@@ -1,11 +1,8 @@
 package addsynth.overpoweredmod.machines.laser.beam;
 
-import javax.annotation.Nullable;
-import addsynth.core.game.blocks.TileEntityBlock;
 import addsynth.overpoweredmod.OverpoweredTechnology;
 import addsynth.overpoweredmod.assets.DamageSources;
 import addsynth.overpoweredmod.config.Config;
-import addsynth.overpoweredmod.registers.Tiles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.entity.Entity;
@@ -13,16 +10,13 @@ import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityTicker;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public final class LaserBeam extends TileEntityBlock {
+public final class LaserBeam extends Block {
 
   public LaserBeam(String name){
     super(Block.Properties.of(Material.FIRE).noCollission().lightLevel((blockstate)->{return Config.laser_light_level.get();}));
@@ -55,18 +49,6 @@ public final class LaserBeam extends TileEntityBlock {
         entity.setSecondsOnFire(8); // 8 seconds is the same time Vanilla sets players on fire when in contact with fire.
       }
     }
-  }
-
-  @Override
-  @Nullable
-  public final BlockEntity newBlockEntity(BlockPos position, BlockState blockstate){
-    return new TileLaserBeam(position, blockstate);
-  }
-
-  @Override
-  @Nullable
-  public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level world, BlockState blockstate, BlockEntityType<T> type){
-    return standardTicker(world, type, Tiles.LASER_BEAM);
   }
 
   @Override

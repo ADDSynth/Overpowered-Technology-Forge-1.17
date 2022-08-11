@@ -1,11 +1,11 @@
 package addsynth.overpoweredmod.machines.laser.machine;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import addsynth.core.block_network.BlockNetwork;
 import addsynth.core.block_network.Node;
-import addsynth.core.block_network.NodeList;
+import addsynth.core.util.constants.DirectionConstant;
 import addsynth.core.util.data.AdvancementUtil;
-import addsynth.core.util.game.MinecraftUtility;
 import addsynth.core.util.math.BlockMath;
 import addsynth.core.util.network.NetworkUtil;
 import addsynth.energy.lib.main.Energy;
@@ -15,20 +15,23 @@ import addsynth.overpoweredmod.assets.CustomStats;
 import addsynth.overpoweredmod.assets.Sounds;
 import addsynth.overpoweredmod.config.MachineValues;
 import addsynth.overpoweredmod.game.NetworkHandler;
+import addsynth.overpoweredmod.machines.laser.LaserJobs;
 import addsynth.overpoweredmod.machines.laser.cannon.LaserCannon;
-import addsynth.overpoweredmod.machines.laser.cannon.TileLaser;
 import addsynth.overpoweredmod.machines.laser.network_messages.LaserClientSyncMessage;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.BlockState;
 
 public final class LaserNetwork extends BlockNetwork<TileLaserHousing> {
 
   public static final int max_laser_distance = 1000;
 
   public boolean changed;
-  private final NodeList lasers = new NodeList(27);
+  private final HashSet<BlockPos> lasers = new HashSet<BlockPos>(27);
   private int number_of_lasers;
   private boolean activated;
   private int laser_distance;
@@ -59,24 +62,39 @@ public final class LaserNetwork extends BlockNetwork<TileLaserHousing> {
 
   @Override
   protected final void customSearch(final Node node){
-    if(node.block instanceof LaserCannon){
-      // FIX: only checks for LaserCannon block. Potential error if Laser is wrong type or laser is not attached to THIS laser network!
-      if(lasers.contains(node.position) == false){
-        lasers.add(node);
+    final BlockEntity tile = node.getTile();
+    if(tile != null){
+      if(tile.getClass() == TileLaserHousing.class){
+        
+        final BlockPos tile_position = tile.getBlockPos();
+        BlockPos position;
+        for(Direction direction : Direction.values()){
+          position = tile_position.relative(direction);
+          check_and_add_LaserCannon(position, direction);
+        }
+      }
+    }
+  }
+
+  /** Checks position if it is a valid LaserCannon, and adds it. */
+  private final void check_and_add_LaserCannon(final BlockPos position, final Direction direction){
+    BlockState state = world.getBlockState(position);
+    LaserCannon laser_block;
+    if(state.getBlock() instanceof LaserCannon){
+      laser_block = (LaserCannon)state.getBlock();
+      if(laser_block.color >= 0 && state.getValue(LaserCannon.FACING) == direction){
+        lasers.add(position);
       }
     }
   }
 
   @Override
   public void neighbor_was_changed(final BlockPos current_position, final BlockPos position_of_neighbor){
-    remove_invalid_nodes(lasers);
-
-    final TileLaser laser = MinecraftUtility.getTileEntity(position_of_neighbor, world, TileLaser.class);
-    if(laser != null){
-      if(lasers.contains(laser) == false){
-        lasers.add(new Node(position_of_neighbor, laser));
-      }
-    }
+    check_and_add_LaserCannon(position_of_neighbor, DirectionConstant.getDirection(current_position, position_of_neighbor));
+    lasers.removeIf((BlockPos pos) -> world.getBlockState(pos).getBlock() instanceof LaserCannon == false);
+    // if(world.getBlockState(position_of_neighbor).getBlock() instanceof LaserCannon == false){
+    //   lasers.remove(position_of_neighbor);
+    // }
     check_if_lasers_changed();
   }
 
@@ -168,11 +186,8 @@ public final class LaserNetwork extends BlockNetwork<TileLaserHousing> {
 
   private final void fire_lasers(){
     remove_invalid_nodes(blocks);
-    remove_invalid_nodes(lasers);
     
-    lasers.forAllTileEntities(TileLaser.class, (TileLaser tile) -> {
-      tile.activate(this.laser_distance);
-    });
+    LaserJobs.addNew(world, lasers, laser_distance);
     
     final double[] center_position = BlockMath.getExactCenter(blocks.getBlockPositions());
     world.playSound(null, center_position[0], center_position[1], center_position[2], Sounds.laser_fire_sound, SoundSource.AMBIENT, 2.0f, 1.0f);

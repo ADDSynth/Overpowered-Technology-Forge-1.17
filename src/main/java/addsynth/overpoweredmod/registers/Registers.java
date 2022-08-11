@@ -201,8 +201,6 @@ public final class Registers {
     RegistryUtil.register(game, Tiles.IDENTIFIER,                 Names.IDENTIFIER);
     RegistryUtil.register(game, Tiles.ENERGY_SUSPENSION_BRIDGE,   Names.ENERGY_SUSPENSION_BRIDGE);
     RegistryUtil.register(game, Tiles.LASER_MACHINE,              Names.LASER_HOUSING);
-    RegistryUtil.register(game, Tiles.LASER,                      Names.LASER_CANNON);
-    RegistryUtil.register(game, Tiles.LASER_BEAM,                 Names.LASER_BEAM);
     RegistryUtil.register(game, Tiles.DATA_CABLE,                 Names.DATA_CABLE);
     RegistryUtil.register(game, Tiles.PORTAL_CONTROL_PANEL,       Names.PORTAL_CONTROL_PANEL);
     RegistryUtil.register(game, Tiles.PORTAL_FRAME,               Names.PORTAL_FRAME);

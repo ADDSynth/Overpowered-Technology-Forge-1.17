@@ -11,6 +11,7 @@ import addsynth.overpoweredmod.assets.CustomStats;
 import addsynth.overpoweredmod.compatability.CompatabilityManager;
 import addsynth.overpoweredmod.config.*;
 import addsynth.overpoweredmod.game.NetworkHandler;
+import addsynth.overpoweredmod.game.OverpoweredSavedData;
 import addsynth.overpoweredmod.game.core.Init;
 import addsynth.overpoweredmod.game.core.Laser;
 import addsynth.overpoweredmod.game.core.Machines;
@@ -34,6 +35,8 @@ import addsynth.overpoweredmod.registers.Containers;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.server.MinecraftServer;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
@@ -43,6 +46,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
+import net.minecraftforge.fmlserverevents.FMLServerStartedEvent;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
@@ -67,6 +71,7 @@ public class OverpoweredTechnology {
     bus.addListener(OverpoweredTechnology::main_setup);
     bus.addListener(OverpoweredTechnology::client_setup);
     bus.addListener(CompatabilityManager::inter_mod_communications);
+    MinecraftForge.EVENT_BUS.addListener(OverpoweredTechnology::serverStarted);
     init_config();
     OverpoweredTechnology.log.info("Done constructing "+OverpoweredTechnology.class.getSimpleName()+" class object.");
   }
@@ -114,6 +119,13 @@ public class OverpoweredTechnology {
     // Game.registerCustomStat(BLACK_HOLE_EVENTS);
     
     log.info("Finished "+MOD_NAME+" main setup.");
+  }
+
+  private static final void serverStarted(final FMLServerStartedEvent event){
+    // load world saved data
+    @SuppressWarnings("resource")
+    final MinecraftServer server = event.getServer();
+    OverpoweredSavedData.load(server);
   }
 
   private static final void client_setup(final FMLClientSetupEvent event){
