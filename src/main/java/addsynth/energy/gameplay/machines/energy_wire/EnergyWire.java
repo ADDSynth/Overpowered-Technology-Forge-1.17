@@ -54,12 +54,6 @@ public final class EnergyWire extends Wire {
     return standardTicker(world, type, Tiles.ENERGY_WIRE);
   }
 
-  /** Starting in Minecraft 1.11, {@link Level#setBlockEntity(BlockEntity)} no longer calls
-   *  {@link Level#updateComparatorOutputLevel(BlockPos, Block)} at the end of the function.
-   *  For this reason we have to use {@link #neighborChanged(BlockState, Level, BlockPos, Block, BlockPos, boolean)}
-   *  instead of {@link #onNeighborChange(BlockState, BlockGetter, BlockPos, BlockPos)} like we do in Minecraft 1.10.
-   *  As it turns out, not even Vanilla Minecraft uses the <code>onNeighborChange()</code> function a whole lot.
-   */
   @Override
   @SuppressWarnings("deprecation")
   public final void neighborChanged(BlockState state, Level world, BlockPos pos, Block blockIn, BlockPos neighbor, boolean isMoving){

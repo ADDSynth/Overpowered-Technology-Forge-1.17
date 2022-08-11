@@ -11,6 +11,7 @@ import addsynth.overpoweredmod.machines.suspension_bridge.BridgeNetwork;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
@@ -256,8 +257,8 @@ public abstract class BlockNetwork<T extends BlockEntity & IBlockNetworkUser> {
   /**<p>
    *   Call this in the block's
    *   {@link Block#neighborChanged(BlockState, Level, BlockPos, Block, BlockPos, boolean)} method.<br>
-   *   <b>Do not use</b> the {@link Block#onNeighborChange(BlockState, net.minecraft.world.IWorldReader, BlockPos, BlockPos)} method!
-   *   Starting in Minecraft 1.11 the {@link Level#updateComparatorOutputLevel(BlockPos, Block)} method
+   *   <b>Do not use</b> the {@link Block#onNeighborChange(BlockState, LevelReader, BlockPos, BlockPos)} method!
+   *   Starting in Minecraft 1.11 the {@link Level#updateNeighbourForOutputSignal(BlockPos, Block)} method
    *   is no longer called at the end of the {@link Level#setBlockEntity(BlockEntity)} function,
    *   so it doesn't update Block Networks at all.
    * <p>NOTE: It seems <code>onNeighborChange()</code> is added by Forge and only gets called if the neighbor block was

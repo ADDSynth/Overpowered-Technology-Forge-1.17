@@ -8,7 +8,7 @@ import net.minecraftforge.fml.loading.FMLEnvironment;
 public final class ForgeUtil {
 
   /**
-   * Taken from {@link net.minecraftforge.registries.GameData#checkPrefix(String)}.
+   * Taken from {@link net.minecraftforge.registries.GameData#checkPrefix(String, boolean)}.
    * @return String modID
    */
   public static final String getModID(){

@@ -41,10 +41,7 @@ public final class NetworkUtil {
     data.writeUtf(string);
   }
 
-  /** You CANNOT use the vanilla method {@link FriendlyByteBuf#readString()} because it has
-   *  the ClientOnly annotation, and thus will crash the server if called on that side!
-   *  You can call this to get around that. This does exactly what the vanilla method does.
-   */
+  @Deprecated
   public static final String readString(final FriendlyByteBuf data){ // OPTIMIZE: our own read/writeString functions are no longer needed for Minecraft 1.16
     return data.readUtf();
   }

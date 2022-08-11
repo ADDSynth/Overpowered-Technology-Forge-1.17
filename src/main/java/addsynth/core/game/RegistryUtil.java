@@ -312,7 +312,7 @@ public final class RegistryUtil { // cannot be named GameRegistry because it con
   }
 
   /**
-   * <p>This is our version of {@link Item#getItemFromBlock(Block)}. This function returns the ItemBlock
+   * <p>This is our version of {@link Item#byBlock(Block)}. This function returns the ItemBlock
    *    for the block you specify, if it exists.
    * <p>We prefer you use this because the vanilla method returns Blocks.AIR, if it can't find the ItemBlock
    *    for your block, and doesn't warn you.

@@ -51,7 +51,7 @@ public final class CrystalEnergyExtractorBlock extends MachineBlock {
     return standardTicker(world, type, Tiles.CRYSTAL_ENERGY_EXTRACTOR);
   }
 
-  /** @deprecated Call via {@link BlockState#onBlockActivated(Level, Player, InteractionHand, BlockHitResult)} whenever possible.
+  /** @deprecated Call via {@link BlockState#use(Level, Player, InteractionHand, BlockHitResult)} whenever possible.
     * Implementing/overriding is fine.
   */
   @Override

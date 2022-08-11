@@ -68,7 +68,7 @@ public final class EnchantmentUtil {
     return Arrays.asList(enchantment_list);
   }
 
-  /** @see ItemStack#addEnchantment(Enchantment, int) */
+  /** @see ItemStack#enchant(Enchantment, int) */
   public static final boolean does_item_have_enchantment(final ItemStack stack, final Enchantment ... enchantments){
     if(stack.isEnchanted()){
       final ListTag enchantment_tag_list = stack.getEnchantmentTags();

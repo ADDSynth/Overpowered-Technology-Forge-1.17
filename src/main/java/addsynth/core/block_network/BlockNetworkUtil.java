@@ -5,6 +5,7 @@ import addsynth.core.util.game.MinecraftUtility;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 
 public final class BlockNetworkUtil {
@@ -130,7 +131,7 @@ public final class BlockNetworkUtil {
     network.updateBlockNetwork(tile.getBlockPos(), tile);
   }
 
-  /** Helper function. Call in block's {@link net.minecraft.block.Block#neighborChanged} function.
+  /** Helper function. Call in block's {@link Block#neighborChanged} function.
    *  Used to cause the BlockNetwork to respond to an adjacent block being added or removed.
    *  @see BlockNetwork#neighbor_was_changed(BlockPos, BlockPos)
    **/

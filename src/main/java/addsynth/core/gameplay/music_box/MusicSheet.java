@@ -24,7 +24,7 @@ import net.minecraft.world.phys.BlockHitResult;
 /**
  * Man did I have trouble with this one. I don't feel like explaining how it works right now.
  * Just run in debug mode and step through the code yourself to see how it works.
- * @see net.minecraft.world.level.block.TntBlock#onBlockActivated
+ * @see net.minecraft.world.level.block.TntBlock#use
  * @see net.minecraft.world.item.BucketItem
  * @see net.minecraft.world.item.EnderEyeItem
  */

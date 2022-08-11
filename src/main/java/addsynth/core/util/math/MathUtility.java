@@ -4,7 +4,7 @@ import javax.annotation.Nonnegative;
 import addsynth.core.ADDSynthCore;
 import addsynth.core.gui.widgets.scrollbar.Scrollbar;
 
-/** For math functions that use {@link net.minecraft.util.math.BlockPos BlockPos},
+/** For math functions that use {@link net.minecraft.core.BlockPos BlockPos},
  *  use {@link BlockMath} instead.
  *  @author ADDSynth
  */

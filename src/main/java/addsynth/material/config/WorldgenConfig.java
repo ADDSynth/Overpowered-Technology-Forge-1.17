@@ -5,7 +5,7 @@ import addsynth.core.util.world.WorldConstants;
 import net.minecraftforge.common.ForgeConfigSpec;
 
 /**
- *  @see net.minecraft.world.biome.DefaultBiomeFeatures
+ *  @see net.minecraft.data.worldgen.BiomeDefaultFeatures
  */
 public final class WorldgenConfig {
 
