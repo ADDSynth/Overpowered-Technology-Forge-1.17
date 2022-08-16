@@ -1,5 +1,6 @@
 package addsynth.core.util.game;
 
+import javax.annotation.Nonnull;
 import addsynth.core.ADDSynthCore;
 import addsynth.core.util.player.PlayerUtil;
 import addsynth.core.util.server.ServerUtils;
@@ -21,14 +22,23 @@ public final class MessageUtil {
    * @param translation_key
    */
   public static final void send_to_player(final Player player, final String translation_key, final Object ... arguments){
+    @SuppressWarnings("resource")
+    final MinecraftServer server = player.getServer();
+    if(server != null){
+      send_to_player(server, player, translation_key, arguments);
+    }
+  }
+
+  /** Sends a SYSTEM type message to the player.<br>
+   *  This must be called on the server side. Calling on the client side will only translate to English.
+   * @param player
+   * @param translation_key
+   */
+  public static final void send_to_player(@Nonnull MinecraftServer server, Player player, String translation_key, Object ... arguments){
     if(Language.getInstance().has(translation_key) == false){
       ADDSynthCore.log.warn("Missing translated text for: "+translation_key);
     }
-    @SuppressWarnings("resource")
-    final MinecraftServer server = ServerUtils.getServer(player.level); // gets server no matter what
-    if(server != null){
-      player.sendMessage(TextComponentHelper.createComponentTranslation(server, translation_key, arguments), null);
-    }
+    player.sendMessage(TextComponentHelper.createComponentTranslation(server, translation_key, arguments), null);
   }
 
   public static final void send_to_all_players(final Level world, final String translation_key, final Object ... arguments){

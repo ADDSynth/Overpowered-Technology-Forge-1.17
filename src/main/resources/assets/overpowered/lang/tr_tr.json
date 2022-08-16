@@ -125,6 +125,7 @@
 "stat.overpowered.items_identified": "Items Identified",
 "stat.overpowered.black_hole_events": "Singularity Events",
 
+"gui.overpowered.anchored_in_this_dimension": "§eYou are anchored in this dimension.",
 "gui.overpowered.black_hole.not_allowed_in_this_dimension": "Bu boyutta Kara Deliklere izin verilmez.",
 "gui.overpowered.black_hole.notify_players": "§5tekillik olayı§r koordinatlarda tespit edildi: %s , %s , %s",
 "gui.overpowered.energy_suspension_bridge.lens": "Lens",
@@ -161,7 +162,7 @@
 "gui.overpowered.jei_description.energy_suspension_bridge": "Yeterli enerji sağlandığında ve bir redstone sinyali ile etkinleştirildiğinde, burası başka bir köprü makine bloğuna bir enerji köprüsü oluşturur. İstediğiniz rengin bir merceğini yerleştirmelisiniz ve iki köprü makine bloğu arasındaki boşlukta engel bulunmamalıdır.",
 "gui.overpowered.jei_description.advanced_ore_refinery": "Bu makineye cevherleri yerleştirin ve çıktıyı iki katına çıkarır, ancak yalnızca cevherlerle çalışır.",
 "gui.overpowered.jei_description.crystal_matter_generator": "Bir süre koştuktan sonra, bu makine bir mücevher parçası üretecek. Bir dolu taş elde etmek için aynı türden 9 parça birleştirin.",
-"gui.overpowered.jei_description.dimensional_anchor": "Şu anda bunun bir amacı yok.",
+"gui.overpowered.jei_description.dimensional_anchor": "The Dimensional Anchor, when kept in your inventory, will prevent you from traveling to other dimensions, and also protects you from a Black Hole.",
 "gui.overpowered.jei_description.black_hole": "Buna dikkat et! Eğer bunu koyarsanız, bu dünyanızın büyük bir bölümünü kaldıracaktır!",
 "gui.overpowered.jei_description.fusion_chamber": "Füzyon enerji yapısının bir parçası. Bu merkezdeki blok. Geçerli kabul edilebilmesi için bir füzyon çekirdeği içermelidir.",
 "gui.overpowered.jei_description.fusion_control_unit": "Füzyon enerji yapısının bir parçası. Bu 5 bloğun 6'sını her yönden merkezden uzağa yerleştirmeniz gerekir. Füzyon kontrol ünitelerini füzyon enerjisi dönüştürücüsüne bağlamak için veri kablosu kullanmalısınız.",
@@ -266,5 +267,7 @@
 "advancements.overpowered.dimensional_anchor.title": "Boyutlu çapa",
 "advancements.overpowered.dimensional_anchor.description": "Boyutlu bir çapa hazırlayın",
 "advancements.overpowered.world_destroyer.title": "Dünya muhripleri",
-"advancements.overpowered.world_destroyer.description": "Dünyanın bir bölümünü yok etmek için bir kara delik kullanın"
+"advancements.overpowered.world_destroyer.description": "Dünyanın bir bölümünü yok etmek için bir kara delik kullanın",
+"advancements.overpowered.survivor.title": "Survivor",
+"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole"
 }

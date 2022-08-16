@@ -125,6 +125,7 @@
 "stat.overpowered.items_identified": "Items Identified",
 "stat.overpowered.black_hole_events": "Singularity Events",
 
+"gui.overpowered.anchored_in_this_dimension": "§eYou are anchored in this dimension.",
 "gui.overpowered.black_hole.not_allowed_in_this_dimension": "Găurile negre nu sunt permise în această dimensiune.",
 "gui.overpowered.black_hole.notify_players": "§5Eveniment de singularitate§r a fost detectat la coordonate: %s , %s , %s",
 "gui.overpowered.energy_suspension_bridge.lens=": "Obiectiv",
@@ -161,7 +162,7 @@
 "gui.overpowered.jei_description.energy_suspension_bridge": "Când este furnizat cu suficientă energie și este activat cu un semnal roșu, acesta va crea o punte de energie de aici către un alt bloc de mașini. Trebuie să introduceți un obiectiv cu culoarea dorită, iar spațiul dintre cele două blocuri de mașini pod să fie lipsit de obstacole.",
 "gui.overpowered.jei_description.advanced_ore_refinery": "Introduceți minereuri în această mașină și va produce dublul producției, dar funcționează doar cu minereuri.",
 "gui.overpowered.jei_description.crystal_matter_generator": "După ce a rulat o perioadă, această mașină va produce un fragment de bijuterie. Combinați 9 cioburi de același tip pentru a obține o bijuterie completă.",
-"gui.overpowered.jei_description.dimensional_anchor": "În prezent acest lucru nu are niciun scop.",
+"gui.overpowered.jei_description.dimensional_anchor": "The Dimensional Anchor, when kept in your inventory, will prevent you from traveling to other dimensions, and also protects you from a Black Hole.",
 "gui.overpowered.jei_description.black_hole": "Fii atent cu asta! Dacă așezați acest lucru jos, acest lucru va elimina o mare parte din lumea voastră!",
 "gui.overpowered.jei_description.fusion_chamber": "Parte a structurii energiei de fuziune. Acesta este blocul din centru. Acesta trebuie să conțină un miez de fuziune pentru a fi considerat valabil.",
 "gui.overpowered.jei_description.fusion_control_unit": "Parte a structurii energiei de fuziune. Trebuie să așezați 6 din aceste 5 blocuri distanță de centru în fiecare direcție. Trebuie să utilizați cablul de date pentru a conecta unitățile de control al fuziunii la convertorul de energie de fuziune.",
@@ -266,5 +267,7 @@
 "advancements.overpowered.dimensional_anchor.title": "Ancoră dimensională",
 "advancements.overpowered.dimensional_anchor.description": "Creează o ancoră dimensională",
 "advancements.overpowered.world_destroyer.title": "Distrugător mondial",
-"advancements.overpowered.world_destroyer.description": "Folosiți o gaură neagră pentru a distruge o parte a lumii"
+"advancements.overpowered.world_destroyer.description": "Folosiți o gaură neagră pentru a distruge o parte a lumii",
+"advancements.overpowered.survivor.title": "Survivor",
+"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole"
 }

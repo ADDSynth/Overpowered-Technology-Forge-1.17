@@ -125,6 +125,7 @@
 "stat.overpowered.items_identified": "Items Identified",
 "stat.overpowered.black_hole_events": "Singularity Events",
 
+"gui.overpowered.anchored_in_this_dimension": "§eYou are anchored in this dimension.",
 "gui.overpowered.black_hole.not_allowed_in_this_dimension": "لا يُسمح بالثقوب السوداء في هذا البعد.",
 "gui.overpowered.black_hole.notify_players": "تم الكشف عن حدث التفرد في الإحداثيات: %s , %s , %s",
 "gui.overpowered.energy_suspension_bridge.lens": "عدسة",
@@ -161,7 +162,7 @@
 "gui.overpowered.jei_description.energy_suspension_bridge": "عند تزويده بطاقة كافية وتنشيطه بإشارة ريدستون ، سيؤدي ذلك إلى إنشاء جسر طاقة من هنا إلى كتلة آلة جسر أخرى. يجب إدخال عدسة اللون الذي تريده ، ويجب أن تكون المسافة بين كتلتين من آلات الجسر خالية من العوائق.",
 "gui.overpowered.jei_description.advanced_ore_refinery": "أدخل الخامات في هذا الجهاز وسوف ينتج ضعف الناتج ، ولكنه يعمل فقط مع الخامات.",
 "gui.overpowered.jei_description.crystal_matter_generator": "بعد التشغيل لفترة من الوقت ، ستنتج هذه الآلة قطعة من الأحجار الكريمة. اجمع 9 قطع من نفس النوع لتحصل على جوهرة كاملة.",
-"gui.overpowered.jei_description.dimensional_anchor": "حاليا هذا ليس له غرض.",
+"gui.overpowered.jei_description.dimensional_anchor": "The Dimensional Anchor, when kept in your inventory, will prevent you from traveling to other dimensions, and also protects you from a Black Hole.",
 "gui.overpowered.jei_description.black_hole": "كن حذرا مع هذا! إذا قمت بوضع هذا ، فسيؤدي ذلك إلى محو عالمك!",
 "gui.overpowered.jei_description.fusion_chamber": "جزء من هيكل طاقة الانصهار. هذا هو الكتلة في المركز. يجب أن تحتوي على نواة صهر لكي تعتبر صالحة.",
 "gui.overpowered.jei_description.fusion_control_unit": "جزء من هيكل طاقة الانصهار. تحتاج إلى وضع 6 من هذه القطع الخمسة بعيدًا عن المركز في كل اتجاه. يجب عليك استخدام كبل البيانات لتوصيل وحدات التحكم في الاندماج بمحول طاقة الانصهار.",
@@ -266,5 +267,7 @@
 "advancements.overpowered.dimensional_anchor.title": "مرساة الأبعاد",
 "advancements.overpowered.dimensional_anchor.description": "اصنع مرساة الأبعاد",
 "advancements.overpowered.world_destroyer.title": "مدمر العالم",
-"advancements.overpowered.world_destroyer.description": "استخدم ثقبًا أسود لتدمير جزء من العالم"
+"advancements.overpowered.world_destroyer.description": "استخدم ثقبًا أسود لتدمير جزء من العالم",
+"advancements.overpowered.survivor.title": "Survivor",
+"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole"
 }

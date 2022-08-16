@@ -125,6 +125,7 @@
 "stat.overpowered.items_identified": "Items Identified",
 "stat.overpowered.black_hole_events": "Singularity Events",
 
+"gui.overpowered.anchored_in_this_dimension": "§eYou are anchored in this dimension.",
 "gui.overpowered.black_hole.not_allowed_in_this_dimension": "इस आयाम में ब्लैक होल की अनुमति नहीं है।",
 "gui.overpowered.black_hole.notify_players": "§5विलक्षण घटना§r निर्देशांक में पाया गया: %s , %s , %s",
 "gui.overpowered.energy_suspension_bridge.lens": "लेंस",
@@ -161,7 +162,7 @@
 "gui.overpowered.jei_description.energy_suspension_bridge": "जब पर्याप्त ऊर्जा की आपूर्ति की जाती है, और रेडस्टोन सिग्नल के साथ सक्रिय होता है, तो यह यहां से दूसरे पुल मशीन ब्लॉक तक एक ऊर्जा पुल का निर्माण करेगा। आपको इच्छित रंग का एक लेंस डालना होगा, और दो पुल मशीन ब्लॉकों के बीच का स्थान बाधाओं से मुक्त होना चाहिए।",
 "gui.overpowered.jei_description.advanced_ore_refinery": "इस मशीन में अयस्कों को डालें और यह उत्पादन को दोगुना करेगा, लेकिन यह केवल अयस्कों के साथ काम करता है।",
 "gui.overpowered.jei_description.crystal_matter_generator": "कुछ समय तक चलने के बाद, यह मशीन एक रत्न शार्क का उत्पादन करेगी। एक पूर्ण मणि पाने के लिए एक ही प्रकार के 9 शकों को मिलाएं।",
-"gui.overpowered.jei_description.dimensional_anchor": "वर्तमान में इसका कोई उद्देश्य नहीं है।",
+"gui.overpowered.jei_description.dimensional_anchor": "The Dimensional Anchor, when kept in your inventory, will prevent you from traveling to other dimensions, and also protects you from a Black Hole.",
 "gui.overpowered.jei_description.black_hole": "इससे सावधान रहें! यदि आप इसे नीचे रखते हैं, तो यह आपकी दुनिया के एक बड़े हिस्से को हटा देगा!",
 "gui.overpowered.jei_description.fusion_chamber": "संलयन ऊर्जा संरचना का हिस्सा। यह केंद्र में ब्लॉक है। इसे मान्य माना जाने के लिए फ्यूजन कोर होना चाहिए।",
 "gui.overpowered.jei_description.fusion_control_unit": "संलयन ऊर्जा संरचना का हिस्सा। आपको इन 5 ब्लॉकों में से 6 को प्रत्येक दिशा में केंद्र से दूर रखने की आवश्यकता है। संलयन ऊर्जा इकाइयों को संलयन ऊर्जा कनवर्टर से जोड़ने के लिए आपको डेटा केबल का उपयोग करना चाहिए।",
@@ -266,5 +267,7 @@
 "advancements.overpowered.dimensional_anchor.title": "आयामी लंगर",
 "advancements.overpowered.dimensional_anchor.description": "एक आयामी लंगर शिल्प।",
 "advancements.overpowered.world_destroyer.title": "संसार का नाश करनेवाला",
-"advancements.overpowered.world_destroyer.description": "दुनिया के हिस्से को नष्ट करने के लिए एक ब्लैक होल का उपयोग करें।"
+"advancements.overpowered.world_destroyer.description": "दुनिया के हिस्से को नष्ट करने के लिए एक ब्लैक होल का उपयोग करें।",
+"advancements.overpowered.survivor.title": "Survivor",
+"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole"
 }

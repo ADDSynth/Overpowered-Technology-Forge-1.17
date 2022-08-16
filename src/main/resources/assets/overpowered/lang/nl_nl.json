@@ -125,6 +125,7 @@
 "stat.overpowered.items_identified": "Items Identified",
 "stat.overpowered.black_hole_events": "Singularity Events",
 
+"gui.overpowered.anchored_in_this_dimension": "§eYou are anchored in this dimension.",
 "gui.overpowered.black_hole.not_allowed_in_this_dimension": "Zwarte gaten zijn in deze dimensie niet toegestaan.",
 "gui.overpowered.black_hole.notify_players": "§5Singularity Event§r gedetecteerd op coördinaten: %s , %s , %s",
 "gui.overpowered.energy_suspension_bridge.lens": "Lens",
@@ -161,7 +162,7 @@
 "gui.overpowered.jei_description.energy_suspension_bridge": "Wanneer deze van voldoende energie wordt voorzien en wordt geactiveerd met een redstone-signaal, zal dit een energiebrug creëren van hier naar een ander brugmachineblok. U moet een lens met de gewenste kleur plaatsen en de ruimte tussen de twee brugmachineblokken moet vrij zijn van obstakels.",
 "gui.overpowered.jei_description.advanced_ore_refinery": "Steek ertsen in deze machine en het zal dubbele output produceren, maar het werkt alleen met ertsen.",
 "gui.overpowered.jei_description.crystal_matter_generator": "Na een tijdje te hebben gerend, zal deze machine een edelsteenscherf produceren. Combineer 9 scherven van hetzelfde type om een ​​volledige edelsteen te krijgen.",
-"gui.overpowered.jei_description.dimensional_anchor": "Dit heeft momenteel geen doel.",
+"gui.overpowered.jei_description.dimensional_anchor": "The Dimensional Anchor, when kept in your inventory, will prevent you from traveling to other dimensions, and also protects you from a Black Hole.",
 "gui.overpowered.jei_description.black_hole": "Wees hier voorzichtig mee! Als je dit neerzet, zal dit een groot deel van je wereld verwijderen!",
 "gui.overpowered.jei_description.fusion_chamber": "Onderdeel van de fusie-energiestructuur. Dit is het blok in het midden. Het moet een fusiekern bevatten om als geldig te worden beschouwd.",
 "gui.overpowered.jei_description.fusion_control_unit": "Onderdeel van de fusie-energiestructuur. Je moet 6 van deze 5 blokken in elke richting uit het midden plaatsen. U moet een datakabel gebruiken om de fusieregeleenheden op de fusie-energieomvormer aan te sluiten.",
@@ -266,5 +267,7 @@
 "advancements.overpowered.dimensional_anchor.title": "Dimensionaal anker",
 "advancements.overpowered.dimensional_anchor.description": "Maak een dimensionaal anker",
 "advancements.overpowered.world_destroyer.title": "Wereldvernietiger",
-"advancements.overpowered.world_destroyer.description": "Gebruik een zwart gat om een ​​deel van de wereld te vernietigen"
+"advancements.overpowered.world_destroyer.description": "Gebruik een zwart gat om een ​​deel van de wereld te vernietigen",
+"advancements.overpowered.survivor.title": "Survivor",
+"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole"
 }

@@ -1,7 +1,7 @@
 package addsynth.overpoweredmod.game.core;
 
 import addsynth.overpoweredmod.Debug;
-import addsynth.overpoweredmod.items.DimensionAnchor;
+import addsynth.overpoweredmod.items.DimensionalAnchor;
 import addsynth.overpoweredmod.items.FusionCore;
 import addsynth.overpoweredmod.items.OverpoweredItem;
 import addsynth.overpoweredmod.items.PlasmaItem;
@@ -30,7 +30,7 @@ public final class ModItems {
   public static final Item fusion_core               = new FusionCore("fusion_core");
   public static final Item matter_energy_converter   = new OverpoweredItem("matter_energy_converter");
   public static final Item dimensional_flux          = new OverpoweredItem("dimensional_flux");
-  public static final Item dimensional_anchor        = new DimensionAnchor("dimensional_anchor");
+  public static final Item dimensional_anchor        = new DimensionalAnchor("dimensional_anchor");
   
   static {
     Debug.log_setup_info("Finished loading Items class.");

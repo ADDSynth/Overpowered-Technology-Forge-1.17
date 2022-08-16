@@ -125,6 +125,7 @@
 "stat.overpowered.items_identified": "Items Identified",
 "stat.overpowered.black_hole_events": "Singularity Events",
 
+"gui.overpowered.anchored_in_this_dimension": "§eYou are anchored in this dimension.",
 "gui.overpowered.black_hole.not_allowed_in_this_dimension": "V této dimenzi nejsou černé díry povoleny.",
 "gui.overpowered.black_hole.notify_players": "§5Událost singularita§r byla detekována na souřadnicích: %s , %s , %s",
 "gui.overpowered.energy_suspension_bridge.lens": "Objektiv",
@@ -161,7 +162,7 @@
 "gui.overpowered.jei_description.energy_suspension_bridge": "Pokud je dodáván dostatek energie a aktivován signálem redstone, vytvoří se tím energetický most odtud do dalšího bloku strojního můstku. Musíte vložit objektiv požadované barvy a prostor mezi dvěma bloky strojního můstku musí být bez překážek.",
 "gui.overpowered.jei_description.advanced_ore_refinery": "Vložte rudy do tohoto stroje a bude mít dvojnásobný výkon, ale pracuje pouze s rudami.",
 "gui.overpowered.jei_description.crystal_matter_generator": "Po chvíli běhu, bude tento stroj produkovat drahokam střep. Kombinujte 9 střepů stejného typu a získejte jeden plný klenot.",
-"gui.overpowered.jei_description.dimensional_anchor": "V současné době to nemá žádný účel.",
+"gui.overpowered.jei_description.dimensional_anchor": "The Dimensional Anchor, when kept in your inventory, will prevent you from traveling to other dimensions, and also protects you from a Black Hole.",
 "gui.overpowered.jei_description.black_hole": "Buďte opatrní! Pokud to umístíte dolů, vymažete tím svůj svět!",
 "gui.overpowered.jei_description.fusion_chamber": "Část struktury jaderné syntézy. Toto je blok ve středu. Aby mohl být považován za platný, musí obsahovat jádro fúze.",
 "gui.overpowered.jei_description.fusion_control_unit": "Část struktury jaderné syntézy. Musíte umístit 6 z těchto 5 bloků od středu v každém směru. Pro připojení fúzních řídících jednotek k převodníku fúzní energie musíte použít datový kabel.",
@@ -266,5 +267,7 @@
 "advancements.overpowered.dimensional_anchor.title": "Dimenzionální kotva",
 "advancements.overpowered.dimensional_anchor.description": "Vytvořte položku Dimensional Kotva",
 "advancements.overpowered.world_destroyer.title": "Světový torpédoborec",
-"advancements.overpowered.world_destroyer.description": "Pomocí černé díry zničte část světa"
+"advancements.overpowered.world_destroyer.description": "Pomocí černé díry zničte část světa",
+"advancements.overpowered.survivor.title": "Survivor",
+"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole"
 }

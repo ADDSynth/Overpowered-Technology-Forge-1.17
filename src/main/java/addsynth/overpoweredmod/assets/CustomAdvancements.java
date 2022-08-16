@@ -26,4 +26,7 @@ public final class CustomAdvancements {
   public static final ResourceLocation WORLD_DESTROYER =
     new ResourceLocation(OverpoweredTechnology.MOD_ID, "overpowered/world_destroyer");
 
+  public static final ResourceLocation SURVIVOR =
+    new ResourceLocation(OverpoweredTechnology.MOD_ID, "overpowered/survivor");
+
 }

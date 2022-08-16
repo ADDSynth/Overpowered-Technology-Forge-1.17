@@ -125,6 +125,7 @@
 "stat.overpowered.items_identified": "Items Identified",
 "stat.overpowered.black_hole_events": "Singularity Events",
 
+"gui.overpowered.anchored_in_this_dimension": "§eYou are anchored in this dimension.",
 "gui.overpowered.black_hole.not_allowed_in_this_dimension": "Sorte huller er ikke tilladt i denne dimension.",
 "gui.overpowered.black_hole.notify_players": "§5Singularitets begivenhed§r blev påvist ved koordinater: %s , %s , %s",
 "gui.overpowered.energy_suspension_bridge.lens": "Linse",
@@ -161,7 +162,7 @@
 "gui.overpowered.jei_description.energy_suspension_bridge": "Når den leveres med nok energi og aktiveres med et rødsten-signal, skaber dette en energibro herfra til en anden bromaskinblok. Du skal indsætte en linse med den ønskede farve, og mellemrummet mellem de to bromaskinblokke skal være fri for forhindringer.",
 "gui.overpowered.jei_description.advanced_ore_refinery": "Indsæt malm i denne maskine, så producerer det dobbelt output, men det fungerer kun med malm.",
 "gui.overpowered.jei_description.crystal_matter_generator": "Efter at have kørt et stykke tid, producerer denne maskine en perlekard. Kombiner 9 skær af samme type for at få en fuld perle.",
-"gui.overpowered.jei_description.dimensional_anchor": "I øjeblikket har dette intet formål.",
+"gui.overpowered.jei_description.dimensional_anchor": "The Dimensional Anchor, when kept in your inventory, will prevent you from traveling to other dimensions, and also protects you from a Black Hole.",
 "gui.overpowered.jei_description.black_hole": "Vær forsigtig med dette! Hvis du lægger dette ned, fjerner dette en stor del af din verden!",
 "gui.overpowered.jei_description.fusion_chamber": "En del af fusionsenergistrukturen. Dette er blokken i midten. Den skal indeholde en fusionskerne for at blive betragtet som gyldig.",
 "gui.overpowered.jei_description.fusion_control_unit": "En del af fusionsenergistrukturen. Du skal placere 6 af disse 5 blokke væk fra centrum i hver retning. Du skal bruge datakabel til at forbinde fusionskontrolenhederne til fusionenergikonverteren.",
@@ -266,5 +267,7 @@
 "advancements.overpowered.dimensional_anchor.title": "Dimensionelt anker",
 "advancements.overpowered.dimensional_anchor.description": "Lav et dimensionelt anker",
 "advancements.overpowered.world_destroyer.title": "Verden ødelægger",
-"advancements.overpowered.world_destroyer.description": "Brug et sort hul til at ødelægge en del af verden"
+"advancements.overpowered.world_destroyer.description": "Brug et sort hul til at ødelægge en del af verden",
+"advancements.overpowered.survivor.title": "Survivor",
+"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole"
 }

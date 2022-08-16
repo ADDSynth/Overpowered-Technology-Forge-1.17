@@ -125,6 +125,7 @@
 "stat.overpowered.items_identified": "Items Identified",
 "stat.overpowered.black_hole_events": "Singularity Events",
 
+"gui.overpowered.anchored_in_this_dimension": "§eYou are anchored in this dimension.",
 "gui.overpowered.black_hole.not_allowed_in_this_dimension": "この次元ではブラックホールは許可されていません。",
 "gui.overpowered.black_hole.notify_players": "§5特異点イベント§r が検出されました: %s , %s , %s",
 "gui.overpowered.energy_suspension_bridge.lens": "レンズ",
@@ -161,7 +162,7 @@
 "gui.overpowered.jei_description.energy_suspension_bridge": "十分なエネルギーが供給され、レッドストーン信号でアクティブ化されると、ここから別のブリッジマシンブロックへのエネルギーブリッジが作成されます。 必要な色のレンズを挿入し、2つのブリッジマシンブロック間のスペースに障害物がないようにする必要があります。",
 "gui.overpowered.jei_description.advanced_ore_refinery": "このマシンに鉱石を挿入すると、出力が2倍になりますが、鉱石でのみ機能します。",
 "gui.overpowered.jei_description.crystal_matter_generator": "しばらく実行すると、このマシンは宝石の破片を生成します。 同じタイプの9つの破片を組み合わせて1つの完全な宝石を取得します。",
-"gui.overpowered.jei_description.dimensional_anchor": "現在、これには目的がありません。",
+"gui.overpowered.jei_description.dimensional_anchor": "The Dimensional Anchor, when kept in your inventory, will prevent you from traveling to other dimensions, and also protects you from a Black Hole.",
 "gui.overpowered.jei_description.black_hole": "これに注意してください！ これを下に置くと、世界の大部分が削除されます。",
 "gui.overpowered.jei_description.fusion_chamber": "核融合エネルギー構造の一部。 これが中央のブロックです。 有効と見なされるためには、フュージョンコアが含まれている必要があります。",
 "gui.overpowered.jei_description.fusion_control_unit": "核融合エネルギー構造の一部。 これらの5つのブロックのうち6つを、中心から各方向に離して配置する必要があります。 フュージョンコントロールユニットをフュージョンエネルギーコンバーターに接続するには、データケーブルを使用する必要があります。",
@@ -266,5 +267,7 @@
 "advancements.overpowered.dimensional_anchor.title": "次元アンカー",
 "advancements.overpowered.dimensional_anchor.description": "次元アンカーを作成します",
 "advancements.overpowered.world_destroyer.title": "世界の駆逐艦",
-"advancements.overpowered.world_destroyer.description": "ブラックホールを使用して、世界の一部を破壊します"
+"advancements.overpowered.world_destroyer.description": "ブラックホールを使用して、世界の一部を破壊します",
+"advancements.overpowered.survivor.title": "Survivor",
+"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole"
 }

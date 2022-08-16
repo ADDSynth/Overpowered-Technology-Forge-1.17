@@ -125,6 +125,7 @@
 "stat.overpowered.items_identified": "Items Identified",
 "stat.overpowered.black_hole_events": "Singularity Events",
 
+"gui.overpowered.anchored_in_this_dimension": "§eYou are anchored in this dimension.",
 "gui.overpowered.black_hole.not_allowed_in_this_dimension": "Черные дыры не допускаются в этом измерении.",
 "gui.overpowered.black_hole.notify_players": "§5Событие Сингулярности§r обнаружен в координатах: %s , %s , %s",
 "gui.overpowered.energy_suspension_bridge.lens": "объектив",
@@ -161,7 +162,7 @@
 "gui.overpowered.jei_description.energy_suspension_bridge": "Когда он снабжен достаточным количеством энергии и активирован сигналом красного камня, это создаст энергетический мост отсюда к другому мостовому машинному блоку. Вы должны вставить линзу нужного вам цвета, и пространство между двумя мостовыми блоками должно быть свободным от препятствий.",
 "gui.overpowered.jei_description.advanced_ore_refinery": "Вставьте руды в эту машину, и вы получите удвоенную производительность, но она работает только с рудами.",
 "gui.overpowered.jei_description.crystal_matter_generator": "По прошествии некоторого времени эта машина выдаст осколок драгоценного камня. Объедините 9 осколков одного типа, чтобы получить один полный драгоценный камень.",
-"gui.overpowered.jei_description.dimensional_anchor": "В настоящее время это не имеет смысла.",
+"gui.overpowered.jei_description.dimensional_anchor": "The Dimensional Anchor, when kept in your inventory, will prevent you from traveling to other dimensions, and also protects you from a Black Hole.",
 "gui.overpowered.jei_description.black_hole": "Будьте осторожны с этим! Если вы положите это вниз, это удалит большую часть вашего мира!",
 "gui.overpowered.jei_description.fusion_chamber": "Часть структуры энергии синтеза. Это блок в центре. Он должен содержать ядро ​​синтеза, чтобы считаться действительным.",
 "gui.overpowered.jei_description.fusion_control_unit": "Часть структуры энергии синтеза. Вам нужно разместить 6 из этих 5 блоков вдали от центра в каждом направлении. Вы должны использовать кабель для передачи данных для подключения блоков управления сваркой к преобразователю энергии плавления.",
@@ -266,5 +267,7 @@
 "advancements.overpowered.dimensional_anchor.title": "Размерный якорь",
 "advancements.overpowered.dimensional_anchor.description": "Создайте размерный якорь",
 "advancements.overpowered.world_destroyer.title": "Разрушитель мира",
-"advancements.overpowered.world_destroyer.description": "Используйте черную дыру, чтобы уничтожить часть мира"
+"advancements.overpowered.world_destroyer.description": "Используйте черную дыру, чтобы уничтожить часть мира",
+"advancements.overpowered.survivor.title": "Survivor",
+"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole"
 }

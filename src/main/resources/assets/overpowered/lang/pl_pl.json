@@ -125,6 +125,7 @@
 "stat.overpowered.items_identified": "Items Identified",
 "stat.overpowered.black_hole_events": "Singularity Events",
 
+"gui.overpowered.anchored_in_this_dimension": "§eYou are anchored in this dimension.",
 "gui.overpowered.black_hole.not_allowed_in_this_dimension": "Czarne dziury nie są dozwolone w tym wymiarze.",
 "gui.overpowered.black_hole.notify_players": "§5Wydarzenie osobliwości§r zostało wykryte przy współrzędnych: %s , %s , %s",
 "gui.overpowered.energy_suspension_bridge.lens": "Obiektyw",
@@ -161,7 +162,7 @@
 "gui.overpowered.jei_description.energy_suspension_bridge": "Dostarczony z wystarczającą ilością energii i aktywowany sygnałem czerwonego kamienia stworzy stąd most energetyczny do kolejnego bloku maszyny mostu. Musisz włożyć soczewkę o żądanym kolorze, a przestrzeń między dwoma blokami maszyny mostu musi być wolna od przeszkód.",
 "gui.overpowered.jei_description.advanced_ore_refinery": "Włóż rudy do tego urządzenia, aby uzyskać podwójną wydajność, ale działa tylko z rudami.",
 "gui.overpowered.jei_description.crystal_matter_generator": "Po dłuższym uruchomieniu maszyna wygeneruje odłamek klejnotu. Połącz 9 odłamków tego samego typu, aby uzyskać jeden pełny klejnot.",
-"gui.overpowered.jei_description.dimensional_anchor": "Obecnie nie ma to celu.",
+"gui.overpowered.jei_description.dimensional_anchor": "The Dimensional Anchor, when kept in your inventory, will prevent you from traveling to other dimensions, and also protects you from a Black Hole.",
 "gui.overpowered.jei_description.black_hole": "Uważaj na to! Jeśli to odłożysz, usunie to dużą część twojego świata!",
 "gui.overpowered.jei_description.fusion_chamber": "Część struktury energii syntezy jądrowej. To jest blok w centrum. Musi zawierać rdzeń fuzyjny, aby można go było uznać za ważny.",
 "gui.overpowered.jei_description.fusion_control_unit": "Część struktury energii syntezy jądrowej. Musisz umieścić 6 z tych 5 bloków z dala od centrum w każdym kierunku. Musisz użyć kabla do transmisji danych, aby połączyć jednostki sterujące syntezą termojądrową z konwerterem energii syntezy jądrowej.",
@@ -266,5 +267,7 @@
 "advancements.overpowered.dimensional_anchor.title": "Kotwica wymiarowa",
 "advancements.overpowered.dimensional_anchor.description": "Stwórz wymiarową kotwicę",
 "advancements.overpowered.world_destroyer.title": "Światowy niszczyciel",
-"advancements.overpowered.world_destroyer.description": "Użyj czarnej dziury, aby zniszczyć część świata"
+"advancements.overpowered.world_destroyer.description": "Użyj czarnej dziury, aby zniszczyć część świata",
+"advancements.overpowered.survivor.title": "Survivor",
+"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole"
 }

@@ -125,6 +125,7 @@
 "stat.overpowered.items_identified": "Items Identified",
 "stat.overpowered.black_hole_events": "Singularity Events",
 
+"gui.overpowered.anchored_in_this_dimension": "§eYou are anchored in this dimension.",
 "gui.overpowered.black_hole.not_allowed_in_this_dimension": "Black Holes are not allowed in this Dimension.",
 "gui.overpowered.black_hole.notify_players": "§5Singularity Event§r detected at coordinates: %s , %s , %s",
 "gui.overpowered.energy_suspension_bridge.lens": "Lens",
@@ -161,7 +162,7 @@
 "gui.overpowered.jei_description.energy_suspension_bridge": "The Energy Suspension Bridge, when supplied with power and activated with a redstone signal, will spawn an energy bridge across to another Energy Suspension Bridge. You must insert a Lens of the color you want. And the space between the two Energy Suspension Blocks must be clear.",
 "gui.overpowered.jei_description.advanced_ore_refinery": "Insert Ores into this machine and it will produce double the output. Automatically works with Ores from other mods if they've registered their Ore with an Ore tag.",
 "gui.overpowered.jei_description.crystal_matter_generator": "This machine requires a lot of power, and must be running at all times. After a while, it will generate a random gem shard. You can combine 9 gem shards of the same type to make a full gem.",
-"gui.overpowered.jei_description.dimensional_anchor": "This currently has no purpose.",
+"gui.overpowered.jei_description.dimensional_anchor": "The Dimensional Anchor, when kept in your inventory, will prevent you from traveling to other dimensions, and also protects you from a Black Hole.",
 "gui.overpowered.jei_description.black_hole": "Whoa. Be careful with this! If you place this down, it will erase your world! I don't know how you got this, but you should destroy it immediately!",
 "gui.overpowered.jei_description.fusion_chamber": "Part of the Fusion Energy structure, this is the block that is in the center. It must contain a Fusion Core in order to be considered valid.",
 "gui.overpowered.jei_description.fusion_control_unit": "Part of the Fusion Energy structure. You need 6 of these to be placed on each side of the Fusion Chamber, 5 blocks away. Each one must be connected to each other and the Fusion Energy Converter with Data Cable.",
@@ -266,5 +267,7 @@
 "advancements.overpowered.dimensional_anchor.title": "Dimensional Anchor",
 "advancements.overpowered.dimensional_anchor.description": "Craft a Dimensional Anchor",
 "advancements.overpowered.world_destroyer.title": "World Destroyer",
-"advancements.overpowered.world_destroyer.description": "Use a Black Hole to destroy part of the world"
+"advancements.overpowered.world_destroyer.description": "Use a Black Hole to destroy part of the world",
+"advancements.overpowered.survivor.title": "Survivor",
+"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole"
 }

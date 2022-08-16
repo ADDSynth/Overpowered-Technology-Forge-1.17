@@ -125,6 +125,7 @@
 "stat.overpowered.items_identified": "Items Identified",
 "stat.overpowered.black_hole_events": "Singularity Events",
 
+"gui.overpowered.anchored_in_this_dimension": "§eYou are anchored in this dimension.",
 "gui.overpowered.black_hole.not_allowed_in_this_dimension": "A fekete lyukak nem engedélyezettek ebben a dimenzióban.",
 "gui.overpowered.black_hole.notify_players": "§5Szingularitás esemény§r a koordinátákon észlelt: %s , %s , %s",
 "gui.overpowered.energy_suspension_bridge.lens": "Lencse",
@@ -161,7 +162,7 @@
 "gui.overpowered.jei_description.energy_suspension_bridge": "Ha elegendő energiával látják el, és redstone jelzéssel aktiválják, ez energiahidat hoz létre innen egy másik hídgép blokkba. Helyezze be a kívánt színű lencsét, és a két hídgép-blokk közötti helynek akadályoktól mentesnek kell lennie.",
 "gui.overpowered.jei_description.advanced_ore_refinery": "Helyezze az ércket ebbe a gépbe, és ez dupla kimenetet eredményez, de csak ércekkel működik.",
 "gui.overpowered.jei_description.crystal_matter_generator": "Egy ideig futás után ez a gép egy drágakő szilánkot készít. Kombináljon 9 azonos típusú szilánkot, hogy egy teljes drágakövet kapjon.",
-"gui.overpowered.jei_description.dimensional_anchor": "Jelenleg ennek nincs célja.",
+"gui.overpowered.jei_description.dimensional_anchor": "The Dimensional Anchor, when kept in your inventory, will prevent you from traveling to other dimensions, and also protects you from a Black Hole.",
 "gui.overpowered.jei_description.black_hole": "Legyen óvatos ezzel! Ha ezt leteszi, az eltávolítja a világ nagy részét!",
 "gui.overpowered.jei_description.fusion_chamber": "A fúziós energia szerkezetének része. Ez a blokk a központban. Tartalmaznia kell egy fúziós magot, hogy érvényesnek lehessen tekinteni.",
 "gui.overpowered.jei_description.fusion_control_unit": "A fúziós energia szerkezetének része. Az öt blokkból 6-at mindkét irányban el kell helyeznie a központtól. A fúziós vezérlőegységeket a fúziós energia átalakítóhoz adatkábel segítségével kell csatlakoztatnia.",
@@ -266,5 +267,7 @@
 "advancements.overpowered.dimensional_anchor.title": "Dimenziós horgony",
 "advancements.overpowered.dimensional_anchor.description": "Készítsen egy méretű horgot",
 "advancements.overpowered.world_destroyer.title": "Világpusztító",
-"advancements.overpowered.world_destroyer.description": "Használj egy fekete lyukat a világ egy részének elpusztításához"
+"advancements.overpowered.world_destroyer.description": "Használj egy fekete lyukat a világ egy részének elpusztításához",
+"advancements.overpowered.survivor.title": "Survivor",
+"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole"
 }

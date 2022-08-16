@@ -125,6 +125,7 @@
 "stat.overpowered.items_identified": "Items Identified",
 "stat.overpowered.black_hole_events": "Singularity Events",
 
+"gui.overpowered.anchored_in_this_dimension": "§eYou are anchored in this dimension.",
 "gui.overpowered.black_hole.not_allowed_in_this_dimension": "Lỗ đen không được phép trong chiều này.",
 "gui.overpowered.black_hole.notify_players": "§5Điểm kỳ dị§r được phát hiện tại tọa độ: %s , %s , %s",
 "gui.overpowered.energy_suspension_bridge.lens": "Ống kính",
@@ -161,7 +162,7 @@
 "gui.overpowered.jei_description.energy_suspension_bridge": "Khi được cung cấp đủ năng lượng và được kích hoạt bằng tín hiệu đá đỏ, điều này sẽ tạo ra một cây cầu năng lượng từ đây đến một khối máy cầu khác. Bạn phải chèn một thấu kính màu bạn muốn và khoảng trống giữa hai khối máy cầu phải không có chướng ngại vật.",
 "gui.overpowered.jei_description.advanced_ore_refinery": "Chèn quặng vào máy này và nó sẽ tạo ra gấp đôi sản lượng, nhưng nó chỉ hoạt động với quặng.",
 "gui.overpowered.jei_description.crystal_matter_generator": "Sau khi chạy được một lúc, chiếc máy này sẽ tạo ra một mảnh đá quý. Kết hợp 9 mảnh cùng loại để có được một viên ngọc đầy đủ.",
-"gui.overpowered.jei_description.dimensional_anchor": "Hiện tại điều này không có mục đích.",
+"gui.overpowered.jei_description.dimensional_anchor": "The Dimensional Anchor, when kept in your inventory, will prevent you from traveling to other dimensions, and also protects you from a Black Hole.",
 "gui.overpowered.jei_description.black_hole": "Hãy cẩn thận với điều này! Nếu bạn đặt nó xuống, điều này sẽ loại bỏ một phần lớn thế giới của bạn!",
 "gui.overpowered.jei_description.fusion_chamber": "Một phần của cấu trúc năng lượng nhiệt hạch. Đây là khối ở trung tâm. Nó phải chứa lõi hợp nhất để được coi là hợp lệ.",
 "gui.overpowered.jei_description.fusion_control_unit": "Một phần của cấu trúc năng lượng nhiệt hạch. Bạn cần đặt 6 trong số 5 khối này cách xa trung tâm theo mỗi hướng. Bạn phải sử dụng cáp dữ liệu để kết nối các bộ điều khiển nhiệt hạch với bộ chuyển đổi năng lượng nhiệt hạch.",
@@ -266,5 +267,7 @@
 "advancements.overpowered.dimensional_anchor.title": "Neo kích thước",
 "advancements.overpowered.dimensional_anchor.description": "Thủ công một chiều neo",
 "advancements.overpowered.world_destroyer.title": "Tàu khu trục thế giới",
-"advancements.overpowered.world_destroyer.description": "Sử dụng một lỗ đen để phá hủy một phần của thế giới"
+"advancements.overpowered.world_destroyer.description": "Sử dụng một lỗ đen để phá hủy một phần của thế giới",
+"advancements.overpowered.survivor.title": "Survivor",
+"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole"
 }

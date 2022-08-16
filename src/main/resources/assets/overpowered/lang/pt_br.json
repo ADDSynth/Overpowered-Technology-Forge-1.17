@@ -125,6 +125,7 @@
 "stat.overpowered.items_identified": "Items Identified",
 "stat.overpowered.black_hole_events": "Singularity Events",
 
+"gui.overpowered.anchored_in_this_dimension": "§eYou are anchored in this dimension.",
 "gui.overpowered.black_hole.not_allowed_in_this_dimension": "Buracos negros não são permitidos nesta dimensão.",
 "gui.overpowered.black_hole.notify_players": "§5Evento de singularidade§r foi detectada nas coordenadas: %s , %s , %s",
 "gui.overpowered.energy_suspension_bridge.lens": "Lente",
@@ -161,7 +162,7 @@
 "gui.overpowered.jei_description.energy_suspension_bridge": "Quando fornecida com energia suficiente e ativada com um sinal de redstone, isso cria uma ponte de energia daqui para outro bloco da máquina de ponte. Você deve inserir uma lente da cor desejada e o espaço entre os dois blocos da máquina ponte deve estar livre de obstáculos.",
 "gui.overpowered.jei_description.advanced_ore_refinery": "Insira minérios nesta máquina e produzirá o dobro da saída, mas só funciona com minérios.",
 "gui.overpowered.jei_description.crystal_matter_generator": "Depois de funcionar por um tempo, esta máquina produzirá um fragmento de gema. Combine 9 fragmentos do mesmo tipo para obter uma gema completa.",
-"gui.overpowered.jei_description.dimensional_anchor": "Atualmente, isso não tem propósito.",
+"gui.overpowered.jei_description.dimensional_anchor": "The Dimensional Anchor, when kept in your inventory, will prevent you from traveling to other dimensions, and also protects you from a Black Hole.",
 "gui.overpowered.jei_description.black_hole": "Tenha cuidado com isso! Se você colocar isso no chão, isso removerá uma grande parte do seu mundo!",
 "gui.overpowered.jei_description.fusion_chamber": "Parte da estrutura de energia de fusão. Este é o bloco no centro. Ele deve conter um núcleo de fusão para ser considerado válido.",
 "gui.overpowered.jei_description.fusion_control_unit": "Parte da estrutura de energia de fusão. Você precisa colocar 6 desses 5 quarteirões de distância do centro em cada direção. Você deve usar o cabo de dados para conectar as unidades de controle de fusão ao conversor de energia de fusão.",
@@ -266,5 +267,7 @@
 "advancements.overpowered.dimensional_anchor.title": "Âncora dimensional",
 "advancements.overpowered.dimensional_anchor.description": "Crie uma âncora dimensional",
 "advancements.overpowered.world_destroyer.title": "Destruidor do mundo",
-"advancements.overpowered.world_destroyer.description": "Use um buraco negro para destruir parte do mundo"
+"advancements.overpowered.world_destroyer.description": "Use um buraco negro para destruir parte do mundo",
+"advancements.overpowered.survivor.title": "Survivor",
+"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole"
 }

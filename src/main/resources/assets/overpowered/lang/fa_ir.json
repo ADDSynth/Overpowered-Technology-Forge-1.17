@@ -125,6 +125,7 @@
 "stat.overpowered.items_identified": "Items Identified",
 "stat.overpowered.black_hole_events": "Singularity Events",
 
+"gui.overpowered.anchored_in_this_dimension": "§eYou are anchored in this dimension.",
 "gui.overpowered.black_hole.not_allowed_in_this_dimension": "سیاهچاله ها در این بعد مجاز نیستند.",
 "gui.overpowered.black_hole.notify_players": "§5رویداد تکینگی§r در مختصات تشخیص داده شد: %s , %s , %s",
 "gui.overpowered.energy_suspension_bridge.lens": "لنز",
@@ -161,7 +162,7 @@
 "gui.overpowered.jei_description.energy_suspension_bridge": "در صورت تأمین انرژی کافی ، و با یک سیگنال سیم قرمز فعال می شود ، این یک پل انرژی از اینجا به بلوک ماشین پل دیگری ایجاد می کند. شما باید یک لنز از رنگ مورد نظر خود وارد کنید ، و فضای بین دو بلوک ماشین پل باید عاری از موانع باشد.",
 "gui.overpowered.jei_description.advanced_ore_refinery": "سنگ معدن را درون این دستگاه قرار دهید و دو برابر آن را تولید می کند ، اما فقط با سنگ معدن کار می کند.",
 "gui.overpowered.jei_description.crystal_matter_generator": "پس از مدت زمان کار ، این دستگاه یک سنگ قیمتی تولید می کند. 9 پارچه از همان نوع را با هم ترکیب کنید تا یک جواهرات کامل بدست آورید.",
-"gui.overpowered.jei_description.dimensional_anchor": "در حال حاضر این هدفی ندارد.",
+"gui.overpowered.jei_description.dimensional_anchor": "The Dimensional Anchor, when kept in your inventory, will prevent you from traveling to other dimensions, and also protects you from a Black Hole.",
 "gui.overpowered.jei_description.black_hole": "مراقب این باشید! اگر این را پایین بیاورید ، این بخش بزرگی از جهان شما را از بین می برد!",
 "gui.overpowered.jei_description.fusion_chamber": "بخشی از ساختار انرژی همجوشی. این بلوک در مرکز است. برای اینکه معتبر در نظر گرفته شود ، باید دارای هسته فیوژن باشد.",
 "gui.overpowered.jei_description.fusion_control_unit": "بخشی از ساختار انرژی همجوشی. شما باید 6 از این 5 بلوک را از مرکز در هر جهت قرار دهید. برای اتصال واحدهای کنترل فیوژن به مبدل انرژی فیوژن باید از کابل داده استفاده کنید.",
@@ -266,5 +267,7 @@
 "advancements.overpowered.dimensional_anchor.title": "لنگر بعدی",
 "advancements.overpowered.dimensional_anchor.description": "یک لنگر بعدی بکشید",
 "advancements.overpowered.world_destroyer.title": "ناوشکن جهان",
-"advancements.overpowered.world_destroyer.description": "برای از بین بردن بخشی از جهان از یک سیاه چاله استفاده کنید"
+"advancements.overpowered.world_destroyer.description": "برای از بین بردن بخشی از جهان از یک سیاه چاله استفاده کنید",
+"advancements.overpowered.survivor.title": "Survivor",
+"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole"
 }

@@ -125,6 +125,7 @@
 "stat.overpowered.items_identified": "Items Identified",
 "stat.overpowered.black_hole_events": "Singularity Events",
 
+"gui.overpowered.anchored_in_this_dimension": "§eYou are anchored in this dimension.",
 "gui.overpowered.black_hole.not_allowed_in_this_dimension": "Schwarze Löcher sind in dieser Dimension nicht zulässig.",
 "gui.overpowered.black_hole.notify_players": "§5Singularitätsereignis§r wurde an Koordinaten festgestellt: %s , %s , %s",
 "gui.overpowered.energy_suspension_bridge.lens": "Linse",
@@ -161,7 +162,7 @@
 "gui.overpowered.jei_description.energy_suspension_bridge": "Bei ausreichender Energieversorgung und Aktivierung mit einem Redstone-Signal wird eine Energiebrücke von hier zu einem anderen Brückenmaschinenblock erstellt. Sie müssen eine Linse der gewünschten Farbe einsetzen und der Abstand zwischen den beiden Brückenmaschinenblöcken muss frei von Hindernissen sein.",
 "gui.overpowered.jei_description.advanced_ore_refinery": "Wenn Sie Erze in diese Maschine einbringen, wird die doppelte Produktion erzeugt, aber nur mit Erzen.",
 "gui.overpowered.jei_description.crystal_matter_generator": "Nach einer Weile wird diese Maschine einen Edelsteinscherben produzieren. Kombiniere 9 Scherben des gleichen Typs, um einen vollen Edelstein zu erhalten.",
-"gui.overpowered.jei_description.dimensional_anchor": "Derzeit hat dies keinen Zweck.",
+"gui.overpowered.jei_description.dimensional_anchor": "The Dimensional Anchor, when kept in your inventory, will prevent you from traveling to other dimensions, and also protects you from a Black Hole.",
 "gui.overpowered.jei_description.black_hole": "Sei vorsichtig damit! Wenn Sie dies ablegen, wird dies einen großen Teil Ihrer Welt entfernen!",
 "gui.overpowered.jei_description.fusion_chamber": "Teil der Fusionsenergiestruktur. Dies ist der Block in der Mitte. Es muss einen Fusionskern enthalten, um als gültig angesehen zu werden.",
 "gui.overpowered.jei_description.fusion_control_unit": "Teil der Fusionsenergiestruktur. Sie müssen 6 dieser 5 Blöcke in jeder Richtung von der Mitte entfernt platzieren. Sie müssen ein Datenkabel verwenden, um die Fusionssteuereinheiten mit dem Fusionsenergiekonverter zu verbinden.",
@@ -266,5 +267,7 @@
 "advancements.overpowered.dimensional_anchor.title": "Maßanker",
 "advancements.overpowered.dimensional_anchor.description": "Stelle einen dimensionalen Anker her",
 "advancements.overpowered.world_destroyer.title": "Weltzerstörer",
-"advancements.overpowered.world_destroyer.description": "Verwende ein Schwarzes Loch, um einen Teil der Welt zu zerstören"
+"advancements.overpowered.world_destroyer.description": "Verwende ein Schwarzes Loch, um einen Teil der Welt zu zerstören",
+"advancements.overpowered.survivor.title": "Survivor",
+"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole"
 }

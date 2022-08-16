@@ -125,6 +125,7 @@
 "stat.overpowered.items_identified": "Items Identified",
 "stat.overpowered.black_hole_events": "Singularity Events",
 
+"gui.overpowered.anchored_in_this_dimension": "§eYou are anchored in this dimension.",
 "gui.overpowered.black_hole.not_allowed_in_this_dimension": "Δεν επιτρέπονται μαύρες τρύπες σε αυτήν την ιδιότητα.",
 "gui.overpowered.black_hole.notify_players": "§5Εκδήλωση μοναδικότητας§r εντοπίστηκε στις συντεταγμένες: %s , %s , %s",
 "gui.overpowered.energy_suspension_bridge.lens": "Φακός",
@@ -161,7 +162,7 @@
 "gui.overpowered.jei_description.energy_suspension_bridge": "Όταν παρέχεται αρκετή ενέργεια και ενεργοποιείται με σήμα redstone, αυτό θα δημιουργήσει μια ενεργειακή γέφυρα από εδώ σε ένα άλλο μπλοκ μηχανών γέφυρας. Πρέπει να εισαγάγετε έναν φακό του χρώματος που θέλετε και ο χώρος μεταξύ των δύο μπλοκ μηχανών γέφυρας πρέπει να είναι απαλλαγμένος από εμπόδια.",
 "gui.overpowered.jei_description.advanced_ore_refinery": "Εισαγάγετε μεταλλεύματα σε αυτό το μηχάνημα και θα παράγει διπλάσια έξοδο, αλλά λειτουργεί μόνο με μεταλλεύματα.",
 "gui.overpowered.jei_description.crystal_matter_generator": "Αφού τρέξει για λίγο, αυτό το μηχάνημα θα παράγει θραύσμα πολύτιμων λίθων. Συνδυάστε 9 θραύσματα του ίδιου τύπου για να πάρετε ένα γεμάτο στολίδι.",
-"gui.overpowered.jei_description.dimensional_anchor": "Προς το παρόν αυτό δεν έχει σκοπό.",
+"gui.overpowered.jei_description.dimensional_anchor": "The Dimensional Anchor, when kept in your inventory, will prevent you from traveling to other dimensions, and also protects you from a Black Hole.",
 "gui.overpowered.jei_description.black_hole": "Προσέξτε με αυτό! Εάν το τοποθετήσετε κάτω, αυτό θα αφαιρέσει μεγάλο μέρος του κόσμου σας!",
 "gui.overpowered.jei_description.fusion_chamber": "Μέρος της δομής της ενέργειας σύντηξης. Αυτό είναι το μπλοκ στο κέντρο. Πρέπει να περιέχει πυρήνα σύντηξης για να θεωρηθεί έγκυρη.",
 "gui.overpowered.jei_description.fusion_control_unit": "Μέρος της δομής της ενέργειας σύντηξης. Πρέπει να τοποθετήσετε 6 από αυτά τα 5 τετράγωνα μακριά από το κέντρο σε κάθε κατεύθυνση. Πρέπει να χρησιμοποιήσετε καλώδιο δεδομένων για να συνδέσετε τις μονάδες ελέγχου σύντηξης στον μετατροπέα ενέργειας σύντηξης.",
@@ -266,5 +267,7 @@
 "advancements.overpowered.dimensional_anchor.title": "Διαστατική άγκυρα",
 "advancements.overpowered.dimensional_anchor.description": "Δημιουργήστε μια διαστατική άγκυρα",
 "advancements.overpowered.world_destroyer.title": "Παγκόσμιος καταστροφέας",
-"advancements.overpowered.world_destroyer.description": "Χρησιμοποιήστε μια μαύρη τρύπα για να καταστρέψετε μέρος του κόσμου"
+"advancements.overpowered.world_destroyer.description": "Χρησιμοποιήστε μια μαύρη τρύπα για να καταστρέψετε μέρος του κόσμου",
+"advancements.overpowered.survivor.title": "Survivor",
+"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole"
 }

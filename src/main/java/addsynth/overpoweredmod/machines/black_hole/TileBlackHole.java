@@ -1,5 +1,6 @@
 package addsynth.overpoweredmod.machines.black_hole;
 
+import addsynth.core.util.data.AdvancementUtil;
 import addsynth.core.util.game.MessageUtil;
 import addsynth.core.util.game.tileentity.ITickingTileEntity;
 import addsynth.core.util.math.BlockMath;
@@ -9,15 +10,17 @@ import addsynth.core.util.time.TimeConstants;
 import addsynth.core.util.time.TimeUtil;
 import addsynth.core.util.world.WorldUtil;
 import addsynth.overpoweredmod.OverpoweredTechnology;
+import addsynth.overpoweredmod.assets.CustomAdvancements;
 import addsynth.overpoweredmod.config.Config;
 import addsynth.overpoweredmod.game.core.Init;
+import addsynth.overpoweredmod.items.DimensionalAnchor;
 import addsynth.overpoweredmod.registers.Tiles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.Mth;
 import net.minecraft.world.Difficulty;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -163,10 +166,15 @@ public final class TileBlackHole extends BlockEntity implements ITickingTileEnti
   private final void delete_entities(){
     for(final Entity entity : level.getEntitiesOfClass(Entity.class, entity_area, (Entity) -> {return true;})){
       if(MathUtility.get_distance(center_x, center_y, center_z, entity.getX(), entity.getY(), entity.getZ()) <= radius){
-        if(entity instanceof Player){ // server players
-          final Player player = (Player)entity;
-          if(player.isCreative() == false && player.isSpectator() == false){
-            player.setHealth(0.0f); // Do Not Remove Players! You must DAMAGE them!
+        if(entity instanceof ServerPlayer){
+          final ServerPlayer player = (ServerPlayer)entity;
+          if(player.gameMode.isSurvival()){
+            if(DimensionalAnchor.player_has_dimensional_anchor(player)){
+              AdvancementUtil.grantAdvancement(player, CustomAdvancements.SURVIVOR);
+            }
+            else{
+              player.setHealth(0.0f); // Do Not Remove Players! You must DAMAGE them!
+            }
           }
         }
         else{

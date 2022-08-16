@@ -125,6 +125,7 @@
 "stat.overpowered.items_identified": "Items Identified",
 "stat.overpowered.black_hole_events": "Singularity Events",
 
+"gui.overpowered.anchored_in_this_dimension": "§eYou are anchored in this dimension.",
 "gui.overpowered.black_hole.not_allowed_in_this_dimension": "У цьому вимірі не допускаються чорні отвори.",
 "gui.overpowered.black_hole.notify_players": "§5Подія сингулярності§r було виявлено за координатами: %s , %s , %s",
 "gui.overpowered.energy_suspension_bridge.lens": "Об'єктив",
@@ -161,7 +162,7 @@
 "gui.overpowered.jei_description.energy_suspension_bridge": "Якщо буде забезпечено достатньою енергією та активовано сигналом червоного каменю, це створить енергетичний міст звідси до іншого блоку машини моста. Ви повинні вставити об'єктив потрібного кольору, а проміжок між двома блоками мостових машин повинен бути без перешкод.",
 "gui.overpowered.jei_description.advanced_ore_refinery": "Вставте руди в цю машину, і це дасть подвійний вихід, але це працює лише з рудами.",
 "gui.overpowered.jei_description.crystal_matter_generator": "Після деякого запуску ця машина видасть осколок дорогоцінного каміння. Поєднайте 9 клаптів одного типу, щоб отримати один повний дорогоцінний камінь.",
-"gui.overpowered.jei_description.dimensional_anchor": "В даний час це не має мети.",
+"gui.overpowered.jei_description.dimensional_anchor": "The Dimensional Anchor, when kept in your inventory, will prevent you from traveling to other dimensions, and also protects you from a Black Hole.",
 "gui.overpowered.jei_description.black_hole": "Будьте обережні з цим! Якщо ви відкладете це, це прибере значну частину вашого світу!",
 "gui.overpowered.jei_description.fusion_chamber": "Частина структури енергії плавлення. Це блок в центрі. Він повинен містити синтетичний сердечник, щоб вважати його дійсним.",
 "gui.overpowered.jei_description.fusion_control_unit": "Частина структури енергії плавлення. Потрібно розмістити 6 з цих 5 блоків подалі від центру в кожному напрямку. Потрібно використовувати кабель передачі даних для підключення блоків управління плавним синтезом до перетворювача плавленої енергії.",
@@ -266,5 +267,7 @@
 "advancements.overpowered.dimensional_anchor.title": "Габаритний якір",
 "advancements.overpowered.dimensional_anchor.description": "Зробіть розмірний якір",
 "advancements.overpowered.world_destroyer.title": "Світовий руйнівник",
-"advancements.overpowered.world_destroyer.description": "Використовуйте чорну діру, щоб знищити частину світу"
+"advancements.overpowered.world_destroyer.description": "Використовуйте чорну діру, щоб знищити частину світу",
+"advancements.overpowered.survivor.title": "Survivor",
+"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole"
 }

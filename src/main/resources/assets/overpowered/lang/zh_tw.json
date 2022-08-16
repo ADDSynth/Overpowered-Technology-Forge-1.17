@@ -125,6 +125,7 @@
 "stat.overpowered.items_identified": "Items Identified",
 "stat.overpowered.black_hole_events": "Singularity Events",
 
+"gui.overpowered.anchored_in_this_dimension": "§eYou are anchored in this dimension.",
 "gui.overpowered.black_hole.not_allowed_in_this_dimension": "這個世界不允許出現黑洞。",
 "gui.overpowered.black_hole.notify_players": "§5奇異事件§r 在坐標處檢測到: %s , %s , %s",
 "gui.overpowered.energy_suspension_bridge.lens": "鏡片",
@@ -161,7 +162,7 @@
 "gui.overpowered.jei_description.energy_suspension_bridge": "當提供足夠的能量並被紅石信號激活時，這將創建一個從此處到另一個電橋機器塊的電橋。您必須插入所需顏色的鏡頭，並且兩個橋接機模塊之間的空間必須沒有障礙物。",
 "gui.overpowered.jei_description.advanced_ore_refinery": "將礦石插入此機器，將產生兩倍的產量，但僅適用於礦石。",
 "gui.overpowered.jei_description.crystal_matter_generator": "運行一段時間後，此機器將產生寶石碎片。合併9個相同類型的碎片，以獲得一個完整的寶石。",
-"gui.overpowered.jei_description.dimensional_anchor": "目前，這沒有任何目的。",
+"gui.overpowered.jei_description.dimensional_anchor": "The Dimensional Anchor, when kept in your inventory, will prevent you from traveling to other dimensions, and also protects you from a Black Hole.",
 "gui.overpowered.jei_description.black_hole": "注意這一點！如果您放下它，這將消除您的大部分世界！",
 "gui.overpowered.jei_description.fusion_chamber": "聚變能量結構的一部分。這是中間的街區。它必須包含一個融合核心，才能被視為有效。",
 "gui.overpowered.jei_description.fusion_control_unit": "聚變能量結構的一部分。您需要在每個方向上將這5個塊中的6個塊放置在遠離中心的位置。您必須使用數據電纜將聚變控制單元連接到聚變能量轉換器。",
@@ -266,5 +267,7 @@
 "advancements.overpowered.dimensional_anchor.title": "尺寸錨",
 "advancements.overpowered.dimensional_anchor.description": "製作尺寸錨",
 "advancements.overpowered.world_destroyer.title": "世界驅逐艦",
-"advancements.overpowered.world_destroyer.description": "使用黑洞破壞世界的一部分"
+"advancements.overpowered.world_destroyer.description": "使用黑洞破壞世界的一部分",
+"advancements.overpowered.survivor.title": "Survivor",
+"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole"
 }

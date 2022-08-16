@@ -125,6 +125,7 @@
 "stat.overpowered.items_identified": "Items Identified",
 "stat.overpowered.black_hole_events": "Singularity Events",
 
+"gui.overpowered.anchored_in_this_dimension": "§eYou are anchored in this dimension.",
 "gui.overpowered.black_hole.not_allowed_in_this_dimension": "Les trous noirs ne sont pas autorisés dans cette dimension.",
 "gui.overpowered.black_hole.notify_players": "§5Événement de singularité§r été détecté aux coordonnées: %s , %s , %s",
 "gui.overpowered.energy_suspension_bridge.lens": "Lentille",
@@ -161,7 +162,7 @@
 "gui.overpowered.jei_description.energy_suspension_bridge": "Lorsqu'il est alimenté avec suffisamment d'énergie et activé avec un signal redstone, cela créera un pont d'énergie d'ici à un autre bloc de machine de pont. Vous devez insérer une lentille de la couleur que vous souhaitez et l'espace entre les deux blocs de la machine à pont doit être libre d'obstacles.",
 "gui.overpowered.jei_description.advanced_ore_refinery": "Insérez des minerais dans cette machine et cela produira le double de la sortie, mais cela ne fonctionne qu'avec des minerais.",
 "gui.overpowered.jei_description.crystal_matter_generator": "Après avoir fonctionné pendant un certain temps, cette machine produira un éclat de gemme. Combinez 9 éclats du même type pour obtenir une gemme complète.",
-"gui.overpowered.jei_description.dimensional_anchor": "Actuellement, cela n'a aucun but.",
+"gui.overpowered.jei_description.dimensional_anchor": "The Dimensional Anchor, when kept in your inventory, will prevent you from traveling to other dimensions, and also protects you from a Black Hole.",
 "gui.overpowered.jei_description.black_hole": "Soyez prudent avec ça! Si vous placez cela, cela supprimera une grande partie de votre monde!",
 "gui.overpowered.jei_description.fusion_chamber": "Une partie de la structure de l'énergie de fusion. Ceci est le bloc au centre. Il doit contenir un noyau de fusion pour être considéré comme valide.",
 "gui.overpowered.jei_description.fusion_control_unit": "Une partie de la structure de l'énergie de fusion. Vous devez placer 6 de ces 5 blocs loin du centre dans chaque direction. Vous devez utiliser un câble de données pour connecter les unités de contrôle de fusion au convertisseur d'énergie de fusion.",
@@ -266,5 +267,7 @@
 "advancements.overpowered.dimensional_anchor.title": "Ancrage dimensionnel",
 "advancements.overpowered.dimensional_anchor.description": "Fabriquez une ancre dimensionnelle",
 "advancements.overpowered.world_destroyer.title": "Destructeur mondial",
-"advancements.overpowered.world_destroyer.description": "Utilisez un trou noir pour détruire une partie du monde"
+"advancements.overpowered.world_destroyer.description": "Utilisez un trou noir pour détruire une partie du monde",
+"advancements.overpowered.survivor.title": "Survivor",
+"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole"
 }

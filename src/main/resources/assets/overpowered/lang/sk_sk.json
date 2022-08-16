@@ -125,6 +125,7 @@
 "stat.overpowered.items_identified": "Items Identified",
 "stat.overpowered.black_hole_events": "Singularity Events",
 
+"gui.overpowered.anchored_in_this_dimension": "§eYou are anchored in this dimension.",
 "gui.overpowered.black_hole.not_allowed_in_this_dimension": "Čierne diery nie sú v tejto dimenzii povolené.",
 "gui.overpowered.black_hole.notify_players": "§5Mimoriadna udalosť§r bola zistená na súradniciach: %s , %s , %s",
 "gui.overpowered.energy_suspension_bridge.lens": "šošovka",
@@ -161,7 +162,7 @@
 "gui.overpowered.jei_description.energy_suspension_bridge": "Ak sa dodáva s dostatočným množstvom energie a aktivuje sa pomocou signálu redstone, vytvorí sa energetický most odtiaľto do ďalšieho bloku strojového zariadenia mosta. Musíte vložiť šošovku požadovanej farby a priestor medzi dvoma blokmi strojového zariadenia musí byť bez prekážok.",
 "gui.overpowered.jei_description.advanced_ore_refinery": "Vložte rudy do tohto stroja a bude mať dvojnásobný výkon, ale funguje iba s rudami.",
 "gui.overpowered.jei_description.crystal_matter_generator": "Po dlhšej dobe prevádzky tento stroj vytvorí črepníkový drahokam. Skombinujte 9 úlomkov rovnakého typu a získajte jeden plný skvost.",
-"gui.overpowered.jei_description.dimensional_anchor": "V súčasnosti to nemá zmysel.",
+"gui.overpowered.jei_description.dimensional_anchor": "The Dimensional Anchor, when kept in your inventory, will prevent you from traveling to other dimensions, and also protects you from a Black Hole.",
 "gui.overpowered.jei_description.black_hole": "Pri tom buďte opatrní! Ak to odložíte, odstráni sa tým veľká časť vášho sveta!",
 "gui.overpowered.jei_description.fusion_chamber": "Časť štruktúry jadrovej syntézy. Toto je blok v strede. Aby mohla byť považovaná za platnú, musí obsahovať jadro fúzie.",
 "gui.overpowered.jei_description.fusion_control_unit": "Časť štruktúry jadrovej syntézy. Musíte umiestniť 6 z týchto 5 blokov od stredu v každom smere. Na pripojenie regulátorov fúzie k meniču energie jadrovej syntézy musíte použiť dátový kábel.",
@@ -266,5 +267,7 @@
 "advancements.overpowered.dimensional_anchor.title": "Rozmerová kotva",
 "advancements.overpowered.dimensional_anchor.description": "Vyrobte rozmerovú kotvu",
 "advancements.overpowered.world_destroyer.title": "Svetový torpédoborec",
-"advancements.overpowered.world_destroyer.description": "Pomocou čiernej diery zničte časť sveta"
+"advancements.overpowered.world_destroyer.description": "Pomocou čiernej diery zničte časť sveta",
+"advancements.overpowered.survivor.title": "Survivor",
+"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole"
 }

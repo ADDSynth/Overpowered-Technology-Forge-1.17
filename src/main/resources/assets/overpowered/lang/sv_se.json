@@ -125,6 +125,7 @@
 "stat.overpowered.items_identified": "Items Identified",
 "stat.overpowered.black_hole_events": "Singularity Events",
 
+"gui.overpowered.anchored_in_this_dimension": "§eYou are anchored in this dimension.",
 "gui.overpowered.black_hole.not_allowed_in_this_dimension": "Svarta hål är inte tillåtna i denna dimension.",
 "gui.overpowered.black_hole.notify_players": "§5Singularitets händelse§r detekteras vid koordinater: %s , %s , %s",
 "gui.overpowered.energy_suspension_bridge.lens": "Lins",
@@ -161,7 +162,7 @@
 "gui.overpowered.jei_description.energy_suspension_bridge": "När den levereras med tillräckligt med energi och aktiveras med en redstone-signal skapar detta en energibro härifrån till ett annat bryggmaskinblock. Du måste sätta in en lins med den färg du vill ha, och utrymmet mellan de två bromaskinblocken måste vara fritt från hinder.",
 "gui.overpowered.jei_description.advanced_ore_refinery": "Sätt i malmer i maskinen så att den ger dubbla uteffekten, men den fungerar bara med malmer.",
 "gui.overpowered.jei_description.crystal_matter_generator": "Efter att ha kört ett tag kommer denna maskin att producera en pärlsskärm. Kombinera 9 skär av samma typ för att få en hel pärla.",
-"gui.overpowered.jei_description.dimensional_anchor": "För närvarande har detta inget syfte.",
+"gui.overpowered.jei_description.dimensional_anchor": "The Dimensional Anchor, when kept in your inventory, will prevent you from traveling to other dimensions, and also protects you from a Black Hole.",
 "gui.overpowered.jei_description.black_hole": "Var försiktig med detta! Om du lägger ner detta kommer det att ta bort en stor del av din värld!",
 "gui.overpowered.jei_description.fusion_chamber": "Del av fusionsenergistrukturen. Detta är blocket i mitten. Den måste innehålla en fusionskärna för att kunna anses vara giltig.",
 "gui.overpowered.jei_description.fusion_control_unit": "Del av fusionsenergistrukturen. Du måste placera 6 av dessa 5 kvarter från centrum i varje riktning. Du måste använda datakabel för att ansluta fusionsstyrenheterna till fusionsenergikonverteraren.",
@@ -266,5 +267,7 @@
 "advancements.overpowered.dimensional_anchor.title": "Dimensionellt ankare",
 "advancements.overpowered.dimensional_anchor.description": "Skapa ett dimensionellt ankare",
 "advancements.overpowered.world_destroyer.title": "Världsdödare",
-"advancements.overpowered.world_destroyer.description": "Använd ett svart hål för att förstöra en del av världen"
+"advancements.overpowered.world_destroyer.description": "Använd ett svart hål för att förstöra en del av världen",
+"advancements.overpowered.survivor.title": "Survivor",
+"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole"
 }

@@ -125,6 +125,7 @@
 "stat.overpowered.items_identified": "Items Identified",
 "stat.overpowered.black_hole_events": "Singularity Events",
 
+"gui.overpowered.anchored_in_this_dimension": "§eYou are anchored in this dimension.",
 "gui.overpowered.black_hole.not_allowed_in_this_dimension": "இந்த பரிமாணத்தில் கருப்பு துளைகள் அனுமதிக்கப்படவில்லை.",
 "gui.overpowered.black_hole.notify_players": "§5ஒருமை நிகழ்வு§r ஆயக்கட்டுகளில் கண்டறியப்பட்டது: %s , %s , %s",
 "gui.overpowered.energy_suspension_bridge.lens": "லென்ஸ்",
@@ -161,7 +162,7 @@
 "gui.overpowered.jei_description.energy_suspension_bridge": "போதுமான ஆற்றலுடன் வழங்கப்பட்டு, ரெட்ஸ்டோன் சிக்னலுடன் செயல்படுத்தப்படும் போது, ​​இது இங்கிருந்து மற்றொரு பாலம் இயந்திரத் தொகுதிக்கு ஒரு ஆற்றல் பாலத்தை உருவாக்கும். நீங்கள் விரும்பும் வண்ணத்தின் லென்ஸை நீங்கள் செருக வேண்டும், மேலும் இரண்டு பாலம் இயந்திரத் தொகுதிகளுக்கு இடையில் இடைவெளி தடைகள் இல்லாமல் இருக்க வேண்டும்.",
 "gui.overpowered.jei_description.advanced_ore_refinery": "இந்த இயந்திரத்தில் தாதுக்களைச் செருகவும், அது வெளியீட்டை இரட்டிப்பாக்கும், ஆனால் இது தாதுக்களுடன் மட்டுமே செயல்படும்.",
 "gui.overpowered.jei_description.crystal_matter_generator": "சிறிது நேரம் ஓடிய பிறகு, இந்த இயந்திரம் ஒரு ரத்தினத் துண்டை உருவாக்கும். ஒரு முழு ரத்தினத்தைப் பெற ஒரே மாதிரியான 9 துண்டுகளை இணைக்கவும்.",
-"gui.overpowered.jei_description.dimensional_anchor": "தற்போது இதற்கு எந்த நோக்கமும் இல்லை.",
+"gui.overpowered.jei_description.dimensional_anchor": "The Dimensional Anchor, when kept in your inventory, will prevent you from traveling to other dimensions, and also protects you from a Black Hole.",
 "gui.overpowered.jei_description.black_hole": "இதில் கவனமாக இருங்கள்! இதை நீங்கள் கீழே வைத்தால், இது உங்கள் உலகின் பெரும் பகுதியை அகற்றும்!",
 "gui.overpowered.jei_description.fusion_chamber": "இணைவு ஆற்றல் கட்டமைப்பின் ஒரு பகுதி. இது மையத்தில் உள்ள தொகுதி. செல்லுபடியாகும் என்று கருதப்படுவதற்கு இது ஒரு இணைவு மையத்தைக் கொண்டிருக்க வேண்டும்.",
 "gui.overpowered.jei_description.fusion_control_unit": "இணைவு ஆற்றல் கட்டமைப்பின் ஒரு பகுதி. இந்த 5 தொகுதிகளில் 6 ஐ ஒவ்வொரு திசையிலும் மையத்திலிருந்து வைக்க வேண்டும். இணைவு கட்டுப்பாட்டு அலகுகளை இணைவு ஆற்றல் மாற்றிக்கு இணைக்க நீங்கள் தரவு கேபிளைப் பயன்படுத்த வேண்டும்.",
@@ -266,5 +267,7 @@
 "advancements.overpowered.dimensional_anchor.title": "பரிமாண நங்கூரம்",
 "advancements.overpowered.dimensional_anchor.description": "ஒரு பரிமாண நங்கூரத்தை வடிவமைக்கவும்.",
 "advancements.overpowered.world_destroyer.title": "உலக அழிப்பான்",
-"advancements.overpowered.world_destroyer.description": "உலகின் ஒரு பகுதியை அழிக்க கருந்துளையைப் பயன்படுத்துங்கள்."
+"advancements.overpowered.world_destroyer.description": "உலகின் ஒரு பகுதியை அழிக்க கருந்துளையைப் பயன்படுத்துங்கள்.",
+"advancements.overpowered.survivor.title": "Survivor",
+"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole"
 }

@@ -125,6 +125,7 @@
 "stat.overpowered.items_identified": "Items Identified",
 "stat.overpowered.black_hole_events": "Singularity Events",
 
+"gui.overpowered.anchored_in_this_dimension": "§eYou are anchored in this dimension.",
 "gui.overpowered.black_hole.not_allowed_in_this_dimension": "Lubang Hitam tidak dibenarkan dalam dimensi ini.",
 "gui.overpowered.black_hole.notify_players": "§5Acara Singularity§r dikesan pada koordinat: %s , %s , %s",
 "gui.overpowered.energy_suspension_bridge.lens": "Kanta",
@@ -161,7 +162,7 @@
 "gui.overpowered.jei_description.energy_suspension_bridge": "Apabila dibekalkan dengan tenaga yang cukup, dan diaktifkan dengan isyarat redstone, ini akan membuat jambatan tenaga dari sini ke blok mesin jambatan yang lain. Anda mesti memasukkan lensa warna yang anda mahukan, dan ruang di antara dua blok mesin jambatan mestilah bebas dari halangan.",
 "gui.overpowered.jei_description.advanced_ore_refinery": "Masukkan bijih ke dalam mesin ini dan ia akan menghasilkan dua kali ganda output, tetapi hanya berfungsi dengan bijih.",
 "gui.overpowered.jei_description.crystal_matter_generator": "Setelah berjalan sebentar, mesin ini akan menghasilkan pecahan permata. Gabungkan 9 keping jenis yang sama untuk mendapatkan satu permata penuh.",
-"gui.overpowered.jei_description.dimensional_anchor": "Pada masa ini, ini tidak mempunyai tujuan.",
+"gui.overpowered.jei_description.dimensional_anchor": "The Dimensional Anchor, when kept in your inventory, will prevent you from traveling to other dimensions, and also protects you from a Black Hole.",
 "gui.overpowered.jei_description.black_hole": "Berhati-hati dengan ini! Sekiranya anda meletakkannya, ini akan menghilangkan sebahagian besar dunia anda!",
 "gui.overpowered.jei_description.fusion_chamber": "Sebahagian daripada struktur tenaga pelakuran. Ini adalah blok di tengah. Ia mesti mengandungi inti peleburan agar dapat dianggap sah.",
 "gui.overpowered.jei_description.fusion_control_unit": "Sebahagian daripada struktur tenaga pelakuran. Anda perlu meletakkan 6 dari 5 blok ini dari pusat ke setiap arah. Anda mesti menggunakan kabel data untuk menyambungkan unit kawalan fusi ke penukar tenaga pelakuran.",
@@ -266,5 +267,7 @@
 "advancements.overpowered.dimensional_anchor.title": "Sauh dimensi",
 "advancements.overpowered.dimensional_anchor.description": "Buat jangkar dimensi",
 "advancements.overpowered.world_destroyer.title": "Pemusnah dunia",
-"advancements.overpowered.world_destroyer.description": "Gunakan lubang hitam untuk memusnahkan bahagian dunia"
+"advancements.overpowered.world_destroyer.description": "Gunakan lubang hitam untuk memusnahkan bahagian dunia",
+"advancements.overpowered.survivor.title": "Survivor",
+"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole"
 }
