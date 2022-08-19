@@ -9,6 +9,12 @@ NEW:
   The Dimensional Anchor now works! It protects you from Black Holes, and prevents
     you from traveling to other dimensions!
   Added the Survivor advancement.
+  Added more mods to detect:
+    Archer's Paradox, Create, CraftTweaker, CoFH Core, Cyclops Core, Ensorcellation,
+    Environmental, Environmental Materials, Environmental Tech, Ex Nihilo: Sequentia,
+    Integration Foregoing, Integrated Dynamics, Integrated Tunnels, Integrated Terminals,
+    Inventory Tweaks Renewed, Mouse Tweaks, No Cubes, No Cubes Reloaded, Patchouli,
+    The Thermal Series of mods, Tool's Complement, and XNet.
 CHANGED:
   Increased the chance to drop an Unidentified Ring when killing enemy mobs.
   The Dimensional Anchor is now registered as a Curios Charm, if you

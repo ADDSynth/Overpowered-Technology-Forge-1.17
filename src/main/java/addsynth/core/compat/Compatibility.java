@@ -27,11 +27,14 @@ public final class Compatibility {
   // I CAN, but it's better to leave it as static constant values in case I need them again.
   // I can't use an enum either. Enum fields are not constant expressions.
 
+  // TODO: Add authors, What Minecraft versions are available, and possibly but not likely a short description.
+
   // REMOVE: When Minecraft 1.20 comes out, remove all the code defining Minecraft 1.12 mods.
 
   public enum ModType {
     Tech, Magic, Library, Misc, Vanilla, Client, Recipe, Biomes, Food, Decoration,
-    Info, Map, API, Dimension, CoreMod, Shader, Tweak, Diagnostics, Materials, Utility
+    Blocks, Tools, Weapons, Computer, Rail_Transport, Info, Map, Compatibility,
+    API, Dimension, CoreMod, Shader, Tweak, Diagnostics, Materials, Utility
   }
 
   // a better way to determine if this is an API or Library mod is to check the ModType. But I can't do that yet.
@@ -39,7 +42,8 @@ public final class Compatibility {
     return modid.equals(CURIOS.modid)    || modid.equals(FORGE_MULTIPART.modid) || modid.equals(REDSTONE_FLUX.modid)        ||
            modid.equals(TESLA.modid)     || modid.equals(ADDSynthCore.MOD_ID)   || modid.equals(CODE_CHICKEN_LIB.modid)     ||
            modid.equals(MANTLE.modid)    || modid.equals(ADDSYNTH_ENERGY.modid) || modid.equals(SHADOWFACTS_FORGELIN.modid) ||
-           modid.equals(TRACK_API.modid) || modid.equals(MCJTY_LIB.modid);
+           modid.equals(TRACK_API.modid) || modid.equals(MCJTY_LIB.modid)       || modid.equals(CYCLOPS_CORE.modid)         ||
+           modid.equals(COFH_CORE.modid) || modid.equals(PATCHOULI.modid)       || modid.equals(CRAFTTWEAKER.modid);
   }
 
   public static final class ACTUALLY_ADDITIONS {
@@ -68,6 +72,13 @@ public final class Compatibility {
     public static final String modid = "appliedenergistics2";
     public static final boolean loaded = ModList.get().isLoaded(modid);
     public static final ModType type = ModType.Tech;
+  }
+
+  public static final class ARCHERS_PARADOX {
+    public static final String name = "Archer's Paradox";
+    public static final String modid = "archers_paradox";
+    public static final boolean loaded = ModList.get().isLoaded(modid);
+    public static final ModType type = ModType.Weapons;
   }
 
   public static final class BIOMES_O_PLENTY {
@@ -119,6 +130,13 @@ public final class Compatibility {
     public static final ModType type = ModType.Library;
   }
   
+  public static final class COFH_CORE {
+    public static final String name = "CoFH Core";
+    public static final String modid = "cofh_core";
+    public static final boolean loaded = ModList.get().isLoaded(modid);
+    public static final ModType type = ModType.CoreMod;
+  }
+  
   public static final class COOKING_FOR_BLOCKHEADS {
     public static final String name = "Cooking for Blockheds";
     public static final String modid = "cookingforblockheads";
@@ -126,11 +144,33 @@ public final class Compatibility {
     public static final ModType type = ModType.Food;
   }
   
+  public static final class CRAFTTWEAKER {
+    // helps modders modify the game
+    public static final String name = "CraftTweaker";
+    public static final String modid = "crafttweaker";
+    public static final boolean loaded = ModList.get().isLoaded(modid);
+    public static final ModType type = ModType.Utility;
+  }
+  
+  public static final class CREATE {
+    public static final String name = "Create";
+    public static final String modid = "create";
+    public static final boolean loaded = ModList.get().isLoaded(modid);
+    public static final ModType type = ModType.Tech;
+  }
+  
   public static final class CURIOS {
     public static final String name = "Curios";
     public static final String modid = "curios";
     public static final boolean loaded = ModList.get().isLoaded(modid);
     public static final ModType type = ModType.API;
+  }
+  
+  public static final class CYCLOPS_CORE {
+    public static final String name = "Cyclops Core";
+    public static final String modid = "cyclopscore";
+    public static final boolean loaded = ModList.get().isLoaded(modid);
+    public static final ModType type = ModType.Library;
   }
   
   /* Another mod that was last updated since Minecraft 1.12. 
@@ -170,6 +210,44 @@ public final class Compatibility {
     public static final String modid = "enderio";
     public static final boolean loaded = ModList.get().isLoaded(modid);
     public static final ModType type = ModType.Tech;
+  }
+  
+  public static final class ENSORCELLATION {
+    public static final String name = "Ensorcellation";
+    public static final String modid = "ensorcellation";
+    public static final boolean loaded = ModList.get().isLoaded(modid);
+    public static final ModType type = ModType.Magic;
+  }
+  
+  // By Team Abnormals
+  public static final class ENVIRONMENTAL {
+    public static final String name = "Environmental";
+    public static final String modid = "environmental";
+    public static final boolean loaded = ModList.get().isLoaded(modid);
+    public static final ModType type = ModType.Biomes;
+  }
+  
+  public static final class ENVIRONMENTAL_MATERIALS {
+    public static final String name = "Environmental Materials";
+    public static final String modid = "enviromats";
+    public static final boolean loaded = ModList.get().isLoaded(modid);
+    public static final ModType type = ModType.Blocks;
+  }
+  
+  // Another 1.12 mod. Has alpha builds for Minecraft 1.16.
+  public static final class ENVIRONMENTAL_TECH {
+    public static final String name = "Environmental Tech";
+    public static final String modid = "envirotech";
+    public static final boolean loaded = ModList.get().isLoaded(modid);
+    public static final ModType type = ModType.Tech;
+  }
+  
+  // Ex Nihilo (1.7.10) -> Ex Nihilo: Adscensio (1.10) -> Ex Nihilo: Creatio (1.12) -> Ex Nihilo: Sequentia (1.15+)
+  public static final class EX_NIHILO_SEQUENTIA {
+    public static final String name = "Ex Nihilo: Sequentia";
+    public static final String modid = "exnihilosequentia";
+    public static final boolean loaded = ModList.get().isLoaded(modid);
+    public static final ModType type = ModType.Misc;
   }
   
   @Deprecated // Another Minecraft 1.12 mod.
@@ -233,7 +311,7 @@ public final class Compatibility {
     public static final String name = "Immersive Railroading";
     public static final String modid = "immersiverailroading";
     public static final boolean loaded = ModList.get().isLoaded(modid);
-    public static final ModType type = ModType.Tech;
+    public static final ModType type = ModType.Rail_Transport;
   }
   
   public static final class INDUSTRIAL_CRAFT {
@@ -248,6 +326,42 @@ public final class Compatibility {
     public static final String modid = "industrialforegoing";
     public static final boolean loaded = ModList.get().isLoaded(modid);
     public static final ModType type = ModType.Tech;
+  }
+  
+  public static final class INTEGRATION_FOREGOING {
+    // Compatibility module for Industrial Foregoing
+    public static final String name = "Integration Foregoing";
+    public static final String modid = "integrationforegoing";
+    public static final boolean loaded = ModList.get().isLoaded(modid);
+    public static final ModType type = ModType.Compatibility;
+  }
+  
+  public static final class INTEGRATED_DYNAMICS {
+    public static final String name = "Integrated Dynamics";
+    public static final String modid = "integrateddynamics";
+    public static final boolean loaded = ModList.get().isLoaded(modid);
+    public static final ModType type = ModType.Tech;
+  }
+  
+  public static final class INTEGRATED_TERMINALS {
+    public static final String name = "Integrated Terminals";
+    public static final String modid = "integratedterminals";
+    public static final boolean loaded = ModList.get().isLoaded(modid);
+    public static final ModType type = ModType.Tech;
+  }
+  
+  public static final class INTEGRATED_TUNNELS {
+    public static final String name = "Integrated Tunnels";
+    public static final String modid = "integratedtunnels";
+    public static final boolean loaded = ModList.get().isLoaded(modid);
+    public static final ModType type = ModType.Tech;
+  }
+  
+  public static final class INVENTORY_TWEAKS_RENEWED {
+    public static final String name = "Inventory Tweaks Renewed";
+    public static final String modid = "invtweaks";
+    public static final boolean loaded = ModList.get().isLoaded(modid);
+    public static final ModType type = ModType.Tweak;
   }
   
   public static final class ITEM_ZOOM {
@@ -292,6 +406,13 @@ public final class Compatibility {
     public static final ModType type = ModType.Tech;
   }
 
+  public static final class MOUSE_TWEAKS {
+    public static final String name = "Mouse Tweaks";
+    public static final String modid = "mousetweaks";
+    public static final boolean loaded = ModList.get().isLoaded(modid);
+    public static final ModType type = ModType.Tweak;
+  }
+
   public static final class MYSTICAL_AGRICULTURE {
     public static final String name = "Mystical Agriculture";
     public static final String modid = "mysticalagriculture";
@@ -313,11 +434,27 @@ public final class Compatibility {
     public static final ModType type = ModType.Info;
   }
   
+  public static final class NO_CUBES {
+    // Renders blocks differently, has collisions, may conflict with other mods, High FPS
+    public static final String name = "NoCubes";
+    public static final String modid = "nocubes";
+    public static final boolean loaded = ModList.get().isLoaded(modid);
+    public static final ModType type = ModType.Shader;
+  }
+
+  public static final class NO_CUBES_RELOADED {
+    // Uses Forge API to change the shape of blocks, no collisions, High compatibility with other mods, Low FPS
+    public static final String name = "No Cubes Reloaded";
+    public static final String modid = "nocubesreloadedbase";
+    public static final boolean loaded = ModList.get().isLoaded(modid);
+    public static final ModType type = ModType.Shader;
+  }
+  
   public static final class OPENCOMPUTERS {
     public static final String name  = "OpenComputers";
     public static final String modid = "opencomputers";
     public static final boolean loaded = ModList.get().isLoaded(modid);
-    public static final ModType type = ModType.Tech;
+    public static final ModType type = ModType.Computer;
   }
   
   public static final class OVERPOWERED_TECHNOLOGY {
@@ -353,6 +490,13 @@ public final class Compatibility {
     public static final String modid = "pamhc2foodextended";
     public static final boolean loaded = ModList.get().isLoaded(modid);
     public static final ModType type = ModType.Food;
+  }
+  
+  public static final class PATCHOULI {
+    public static final String name = "Patchouli";
+    public static final String modid = "patchouli";
+    public static final boolean loaded = ModList.get().isLoaded(modid);
+    public static final ModType type = ModType.Info;
   }
   
   /* Dang it. Another one that's stuck at Minecraft 1.12. I was too late!
@@ -391,7 +535,7 @@ public final class Compatibility {
     public static final String name  = "Railcraft";
     public static final String modid = "railcraft";
     public static final boolean loaded = ModList.get().isLoaded(modid);
-    public static final ModType type = ModType.Tech;
+    public static final ModType type = ModType.Rail_Transport;
   }
 
   public static final class REDSTONE_FLUX {
@@ -443,11 +587,54 @@ public final class Compatibility {
     public static final ModType type = ModType.Info;
   }
 
+  public static final class THERMAL_CULTIVATION {
+    public static final String name = "Thermal Cultivation";
+    public static final String modid = "thermal_cultivation";
+    public static final boolean loaded = ModList.get().isLoaded(modid);
+    public static final ModType type = ModType.Food;
+  }
+
+  public static final class THERMAL_EXPANSION { // The original
+    public static final String name = "Thermal Expansion";
+    public static final String modid = "thermal_expansion";
+    public static final boolean loaded = ModList.get().isLoaded(modid);
+    public static final ModType type = ModType.Tech;
+  }
+
+  public static final class THERMAL_FOUNDATION {
+    public static final String name = "Thermal Foundation";
+    public static final String modid = "thermal_foundation";
+    public static final boolean loaded = ModList.get().isLoaded(modid);
+    public static final ModType type = ModType.Materials;
+  }
+
+  public static final class THERMAL_INNOVATION {
+    public static final String name = "Thermal Innovation";
+    public static final String modid = "thermal_innovation";
+    public static final boolean loaded = ModList.get().isLoaded(modid);
+    public static final ModType type = ModType.Tools;
+  }
+
+  public static final class THERMAL_INTEGRATION {
+    // Compatibility module for the Thermal series
+    public static final String name = "Thermal Integration";
+    public static final String modid = "thermal_integration";
+    public static final boolean loaded = ModList.get().isLoaded(modid);
+    public static final ModType type = ModType.Compatibility;
+  }
+
+  public static final class THERMAL_LOCOMOTION {
+    public static final String name = "Thermal Locomotion";
+    public static final String modid = "thermal_locomotion";
+    public static final boolean loaded = ModList.get().isLoaded(modid);
+    public static final ModType type = ModType.Rail_Transport;
+  }
+
   public static final class TINKERS_CONSTRUCT {
     public static final String name = "Tinkers' Construct";
     public static final String modid = "tconstruct";
     public static final boolean loaded = ModList.get().isLoaded(modid);
-    public static final ModType type = ModType.Tech;
+    public static final ModType type = ModType.Tools;
   }
   
   public static final class TINY_PROGRESSIONS {
@@ -457,11 +644,25 @@ public final class Compatibility {
     public static final ModType type = ModType.Misc;
   }
 
+  public static final class TOOLS_COMPLEMENT {
+    public static final String name = "Tool's Complement";
+    public static final String modid = "tools_complement";
+    public static final boolean loaded = ModList.get().isLoaded(modid);
+    public static final ModType type = ModType.Tools;
+  }
+
   public static final class TRACK_API {
     public static final String name = "Track API";
     public static final String modid = "trackapi";
     public static final boolean loaded = ModList.get().isLoaded(modid);
     public static final ModType type = ModType.API;
+  }
+
+  public static final class XNET {
+    public static final String name = "XNet";
+    public static final String modid = "xnet";
+    public static final boolean loaded = ModList.get().isLoaded(modid);
+    public static final ModType type = ModType.Tech;
   }
 
   public static final void debug(){
