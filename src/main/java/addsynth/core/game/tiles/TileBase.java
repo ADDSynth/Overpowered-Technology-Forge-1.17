@@ -1,38 +1,23 @@
 package addsynth.core.game.tiles;
 
-import addsynth.core.ADDSynthCore;
 import addsynth.core.block_network.BlockNetwork;
-import addsynth.core.util.game.MessageUtil;
-import addsynth.core.util.world.WorldUtil;
-import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.Connection;
-import net.minecraft.network.chat.Style;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 
-/** YES! ALL of ADDSynth's TileEntities should override THIS class, because this
- *  simplifies updating the TileEntity, and has many common features!
+/** This is the standard Base TileEntity that most TileEntities should derive from.
+ *  It greatly simplifies syncing data to clients, and automatically handles world
+ *  saving and loading. 
+ *  @author ADDSynth
  */
-public abstract class TileBase extends BlockEntity {
+public abstract class TileBase extends TileAbstractBase {
 
   public TileBase(final BlockEntityType type, BlockPos position, BlockState blockstate){
     super(type, position, blockstate);
-  }
-
-  @SuppressWarnings("null")
-  protected final boolean onServerSide(){
-    return !level.isClientSide;
-  }
-
-  @SuppressWarnings("null")
-  protected final boolean onClientSide(){
-    return level.isClientSide;
   }
 
   // http://mcforge.readthedocs.io/en/latest/tileentities/tileentity/#synchronizing-the-data-to-the-client
@@ -81,27 +66,13 @@ public abstract class TileBase extends BlockEntity {
    *     this so that you instead update the BlockNetwork which then updates each TileEntity manually.</p>
    */
   @SuppressWarnings("null")
+  @Override
   public void update_data(){
     if(level != null){
       setChanged();
-      final BlockState blockstate = level.getBlockState(worldPosition); // OPTIMIZE: Use TileEntity's blockstate field.
+      final BlockState blockstate = getBlockState();
       level.sendBlockUpdated(worldPosition, blockstate, blockstate, Block.UPDATE_ALL);
     }
-  }
-
-  // TODO: MC 1.17: TileEntity ticking is now called outside the TileEntity. Move this to a Util class, and call with all required variables.
-  protected final void report_ticking_error(final Throwable e){
-    ADDSynthCore.log.fatal(
-      "Encountered an error while ticking TileEntity: "+getClass().getSimpleName()+", at position: "+worldPosition+". "+
-      "Please report this to the developer.", e);
-
-    WorldUtil.delete_block(level, worldPosition);
-
-    final TranslatableComponent message = new TranslatableComponent("message.addsynthcore.tileentity_error",
-      getClass().getSimpleName(), worldPosition.getX(), worldPosition.getY(), worldPosition.getZ());
-
-    message.setStyle(Style.EMPTY.withColor(ChatFormatting.RED));
-    MessageUtil.send_to_all_players_in_world(level, message);
   }
 
 }

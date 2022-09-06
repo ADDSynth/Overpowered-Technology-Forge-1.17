@@ -1,5 +1,6 @@
 package addsynth.energy.lib.tiles.machines;
 
+import addsynth.core.util.game.tileentity.TileEntityUtil;
 import addsynth.energy.lib.config.MachineData;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -34,7 +35,7 @@ public abstract class TileManualMachine extends TileSwitchableMachine {
       }
     }
     catch(Exception e){
-      report_ticking_error(e);
+      TileEntityUtil.report_ticking_error(this, e);
     }
   }
 

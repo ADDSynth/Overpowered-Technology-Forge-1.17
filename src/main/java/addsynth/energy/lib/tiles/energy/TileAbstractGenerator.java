@@ -2,6 +2,7 @@ package addsynth.energy.lib.tiles.energy;
 
 import addsynth.core.game.tiles.TileBase;
 import addsynth.core.util.game.tileentity.ITickingTileEntity;
+import addsynth.core.util.game.tileentity.TileEntityUtil;
 import addsynth.energy.lib.main.Generator;
 import addsynth.energy.lib.main.IEnergyGenerator;
 import net.minecraft.core.BlockPos;
@@ -36,7 +37,7 @@ public abstract class TileAbstractGenerator extends TileBase implements IEnergyG
       }
     }
     catch(Exception e){
-      report_ticking_error(e);
+      TileEntityUtil.report_ticking_error(this, e);
     }
   }
 

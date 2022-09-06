@@ -5,6 +5,7 @@ import addsynth.core.block_network.BlockNetworkUtil;
 import addsynth.core.block_network.IBlockNetworkUser;
 import addsynth.core.game.inventory.SlotData;
 import addsynth.core.util.constants.Constants;
+import addsynth.core.util.game.tileentity.TileEntityUtil;
 import addsynth.energy.lib.main.Receiver;
 import addsynth.energy.lib.tiles.TileBasicMachine;
 import addsynth.overpoweredmod.game.core.Lens;
@@ -41,7 +42,7 @@ public final class TileSuspensionBridge extends TileBasicMachine implements IBlo
       network.tick(this);
     }
     catch(Exception e){
-      report_ticking_error(e);
+      TileEntityUtil.report_ticking_error(this, e);
     }
   }
 

@@ -6,6 +6,7 @@ import addsynth.core.game.inventory.IInputInventory;
 import addsynth.core.game.inventory.InputInventory;
 import addsynth.core.game.inventory.InventoryUtil;
 import addsynth.core.game.inventory.SlotData;
+import addsynth.core.util.game.tileentity.TileEntityUtil;
 import addsynth.energy.lib.main.Receiver;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -51,7 +52,7 @@ public abstract class TileBasicMachine extends TileAbstractMachine implements II
       }
     }
     catch(Exception e){
-      report_ticking_error(e);
+      TileEntityUtil.report_ticking_error(this, e);
     }
   }
 

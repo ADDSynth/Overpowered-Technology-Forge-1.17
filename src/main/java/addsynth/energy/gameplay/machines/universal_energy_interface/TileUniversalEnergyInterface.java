@@ -2,6 +2,7 @@ package addsynth.energy.gameplay.machines.universal_energy_interface;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import addsynth.core.util.game.tileentity.TileEntityUtil;
 import addsynth.core.util.java.ArrayUtil;
 import addsynth.energy.compat.energy.EnergyCompat;
 import addsynth.energy.compat.energy.forge.ForgeEnergyIntermediary;
@@ -72,7 +73,7 @@ public final class TileUniversalEnergyInterface extends BasicEnergyNetworkTile
       }
     }
     catch(Exception e){
-      report_ticking_error(e);
+      TileEntityUtil.report_ticking_error(this, e);
     }
   }
 

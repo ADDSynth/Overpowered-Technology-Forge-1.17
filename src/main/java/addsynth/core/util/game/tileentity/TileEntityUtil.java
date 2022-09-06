@@ -1,6 +1,12 @@
 package addsynth.core.util.game.tileentity;
 
+import addsynth.core.ADDSynthCore;
+import addsynth.core.util.game.MessageUtil;
+import addsynth.core.util.world.WorldUtil;
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Style;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
@@ -31,6 +37,25 @@ public class TileEntityUtil {
     if(tile != null){
       tile.clientTick();
     }
+  }
+
+  public static final void report_ticking_error(final BlockEntity tile, final Throwable e){
+    @SuppressWarnings("resource")
+    final Level level = tile.getLevel();
+    final BlockPos position = tile.getBlockPos();
+    final String class_name = tile.getClass().getSimpleName();
+    
+    ADDSynthCore.log.fatal(
+      "Encountered an error while ticking TileEntity: "+class_name+", at position: "+position+". "+
+      "Please report this to the developer.", e);
+
+    WorldUtil.delete_block(level, position);
+
+    final TranslatableComponent message = new TranslatableComponent("message.addsynthcore.tileentity_error",
+      class_name, position.getX(), position.getY(), position.getZ());
+
+    message.setStyle(Style.EMPTY.withColor(ChatFormatting.RED));
+    MessageUtil.send_to_all_players_in_world(level, message);
   }
 
 }

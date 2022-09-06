@@ -13,6 +13,12 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.level.block.entity.BlockEntity;
 
+/** Base Gui class for machines that use {@link Energy}. Contains helper
+ *  functions for drawing energy variables and machine status.
+ * @author ADDSynth
+ * @param <T> BlockEntity that implements the {@link IEnergyUser} interface
+ * @param <C> The Container class object for the machine
+ */
 public abstract class GuiEnergyBase<T extends BlockEntity & IEnergyUser, C extends TileEntityContainer<T>> extends GuiContainerBase<C> {
 
   protected final T tile;

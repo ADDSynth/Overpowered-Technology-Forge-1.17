@@ -5,6 +5,7 @@ import javax.annotation.Nullable;
 import addsynth.core.game.inventory.*;
 import addsynth.core.game.inventory.machine.IMachineInventory;
 import addsynth.core.game.inventory.machine.MachineInventory;
+import addsynth.core.util.game.tileentity.TileEntityUtil;
 import addsynth.energy.lib.config.MachineData;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -57,7 +58,7 @@ public abstract class TileStandardWorkMachine extends TileSwitchableMachine
       }
     }
     catch(Exception e){
-      report_ticking_error(e);
+      TileEntityUtil.report_ticking_error(this, e);
     }
   }
 

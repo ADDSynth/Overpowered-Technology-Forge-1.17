@@ -5,6 +5,7 @@ import javax.annotation.Nullable;
 import addsynth.core.game.inventory.IInputInventory;
 import addsynth.core.game.inventory.InputInventory;
 import addsynth.core.game.inventory.InventoryUtil;
+import addsynth.core.util.game.tileentity.TileEntityUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -46,7 +47,7 @@ public abstract class TileStandardGenerator extends TileAbstractGenerator implem
       }
     }
     catch(Exception e){
-      report_ticking_error(e);
+      TileEntityUtil.report_ticking_error(this, e);
     }
   }
 

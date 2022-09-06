@@ -78,6 +78,9 @@ public final class RegistryUtil { // cannot be named GameRegistry because it con
     ADDSynthCore.log.info("Done checking RegistryUtil.");
   }
 
+  // TODO: Add a create() function, which returns a ResourceLocation with the mod ID prefixed automatically, used
+  //       to populate a Names file, which we can refer back to whenever we need the ResourceLocation for that object.
+
   private static final boolean debug = false;
   /** Determines how much of the stacktrace to print to the debug log file.
    *  Set to -1 to print the whole stacktrace, or 0 to not print. */
