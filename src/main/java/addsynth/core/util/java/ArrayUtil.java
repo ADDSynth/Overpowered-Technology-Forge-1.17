@@ -2,6 +2,8 @@ package addsynth.core.util.java;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.function.Function;
 import javax.annotation.Nonnull;
 import addsynth.core.ADDSynthCore;
 
@@ -191,6 +193,33 @@ public final class ArrayUtil {
       }
     }
     return Arrays.copyOfRange(final_array, 0, i);
+  }
+
+  @SafeVarargs
+  public static final <T> T[] combine_collections(@Nonnull final Function<Integer, T[]> new_array_supplier, final Collection<T> ... lists){
+    // check for null
+    if(lists == null){
+      return new_array_supplier.apply(0);
+    }
+    // get length of all lists
+    int final_length = 0;
+    for(final Collection<T> list : lists){
+      if(list != null){
+        final_length += list.size();
+      }
+    }
+    // create final array
+    final T[] final_array = new_array_supplier.apply(final_length);
+    int i = 0;
+    for(final Collection<T> list : lists){
+      if(list != null){
+        for(T a : list){
+          final_array[i] = a;
+          i++;
+        }
+      }
+    }
+    return final_array;
   }
 
   /** This checks the two arrays and returns true if they are different.

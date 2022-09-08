@@ -3,6 +3,7 @@ package addsynth.energy.gameplay.machines.energy_wire;
 import javax.annotation.Nullable;
 import addsynth.core.block_network.BlockNetworkUtil;
 import addsynth.energy.ADDSynthEnergy;
+import addsynth.energy.gameplay.machines.energy_diagnostics.TileEnergyDiagnostics;
 import addsynth.energy.lib.blocks.Wire;
 import addsynth.energy.lib.energy_network.tiles.AbstractEnergyNetworkTile;
 import addsynth.energy.lib.main.IEnergyUser;
@@ -34,7 +35,7 @@ public final class EnergyWire extends Wire {
       valid_sides[side.ordinal()] = false;
       final BlockEntity tile = world.getBlockEntity(pos.relative(side));
       if(tile != null){
-        if(tile instanceof AbstractEnergyNetworkTile || tile instanceof IEnergyUser){
+        if(tile instanceof AbstractEnergyNetworkTile || tile instanceof IEnergyUser || tile instanceof TileEnergyDiagnostics){
           valid_sides[side.ordinal()] = true;
         }
       }

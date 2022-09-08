@@ -15,6 +15,10 @@ NEW:
     Integration Foregoing, Integrated Dynamics, Integrated Tunnels, Integrated Terminals,
     Inventory Tweaks Renewed, Mouse Tweaks, No Cubes, No Cubes Reloaded, Patchouli,
     The Thermal Series of mods, Tool's Complement, and XNet.
+  Added Energy Diagnostics block.
+    Attaches to an Energy Network and displays the energy variables of all machines
+      on the Energy Network.
+    - Only supports a maximum of 16 machines right now.
 CHANGED:
   Increased the chance to drop an Unidentified Ring when killing enemy mobs.
   The Dimensional Anchor is now registered as a Curios Charm, if you

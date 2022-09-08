@@ -292,6 +292,7 @@ public final class MaterialsUtil {
   }
 
   /** Returns an Item array. To get back a list, use <code>Arrays.asList(Item[] input)</code>.*/
+  // OPTIMIZE: Change this to use addsynth.core.util.ArrayUtil.combine_collections()?
   @SafeVarargs
   public static final Item[] getFilter(final Collection<Item> ... lists){
     int count = 0;

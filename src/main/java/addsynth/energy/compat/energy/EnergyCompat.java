@@ -16,7 +16,7 @@ import net.minecraftforge.energy.IEnergyStorage;
 
 public final class EnergyCompat {
 
-  public enum EnergyType {
+  public enum EnergySystem {
     FORGE(true),
     RF(Compatibility.REDSTONE_FLUX.loaded),
     TESLA(Compatibility.TESLA.loaded);
@@ -26,17 +26,17 @@ public final class EnergyCompat {
     public final void setError(final Exception e){
     }
     
-    private EnergyType(final boolean loaded){
+    private EnergySystem(final boolean loaded){
       this.exists = loaded;
     }
   }
   
   public static final class CompatEnergyNode {
-    public final EnergyType type;
+    public final EnergySystem type;
     public final Object energy;
     public final Direction side;
     
-    public CompatEnergyNode(final EnergyType type, final Object energy, final Direction side){
+    public CompatEnergyNode(final EnergySystem type, final Object energy, final Direction side){
       this.type = type;
       this.energy = energy;
       this.side = side;
@@ -57,22 +57,22 @@ public final class EnergyCompat {
         // Forge Energy
         final IEnergyStorage energy = tile.getCapability(CapabilityEnergy.ENERGY, capability_side).orElse(null);
         if(energy != null){
-          nodes.add(new CompatEnergyNode(EnergyType.FORGE, energy, capability_side));
+          nodes.add(new CompatEnergyNode(EnergySystem.FORGE, energy, capability_side));
           continue;
         }
         
         try{
         
           // RF Energy
-          if(EnergyType.RF.exists){
+          if(EnergySystem.RF.exists){
             if(RedstoneFluxEnergy.check(tile)){
-              nodes.add(new CompatEnergyNode(EnergyType.RF, tile, capability_side));
+              nodes.add(new CompatEnergyNode(EnergySystem.RF, tile, capability_side));
               continue;
             }
           }
           
           // Tesla Energy
-          if(EnergyType.TESLA.exists){
+          if(EnergySystem.TESLA.exists){
             if(TeslaEnergy.check(tile)){
               continue;
             }

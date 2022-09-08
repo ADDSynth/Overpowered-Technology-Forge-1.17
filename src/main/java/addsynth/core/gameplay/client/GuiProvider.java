@@ -1,6 +1,5 @@
 package addsynth.core.gameplay.client;
 
-import addsynth.core.gameplay.music_box.MusicBox;
 import addsynth.core.gameplay.music_box.TileMusicBox;
 import addsynth.core.gameplay.music_box.gui.GuiMusicBox;
 import addsynth.core.gameplay.team_manager.TeamManagerBlock;
@@ -11,8 +10,8 @@ import net.minecraft.network.chat.TranslatableComponent;
 public final class GuiProvider {
 
   @SuppressWarnings("resource")
-  public static final void openMusicBoxGui(final TileMusicBox tile, final MusicBox block){
-    Minecraft.getInstance().setScreen(new GuiMusicBox(tile, new TranslatableComponent(block.getDescriptionId())));
+  public static final void openMusicBoxGui(final TileMusicBox tile, final String title){
+    Minecraft.getInstance().setScreen(new GuiMusicBox(tile, new TranslatableComponent(title)));
   }
 
   @SuppressWarnings("resource")

@@ -31,6 +31,8 @@ public final class WidgetUtil {
     return total_size - (total_size / 2);
   }
   
+  /** This returns a list of widget positions (either horizontally or vertically).
+   *  This will provide even spacing between the widgets and left and right sides. */
   public static final int[] evenAlignment(final int total_area, final int[] widget_sizes){
     final int widgets = widget_sizes.length;
     final int[] widget_position = new int[widgets];
@@ -62,6 +64,12 @@ public final class WidgetUtil {
     return widget_position;
   }
 
+  /** This provides a list of widget positions (either horizontally or vertically).
+   *  This one should be used if all the widgets are the same size.
+   * @param total_area
+   * @param widget_size
+   * @param number_of_widgets
+   */
   public static final int[] evenAlignment(final int total_area, final int widget_size, final int number_of_widgets){
     int[] widget_sizes = new int[number_of_widgets];
     int z;

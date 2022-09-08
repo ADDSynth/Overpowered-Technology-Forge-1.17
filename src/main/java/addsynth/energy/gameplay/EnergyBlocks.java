@@ -3,6 +3,7 @@ package addsynth.energy.gameplay;
 import addsynth.energy.gameplay.machines.circuit_fabricator.CircuitFabricatorBlock;
 import addsynth.energy.gameplay.machines.compressor.CompressorBlock;
 import addsynth.energy.gameplay.machines.electric_furnace.ElectricFurnaceBlock;
+import addsynth.energy.gameplay.machines.energy_diagnostics.EnergyDiagnosticsBlock;
 import addsynth.energy.gameplay.machines.energy_storage.EnergyStorageBlock;
 import addsynth.energy.gameplay.machines.energy_wire.EnergyWire;
 import addsynth.energy.gameplay.machines.generator.GeneratorBlock;
@@ -17,5 +18,6 @@ public final class EnergyBlocks {
   public static final ElectricFurnaceBlock    electric_furnace         = new ElectricFurnaceBlock("electric_furnace");
   public static final CircuitFabricatorBlock  circuit_fabricator       = new CircuitFabricatorBlock("circuit_fabricator");
   public static final UniversalEnergyInterfaceBlock universal_energy_machine = new UniversalEnergyInterfaceBlock("universal_energy_interface");
+  public static final EnergyDiagnosticsBlock  energy_diagnostics_block = new EnergyDiagnosticsBlock("energy_diagnostics_block");
 
 }

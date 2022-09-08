@@ -20,7 +20,7 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 // https://github.com/canitzp/Metalworks/blob/master/src/main/java/de/canitzp/metalworks/block/cable/Network.java
 
 /** The EnergyNetwork is responsible for transferring energy to and from machines. It only keeps a list
- *  of receivers, batteries, and generators, and no other data. Certain Batteries acts as part of the
+ *  of receivers, batteries, and generators, and no other data. Currently, Batteries act as part of the
  *  network, so when it performs an Update search, it passes through the batteries, and works on all
  *  batteries at the same time, preventing energy waterfall effects.
  */
@@ -28,6 +28,7 @@ public final class EnergyNetwork extends BlockNetwork<AbstractEnergyNetworkTile>
 
   public long tick_time;
 
+  private final ArrayList<EnergyNode> all_machines = new ArrayList<>(); // This is temporary, but temporary solutions are often the most permanent.
   private final ArrayList<EnergyNode> receivers = new ArrayList<>();
   private final ArrayList<EnergyNode> batteries = new ArrayList<>();
   private final ArrayList<EnergyNode> generators = new ArrayList<>();
@@ -38,6 +39,7 @@ public final class EnergyNetwork extends BlockNetwork<AbstractEnergyNetworkTile>
 
   @Override
   protected void clear_custom_data(){
+    all_machines.clear();
     generators.clear();
     receivers.clear();
     batteries.clear();
@@ -50,7 +52,7 @@ public final class EnergyNetwork extends BlockNetwork<AbstractEnergyNetworkTile>
   private static final void add_energy_node(final ArrayList<EnergyNode> list, final EnergyNode node){
     boolean exists = false;
     for(EnergyNode existing_node : list){
-      if(existing_node.energy == node.energy){
+      if(existing_node.getEnergy() == node.getEnergy()){
         exists = true;
         break;
       }
@@ -65,11 +67,14 @@ public final class EnergyNetwork extends BlockNetwork<AbstractEnergyNetworkTile>
     if(tile == first_tile){
       final long start = TimeUtil.get_start_time();
       
+      remove_invalid_nodes(all_machines);
       remove_invalid_nodes(batteries);
       remove_invalid_nodes(receivers);
       remove_invalid_nodes(generators);
 
       try{
+        // TEST: Step 1 and 2 should probably be reversed.
+      
         // Step 1: subtract as much energy as we can from the generators.
         EnergyUtil.transfer_energy(generators, receivers);
         
@@ -104,19 +109,26 @@ public final class EnergyNetwork extends BlockNetwork<AbstractEnergyNetworkTile>
     final BlockEntity tile = node.getTile();
     if(tile != null){
       if(tile instanceof ICustomEnergyUser){
+        add_energy_node(all_machines, new EnergyNode(tile, ((IEnergyUser)tile).getEnergy()));
         add_energy_node(generators, new EnergyNode(tile, ((IEnergyUser)tile).getEnergy()));
         add_energy_node(receivers, new EnergyNode(tile, ((IEnergyUser)tile).getEnergy()));
         return;
       }
+      // OPTIMIZE: replace with addsynth.energy.lib.main.EnergyType.determine()?
       if(tile instanceof IEnergyConsumer){
+        add_energy_node(all_machines, new EnergyNode(tile, ((IEnergyUser)tile).getEnergy()));
         add_energy_node(receivers, new EnergyNode(tile, ((IEnergyUser)tile).getEnergy()));
         return;
       }
       if(tile instanceof IEnergyGenerator){
+        add_energy_node(all_machines, new EnergyNode(tile, ((IEnergyUser)tile).getEnergy()));
         add_energy_node(generators, new EnergyNode(tile, ((IEnergyUser)tile).getEnergy()));
         return;
       }
+      // Already checked for machines that are specifically defined as a Generator or Receiver,
+      // all other machines that still handle energy are treated as a Battery.
       if(tile instanceof IEnergyUser){
+        add_energy_node(all_machines, new EnergyNode(tile, ((IEnergyUser)tile).getEnergy()));
         add_energy_node(batteries, new EnergyNode(tile, ((IEnergyUser)tile).getEnergy()));
       }
     }
@@ -130,6 +142,10 @@ public final class EnergyNetwork extends BlockNetwork<AbstractEnergyNetworkTile>
         updateBlockNetwork(current_position);
       }
     }
+  }
+
+  public final EnergyNode[] getDiagnosticsData(){
+    return all_machines.toArray(new EnergyNode[all_machines.size()]);
   }
 
 }

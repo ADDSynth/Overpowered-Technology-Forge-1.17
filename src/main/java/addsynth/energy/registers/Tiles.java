@@ -4,6 +4,7 @@ import addsynth.energy.gameplay.EnergyBlocks;
 import addsynth.energy.gameplay.machines.circuit_fabricator.TileCircuitFabricator;
 import addsynth.energy.gameplay.machines.compressor.TileCompressor;
 import addsynth.energy.gameplay.machines.electric_furnace.TileElectricFurnace;
+import addsynth.energy.gameplay.machines.energy_diagnostics.TileEnergyDiagnostics;
 import addsynth.energy.gameplay.machines.energy_storage.TileEnergyStorage;
 import addsynth.energy.gameplay.machines.energy_wire.TileEnergyWire;
 import addsynth.energy.gameplay.machines.generator.TileGenerator;
@@ -32,5 +33,8 @@ public final class Tiles {
 
   public static final BlockEntityType<TileUniversalEnergyInterface> UNIVERSAL_ENERGY_INTERFACE =
     BlockEntityType.Builder.of(TileUniversalEnergyInterface::new, EnergyBlocks.universal_energy_machine).build(null);
+
+  public static final BlockEntityType<TileEnergyDiagnostics> ENERGY_DIAGNOSTICS_BLOCK =
+    BlockEntityType.Builder.of(TileEnergyDiagnostics::new, EnergyBlocks.energy_diagnostics_block).build(null);
 
 }

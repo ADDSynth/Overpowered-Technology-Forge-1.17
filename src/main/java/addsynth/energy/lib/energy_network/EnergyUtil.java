@@ -66,7 +66,7 @@ public final class EnergyUtil {
         available_energy[i] = (long)(((ICustomEnergyUser)tile).getAvailableEnergy() * DecimalNumber.DECIMAL_ACCURACY);
       }
       else{
-        available_energy[i] = (long)(node.energy.getAvailableEnergy() * DecimalNumber.DECIMAL_ACCURACY);
+        available_energy[i] = (long)(node.getEnergy().getAvailableEnergy() * DecimalNumber.DECIMAL_ACCURACY);
       }
       total_available_energy += available_energy[i];
     }
@@ -80,7 +80,7 @@ public final class EnergyUtil {
         requested_energy[i] = (long)(((ICustomEnergyUser)tile).getRequestedEnergy() * DecimalNumber.DECIMAL_ACCURACY);
       }
       else{
-        requested_energy[i] = (long)(node.energy.getRequestedEnergy() * DecimalNumber.DECIMAL_ACCURACY);
+        requested_energy[i] = (long)(node.getEnergy().getRequestedEnergy() * DecimalNumber.DECIMAL_ACCURACY);
       }
       total_requested_energy += requested_energy[i];
     }
@@ -96,13 +96,13 @@ public final class EnergyUtil {
     // Part 3a: Extract energy from Generators
     for(i = 0; i < from_size; i++){
       node = from.get(i);
-      node.energy.extractEnergy((double)energy_to_extract[i] / DecimalNumber.DECIMAL_ACCURACY);
+      node.getEnergy().extractEnergy((double)energy_to_extract[i] / DecimalNumber.DECIMAL_ACCURACY);
     }
     
     // Part 3b: Insert energy into Receivers
     for(i = 0; i < to_size; i++){
       node = to.get(i);
-      node.energy.receiveEnergy((double)energy_to_receive[i] / DecimalNumber.DECIMAL_ACCURACY);
+      node.getEnergy().receiveEnergy((double)energy_to_receive[i] / DecimalNumber.DECIMAL_ACCURACY);
     }
     
   }
@@ -122,7 +122,7 @@ public final class EnergyUtil {
     final long[] capacity = new long[length];
 
     for(i = 0; i < length; i++){
-      energy_storage = batteries.get(i).energy;
+      energy_storage = batteries.get(i).getEnergy();
       total_energy   += (long)(energy_storage.getEnergy()   * DecimalNumber.DECIMAL_ACCURACY);
       capacity[i]     = (long)(energy_storage.getCapacity() * DecimalNumber.DECIMAL_ACCURACY);
       total_capacity += capacity[i];
@@ -135,7 +135,7 @@ public final class EnergyUtil {
     final long[] energy_to_insert = MathUtility.divide_evenly(total_energy, capacity);
     
     for(i = 0; i < length; i++){
-      energy_storage = batteries.get(i).energy;
+      energy_storage = batteries.get(i).getEnergy();
       energy_storage.setEnergy((double)energy_to_insert[i] / DecimalNumber.DECIMAL_ACCURACY);
     }
   }

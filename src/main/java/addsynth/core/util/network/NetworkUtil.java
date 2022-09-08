@@ -1,11 +1,14 @@
 package addsynth.core.util.network;
 
+import java.util.function.Supplier;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.fmllegacy.network.PacketDistributor;
+import net.minecraftforge.fmllegacy.network.PacketDistributor.TargetPoint;
 import net.minecraftforge.fmllegacy.network.simple.SimpleChannel;
 
 public final class NetworkUtil {
@@ -88,6 +91,26 @@ public final class NetworkUtil {
    */
   public static final void send_to_clients_in_world(final SimpleChannel network, final Level world, final Object message){
     network.send(PacketDistributor.DIMENSION.with(() -> world.dimension()), message);
+  }
+
+  /** Sends a network message to only those players that are close to the TileEntity,
+   *  with a default radius of 32 blocks.   */
+  public static final void send_to_TileEntity(final SimpleChannel network, final BlockEntity tile, final Object message){
+    send_to_TileEntity(network, tile, 32, message);
+  }
+
+  /** Further restricts which clients to send the network message to by only sending
+   *  the message to just the players that are close to the TileEntity. */
+  public static final void send_to_TileEntity(final SimpleChannel network, final BlockEntity tile, final double radius, final Object message){
+    @SuppressWarnings("resource")
+    final Level world = tile.getLevel();
+    if(world != null){
+      final BlockPos pos = tile.getBlockPos();
+      final Supplier<TargetPoint> tp_supplier = () -> {
+        return new TargetPoint(pos.getX(), pos.getY(), pos.getZ(), radius, world.dimension());
+      };
+      network.send(PacketDistributor.NEAR.with(tp_supplier), message);
+    }
   }
 
 }
