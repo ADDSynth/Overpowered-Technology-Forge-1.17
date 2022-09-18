@@ -2,7 +2,7 @@ package addsynth.core.util.math;
 
 import javax.annotation.Nonnegative;
 import addsynth.core.ADDSynthCore;
-import addsynth.core.gui.widgets.scrollbar.Scrollbar;
+import addsynth.core.gui.widgets.scrollbar.AbstractScrollbar;
 
 /** For math functions that use {@link net.minecraft.core.BlockPos BlockPos},
  *  use {@link BlockMath} instead.
@@ -207,12 +207,16 @@ public final class MathUtility {
     return get_distance(x1, y1, z1, x2, y2, z2) <= distance;
   }
 
-  /** Used in {@link Scrollbar}s. Generates an array of stop positions for the scrollbar. */
+  /** Used in {@link AbstractScrollbar Scrollbars}. Generates an array of stop positions for the scrollbar. */
   public static final int[] getPositions(int max_number, int positions){
     return getPositions(0, max_number, positions);
   }
   
-  /** Used in {@link Scrollbar}s. Generates an array of stop positions for the scrollbar. */
+  /** Used in {@link AbstractScrollbar Scrollbars}. Generates an array of stop positions for the scrollbar.
+   * @param min_number Minimum Y Position
+   * @param max_number Maximum Y Position
+   * @param positions  Number of Scrollbar Index Positions
+   */
   public static final int[] getPositions(int min_number, int max_number, int positions){
     // handle a position of 1 to prevent divide by zero
     if(positions <= 1){
@@ -227,7 +231,7 @@ public final class MathUtility {
     return recorded_positions;
   }
 
-  /** Used in {@link Scrollbar}s. Uses the scrollbar's current position to determine the index amongst the
+  /** Used in {@link AbstractScrollbar Scrollbars}. Uses the scrollbar's current position to determine the index amongst the
    *  stop positions and writes all visible lines according to the index position.
    * @param position
    * @param values

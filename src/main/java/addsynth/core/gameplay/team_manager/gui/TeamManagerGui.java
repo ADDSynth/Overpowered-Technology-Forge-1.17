@@ -11,7 +11,7 @@ import addsynth.core.gui.GuiBase;
 import addsynth.core.gui.util.GuiUtil;
 import addsynth.core.gui.widgets.WidgetUtil;
 import addsynth.core.gui.widgets.scrollbar.ListEntry;
-import addsynth.core.gui.widgets.scrollbar.Scrollbar;
+import addsynth.core.gui.widgets.scrollbar.TextScrollbar;
 import addsynth.core.util.StringUtil;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.ChatFormatting;
@@ -62,16 +62,16 @@ public final class TeamManagerGui extends GuiBase {
   // private static final int team_player_list_size = 11;
 
   private final ListEntry[] team_entries = new ListEntry[team_list_size];
-  private Scrollbar team_list;
+  private TextScrollbar team_list;
 
   private final ListEntry[] all_players = new ListEntry[player_list_size];
-  private Scrollbar all_players_list;
+  private TextScrollbar all_players_list;
 
   private final ListEntry[] team_players = new ListEntry[player_list_size];
-  private Scrollbar team_players_list;
+  private TextScrollbar team_players_list;
 
   private final ListEntry[] objectives_entries = new ListEntry[objective_list_size];
-  private Scrollbar objectives_list;
+  private TextScrollbar objectives_list;
 
   private final BiConsumer<String, Integer> onTeamSelected = (String value, Integer id) -> {
     team_selected = ChatFormatting.stripFormatting(value);
@@ -196,7 +196,7 @@ public final class TeamManagerGui extends GuiBase {
       team_players[i] = new ListEntry(x_position_1, start_y + (entry_height * i), list_width, entry_height);
       addRenderableWidget(team_players[i]);
     }
-    team_players_list = new Scrollbar(x_position_1 + list_width, start_y, player_list_height, team_players);
+    team_players_list = new TextScrollbar(x_position_1 + list_width, start_y, player_list_height, team_players);
     team_players_list.setResponder(onTeamPlayerSelected);
     addRenderableWidget(team_players_list);
     
@@ -209,7 +209,7 @@ public final class TeamManagerGui extends GuiBase {
       all_players[i] = new ListEntry(x_position_1, player_list_y + (entry_height * i), list_width, entry_height);
       addRenderableWidget(all_players[i]);
     }
-    all_players_list = new Scrollbar(x_position_1 + list_width, player_list_y, player_list_height, all_players);
+    all_players_list = new TextScrollbar(x_position_1 + list_width, player_list_y, player_list_height, all_players);
     all_players_list.setResponder(onPlayerSelected);
     addRenderableWidget(all_players_list);
     
@@ -219,7 +219,7 @@ public final class TeamManagerGui extends GuiBase {
       team_entries[i] = new ListEntry(x_position_2, start_y + (entry_height * i), list_width, entry_height);
       addRenderableWidget(team_entries[i]);
     }
-    team_list = new Scrollbar(x_position_2 + list_width, start_y, team_list_height, team_entries);
+    team_list = new TextScrollbar(x_position_2 + list_width, start_y, team_list_height, team_entries);
     team_list.setResponder(onTeamSelected);
     addRenderableWidget(team_list);
       edit_team_button = new TeamManagerGuiButtons.EditTeamButton(  x_position_2 + 34, team_buttons_y, 30, button_height);
@@ -234,7 +234,7 @@ public final class TeamManagerGui extends GuiBase {
       objectives_entries[i] = new ListEntry(x_position_3, start_y + (entry_height * i), list_width, entry_height);
       addRenderableWidget(objectives_entries[i]);
     }
-    objectives_list = new Scrollbar(x_position_3 + list_width, start_y, objectives_list_height, objectives_entries);
+    objectives_list = new TextScrollbar(x_position_3 + list_width, start_y, objectives_list_height, objectives_entries);
     objectives_list.setResponder(onObjectiveSelected);
     addRenderableWidget(objectives_list);
     edit_objective_button   = new TeamManagerGuiButtons.EditObjectiveButton(  x_position_3 + 34, objective_buttons_y, 30, button_height);

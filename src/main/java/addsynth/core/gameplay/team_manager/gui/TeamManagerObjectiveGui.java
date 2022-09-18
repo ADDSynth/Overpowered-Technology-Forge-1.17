@@ -13,7 +13,7 @@ import addsynth.core.gui.util.GuiUtil;
 import addsynth.core.gui.widgets.WidgetUtil;
 import addsynth.core.gui.widgets.buttons.RadialButtonGroup;
 import addsynth.core.gui.widgets.scrollbar.ListEntry;
-import addsynth.core.gui.widgets.scrollbar.Scrollbar;
+import addsynth.core.gui.widgets.scrollbar.TextScrollbar;
 import addsynth.core.util.StringUtil;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.gui.components.EditBox;
@@ -55,7 +55,7 @@ public final class TeamManagerObjectiveGui extends GuiBase {
   private EditBox objective_id_name;
   private EditBox objective_display_name;
   private RadialButtonGroup criteria_types;
-  private Scrollbar criteria_list;
+  private TextScrollbar criteria_list;
   private TeamManagerGuiButtons.FinishButton finish_button;
 
   private static final int widget_spacing = 2;
@@ -107,7 +107,7 @@ public final class TeamManagerObjectiveGui extends GuiBase {
       objective_entries[i] = new ListEntry(right_section.x, right_section.y + (entry_height*i), right_section.width, entry_height);
       addRenderableWidget(objective_entries[i]);
     }
-    criteria_list = new Scrollbar(right_section.right, widget_line_1, list_height, objective_entries);
+    criteria_list = new TextScrollbar(right_section.right, widget_line_1, list_height, objective_entries);
     addRenderableWidget(criteria_list);
 
     // Done and Cancel Buttons

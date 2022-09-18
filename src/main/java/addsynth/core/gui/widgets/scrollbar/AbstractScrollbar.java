@@ -33,7 +33,7 @@ import net.minecraft.resources.ResourceLocation;
  *  <p>Call {@link #setSelected(int)} with any negative value to unselect.
  * @author ADDSynth
  */
-public final class Scrollbar extends AbstractWidget {
+public abstract class AbstractScrollbar<E, L extends AbstractListEntry<E>> extends AbstractWidget {
 
   private static final ResourceLocation texture = new ResourceLocation(ADDSynthCore.MOD_ID, "textures/gui/scrollbar.png");
 
@@ -99,11 +99,11 @@ public final class Scrollbar extends AbstractWidget {
   private int[] index_positions;
 
   /** The List Entries connected to this Scrollbar. */
-  private ListEntry[] list_items;
+  private L[] list_items;
   /** Number of visible List Entries. */
   private int visible_elements;
   /** Full list of values. */
-  private String[] values;
+  protected E[] values;
   /** Number of string values in the full list. */
   private int list_length;
   /** The selected string value in the full list. */
@@ -111,18 +111,14 @@ public final class Scrollbar extends AbstractWidget {
 
   /** This is passed the new Selection Index every time it is changed,
    *  even if it is changed to an invalid value. */
-  private BiConsumer<String, Integer> onSelected;
+  private BiConsumer<E, Integer> onSelected;
 
-  public Scrollbar(int x, int y, int height, ListEntry[] list_items){
-    this(x, y, height, list_items, null);
-  }
-
-  public Scrollbar(int x, int y, int height, ListEntry[] list_items, String[] values){
+  public AbstractScrollbar(int x, int y, int height, L[] list_items, E[] values){
     super(x, y, scrollbar_gui_width, height, new TextComponent(""));
     if(height > max_scrollbar_height - 8){
       ADDSynthCore.log.error("Requested Scrollbar height is bigger than Max Scrollbar height!");
     }
-    for(ListEntry entry : list_items){
+    for(L entry : list_items){
       entry.setScrollbar(this);
     }
     this.list_items = list_items;
@@ -131,12 +127,21 @@ public final class Scrollbar extends AbstractWidget {
   }
   
   /** Call this to assign the full list of values. The scrollbar will automatically update its displayed list and size. */
-  @SuppressWarnings("deprecation")
-  public void updateScrollbar(final String[] values){
-    try{
-      this.values = values != null ? values : new String[0];
-      list_length = this.values.length;
+  public final void updateScrollbar(E[] values){
+    this.values = values != null ? values : createEmptyValueArray();
+    list_length = this.values.length;
+    
+    recalculateScrollbar();
+
+    // set list entries
+    updateList();
+  }
   
+  protected abstract E[] createEmptyValueArray();
+  
+  @SuppressWarnings("deprecation")
+  private final void recalculateScrollbar(){
+    try{
       // recalculate everything for now. it doesn't hurt.
   
       // scrollbar
@@ -163,9 +168,6 @@ public final class Scrollbar extends AbstractWidget {
         number_of_center_sections = 0;
       }
       scrollbar_gui_height_calc = WidgetUtil.get_half_lengths(scrollbar_height - (number_of_center_sections * center_gui_height));
-  
-      // set list entries
-      updateList();
     }
     catch(Exception e){
       e.printStackTrace();
@@ -194,12 +196,12 @@ public final class Scrollbar extends AbstractWidget {
   }
 
   @Override
-  protected void onDrag(double gui_x, double gui_y, double screen_x, double screen_y){
+  protected final void onDrag(double gui_x, double gui_y, double screen_x, double screen_y){
     move_scrollbar((int)Math.round(gui_y));
   }
 
   @SuppressWarnings("deprecation")
-  private final void move_scrollbar(final int new_scrollbar_y_position){
+  protected final void move_scrollbar(final int new_scrollbar_y_position){
     center_y = new_scrollbar_y_position;
     position_y = CommonMath.clamp(center_y - scrollbar_half_height, this.y, max_position_y);
     
@@ -220,18 +222,17 @@ public final class Scrollbar extends AbstractWidget {
         list_items[i].setSelected(selected);
       }
       else{
-        list_items[i].set(-1, "");
-        list_items[i].setSelected(-1);
+        list_items[i].setNull();
       }
     }
   }
 
   @Override
-  public void onRelease(double p_onRelease_1_, double p_onRelease_3_){
+  public final void onRelease(double p_onRelease_1_, double p_onRelease_3_){
     position_y = index_positions[index_position];
   }
 
-  public void setResponder(final BiConsumer<String, Integer> responder){
+  public final void setResponder(final BiConsumer<E, Integer> responder){
     this.onSelected = responder;
   }
 
@@ -248,7 +249,7 @@ public final class Scrollbar extends AbstractWidget {
     //        the parameter. But I may want to control this in the future, so it's left as-is for now.
     //        Remove this in 2027 if it's no longer necessary.
     selected = list_entry;
-    for(final ListEntry e : list_items){
+    for(final L e : list_items){
       e.setSelected(selected);
     }
     
@@ -264,16 +265,7 @@ public final class Scrollbar extends AbstractWidget {
   }
 
   /** Attempt to set this scrollbar's selected index to one of the values in the list. */
-  public void setSelected(final String value){
-    int i;
-    for(i = 0; i < values.length; i++){
-      if(values[i].equals(value)){
-        setSelected(i);
-        return;
-      }
-    }
-    unSelect();
-  }
+  public abstract void setSelected(final E value);
 
   private final void scroll_to_value(){ // seperate as a function in case we need to call it externally?
     if(hasValidSelection()){
@@ -285,24 +277,24 @@ public final class Scrollbar extends AbstractWidget {
     }
   }
 
-  public String getSelected(){
+  public final E getSelected(){
     return hasValidSelection() ? values[selected] : null;
   }
 
-  public int getSelectedIndex(){
+  public final int getSelectedIndex(){
     return selected;
   }
 
-  public boolean hasValidSelection(){
+  public final boolean hasValidSelection(){
     return ArrayUtil.isInsideBounds(selected, values.length);
   }
 
   @Override
-  public void playDownSound(SoundManager p_playDownSound_1_){
+  public final void playDownSound(SoundManager p_playDownSound_1_){
   }
 
   @Override
-  public void updateNarration(NarrationElementOutput p_169152_){
+  public final void updateNarration(NarrationElementOutput p_169152_){
   }
 
 }

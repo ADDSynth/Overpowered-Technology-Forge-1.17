@@ -2,6 +2,7 @@ package addsynth.core.gui;
 
 import addsynth.core.gui.util.GuiUtil;
 import com.mojang.blaze3d.vertex.PoseStack;
+import net.minecraft.client.gui.components.events.ContainerEventHandler;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -23,6 +24,25 @@ public abstract class GuiContainerBase<T extends AbstractContainerMenu> extends 
     guiUtil = new GuiUtil(gui_texture, width, height);
     this.imageWidth = width;
     this.imageHeight = height;
+  }
+
+  /** REPLICA: {@link ContainerEventHandler#mouseDragged}<br/>
+   *  On normal {@link net.minecraft.client.gui.screens.Screen Screens}, the
+   *  {@link ContainerEventHandler#mouseDragged} method is called by
+   *  {@link net.minecraft.client.MouseHandler#onMove}. However, in
+   *  {@link AbstractContainerScreen ContainerScreens} the
+   *  {@link AbstractContainerScreen#mouseDragged} method is overridden with different
+   *  instructions. Therefore, we override it again, and call both functions.
+   *  This is replicated because we need to call the
+   *  {@link net.minecraft.client.gui.components.events.GuiEventListener#mouseDragged} method,
+   *  Because {@link addsynth.core.gui.widgets.scrollbar.AbstractScrollbar#onDrag Scrollbars}
+   *  depend on this method to move properly!
+   */
+  @Override
+  public boolean mouseDragged(double gui_x, double gui_y, int widget_id, double screen_x, double screen_y){
+    super.mouseDragged(gui_x, gui_y, widget_id, screen_x, screen_y);
+    // return ((ContainerEventHandler)this).mouseDragged(gui_x, gui_y, widget_id, screen_x, screen_y); Causes a Stackoverflow because we're still calling THIS method.
+    return this.getFocused() != null && this.isDragging() && widget_id == 0 ? this.getFocused().mouseDragged(gui_x, gui_y, widget_id, screen_x, screen_y) : false;
   }
 
   @Override
