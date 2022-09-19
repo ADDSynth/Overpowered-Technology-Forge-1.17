@@ -6,12 +6,14 @@ import addsynth.core.ADDSynthCore;
 import addsynth.core.Debug;
 import addsynth.core.recipe.RecipeUtil;
 import addsynth.material.MaterialsUtil;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
+import net.minecraftforge.registries.ForgeRegistries;
 
 public class RecipeCollection <T extends AbstractRecipe> {
 
@@ -107,6 +109,21 @@ public class RecipeCollection <T extends AbstractRecipe> {
     T recipe = null;
     for(T r : recipes){
       if(r.getResultItem().sameItem(output)){
+        recipe = r;
+        break;
+      }
+    }
+    return recipe;
+  }
+
+  public final T find_recipe(final ResourceLocation registry_key){
+    final Item output = ForgeRegistries.ITEMS.getValue(registry_key);
+    if(output == null){
+      return null;
+    }
+    T recipe = null;
+    for(T r : recipes){
+      if(r.getResultItem().getItem() == output){
         recipe = r;
         break;
       }

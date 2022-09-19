@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:crafting_shapeless",
+  "type": "addsynth_energy:circuit_fabricator",
   "ingredients": [
     {"item": "addsynth_energy:advanced_power_core"},
     {"tag": "forge:silicon"},

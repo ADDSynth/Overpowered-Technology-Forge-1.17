@@ -3,7 +3,7 @@ NEW:
   Added new items.
   Added 5 new beam emitter type items.
   Added Plasma Generator machine.
-   - Deleted the crafting recipe for Plasma that was added in the previous version.
+   - Deleted the crafting recipe for Plasma that was added in version 1.4.
   ReAdded Ring drops, if you have the Curios mod loaded.
    - Added the ability to disable Rings.
   The Dimensional Anchor now works! It protects you from Black Holes, and prevents
@@ -19,10 +19,13 @@ NEW:
     Attaches to an Energy Network and displays the energy variables of all machines
       on the Energy Network.
     - Only supports a maximum of 16 machines right now.
+  The Circuit Fabricator now supports additional recipes than just the circuit items.
 CHANGED:
   Increased the chance to drop an Unidentified Ring when killing enemy mobs.
   The Dimensional Anchor is now registered as a Curios Charm, if you
     have the Curios mod installed.
+  The Energized Power Core and Nullified Power Core are now crafted using the
+    Circuit Fabricator from ADDSynth Energy.
 FIXED:
   Fixed Unidentified Chainmail armor dropping as often as Gold armor.
   Optimized Lasers:

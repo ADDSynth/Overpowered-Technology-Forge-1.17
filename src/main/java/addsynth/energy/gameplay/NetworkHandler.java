@@ -1,7 +1,7 @@
 package addsynth.energy.gameplay;
 
 import addsynth.energy.ADDSynthEnergy;
-import addsynth.energy.gameplay.machines.circuit_fabricator.ChangeCircuitCraftType;
+import addsynth.energy.gameplay.machines.circuit_fabricator.ChangeCircuitFabricatorRecipe;
 import addsynth.energy.gameplay.machines.energy_diagnostics.EnergyDiagnosticsMessage;
 import addsynth.energy.gameplay.machines.universal_energy_interface.CycleTransferModeMessage;
 import addsynth.energy.lib.network_messages.*;
@@ -38,10 +38,10 @@ public final class NetworkHandler {
       ToggleAutoShutoffMessage::handle
     );
     INSTANCE.registerMessage(3,
-      ChangeCircuitCraftType.class,
-      ChangeCircuitCraftType::encode,
-      ChangeCircuitCraftType::decode,
-      ChangeCircuitCraftType::handle
+      ChangeCircuitFabricatorRecipe.class,
+      ChangeCircuitFabricatorRecipe::encode,
+      ChangeCircuitFabricatorRecipe::decode,
+      ChangeCircuitFabricatorRecipe::handle
     );
     INSTANCE.registerMessage(4,
       EnergyDiagnosticsMessage.class,
