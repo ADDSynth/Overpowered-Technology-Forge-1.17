@@ -86,9 +86,9 @@ public final class ADDSynthMaterials {
   private static final void process_imc_messages(final InterModProcessEvent event){
     final Stream<IMCMessage> message_stream = event.getIMCStream();
     message_stream.forEach(message -> {
-      final String sender  = message.getSenderModId();
-      final String type    = message.getMethod();
-      final Object payload = message.getMessageSupplier().get();
+      final String sender  = message.senderModId();
+      final String type    = message.method();
+      final Object payload = message.messageSupplier().get();
     });
   }
 
