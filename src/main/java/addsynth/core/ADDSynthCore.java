@@ -7,7 +7,6 @@ import addsynth.core.game.RegistryUtil;
 import addsynth.core.gameplay.Core;
 import addsynth.core.gameplay.NetworkHandler;
 import addsynth.core.gameplay.commands.ADDSynthCommands;
-import addsynth.core.gameplay.compat.CompatabilityManager;
 import addsynth.core.gameplay.team_manager.data.CriteriaData;
 import addsynth.core.gameplay.team_manager.data.TeamData;
 import addsynth.core.util.CommonUtil;
@@ -104,7 +103,6 @@ public final class ADDSynthCore {
     }
     NetworkHandler.registerMessages();
     MaterialsUtil.registerResponder(Debug::dump_tags);
-    event.enqueueWork(CompatabilityManager::init);
 
     log.info("Finished ADDSynthCore main setup.");
   }
