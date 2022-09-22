@@ -57,6 +57,7 @@ public class OverpoweredTechnology {
   public static final String MOD_NAME = "Overpowered Technology";
   public static final String VERSION = "1.5";
   public static final String VERSION_DATE = "June 15, 2022";
+  public static final DevStage DEV_STAGE = DevStage.DEVELOPMENT;
     
   public static final Logger log = LogManager.getLogger(MOD_NAME);
 
@@ -102,7 +103,7 @@ public class OverpoweredTechnology {
   private static final void main_setup(final FMLCommonSetupEvent event){
     log.info("Begin "+MOD_NAME+" main setup...");
     
-    CommonUtil.displayModInfo(log, MOD_NAME, "ADDSynth", VERSION, DevStage.DEVELOPMENT, VERSION_DATE);
+    CommonUtil.displayModInfo(log, MOD_NAME, "ADDSynth", VERSION, DEV_STAGE, VERSION_DATE);
     
     NetworkHandler.registerMessages();
     // WeirdDimension.register();
