@@ -20,6 +20,7 @@ NEW:
       on the Energy Network.
     - Only supports a maximum of 16 machines right now.
   The Circuit Fabricator now supports additional recipes than just the circuit items.
+  Portal spawn time can now be configured.
 CHANGED:
   Increased the chance to drop an Unidentified Ring when killing enemy mobs.
   The Dimensional Anchor is now registered as a Curios Charm, if you
