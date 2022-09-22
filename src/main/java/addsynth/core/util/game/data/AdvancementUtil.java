@@ -1,4 +1,4 @@
-package addsynth.core.util.data;
+package addsynth.core.util.game.data;
 
 import java.util.Set;
 import net.minecraft.advancements.Advancement;

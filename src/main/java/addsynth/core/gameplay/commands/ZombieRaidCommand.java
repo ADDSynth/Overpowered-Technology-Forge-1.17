@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import addsynth.core.ADDSynthCore;
 import addsynth.core.util.command.CommandUtil;
 import addsynth.core.util.command.PermissionLevel;
-import addsynth.core.util.entity.MobUtil;
+import addsynth.core.util.game.entity.MobUtil;
 import addsynth.core.util.math.CommonMath;
 import addsynth.core.util.player.PlayerUtil;
 import addsynth.core.util.time.TimeConstants;

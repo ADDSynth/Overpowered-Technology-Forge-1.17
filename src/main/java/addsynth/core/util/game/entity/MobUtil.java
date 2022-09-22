@@ -1,4 +1,4 @@
-package addsynth.core.util.entity;
+package addsynth.core.util.game.entity;
 
 import net.minecraft.world.entity.Entity;
 

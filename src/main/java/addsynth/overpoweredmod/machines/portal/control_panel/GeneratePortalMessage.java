@@ -1,8 +1,8 @@
 package addsynth.overpoweredmod.machines.portal.control_panel;
 
 import java.util.function.Supplier;
-import addsynth.core.util.data.AdvancementUtil;
 import addsynth.core.util.game.MinecraftUtility;
+import addsynth.core.util.game.data.AdvancementUtil;
 import addsynth.overpoweredmod.assets.CustomAdvancements;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.FriendlyByteBuf;

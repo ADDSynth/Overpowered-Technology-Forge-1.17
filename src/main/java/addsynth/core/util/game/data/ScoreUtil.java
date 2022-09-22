@@ -1,4 +1,4 @@
-package addsynth.core.util.data;
+package addsynth.core.util.game.data;
 
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.scores.Objective;

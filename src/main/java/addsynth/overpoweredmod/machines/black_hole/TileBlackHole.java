@@ -1,7 +1,7 @@
 package addsynth.overpoweredmod.machines.black_hole;
 
-import addsynth.core.util.data.AdvancementUtil;
 import addsynth.core.util.game.MessageUtil;
+import addsynth.core.util.game.data.AdvancementUtil;
 import addsynth.core.util.game.tileentity.ITickingTileEntity;
 import addsynth.core.util.math.BlockMath;
 import addsynth.core.util.math.MathUtility;

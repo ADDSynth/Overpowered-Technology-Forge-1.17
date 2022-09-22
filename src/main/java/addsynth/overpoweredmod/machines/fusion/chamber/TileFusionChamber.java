@@ -3,7 +3,7 @@ package addsynth.overpoweredmod.machines.fusion.chamber;
 import javax.annotation.Nullable;
 import addsynth.core.game.inventory.SlotData;
 import addsynth.core.game.tiles.TileStorageMachine;
-import addsynth.core.util.data.AdvancementUtil;
+import addsynth.core.util.game.data.AdvancementUtil;
 import addsynth.overpoweredmod.assets.CustomAdvancements;
 import addsynth.overpoweredmod.game.core.Machines;
 import addsynth.overpoweredmod.game.core.ModItems;

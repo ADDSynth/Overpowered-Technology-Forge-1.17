@@ -5,7 +5,7 @@ import java.util.HashSet;
 import addsynth.core.block_network.BlockNetwork;
 import addsynth.core.block_network.Node;
 import addsynth.core.util.constants.DirectionConstant;
-import addsynth.core.util.data.AdvancementUtil;
+import addsynth.core.util.game.data.AdvancementUtil;
 import addsynth.core.util.math.BlockMath;
 import addsynth.core.util.network.NetworkUtil;
 import addsynth.energy.lib.main.Energy;
