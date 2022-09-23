@@ -25,7 +25,7 @@ public final class GuiCrystalMatterGenerator extends GuiEnergyBase<TileCrystalMa
   @Override
   public final void init(){
     super.init();
-    addRenderableWidget(new OnOffSwitch<>(this.leftPos + 6, this.topPos + 17, tile));
+    addRenderableWidget(new OnOffSwitch<>(this, tile));
   }
 
   @Override
@@ -37,7 +37,7 @@ public final class GuiCrystalMatterGenerator extends GuiEnergyBase<TileCrystalMa
   @Override
   protected final void renderLabels(PoseStack matrix, int mouseX, int mouseY){
     guiUtil.draw_title(matrix, this.title);
-    draw_status(matrix, tile.getStatus(), 44, 21);
+    draw_status_after_switch(matrix, tile.getStatus());
     draw_energy_usage(matrix, 6, 38);
     guiUtil.draw_text_center(matrix, work_progress_bar.getWorkTimeProgress(), work_percentage_text_y);
     draw_time_left(matrix, 98);

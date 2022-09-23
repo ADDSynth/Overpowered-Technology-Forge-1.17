@@ -28,26 +28,26 @@ public final class GuiPortalControlPanel extends GuiEnergyBase<TilePortalControl
   private static final int checkbox_x = 80;
   private static final int checkbox_y = 19;
 
-  private static final int energy_percentage_y = 46;
-  private static final int energy_change_y = 58;
+  private static final int energy_percentage_y = 48;
+  private static final int energy_change_y = 60;
 
-  private final EnergyProgressBar energy_bar = new EnergyProgressBar(193, 57, 17, 64, 227, 24);
+  private final EnergyProgressBar energy_bar = new EnergyProgressBar(193, 59, 17, 64, 227, 24);
 
   private static final ResourceLocation gui_icons = new ResourceLocation(OverpoweredTechnology.MOD_ID,"textures/gui/gui_textures.png");
   private static final int image_x = 14;
-  private static final int image_y = 69;
+  private static final int image_y = 71;
   private static final int space_x = 44;
   private static final int space_y = 18;
 
   private static final int button_x = 27;
-  private static final int button_y = 106;
+  private static final int button_y = 108;
   private static final int button_width = 136;
   private static final int button_height = 16;
   
   private static final int status_message_y = button_y + button_height + 6;
 
   public GuiPortalControlPanel(final ContainerPortalControlPanel container, final Inventory player_inventory, final Component title){
-    super(218, 144, container, player_inventory, title, portal_control_panel_gui_texture);
+    super(218, 146, container, player_inventory, title, portal_control_panel_gui_texture);
   }
 
   private static final class GeneratePortalButton extends AdjustableButton {
@@ -75,7 +75,7 @@ public final class GuiPortalControlPanel extends GuiEnergyBase<TilePortalControl
   @Override
   public final void init(){
     super.init();
-    addRenderableWidget(new OnOffSwitch<>(this.leftPos + 6, this.topPos + 19, tile));
+    addRenderableWidget(new OnOffSwitch<>(this, tile));
     addRenderableWidget(new AutoShutoffCheckbox<TilePortalControlPanel>(this.leftPos + checkbox_x, this.topPos + checkbox_y, tile));
     addRenderableWidget(new GeneratePortalButton(this.leftPos + button_x, this.topPos + button_y, tile));
     
@@ -104,7 +104,7 @@ public final class GuiPortalControlPanel extends GuiEnergyBase<TilePortalControl
   @Override
   protected final void renderLabels(PoseStack matrix, final int mouseX, final int mouseY){
     guiUtil.draw_title(matrix, this.title);
-    draw_energy(matrix, 44, 34);
+    draw_energy_below_switch(matrix);
     draw_status(matrix, tile.getStatus(), energy_percentage_y);
     guiUtil.draw_text_right(matrix, WorkProgressBar.getWorkTimeProgress(tile), energy_percentage_y);
     draw_energy_difference(matrix, energy_change_y);

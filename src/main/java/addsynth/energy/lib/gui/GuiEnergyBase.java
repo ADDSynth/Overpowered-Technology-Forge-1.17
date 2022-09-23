@@ -54,7 +54,11 @@ public abstract class GuiEnergyBase<T extends BlockEntity & IEnergyUser, C exten
   }
 
   protected final void draw_energy_after_switch(final PoseStack matrix){
-    this.draw_energy(matrix, 44, 21);
+    this.draw_energy(matrix, 50, 21);
+  }
+
+  protected final void draw_energy_below_switch(final PoseStack matrix){
+    this.draw_energy(matrix, 6, 37);
   }
 
   protected final void draw_energy(final PoseStack matrix, final int draw_x, final int draw_y){
@@ -74,7 +78,7 @@ public abstract class GuiEnergyBase<T extends BlockEntity & IEnergyUser, C exten
   
   /** Draws the Energy Usage to the right of the Power Switch. */
   protected final void draw_energy_usage_after_switch(final PoseStack matrix){
-    this.draw_energy_usage(matrix, 44, 21);
+    this.draw_energy_usage(matrix, 50, 21);
   }
   
   protected final void draw_energy_usage(PoseStack matrix, final int draw_x, final int draw_y){
@@ -105,6 +109,10 @@ public abstract class GuiEnergyBase<T extends BlockEntity & IEnergyUser, C exten
 
   protected final void draw_status(PoseStack matrix, final String status, final int x, final int y){
     GuiUtil.draw_text_left(matrix, status_text+": "+status, x, y);
+  }
+
+  protected final void draw_status_after_switch(PoseStack matrix, final String status){
+    GuiUtil.draw_text_left(matrix, status_text+": "+status, 50, 21);
   }
 
   protected final void draw_status_below_switch(PoseStack matrix, final String status){
