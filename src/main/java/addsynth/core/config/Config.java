@@ -5,6 +5,11 @@ import net.minecraftforge.common.ForgeConfigSpec;
 
 public final class Config {
 
+  private static final Pair<Config, ForgeConfigSpec> SPEC_PAIR = new ForgeConfigSpec.Builder().configure(Config::new);
+  public static final Config INSTANCE = SPEC_PAIR.getLeft();
+  public static final ForgeConfigSpec CONFIG_SPEC = SPEC_PAIR.getRight();
+
+  // Debug
   public static ForgeConfigSpec.BooleanValue debug_mod_detection;
   public static ForgeConfigSpec.BooleanValue dump_tags;
   public static ForgeConfigSpec.BooleanValue dump_map_colors;
@@ -12,11 +17,14 @@ public final class Config {
   // Music Box
   public static ForgeConfigSpec.BooleanValue enable_left_hand;
 
-  public static ForgeConfigSpec.BooleanValue show_advanced_config;
+  // Other Mods
+  public enum EMCValueDefinition {DEVELOPER_DEFINED, ACCURATE}
+  public static ForgeConfigSpec.EnumValue<EMCValueDefinition> emc_definition;
+  public static final boolean emcDeveloperDefined(){
+    return emc_definition.get() == EMCValueDefinition.DEVELOPER_DEFINED;
+  }
 
-  private static final Pair<Config, ForgeConfigSpec> SPEC_PAIR = new ForgeConfigSpec.Builder().configure(Config::new);
-  public static final Config INSTANCE = SPEC_PAIR.getLeft();
-  public static final ForgeConfigSpec CONFIG_SPEC = SPEC_PAIR.getRight();
+  public static ForgeConfigSpec.BooleanValue show_advanced_config;
 
   public Config(final ForgeConfigSpec.Builder builder){
 
@@ -33,6 +41,12 @@ public final class Config {
       "By default, the Music Box uses Right-Hand controls (Left-click adds notes, Right-click deletes notes.)\n"+
       "Set this to true to enable Left-Hand controls, which will swap these functions.")
       .define("Enable Left Hand", false);
+    builder.pop();
+
+    builder.push("Compatibility");
+      builder.push("Project E");
+        emc_definition = builder.defineEnum("How Should EMC Values be Calculated", EMCValueDefinition.DEVELOPER_DEFINED);
+      builder.pop();
     builder.pop();
 
     builder.push("Advanced");
