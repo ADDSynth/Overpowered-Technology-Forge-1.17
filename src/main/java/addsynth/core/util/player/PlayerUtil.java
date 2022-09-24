@@ -1,6 +1,7 @@
 package addsynth.core.util.player;
 
 import java.util.function.Consumer;
+import javax.annotation.Nullable;
 import addsynth.core.game.items.ItemUtil;
 import addsynth.core.util.math.BlockMath;
 import addsynth.core.util.server.ServerUtils;
@@ -71,6 +72,7 @@ public final class PlayerUtil {
    * @param world
    * @param player_name
    */
+  @Nullable
   @SuppressWarnings({ "resource", "null", "deprecation" })
   public static final ServerPlayer getPlayer(Level world, String player_name){
     if(world == null){

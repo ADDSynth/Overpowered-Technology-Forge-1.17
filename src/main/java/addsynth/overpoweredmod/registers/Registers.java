@@ -79,7 +79,7 @@ public final class Registers {
       if(Features.blue_laser.get()){    game.register(Laser.BLUE.cannon);    game.register(Laser.BLUE.beam);    }
       if(Features.magenta_laser.get()){ game.register(Laser.MAGENTA.cannon); game.register(Laser.MAGENTA.beam); }
     }
-    if(Features.fusion_container.get()){
+    if(Features.fusion.get()){
       game.register(Machines.fusion_converter);
       game.register(Machines.fusion_control_unit);
       game.register(Machines.fusion_chamber);
@@ -153,7 +153,7 @@ public final class Registers {
       if(Features.magenta_laser.get()){ game.register(OverpoweredTechnology.registry.getItemBlock(Laser.MAGENTA.cannon)); }
     }
     
-    if(Features.fusion_container.get()){
+    if(Features.fusion.get()){
       game.register(OverpoweredTechnology.registry.getItemBlock(Machines.fusion_converter));
       game.register(OverpoweredTechnology.registry.getItemBlock(Machines.fusion_control_unit));
       game.register(OverpoweredTechnology.registry.getItemBlock(Machines.fusion_chamber));

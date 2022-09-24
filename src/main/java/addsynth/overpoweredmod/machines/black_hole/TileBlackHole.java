@@ -39,6 +39,10 @@ public final class TileBlackHole extends BlockEntity implements ITickingTileEnti
 
   /** Max time the black hole algorithm is alloted per tick. Can be changed in the config. */
   private final long max_time = (long)Math.round(TimeConstants.tick_time_in_nanoseconds * Config.black_hole_max_tick_time.get());
+  /** Rather than having the Black Hole algorithm taking up 100% of a tick time,
+   *  we'll hard-limit it to 80% instead. This gives the server some time to process other stuff.*/
+  // MAYBE: Should black hole algorithm hard-limit be configurable?
+  private static final long algorithm_limit = (long)(TimeConstants.tick_time_in_nanoseconds * 0.8);
 
   public static final int MIN_RADIUS = 2;
   public static final int MAX_RADIUS = 500;
@@ -224,7 +228,7 @@ public final class TileBlackHole extends BlockEntity implements ITickingTileEnti
       }
       // record time
       check_1 = TimeUtil.time_exceeded(begin_tick_time, max_time);
-      check_2 = TimeUtil.exceeded_server_tick_time(level.getServer(), begin_tick_time);
+      check_2 = TimeUtil.time_exceeded(begin_tick_time, algorithm_limit);
     }
     while((check_1 || check_2) == false);
   }

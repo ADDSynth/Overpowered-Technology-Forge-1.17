@@ -2,6 +2,7 @@ package addsynth.core.recipe.shapeless;
 
 import java.util.ArrayList;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import addsynth.core.ADDSynthCore;
 import addsynth.core.Debug;
 import addsynth.core.recipe.RecipeUtil;
@@ -105,6 +106,7 @@ public class RecipeCollection <T extends AbstractRecipe> {
    *  Warning: Finds the FIRST recipe with a matching output. There may be
    *  more than one recipe that makes that item. Returns null if no recipe was found.
    */
+  @Nullable
   public final T find_recipe(final ItemStack output){
     T recipe = null;
     for(T r : recipes){
@@ -116,6 +118,7 @@ public class RecipeCollection <T extends AbstractRecipe> {
     return recipe;
   }
 
+  @Nullable
   public final T find_recipe(final ResourceLocation registry_key){
     final Item output = ForgeRegistries.ITEMS.getValue(registry_key);
     if(output == null){

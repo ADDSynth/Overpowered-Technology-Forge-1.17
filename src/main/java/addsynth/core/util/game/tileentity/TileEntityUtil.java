@@ -1,5 +1,6 @@
 package addsynth.core.util.game.tileentity;
 
+import javax.annotation.Nonnull;
 import addsynth.core.ADDSynthCore;
 import addsynth.core.util.game.MessageUtil;
 import addsynth.core.util.world.WorldUtil;
@@ -39,7 +40,7 @@ public class TileEntityUtil {
     }
   }
 
-  public static final void report_ticking_error(final BlockEntity tile, final Throwable e){
+  public static final void report_ticking_error(@Nonnull final BlockEntity tile, final Throwable e){
     @SuppressWarnings("resource")
     final Level level = tile.getLevel();
     final BlockPos position = tile.getBlockPos();

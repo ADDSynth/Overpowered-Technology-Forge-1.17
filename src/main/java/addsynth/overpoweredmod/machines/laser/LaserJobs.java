@@ -122,7 +122,7 @@ public final class LaserJobs {
     private final int distance;
     private final ArrayList<LaserBeamData> beams;
     private int life = 0;
-    private ResourceLocation dimension;
+    private final ResourceLocation dimension;
     
     private LaserJob(final Level world, final Collection<BlockPos> positions, final int distance){
       this.distance = distance;

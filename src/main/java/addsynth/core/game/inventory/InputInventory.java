@@ -187,9 +187,10 @@ public final class InputInventory extends CommonInventory {
   }
 
   private final ItemStack[] getInvalidItemStacks(){
+    final int size = stacks.size();
+    final ArrayList<ItemStack> ejected_itemStacks = new ArrayList<>(size);
     int i;
-    final ArrayList<ItemStack> ejected_itemStacks = new ArrayList<>(stacks.size());
-    for(i = 0; i < stacks.size(); i++){
+    for(i = 0; i < size; i++){
       if(slot_data[i].is_item_valid(getStackInSlot(i)) == false){
         ejected_itemStacks.add(extractItemStack(i));
       }

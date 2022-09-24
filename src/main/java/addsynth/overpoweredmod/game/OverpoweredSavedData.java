@@ -43,7 +43,7 @@ public final class OverpoweredSavedData extends SavedData {
 
   @Override
   public final CompoundTag save(CompoundTag nbt){
-    LaserJobs.save(nbt);
+    LaserJobs.save(nbt); // TODO: Since Lasers are ticked on a per-world basis, perhaps they should be saved separately in each world as well.
     return nbt;
   }
 

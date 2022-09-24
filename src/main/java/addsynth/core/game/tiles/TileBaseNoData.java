@@ -24,7 +24,7 @@ public abstract class TileBaseNoData extends TileAbstractBase {
 
   @Override
   public final ClientboundBlockEntityDataPacket getUpdatePacket(){
-    CompoundTag nbtTag = new CompoundTag();
+    final CompoundTag nbtTag = new CompoundTag();
     save(nbtTag);
     return new ClientboundBlockEntityDataPacket(this.worldPosition, -1, nbtTag);
   }

@@ -25,7 +25,7 @@ public final class Features {
   public static ForgeConfigSpec.BooleanValue portal;
   public static ForgeConfigSpec.BooleanValue crystal_matter_generator;
   public static ForgeConfigSpec.BooleanValue advanced_ore_refinery;
-  public static ForgeConfigSpec.BooleanValue fusion_container;
+  public static ForgeConfigSpec.BooleanValue fusion;
   
   public static ForgeConfigSpec.BooleanValue white_laser;
   public static ForgeConfigSpec.BooleanValue red_laser;
@@ -87,7 +87,7 @@ public final class Features {
     portal                     = builder.define("Portal",                   true);
     crystal_matter_generator   = builder.define("Crystal Matter Generator", true);
     advanced_ore_refinery      = builder.define("Advanced Ore Refinery",    true);
-    fusion_container           = builder.define("Fusion Energy",            true);
+    fusion                     = builder.define("Fusion Energy",            true);
     builder.pop();
 
     builder.push("Lasers");

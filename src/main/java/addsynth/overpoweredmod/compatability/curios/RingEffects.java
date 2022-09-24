@@ -6,6 +6,7 @@ import addsynth.core.game.items.ItemUtil;
 import addsynth.core.game.items.ItemValue;
 import addsynth.core.util.math.random.Weight;
 import addsynth.core.util.time.TimeConstants;
+import addsynth.overpoweredmod.config.Config;
 import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
@@ -43,10 +44,11 @@ public enum RingEffects {
   }
 
   @Deprecated
-  public static final void addEffectsToEntity(final ItemStack stack, final LivingEntity livingEntity, final boolean ring_particles){
+  public static final void addEffectsToEntity(final ItemStack stack, final LivingEntity livingEntity){
     final int effect_id = get_ring_effect(stack);
     if(effect_id > 0){
       final RingEffects ring_effect = RingEffects.values()[effect_id];
+      final boolean ring_particles = Config.rings_have_particle_effects.get();
       if(ring_effect.has_levels){
         final int level = get_ring_effect_level(stack) - 1;
         livingEntity.addEffect(new MobEffectInstance(ring_effect.effect, Integer.MAX_VALUE, level, false, ring_particles));
@@ -64,15 +66,15 @@ public enum RingEffects {
    *  the effect again.
    * @param stack
    * @param livingEntity
-   * @param ring_particles
    */
-  public static final void checkEntityHasEffect(final ItemStack stack, final LivingEntity livingEntity, final boolean ring_particles){
+  public static final void checkEntityHasEffect(final ItemStack stack, final LivingEntity livingEntity){
     final int effect_id = get_ring_effect(stack);
     if(effect_id > 0){
       final RingEffects ring_effect = RingEffects.values()[effect_id];
       final MobEffectInstance effect = livingEntity.getEffect(ring_effect.effect);
       if(effect != null ? effect.getDuration() < TimeConstants.ticks_per_second : true){
         // add effect
+        final boolean ring_particles = Config.rings_have_particle_effects.get();
         if(ring_effect.has_levels){
           final int level = get_ring_effect_level(stack) - 1;
           livingEntity.addEffect(new MobEffectInstance(ring_effect.effect, Integer.MAX_VALUE, level, false, ring_particles));

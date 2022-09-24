@@ -88,10 +88,9 @@ public final class TileLaserHousing extends TileBase implements IBlockNetworkUse
   }
 
   @Override
-  @SuppressWarnings("null")
   public final Energy getEnergy(){
     // OPTIMIZE: Standardize getting energy from multi-block structures.
-    if(level.isClientSide){ // OPTIMIZE replace with onClientSide() from Tilebase
+    if(onClientSide()){
       return energy; // only guis should use this.
     }
     if(network == null){

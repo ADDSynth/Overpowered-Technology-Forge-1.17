@@ -174,7 +174,7 @@ public abstract class BlockNetwork<T extends BlockEntity & IBlockNetworkUser> {
   }
 
   /**
-   * Must be called when splitting or joining BlockNetworks, and right after creating BlockNetworks during TileEnity load.
+   * Must be called when splitting or joining BlockNetworks, and right after creating BlockNetworks during TileEntity load.
    * @param from
    * @param tile First TileEntity in network, or a new TileEntity if the first was destroyed.
    */

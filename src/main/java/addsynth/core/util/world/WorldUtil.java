@@ -103,7 +103,9 @@ public final class WorldUtil {
   /** I don't get it. The /time command sets the time for all worlds, but you can also
    *  set the world's time individually.
    *  DO NOT set time as a negative value!
-   * @see net.minecraft.server.commands.TimeCommand */
+   * @see addsynth.core.util.time.WorldTime
+   * @see net.minecraft.server.commands.TimeCommand
+   */
   @Deprecated
   public static final void set_time(final Level world, final int world_time){
     set_time(world, (long)world_time);
@@ -112,7 +114,9 @@ public final class WorldUtil {
   /** I don't get it. The /time command sets the time for all worlds, but you can also
    *  set the world's time individually.
    *  DO NOT set time as a negative value!
-   * @see net.minecraft.server.commands.TimeCommand */
+   * @see addsynth.core.util.time.WorldTime
+   * @see net.minecraft.server.commands.TimeCommand
+   */
   @Deprecated
   public static final void set_time(final MinecraftServer server, final int world_time){
     set_time(server, (long)world_time);
@@ -121,7 +125,9 @@ public final class WorldUtil {
   /** I don't get it. The /time command sets the time for all worlds, but you can also
    *  set the world's time individually.
    *  DO NOT set time as a negative value!
-   * @see net.minecraft.server.commands.TimeCommand */
+   * @see addsynth.core.util.time.WorldTime
+   * @see net.minecraft.server.commands.TimeCommand
+   */
   public static final void set_time(final Level world, final long world_time){
     @SuppressWarnings("resource")
     final MinecraftServer server = ServerUtils.getServer(world);
@@ -139,7 +145,9 @@ public final class WorldUtil {
   /** I don't get it. The /time command sets the time for all worlds, but you can also
    *  set the world's time individually.
    *  DO NOT set time as a negative value!
-   * @see net.minecraft.server.commands.TimeCommand */
+   * @see addsynth.core.util.time.WorldTime
+   * @see net.minecraft.server.commands.TimeCommand
+   */
   public static final void set_time(final MinecraftServer server, final long world_time){
     for(ServerLevel world : server.getAllLevels()){
       world.setDayTime(world_time >= 0 ? world_time : 0);
