@@ -4,6 +4,7 @@ import addsynth.core.util.java.ArrayUtil;
 import addsynth.material.MaterialsUtil;
 import addsynth.overpoweredmod.game.core.Init;
 import addsynth.overpoweredmod.machines.gem_converter.GemConverterRecipe;
+import addsynth.overpoweredmod.machines.magic_infuser.recipes.MagicInfuserRecipes;
 import net.minecraft.world.item.Item;
 
 public final class Filters {
@@ -27,10 +28,7 @@ public final class Filters {
 
   public static final void regenerate_machine_filters(){
   
-    gem_converter = MaterialsUtil.getFilter(
-      MaterialsUtil.getRubies(), MaterialsUtil.getTopaz(), MaterialsUtil.getCitrine(), MaterialsUtil.getEmeralds(),
-      MaterialsUtil.getDiamonds(), MaterialsUtil.getSapphires(), MaterialsUtil.getAmethysts(), MaterialsUtil.getQuartz()
-    );
+    gem_converter = MagicInfuserRecipes.getFilter();
     
     portal_frame = MaterialsUtil.getFilter(
       MaterialsUtil.getRubyBlocks(),     MaterialsUtil.getTopazBlocks(),

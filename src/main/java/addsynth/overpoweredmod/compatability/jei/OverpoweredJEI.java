@@ -14,6 +14,7 @@ import addsynth.overpoweredmod.game.core.Wires;
 import addsynth.overpoweredmod.machines.advanced_ore_refinery.OreRefineryRecipes;
 import addsynth.overpoweredmod.machines.gem_converter.GemConverterRecipe;
 import addsynth.overpoweredmod.machines.inverter.InverterRecipe;
+import addsynth.overpoweredmod.machines.magic_infuser.recipes.MagicInfuserRecipes;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.constants.VanillaTypes;
@@ -61,7 +62,8 @@ public final class OverpoweredJEI implements IModPlugin {
     registration.addRecipeCategories(
       new GemConverterCategory(gui_helper),
       new AdvancedOreRefineryCategory(gui_helper),
-      new InverterCategory(gui_helper)
+      new InverterCategory(gui_helper),
+      new MagicInfuserCategory(gui_helper)
     );
   }
 
@@ -70,6 +72,7 @@ public final class OverpoweredJEI implements IModPlugin {
     registration.addRecipes(GemConverterRecipe.recipes, GemConverterCategory.id);
     registration.addRecipes(OreRefineryRecipes.recipes, AdvancedOreRefineryCategory.id);
     registration.addRecipes(InverterRecipe.get_recipes(), InverterCategory.id);
+    registration.addRecipes(MagicInfuserRecipes.recipes, MagicInfuserCategory.id);
     add_information(registration);
   }
 
@@ -78,6 +81,7 @@ public final class OverpoweredJEI implements IModPlugin {
     registration.addRecipeCatalyst(new ItemStack(Machines.gem_converter), GemConverterCategory.id);
     registration.addRecipeCatalyst(new ItemStack(Machines.advanced_ore_refinery), AdvancedOreRefineryCategory.id);
     registration.addRecipeCatalyst(new ItemStack(Machines.inverter), InverterCategory.id);
+    registration.addRecipeCatalyst(new ItemStack(Machines.magic_infuser), MagicInfuserCategory.id);
   }
 
   private static final void add_information(IRecipeRegistration registry){

@@ -65,6 +65,8 @@ public class RecipeCollection <T extends AbstractRecipe> {
     filter = item_list.toArray(new Item[item_list.size()]);
   }
 
+  // TODO: RecipeCollection.getFilter() works with Shapeless recipes, but not if Slots
+  //       are filtered on a per-slot basis. I'll need a more robust system for that.
   public final Item[] getFilter(){
     if(update || filter == null){
       build_filter();

@@ -23,7 +23,7 @@ public final class GemConverterCategory implements IRecipeCategory<GemConverterR
   private final IDrawable icon;
 
   public GemConverterCategory(final IGuiHelper gui_helper){
-    background = gui_helper.createDrawable(gui_texture, 0, 16, 74, 18);
+    background = gui_helper.createDrawable(gui_texture, 18, 16, 74, 18);
     icon = gui_helper.createDrawableIngredient(new ItemStack(Machines.gem_converter));
   }
 

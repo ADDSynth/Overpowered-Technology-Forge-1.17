@@ -8,9 +8,11 @@ import addsynth.overpoweredmod.compatability.CompatabilityManager;
 import addsynth.overpoweredmod.config.Features;
 import addsynth.overpoweredmod.game.Names;
 import addsynth.overpoweredmod.game.core.*;
+import addsynth.overpoweredmod.machines.magic_infuser.recipes.MagicInfuserRecipes;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -232,6 +234,12 @@ public final class Registers {
     RegistryUtil.register(game, Containers.FUSION_CHAMBER,             Names.FUSION_CHAMBER);
     RegistryUtil.register(game, Containers.PORTAL_CONTROL_PANEL,       Names.PORTAL_CONTROL_PANEL);
     RegistryUtil.register(game, Containers.PORTAL_FRAME,               Names.PORTAL_FRAME);
+  }
+
+  @SubscribeEvent
+  public static final void registerRecipeSerializers(final RegistryEvent.Register<RecipeSerializer<?>> event){
+    final IForgeRegistry<RecipeSerializer<?>> game = event.getRegistry();
+    RegistryUtil.register(game, MagicInfuserRecipes.serializer, Names.MAGIC_INFUSER);
   }
 
   @SubscribeEvent
