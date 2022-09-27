@@ -3,7 +3,7 @@ package addsynth.core.gameplay.commands;
 import addsynth.core.ADDSynthCore;
 import addsynth.core.util.command.CommandUtil;
 import addsynth.core.util.command.PermissionLevel;
-import addsynth.core.util.math.BlockMath;
+import addsynth.core.util.math.block.BlockMath;
 import addsynth.core.util.world.WorldUtil;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.IntegerArgumentType;

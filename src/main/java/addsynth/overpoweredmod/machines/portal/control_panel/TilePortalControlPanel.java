@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import addsynth.core.util.game.MinecraftUtility;
-import addsynth.core.util.math.BlockMath;
+import addsynth.core.util.math.block.BlockMath;
 import addsynth.core.util.network.NetworkUtil;
 import addsynth.core.util.world.WorldUtil;
 import addsynth.energy.lib.tiles.machines.IAutoShutoff;

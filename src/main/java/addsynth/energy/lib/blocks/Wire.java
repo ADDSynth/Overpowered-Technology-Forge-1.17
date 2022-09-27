@@ -66,14 +66,14 @@ public abstract class Wire extends TileEntityBlock implements SimpleWaterloggedB
   protected abstract boolean[] get_valid_sides(BlockGetter world, BlockPos pos);
 
   private static final BlockState getState(final BlockState state, final boolean[] valid_sides, final LevelAccessor world, final BlockPos position){
-    final boolean down  = valid_sides[DirectionConstant.DOWN]; // OPTIMIZE this
-    final boolean up    = valid_sides[DirectionConstant.UP];
-    final boolean north = valid_sides[DirectionConstant.NORTH];
-    final boolean south = valid_sides[DirectionConstant.SOUTH];
-    final boolean west  = valid_sides[DirectionConstant.WEST];
-    final boolean east  = valid_sides[DirectionConstant.EAST];
-    final boolean water = world.getFluidState(position).getType() == Fluids.WATER;
-    return state.setValue(DOWN, down).setValue(UP, up).setValue(NORTH, north).setValue(SOUTH, south).setValue(WEST, west).setValue(EAST, east).setValue(WATERLOGGED, water);
+    state.setValue(DOWN,  valid_sides[DirectionConstant.DOWN ]);
+    state.setValue(UP,    valid_sides[DirectionConstant.UP   ]);
+    state.setValue(NORTH, valid_sides[DirectionConstant.NORTH]);
+    state.setValue(SOUTH, valid_sides[DirectionConstant.SOUTH]);
+    state.setValue(WEST,  valid_sides[DirectionConstant.WEST ]);
+    state.setValue(EAST,  valid_sides[DirectionConstant.EAST ]);
+    state.setValue(WATERLOGGED, world.getFluidState(position).getType() == Fluids.WATER);
+    return state;
   }
 
   @Override

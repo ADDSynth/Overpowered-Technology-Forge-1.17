@@ -10,7 +10,7 @@ import addsynth.core.ADDSynthCore;
 import addsynth.core.util.StringUtil;
 import addsynth.core.util.command.PermissionLevel;
 import addsynth.core.util.java.FileUtil;
-import addsynth.core.util.math.BlockMath;
+import addsynth.core.util.math.block.BlockMath;
 import addsynth.core.util.world.WorldConstants;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.IntegerArgumentType;

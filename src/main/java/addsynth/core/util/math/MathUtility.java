@@ -5,7 +5,7 @@ import addsynth.core.ADDSynthCore;
 import addsynth.core.gui.widgets.scrollbar.AbstractScrollbar;
 
 /** For math functions that use {@link net.minecraft.core.BlockPos BlockPos},
- *  use {@link BlockMath} instead.
+ *  use {@link addsynth.core.util.math.block.BlockMath BlockMath} instead.
  *  @author ADDSynth
  */
 public final class MathUtility {

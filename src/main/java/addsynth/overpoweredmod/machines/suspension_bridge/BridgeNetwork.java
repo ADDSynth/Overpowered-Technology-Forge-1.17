@@ -6,7 +6,8 @@ import addsynth.core.block_network.BlockNetworkUtil;
 import addsynth.core.block_network.Node;
 import addsynth.core.util.constants.DirectionConstant;
 import addsynth.core.util.game.MinecraftUtility;
-import addsynth.core.util.math.BlockMath;
+import addsynth.core.util.math.block.BlockMath;
+import addsynth.core.util.math.block.DirectionUtil;
 import addsynth.core.util.network.NetworkUtil;
 import addsynth.core.util.world.WorldConstants;
 import addsynth.core.util.world.WorldUtil;
@@ -340,7 +341,7 @@ public final class BridgeNetwork extends BlockNetwork<TileSuspensionBridge> {
     for(direction = 0; direction < 6; direction++){
       bridge = other_bridge[direction];
       if(bridge != null){
-        opposite = DirectionConstant.getOppositeDirection(direction);
+        opposite = DirectionUtil.getOppositeDirection(direction);
         bridge.check_direction(opposite); // updates messages, and bridge area.
         bridge.updateBridgeNetwork();
         bridge.update_direction(opposite);
@@ -412,7 +413,7 @@ public final class BridgeNetwork extends BlockNetwork<TileSuspensionBridge> {
   }
 
   private final void update_direction(final int direction){
-    final int opposite = DirectionConstant.getOppositeDirection(direction);
+    final int opposite = DirectionUtil.getOppositeDirection(direction);
     if(message[direction] == BridgeMessage.OKAY){
     // a message of OKAY means we already know WE'RE valid, and valid in that direction,
     // so we're free to manipulate blocks in that area.

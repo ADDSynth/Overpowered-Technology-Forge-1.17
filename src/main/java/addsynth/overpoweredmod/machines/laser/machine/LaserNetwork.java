@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import addsynth.core.block_network.BlockNetwork;
 import addsynth.core.block_network.Node;
-import addsynth.core.util.constants.DirectionConstant;
 import addsynth.core.util.game.data.AdvancementUtil;
-import addsynth.core.util.math.BlockMath;
+import addsynth.core.util.math.block.BlockMath;
+import addsynth.core.util.math.block.DirectionUtil;
 import addsynth.core.util.network.NetworkUtil;
 import addsynth.energy.lib.main.Energy;
 import addsynth.energy.lib.main.Receiver;
@@ -90,7 +90,7 @@ public final class LaserNetwork extends BlockNetwork<TileLaserHousing> {
 
   @Override
   public void neighbor_was_changed(final BlockPos current_position, final BlockPos position_of_neighbor){
-    check_and_add_LaserCannon(position_of_neighbor, DirectionConstant.getDirection(current_position, position_of_neighbor));
+    check_and_add_LaserCannon(position_of_neighbor, DirectionUtil.getDirection(current_position, position_of_neighbor));
     lasers.removeIf((BlockPos pos) -> world.getBlockState(pos).getBlock() instanceof LaserCannon == false);
     // if(world.getBlockState(position_of_neighbor).getBlock() instanceof LaserCannon == false){
     //   lasers.remove(position_of_neighbor);
