@@ -8,7 +8,8 @@ import net.minecraft.world.item.Item;
 public class OverpoweredItem extends Item {
 
   public OverpoweredItem(final String name){
-    this(name, CreativeTabs.creative_tab);
+    super(new Item.Properties().tab(CreativeTabs.creative_tab));
+    OverpoweredTechnology.registry.register_item(this, name);
   }
 
   public OverpoweredItem(final String name, final CreativeModeTab tab){
