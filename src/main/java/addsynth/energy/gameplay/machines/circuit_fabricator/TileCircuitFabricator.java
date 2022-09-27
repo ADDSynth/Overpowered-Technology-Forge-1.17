@@ -10,6 +10,7 @@ import addsynth.energy.gameplay.EnergyItems;
 import addsynth.energy.gameplay.machines.circuit_fabricator.recipe.CircuitFabricatorRecipe;
 import addsynth.energy.gameplay.machines.circuit_fabricator.recipe.CircuitFabricatorRecipes;
 import addsynth.energy.lib.tiles.machines.TileStandardWorkMachine;
+import addsynth.energy.registers.Names;
 import addsynth.energy.registers.Tiles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
@@ -27,8 +28,9 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public final class TileCircuitFabricator extends TileStandardWorkMachine implements MenuProvider {
 
-  @Nonnull // It's better to keep this as a string, so we can save and load it no problem.
-  private String output_itemStack = "";
+  private static final ResourceLocation defaultRecipe = Names.CIRCUIT_TIER_1;
+  @Nonnull
+  private ResourceLocation output_itemStack = defaultRecipe;
   private ItemStack[][] filter = new ItemStack[8][];
 
   private final InputSlot[] input_slot = {
@@ -44,8 +46,6 @@ public final class TileCircuitFabricator extends TileStandardWorkMachine impleme
 
   private static final String legacyNBTSaveTag = "Circuit to Craft";
   private static final String saveTag = "Recipe";
-  @SuppressWarnings("null")
-  private static final String defaultRecipe = EnergyItems.circuit_tier_1.getRegistryName().toString();
 
   public TileCircuitFabricator(BlockPos position, BlockState blockstate){
     super(Tiles.CIRCUIT_FABRICATOR, position, blockstate, 8, null, 1, Config.circuit_fabricator_data);
@@ -53,6 +53,10 @@ public final class TileCircuitFabricator extends TileStandardWorkMachine impleme
   }
 
   public final void change_recipe(final String new_recipe){
+    change_recipe(new ResourceLocation(new_recipe));
+  }
+
+  public final void change_recipe(final ResourceLocation new_recipe){
     if(output_itemStack.equals(new_recipe) == false){
      output_itemStack = new_recipe;
      rebuild_filters();
@@ -63,25 +67,32 @@ public final class TileCircuitFabricator extends TileStandardWorkMachine impleme
   // TODO: Ideally, this should be rebuilt every recipe and tag reload, but this is the best I can do for now.
   public final void rebuild_filters(){
     // find recipe
-    final ResourceLocation recipe_id = new ResourceLocation(output_itemStack);
-    final CircuitFabricatorRecipe recipe = CircuitFabricatorRecipes.INSTANCE.find_recipe(recipe_id);
-    // get ingredients, create filters
-    filter = recipe.getItemStackIngredients();
-    int i;
-    for(i = 0; i < 8; i++){
-      // apply filters
-      if(i < filter.length){
-        input_slot[i].setFilter(filter[i]);
-        inventory.getInputInventory().setFilter(i, ItemUtil.toItemArray(filter[i]));
+    final CircuitFabricatorRecipe recipe = CircuitFabricatorRecipes.INSTANCE.find_recipe(output_itemStack);
+    if(recipe != null){
+      // get ingredients, create filters
+      filter = recipe.getItemStackIngredients();
+      int i;
+      for(i = 0; i < 8; i++){
+        // apply filters
+        if(i < filter.length){
+          input_slot[i].setFilter(filter[i]);
+          inventory.getInputInventory().setFilter(i, ItemUtil.toItemArray(filter[i]));
+        }
+        else{
+          input_slot[i].setFilter(new Item[0]);
+          inventory.getInputInventory().setFilter(i, new Item[0]);
+        }
       }
-      else{
-        input_slot[i].setFilter(new Item[0]);
-        inventory.getInputInventory().setFilter(i, new Item[0]);
-      }
+      
+      // update recipe in gui if on client side
+      updateGui();
     }
-    
-    // update recipe in gui if on client side
-    updateGui();
+    else{
+      // Handle invalid recipe
+      ADDSynthEnergy.log.warn("Circuit Fabricator recipe for "+output_itemStack.toString()+" doesn't exist anymore.");
+      // PRIORITY: add a resetMachine() function. Add a call here. Check how we currently handle unexpected machine state errors.
+      change_recipe(defaultRecipe);
+    }
   }
 
   /** Go through all inventory slots and eject all items that don't match.
@@ -102,25 +113,24 @@ public final class TileCircuitFabricator extends TileStandardWorkMachine impleme
   }
 
   public final ItemStack getRecipeOutput(){
-    return new ItemStack(ForgeRegistries.ITEMS.getValue(new ResourceLocation(output_itemStack)));
+    return new ItemStack(ForgeRegistries.ITEMS.getValue(output_itemStack));
   }
 
   @Override
   public final CompoundTag save(final CompoundTag nbt){
     super.save(nbt);
-    nbt.putString(saveTag, output_itemStack);
+    nbt.putString(saveTag, output_itemStack.toString());
     return nbt;
   }
 
   @Override
-  @SuppressWarnings("null")
   public final void load(final CompoundTag nbt){
     super.load(nbt);
     
     // handle old saves
     if(nbt.contains(legacyNBTSaveTag)){
       final int circuit = nbt.getInt(legacyNBTSaveTag);
-      change_recipe(EnergyItems.circuit[circuit].getRegistryName().toString());
+      change_recipe(EnergyItems.circuit[circuit].getRegistryName());
       return;
     }
     
@@ -131,10 +141,9 @@ public final class TileCircuitFabricator extends TileStandardWorkMachine impleme
       change_recipe(defaultRecipe);
       return;
     }
-    // handle if recipe doesn't exist
-    if(CircuitFabricatorRecipes.INSTANCE.find_recipe(new ResourceLocation(recipe)) == null){
-      ADDSynthEnergy.log.warn("Circuit Fabricator recipe for "+recipe+" doesn't exist anymore.");
-      // PRIORITY: add a resetMachine() function. Add a call here. Check how we currently handle unexpected machine state errors.
+    // handle if item doesn't exist
+    if(ForgeRegistries.ITEMS.containsKey(new ResourceLocation(recipe)) == false){
+      ADDSynthEnergy.log.warn("Loading CircuitFabricator data: Item '"+recipe+"' doesn't exist anymore. Loading default recipe.");
       change_recipe(defaultRecipe);
       return;
     }
