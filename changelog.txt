@@ -35,6 +35,8 @@ FIXED:
     - Lasers beams continue moving even if the Laser is removed.
   Fixed Laser machines counting adjacent lasers even though they weren't attached
     or the proper laser type.
+  Fixed de_de.json language files. Fixed "Lasers" and "Auto Shutoff" not being translated.
+    See: https://github.com/ADDSynth/Overpowered-Forge-1.14/commit/5f4418eadb862447e4b58be2b637d0f230d717f4
 
 
 
