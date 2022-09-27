@@ -21,6 +21,7 @@ public class RecipeCollection <T extends AbstractRecipe> {
   public final RecipeType<T> type;
   public final ShapelessRecipeSerializer<T> serializer;
 
+  @Deprecated
   public final ArrayList<T> recipes = new ArrayList<T>();
   private Item[] filter;
   private boolean update = true;
@@ -31,6 +32,7 @@ public class RecipeCollection <T extends AbstractRecipe> {
   }
 
   /** Adds the recipe to this collection, so that it may be used in the other functions. */
+  @Deprecated
   public final void addRecipe(final T recipe){
     if(recipes.contains(recipe) == false){
       recipes.add(recipe);

@@ -20,8 +20,10 @@ public final class MagicInfuserRecipes {
   public static final MagicInfuserRecipeType recipe_type = new MagicInfuserRecipeType();
   public static final MagicInfuserRecipeSerializer serializer = new MagicInfuserRecipeSerializer();
 
+  @Deprecated
   public static final ArrayList<MagicInfuserRecipe> recipes = new ArrayList<>();
 
+  @Deprecated
   public static final void addRecipe(final MagicInfuserRecipe recipe){
     if(recipes.contains(recipe) == false){
       recipes.add(recipe);
