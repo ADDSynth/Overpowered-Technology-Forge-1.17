@@ -3,9 +3,7 @@ package addsynth.material;
 import addsynth.material.compat.MaterialsCompat;
 import addsynth.material.compat.recipe.BronzeModAbsentCondition;
 import addsynth.material.compat.recipe.SteelModAbsentCondition;
-import addsynth.material.types.Gem;
 import addsynth.overpoweredmod.config.Features;
-import addsynth.overpoweredmod.game.core.Gems;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.block.Block;
@@ -83,7 +81,14 @@ public final class MaterialsRegister {
     game.register(ADDSynthMaterials.registry.getItemBlock(Material.AMETHYST.ore));
 
     if(Features.crystal_matter_generator.get()){ // REMOVE shards
-      for(Gem gem : Gems.index){ game.register(gem.shard); }
+      game.register(Material.RUBY.shard);
+      game.register(Material.TOPAZ.shard);
+      game.register(Material.CITRINE.shard);
+      game.register(Material.EMERALD.shard);
+      game.register(Material.DIAMOND.shard);
+      game.register(Material.SAPPHIRE.shard);
+      game.register(Material.AMETHYST.shard);
+      game.register(Material.QUARTZ.shard);
     }
 
     // metal ingots

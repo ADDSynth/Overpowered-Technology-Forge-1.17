@@ -30,7 +30,7 @@ public final class TileCrystalMatterGenerator extends TilePassiveMachine impleme
   @Override
   protected final void perform_work(){
     final int slot = (new Random()).nextInt(8);
-    final ItemStack stack = new ItemStack(Gems.index[slot].shard,1);
+    final ItemStack stack = Gems.getShard(slot);
     output_inventory.insertItem(slot, stack, false);
   }
 

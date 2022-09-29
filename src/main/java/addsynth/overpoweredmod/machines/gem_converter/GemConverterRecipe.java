@@ -1,7 +1,7 @@
 package addsynth.overpoweredmod.machines.gem_converter;
 
 import java.util.ArrayList;
-import addsynth.overpoweredmod.game.core.Gems;
+import addsynth.material.Material;
 import addsynth.overpoweredmod.machines.Filters;
 import net.minecraft.core.NonNullList;
 import net.minecraft.world.item.ItemStack;
@@ -24,14 +24,14 @@ public final class GemConverterRecipe {
   public static final void generate_recipes(){
     recipes.clear();
     generate_all_gems();
-    recipes.add(new GemConverterRecipe(all_gems, new ItemStack(Gems.ruby)));
-    recipes.add(new GemConverterRecipe(all_gems, new ItemStack(Gems.topaz)));
-    recipes.add(new GemConverterRecipe(all_gems, new ItemStack(Gems.citrine)));
-    recipes.add(new GemConverterRecipe(all_gems, new ItemStack(Gems.emerald)));
-    recipes.add(new GemConverterRecipe(all_gems, new ItemStack(Gems.diamond)));
-    recipes.add(new GemConverterRecipe(all_gems, new ItemStack(Gems.sapphire)));
-    recipes.add(new GemConverterRecipe(all_gems, new ItemStack(Gems.amethyst)));
-    recipes.add(new GemConverterRecipe(all_gems, new ItemStack(Gems.quartz)));
+    recipes.add(new GemConverterRecipe(all_gems, new ItemStack(Material.RUBY.gem)));
+    recipes.add(new GemConverterRecipe(all_gems, new ItemStack(Material.TOPAZ.gem)));
+    recipes.add(new GemConverterRecipe(all_gems, new ItemStack(Material.CITRINE.gem)));
+    recipes.add(new GemConverterRecipe(all_gems, new ItemStack(Material.EMERALD.gem)));
+    recipes.add(new GemConverterRecipe(all_gems, new ItemStack(Material.DIAMOND.gem)));
+    recipes.add(new GemConverterRecipe(all_gems, new ItemStack(Material.SAPPHIRE.gem)));
+    recipes.add(new GemConverterRecipe(all_gems, new ItemStack(Material.AMETHYST.gem)));
+    recipes.add(new GemConverterRecipe(all_gems, new ItemStack(Material.QUARTZ.gem)));
   }
 
   private static final void generate_all_gems(){

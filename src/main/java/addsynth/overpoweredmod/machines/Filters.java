@@ -1,9 +1,7 @@
 package addsynth.overpoweredmod.machines;
 
-import addsynth.core.util.java.ArrayUtil;
 import addsynth.material.MaterialTag;
 import addsynth.material.MaterialsUtil;
-import addsynth.overpoweredmod.game.core.Init;
 import addsynth.overpoweredmod.machines.gem_converter.GemConverterRecipe;
 import addsynth.overpoweredmod.machines.magic_infuser.recipes.MagicInfuserRecipes;
 import net.minecraft.world.item.Item;
@@ -29,7 +27,12 @@ public final class Filters {
 
   public static final void regenerate_machine_filters(){
   
-    gem_converter = MagicInfuserRecipes.getFilter();
+    gem_converter = MaterialsUtil.getFilter(
+      MaterialTag.RUBY.GEMS,     MaterialTag.TOPAZ.GEMS,
+      MaterialTag.CITRINE.GEMS,  MaterialTag.EMERALD.GEMS,
+      MaterialTag.DIAMOND.GEMS,  MaterialTag.SAPPHIRE.GEMS,
+      MaterialTag.AMETHYST.GEMS, MaterialTag.QUARTZ.GEMS
+    );
     
     portal_frame = MaterialsUtil.getFilter(
       MaterialTag.RUBY.BLOCKS,     MaterialTag.TOPAZ.BLOCKS,
@@ -38,7 +41,7 @@ public final class Filters {
       MaterialTag.AMETHYST.BLOCKS, MaterialTag.QUARTZ.BLOCKS
     );
     
-    magic_infuser = ArrayUtil.combine_arrays(gem_converter, new Item[]{Init.celestial_gem, Init.void_crystal});
+    magic_infuser = MagicInfuserRecipes.getFilter();
     
     GemConverterRecipe.generate_recipes();
   }

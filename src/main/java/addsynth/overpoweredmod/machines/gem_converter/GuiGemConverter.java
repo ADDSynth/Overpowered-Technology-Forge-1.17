@@ -4,10 +4,10 @@ import addsynth.core.gui.util.GuiUtil;
 import addsynth.core.gui.widgets.buttons.AdjustableButton;
 import addsynth.energy.lib.gui.GuiEnergyBase;
 import addsynth.energy.lib.gui.widgets.WorkProgressBar;
+import addsynth.material.Material;
 import addsynth.overpoweredmod.OverpoweredTechnology;
 import addsynth.overpoweredmod.config.Config;
 import addsynth.overpoweredmod.game.NetworkHandler;
-import addsynth.overpoweredmod.game.core.Gems;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -19,14 +19,14 @@ public final class GuiGemConverter extends GuiEnergyBase<TileGemConverter, Conta
   private static final ResourceLocation gem_converter_gui_texture = new ResourceLocation(OverpoweredTechnology.MOD_ID,"textures/gui/gem_converter.png");
 
   private static final ItemStack[] gem = new ItemStack[] {
-    new ItemStack(Gems.ruby, 1),
-    new ItemStack(Gems.topaz, 1),
-    new ItemStack(Gems.citrine, 1),
-    new ItemStack(Gems.emerald, 1),
-    new ItemStack(Gems.diamond, 1),
-    new ItemStack(Gems.sapphire, 1),
-    new ItemStack(Gems.amethyst, 1),
-    new ItemStack(Gems.quartz, 1)
+    new ItemStack(Material.RUBY.gem, 1),
+    new ItemStack(Material.TOPAZ.gem, 1),
+    new ItemStack(Material.CITRINE.gem, 1),
+    new ItemStack(Material.EMERALD.gem, 1),
+    new ItemStack(Material.DIAMOND.gem, 1),
+    new ItemStack(Material.SAPPHIRE.gem, 1),
+    new ItemStack(Material.AMETHYST.gem, 1),
+    new ItemStack(Material.QUARTZ.gem, 1)
   };
 
   private static final int work_percentage_x = 25;

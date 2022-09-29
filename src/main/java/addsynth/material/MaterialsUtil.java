@@ -85,11 +85,7 @@ public final class MaterialsUtil {
   public static final boolean match(final Item item, final ResourceLocation item_tag){
     final Collection<Item> list = getItemCollection(item_tag);
     if(list != null){
-      for(final Item check_item : list){
-        if(item == check_item){
-          return true;
-        }
-      }
+      return list.contains(item);
     }
     return false;
   }

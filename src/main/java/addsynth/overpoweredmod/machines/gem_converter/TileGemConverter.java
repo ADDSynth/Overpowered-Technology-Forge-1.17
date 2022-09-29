@@ -4,6 +4,9 @@ import javax.annotation.Nullable;
 import addsynth.core.util.game.data.AdvancementUtil;
 import addsynth.core.util.player.PlayerUtil;
 import addsynth.energy.lib.tiles.machines.TileStandardWorkMachine;
+import addsynth.material.Material;
+import addsynth.material.MaterialTag;
+import addsynth.material.MaterialsUtil;
 import addsynth.overpoweredmod.assets.CustomAdvancements;
 import addsynth.overpoweredmod.assets.CustomStats;
 import addsynth.overpoweredmod.config.MachineValues;
@@ -29,7 +32,7 @@ public final class TileGemConverter extends TileStandardWorkMachine implements M
 
   private ServerPlayer player;
   private byte selection;
-  private ItemStack gem_selected = new ItemStack(Gems.ruby, 1);
+  private ItemStack gem_selected = new ItemStack(Material.RUBY.gem, 1);
   private byte converting_to;
   
   public TileGemConverter(BlockPos position, BlockState blockstate){
@@ -102,7 +105,15 @@ public final class TileGemConverter extends TileStandardWorkMachine implements M
 
   /** Returns whether the input ItemStack matches the specified Gem Index. */
   private static final boolean match(final Item item, final int id){
-    return Gems.getID(item) == id;
+    if(id == 0){ return MaterialsUtil.match(item, MaterialTag.RUBY.GEMS);     }
+    if(id == 1){ return MaterialsUtil.match(item, MaterialTag.TOPAZ.GEMS);    }
+    if(id == 2){ return MaterialsUtil.match(item, MaterialTag.CITRINE.GEMS);  }
+    if(id == 3){ return MaterialsUtil.match(item, MaterialTag.EMERALD.GEMS);  }
+    if(id == 4){ return MaterialsUtil.match(item, MaterialTag.DIAMOND.GEMS);  }
+    if(id == 5){ return MaterialsUtil.match(item, MaterialTag.SAPPHIRE.GEMS); }
+    if(id == 6){ return MaterialsUtil.match(item, MaterialTag.AMETHYST.GEMS); }
+    if(id == 7){ return MaterialsUtil.match(item, MaterialTag.QUARTZ.GEMS);   }
+    return false;
   }
 
   @Override
