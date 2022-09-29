@@ -3,7 +3,10 @@ package addsynth.core.block_network;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.function.Consumer;
+import java.util.function.Predicate;
+import addsynth.core.util.block.BlockUtil;
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 
 public final class NodeList extends HashSet<Node> {
@@ -16,8 +19,36 @@ public final class NodeList extends HashSet<Node> {
     super(size);
   }
 
-  public final void setFrom(final HashSet<Node> hash_set){
-    addAll(hash_set);
+  /** This is the main function that finds all blocks belonging to this BlockNetwork.
+   *  This is called by {@link BlockNetwork#updateBlockNetwork(BlockPos, BlockEntity)}. */
+  @SuppressWarnings("unchecked") // This is the best I can do, for now.
+  public final <T extends BlockEntity & IBlockNetworkUser> void set(BlockNetwork<T> network, BlockPos from, Level world, Class<T> class_type, Consumer<Node> custom_search){
+    // clear all existing nodes
+    clear();
+    
+    // construct predicate
+    final Predicate<Node> is_valid = (Node node) -> {
+      final BlockEntity tile = node.getTile();
+      if(tile != null){
+        if(tile.isRemoved() == false && class_type.isInstance(tile)){
+          return true;
+        }
+      }
+      return false;
+    };
+    
+    // find blocks that match the BlockEntity type we're looking for
+    final HashSet<Node> blocks = BlockUtil.find_blocks(from, world, is_valid, custom_search);
+
+    // assign BlockNetwork to all TileEntities
+    T tile;
+    for(Node node : blocks){
+      tile = class_type.cast(node.getTile());
+      tile.setBlockNetwork(network);
+    }
+
+    // assign Nodes
+    addAll(blocks);
   }
 
   public final ArrayList<BlockPos> getBlockPositions(){
@@ -86,16 +117,6 @@ public final class NodeList extends HashSet<Node> {
         }
       }
     }
-  }
-
-  @SuppressWarnings({"unchecked", "null"})
-  public final void setBlockNetwork(final BlockNetwork network){
-    remove_invalid();
-    forEach((Node node) -> {
-      if(node.getTile() != null){
-        ((IBlockNetworkUser)node.getTile()).setBlockNetwork(network);
-      }
-    });
   }
 
   @Override

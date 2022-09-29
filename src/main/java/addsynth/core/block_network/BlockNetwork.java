@@ -3,7 +3,6 @@ package addsynth.core.block_network;
 import java.util.Collection;
 import javax.annotation.Nonnull;
 import addsynth.core.ADDSynthCore;
-import addsynth.core.util.block.BlockUtil;
 import addsynth.energy.lib.energy_network.EnergyNetwork;
 import addsynth.overpoweredmod.machines.data_cable.DataCableNetwork;
 import addsynth.overpoweredmod.machines.laser.machine.LaserNetwork;
@@ -182,10 +181,8 @@ public abstract class BlockNetwork<T extends BlockEntity & IBlockNetworkUser> {
     if(world != null){
       if(world.isClientSide == false){
         try{
-          blocks.clear();
           clear_custom_data();
-          blocks.setFrom(BlockUtil.find_blocks(from, world, this::is_valid_tile, this::customSearch));
-          blocks.setBlockNetwork(this);
+          blocks.set(this, from, world, class_type, this::customSearch);
   
           // Changes first_tile less often, only when necessary
           if(blocks.contains(first_tile) == false){
@@ -202,16 +199,6 @@ public abstract class BlockNetwork<T extends BlockEntity & IBlockNetworkUser> {
     }
     ADDSynthCore.log.error("BlockNetwork.updateNetwork() method is not supposed to be called on client-side.");
     // Thread.dumpStack();
-  }
-
-  private final boolean is_valid_tile(final Node node){
-    final BlockEntity tile = node.getTile();
-    if(tile != null){
-      if(tile.isRemoved() == false && class_type.isInstance(tile)){
-        return true;
-      }
-    }
-    return false;
   }
 
   /** This is a common update function that runs every tick. You call this from your TileEntity's tick function.<br />
