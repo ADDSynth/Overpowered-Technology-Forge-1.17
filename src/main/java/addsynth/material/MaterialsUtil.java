@@ -11,7 +11,6 @@ import net.minecraft.tags.Tag;
 import net.minecraft.tags.TagCollection;
 import net.minecraft.tags.TagContainer;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
@@ -65,8 +64,8 @@ public final class MaterialsUtil {
     return ore_list;
   }
 
+  @Nullable
   public static final Tag<Item> getTag(final ResourceLocation tag_id){
-    // FIX: getTag() could return null if tag doesn't exist. Check for null and add @Nullable
     return ItemTags.getAllTags().getTag(tag_id);
   }
 
@@ -77,228 +76,31 @@ public final class MaterialsUtil {
   }
 
   public static final Ingredient getTagIngredient(final ResourceLocation tag_id){
-    return Ingredient.of(getTag(tag_id));
+    final Tag<Item> item_tag = getTag(tag_id);
+    return item_tag != null ? Ingredient.of(item_tag) : Ingredient.EMPTY;
   }
 
 // =======================================================================================
 
-  // TODO: This system needs to be updated, to produce either a Collection or Array of either Items, ItemStacks,
-  //       or Ingredient, with the user specifying the Material and requested form (item, ore, dust, or block)
-  //       Use a 2-dimensional Map, which takes in a Material and outputs a ResourceLocation.
-  @Nullable
-  public static final Collection<Item> getRubyBlocks(){
-    return getItemCollection(new ResourceLocation("forge:storage_blocks/ruby"));
-  }
-
-  public static final Ingredient getRubyBlocksIngredient(){
-    return getTagIngredient(new ResourceLocation("forge:storage_blocks/ruby"));
-  }
-
-  @Nullable
-  public static final Collection<Item> getTopazBlocks(){
-    return getItemCollection(new ResourceLocation("forge:storage_blocks/topaz"));
-  }
-
-  public static final Ingredient getTopazBlocksIngredient(){
-    return getTagIngredient(new ResourceLocation("forge:storage_blocks/topaz"));
-  }
-
-  @Nullable
-  public static final Collection<Item> getCitrineBlocks(){
-    return getItemCollection(new ResourceLocation("forge:storage_blocks/citrine"));
-  }
-
-  public static final Ingredient getCitrineBlocksIngredient(){
-    return getTagIngredient(new ResourceLocation("forge:storage_blocks/citrine"));
-  }
-
-  @Nullable
-  public static final Collection<Item> getEmeraldBlocks(){
-    return getItemCollection(new ResourceLocation("forge:storage_blocks/emerald"));
-  }
-
-  public static final Ingredient getEmeraldBlocksIngredient(){
-    return getTagIngredient(new ResourceLocation("forge:storage_blocks/emerald"));
-  }
-
-  @Nullable
-  public static final Collection<Item> getDiamondBlocks(){
-    return getItemCollection(new ResourceLocation("forge:storage_blocks/diamond"));
-  }
-
-  public static final Ingredient getDiamondBlocksIngredient(){
-    return getTagIngredient(new ResourceLocation("forge:storage_blocks/diamond"));
-  }
-
-  @Nullable
-  public static final Collection<Item> getSapphireBlocks(){
-    return getItemCollection(new ResourceLocation("forge:storage_blocks/sapphire"));
-  }
-
-  public static final Ingredient getSapphireBlocksIngredient(){
-    return getTagIngredient(new ResourceLocation("forge:storage_blocks/sapphire"));
-  }
-
-  @Nullable
-  public static final Collection<Item> getAmethystBlocks(){
-    return getItemCollection(new ResourceLocation("forge:storage_blocks/amethyst"));
-  }
-
-  public static final Ingredient getAmethystBlocksIngredient(){
-    return getTagIngredient(new ResourceLocation("forge:storage_blocks/amethyst"));
-  }
-
-  @Nullable
-  public static final Collection<Item> getQuartzBlocks(){
-    return getItemCollection(new ResourceLocation("forge:storage_blocks/quartz"));
-  }
-
-  public static final Ingredient getQuartzBlocksIngredient(){
-    return getTagIngredient(new ResourceLocation("forge:storage_blocks/quartz"));
-  }
-
-  @Nullable
-  public static final Collection<Item> getRubies(){
-    return getItemCollection(new ResourceLocation("forge:gems/ruby"));
-  }
-
-  @Nullable
-  public static final Collection<Item> getTopaz(){
-    return getItemCollection(new ResourceLocation("forge:gems/topaz"));
-  }
-
-  @Nullable
-  public static final Collection<Item> getCitrine(){
-    return getItemCollection(new ResourceLocation("forge:gems/citrine"));
-  }
-
-  @Nullable
-  public static final Collection<Item> getEmeralds(){
-    return getItemCollection(new ResourceLocation("forge:gems/emerald"));
-  }
-
-  @Nullable
-  public static final Collection<Item> getDiamonds(){
-    return getItemCollection(new ResourceLocation("forge:gems/diamond"));
-  }
-
-  @Nullable
-  public static final Collection<Item> getSapphires(){
-    return getItemCollection(new ResourceLocation("forge:gems/sapphire"));
-  }
-
-  @Nullable
-  public static final Collection<Item> getAmethysts(){
-    return getItemCollection(new ResourceLocation("forge:gems/amethyst"));
-  }
-
-  @Nullable
-  public static final Collection<Item> getQuartz(){
-    return getItemCollection(new ResourceLocation("forge:gems/quartz"));
-  }
-
-  @Nullable
-  public static final Ingredient getRubyIngredient(){
-    return getTagIngredient(new ResourceLocation("forge:gems/ruby"));
-  }
-
-  @Nullable
-  public static final Ingredient getTopazIngredient(){
-    return getTagIngredient(new ResourceLocation("forge:gems/topaz"));
-  }
-
-  @Nullable
-  public static final Ingredient getCitrineIngredient(){
-    return getTagIngredient(new ResourceLocation("forge:gems/citrine"));
-  }
-
-  @Nullable
-  public static final Ingredient getEmeraldIngredient(){
-    return getTagIngredient(new ResourceLocation("forge:gems/emerald"));
-  }
-
-  @Nullable
-  public static final Ingredient getDiamondIngredient(){
-    return getTagIngredient(new ResourceLocation("forge:gems/diamond"));
-  }
-
-  @Nullable
-  public static final Ingredient getSapphireIngredient(){
-    return getTagIngredient(new ResourceLocation("forge:gems/sapphire"));
-  }
-
-  @Nullable
-  public static final Ingredient getAmethystIngredient(){
-    return getTagIngredient(new ResourceLocation("forge:gems/amethyst"));
-  }
-
-  @Nullable
-  public static final Ingredient getQuartzIngredient(){
-    return getTagIngredient(new ResourceLocation("forge:gems/quartz"));
-  }
-
-  @Nullable
-  public static final Collection<Item> getTinIngots(){
-    return getItemCollection(new ResourceLocation("forge:ingots/tin"));
-  }
-
-  @Nullable
-  @Deprecated
-  public static final Collection<Item> getCopperIngots(){
-    final ArrayList<Item> copper_ingots = new ArrayList<>();
-    copper_ingots.add(Items.COPPER_INGOT);
-    return copper_ingots;
-  }
-
-  @Nullable
-  public static final Collection<Item> getAluminumIngots(){
-    return getItemCollection(new ResourceLocation("forge:ingots/aluminum"));
-  }
-
-  @Nullable
-  public static final Collection<Item> getSteelIngots(){
-    return getItemCollection(new ResourceLocation("forge:ingots/steel"));
-  }
-
-  @Nullable
-  public static final Collection<Item> getBronzeIngots(){
-    return getItemCollection(new ResourceLocation("forge:ingots/bronze"));
-  }
-
-  @Nullable
-  public static final Collection<Item> getSilverIngots(){
-    return getItemCollection(new ResourceLocation("forge:ingots/silver"));
-  }
-
-  @Nullable
-  public static final Collection<Item> getPlatinumIngots(){
-    return getItemCollection(new ResourceLocation("forge:ingots/platinum"));
-  }
-
-  @Nullable
-  public static final Collection<Item> getTitaniumIngots(){
-    return getItemCollection(new ResourceLocation("forge:ingots/titanium"));
-  }
-
-// =======================================================================================
-
-  public static final boolean match(final Item item, final Collection<Item> list){
-    for(final Item check_item : list){
-      if(item == check_item){
-        return true;
+  public static final boolean match(final Item item, final ResourceLocation item_tag){
+    final Collection<Item> list = getItemCollection(item_tag);
+    if(list != null){
+      for(final Item check_item : list){
+        if(item == check_item){
+          return true;
+        }
       }
     }
     return false;
   }
 
-  /** Returns an Item array. To get back a list, use <code>Arrays.asList(Item[] input)</code>.*/
-  // OPTIMIZE: Change this to use addsynth.core.util.ArrayUtil.combine_collections()?
-  @SafeVarargs
-  public static final Item[] getFilter(final Collection<Item> ... lists){
-    int count = 0;
-    for(final Collection<Item> list : lists){
-      if(list != null){
-        count += list.size();
+  public static final Item[] getFilter(final ResourceLocation ... tag_list){
+    final ArrayList<Item> final_list = new ArrayList<>(100);
+    Collection<Item> collection;
+    for(final ResourceLocation tag : tag_list){
+      collection = getItemCollection(tag);
+      if(collection != null){
+        final_list.addAll(collection);
         continue;
       }
       ADDSynthCore.log.error(new NullPointerException(
@@ -306,17 +108,7 @@ public final class MaterialsUtil {
         "that retrieves all the Items in an Item Tag didn't return anything because there ARE no Items registered to that Item Tag!"
       ));
     }
-    final Item[] filter = new Item[count];
-    int i = 0;
-    for(final Collection<Item> list : lists){
-      if(list != null){
-        for(final Item item : list){
-          filter[i] = item;
-          i += 1;
-        }
-      }
-    }
-    return filter;
+    return final_list.toArray(new Item[final_list.size()]);
   }
 
 }

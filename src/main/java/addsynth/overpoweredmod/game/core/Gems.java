@@ -1,6 +1,7 @@
 package addsynth.overpoweredmod.game.core;
 
 import addsynth.material.Material;
+import addsynth.material.MaterialTag;
 import addsynth.material.MaterialsUtil;
 import addsynth.material.types.Gem;
 import addsynth.overpoweredmod.Debug;
@@ -40,14 +41,14 @@ public final class Gems {
   }
 
   public static final int getID(final Item gem){
-    if(MaterialsUtil.match(gem, MaterialsUtil.getRubies())){    return 0; }
-    if(MaterialsUtil.match(gem, MaterialsUtil.getTopaz())){     return 1; }
-    if(MaterialsUtil.match(gem, MaterialsUtil.getCitrine())){   return 2; }
-    if(MaterialsUtil.match(gem, MaterialsUtil.getEmeralds())){  return 3; }
-    if(MaterialsUtil.match(gem, MaterialsUtil.getDiamonds())){  return 4; }
-    if(MaterialsUtil.match(gem, MaterialsUtil.getSapphires())){ return 5; }
-    if(MaterialsUtil.match(gem, MaterialsUtil.getAmethysts())){ return 6; }
-    if(MaterialsUtil.match(gem, MaterialsUtil.getQuartz())){    return 7; }
+    if(MaterialsUtil.match(gem, MaterialTag.RUBY.GEMS)){     return 0; }
+    if(MaterialsUtil.match(gem, MaterialTag.TOPAZ.GEMS)){    return 1; }
+    if(MaterialsUtil.match(gem, MaterialTag.CITRINE.GEMS)){  return 2; }
+    if(MaterialsUtil.match(gem, MaterialTag.EMERALD.GEMS)){  return 3; }
+    if(MaterialsUtil.match(gem, MaterialTag.DIAMOND.GEMS)){  return 4; }
+    if(MaterialsUtil.match(gem, MaterialTag.SAPPHIRE.GEMS)){ return 5; }
+    if(MaterialsUtil.match(gem, MaterialTag.AMETHYST.GEMS)){ return 6; }
+    if(MaterialsUtil.match(gem, MaterialTag.QUARTZ.GEMS)){   return 7; }
     return -1;
   }
 

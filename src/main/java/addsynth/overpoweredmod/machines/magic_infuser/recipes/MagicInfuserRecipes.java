@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Random;
 import addsynth.core.Debug;
 import addsynth.core.util.StringUtil;
-import addsynth.material.MaterialsUtil;
 import addsynth.overpoweredmod.OverpoweredTechnology;
 import net.minecraft.core.NonNullList;
 import net.minecraft.world.item.Item;
@@ -32,10 +31,19 @@ public final class MagicInfuserRecipes {
   }
 
   public static final Item[] getFilter(){
-    return MaterialsUtil.getFilter(
-      MaterialsUtil.getRubies(), MaterialsUtil.getTopaz(), MaterialsUtil.getCitrine(), MaterialsUtil.getEmeralds(),
-      MaterialsUtil.getDiamonds(), MaterialsUtil.getSapphires(), MaterialsUtil.getAmethysts(), MaterialsUtil.getQuartz()
-    );
+    final ArrayList<Item> filter = new ArrayList<>(30);
+    ItemStack[] ingredient;
+    Item item;
+    for(final MagicInfuserRecipe recipe : recipes){
+      ingredient = recipe.getItemStackIngredients()[0];
+      for(final ItemStack stack : ingredient){
+        item = stack.getItem();
+        if(filter.contains(item) == false){
+          filter.add(item);
+        }
+      }
+    }
+    return filter.toArray(new Item[filter.size()]);
   }
 
   public static final ItemStack getResult(final ItemStack input){

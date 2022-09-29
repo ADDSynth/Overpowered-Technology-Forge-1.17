@@ -3,6 +3,7 @@ package addsynth.overpoweredmod.machines.portal.frame;
 import javax.annotation.Nullable;
 import addsynth.core.game.inventory.SlotData;
 import addsynth.core.game.tiles.TileStorageMachine;
+import addsynth.material.MaterialTag;
 import addsynth.material.MaterialsUtil;
 import addsynth.overpoweredmod.machines.Filters;
 import addsynth.overpoweredmod.registers.Tiles;
@@ -27,14 +28,14 @@ public final class TilePortalFrame extends TileStorageMachine implements MenuPro
     final ItemStack stack = input_inventory.getStackInSlot(0);
     if(stack.isEmpty()){ return -1; }
     final Item item = stack.getItem();
-    if(MaterialsUtil.match(item, MaterialsUtil.getRubyBlocks())){     return 0; }
-    if(MaterialsUtil.match(item, MaterialsUtil.getTopazBlocks())){    return 1; }
-    if(MaterialsUtil.match(item, MaterialsUtil.getCitrineBlocks())){  return 2; }
-    if(MaterialsUtil.match(item, MaterialsUtil.getEmeraldBlocks())){  return 3; }
-    if(MaterialsUtil.match(item, MaterialsUtil.getDiamondBlocks())){  return 4; }
-    if(MaterialsUtil.match(item, MaterialsUtil.getSapphireBlocks())){ return 5; }
-    if(MaterialsUtil.match(item, MaterialsUtil.getAmethystBlocks())){ return 6; }
-    if(MaterialsUtil.match(item, MaterialsUtil.getQuartzBlocks())){   return 7; }
+    if(MaterialsUtil.match(item, MaterialTag.RUBY.BLOCKS)){     return 0; }
+    if(MaterialsUtil.match(item, MaterialTag.TOPAZ.BLOCKS)){    return 1; }
+    if(MaterialsUtil.match(item, MaterialTag.CITRINE.BLOCKS)){  return 2; }
+    if(MaterialsUtil.match(item, MaterialTag.EMERALD.BLOCKS)){  return 3; }
+    if(MaterialsUtil.match(item, MaterialTag.DIAMOND.BLOCKS)){  return 4; }
+    if(MaterialsUtil.match(item, MaterialTag.SAPPHIRE.BLOCKS)){ return 5; }
+    if(MaterialsUtil.match(item, MaterialTag.AMETHYST.BLOCKS)){ return 6; }
+    if(MaterialsUtil.match(item, MaterialTag.QUARTZ.BLOCKS)){   return 7; }
     return -1;
   }
 
