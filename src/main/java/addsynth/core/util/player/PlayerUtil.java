@@ -3,6 +3,7 @@ package addsynth.core.util.player;
 import java.util.function.Consumer;
 import javax.annotation.Nullable;
 import addsynth.core.game.items.ItemUtil;
+import addsynth.core.util.StringUtil;
 import addsynth.core.util.math.block.BlockMath;
 import addsynth.core.util.server.ServerUtils;
 import net.minecraft.core.BlockPos;
@@ -75,11 +76,13 @@ public final class PlayerUtil {
   @Nullable
   @SuppressWarnings({ "resource", "null", "deprecation" })
   public static final ServerPlayer getPlayer(Level world, String player_name){
-    if(world == null){
-      return ServerUtils.getServer().getPlayerList().getPlayerByName(player_name);
-    }
-    if(world.isClientSide == false){
-      return world.getServer().getPlayerList().getPlayerByName(player_name);
+    if(StringUtil.StringExists(player_name)){
+      if(world == null){
+        return ServerUtils.getServer().getPlayerList().getPlayerByName(player_name);
+      }
+      if(world.isClientSide == false){
+        return world.getServer().getPlayerList().getPlayerByName(player_name);
+      }
     }
     return null;
   }

@@ -29,8 +29,6 @@ import net.minecraft.world.level.block.state.BlockState;
 
 public final class TileIdentifier extends TileStandardWorkMachine implements MenuProvider {
 
-  private ServerPlayer player;
-
   private static final Item[] unidentified_armor = ArrayUtil.combine_arrays(
     Tools.unidentified_armor[0],
     Tools.unidentified_armor[1],
@@ -73,6 +71,7 @@ public final class TileIdentifier extends TileStandardWorkMachine implements Men
         }
         
         // Award Advancement to Player
+        final ServerPlayer player = PlayerUtil.getPlayer(level, last_used_by);
         if(player != null){
           AdvancementUtil.grantAdvancement(player, CustomAdvancements.IDENTIFY_SOMETHING);
           player.awardStat(CustomStats.ITEMS_IDENTIFIED);
@@ -85,25 +84,20 @@ public final class TileIdentifier extends TileStandardWorkMachine implements Men
   @Override
   public void load(final CompoundTag nbt){
     super.load(nbt);
-    player = PlayerUtil.getPlayer(level, nbt.getString("Player"));
+    loadPlayerData(nbt);
   }
 
   @Override
   public CompoundTag save(final CompoundTag nbt){
     super.save(nbt);
-    if(player != null){
-      nbt.putString("Player", player.getGameProfile().getName());
-    }
+    savePlayerData(nbt);
     return nbt;
   }
 
   @Override
   @Nullable
   public AbstractContainerMenu createMenu(int id, Inventory player_inventory, Player player){
-    if(player instanceof ServerPlayer){
-      this.player = (ServerPlayer)player;
-      changed = true;
-    }
+    setPlayerAccessed(player);
     return new ContainerIdentifier(id, player_inventory, this);
   }
 

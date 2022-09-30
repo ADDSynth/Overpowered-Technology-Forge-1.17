@@ -8,6 +8,7 @@ import addsynth.core.util.game.data.AdvancementUtil;
 import addsynth.core.util.math.block.BlockMath;
 import addsynth.core.util.math.block.DirectionUtil;
 import addsynth.core.util.network.NetworkUtil;
+import addsynth.core.util.player.PlayerUtil;
 import addsynth.energy.lib.main.Energy;
 import addsynth.energy.lib.main.Receiver;
 import addsynth.overpoweredmod.assets.CustomAdvancements;
@@ -205,7 +206,8 @@ public final class LaserNetwork extends BlockNetwork<TileLaserHousing> {
     
     blocks.forAllTileEntities(TileLaserHousing.class, (TileLaserHousing tile) -> {
       // only count each player once, increment Laser Fired stat of each player
-      final ServerPlayer player = tile.getPlayer();
+      final String player_name = tile.getLastUsedBy();
+      final ServerPlayer player = PlayerUtil.getPlayer(world, player_name);
       if(player != null){
         if(players.contains(player) == false){
           players.add(player);

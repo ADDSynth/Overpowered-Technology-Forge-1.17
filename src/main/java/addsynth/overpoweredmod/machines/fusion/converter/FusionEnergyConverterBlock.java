@@ -2,7 +2,7 @@ package addsynth.overpoweredmod.machines.fusion.converter;
 
 import java.util.List;
 import javax.annotation.Nullable;
-import addsynth.core.util.game.MinecraftUtility;
+import addsynth.core.util.game.tileentity.TileEntityUtil;
 import addsynth.energy.lib.blocks.MachineBlock;
 import addsynth.overpoweredmod.OverpoweredTechnology;
 import addsynth.overpoweredmod.assets.CreativeTabs;
@@ -11,7 +11,6 @@ import addsynth.overpoweredmod.registers.Tiles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -51,12 +50,7 @@ public final class FusionEnergyConverterBlock extends MachineBlock {
 
   @Override
   public void setPlacedBy(Level world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack stack){
-    if(placer instanceof ServerPlayer){
-      final TileFusionEnergyConverter tile = MinecraftUtility.getTileEntity(pos, world, TileFusionEnergyConverter.class);
-      if(tile != null){
-        tile.setPlayer((ServerPlayer)placer);
-      }
-    }
+    TileEntityUtil.setOwner(world, placer, pos);
   }
 
 }

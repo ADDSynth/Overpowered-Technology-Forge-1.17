@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import addsynth.core.game.tiles.TileBase;
 import addsynth.core.util.game.MinecraftUtility;
 import addsynth.core.util.game.tileentity.ITickingTileEntity;
-import addsynth.core.util.player.PlayerUtil;
 import addsynth.energy.lib.main.Generator;
 import addsynth.energy.lib.main.IEnergyGenerator;
 import addsynth.overpoweredmod.config.MachineValues;
@@ -15,7 +14,6 @@ import addsynth.overpoweredmod.registers.Tiles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
@@ -27,7 +25,6 @@ public final class TileFusionEnergyConverter extends TileBase implements IEnergy
   private TileFusionChamber fusion_chamber;
   private boolean activated;
   private boolean valid;
-  private ServerPlayer player;
 
   public TileFusionEnergyConverter(BlockPos position, BlockState blockstate){
     super(Tiles.FUSION_ENERGY_CONVERTER, position, blockstate);
@@ -51,7 +48,7 @@ public final class TileFusionEnergyConverter extends TileBase implements IEnergy
       }
       
       if(fusion_chamber != null){ // Cannot be valid without fusion chamber
-        fusion_chamber.set_state(activated && valid, player); // keep fusion chamber up-to-date if it exists.
+        fusion_chamber.set_state(activated && valid, owner); // keep fusion chamber up-to-date if it exists.
         if(activated && valid == false && previous_valid == true){
           // only explodes if valid goes from true to false. Loading a world is safe because it goes from false to true.
           fusion_chamber.explode();
@@ -69,21 +66,14 @@ public final class TileFusionEnergyConverter extends TileBase implements IEnergy
   @Override
   public void load(final CompoundTag nbt){
     super.load(nbt);
-    player = PlayerUtil.getPlayer(level, nbt.getString("Player"));
+    loadPlayerData(nbt);
   }
 
   @Override
   public CompoundTag save(final CompoundTag nbt){
     super.save(nbt);
-    if(player != null){
-      nbt.putString("Player", player.getGameProfile().getName());
-    }
+    savePlayerData(nbt);
     return nbt;
-  }
-
-  public final void setPlayer(final ServerPlayer player){
-    this.player = player;
-    update_data();
   }
 
   private final void check_connection(){

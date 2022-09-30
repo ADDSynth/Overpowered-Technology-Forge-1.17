@@ -12,7 +12,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -48,7 +47,7 @@ public final class TileFusionChamber extends TileStorageMachine implements MenuP
     return on;
   }
 
-  public final void set_state(final boolean state, final ServerPlayer player){
+  public final void set_state(final boolean state, final String player_name){
     if(on != state){ // Only run on state change
       int i;
       BlockPos position;
@@ -60,9 +59,7 @@ public final class TileFusionChamber extends TileStorageMachine implements MenuP
             //       OpenGL special effects that doesn't touch the world and immune to player interference.
             level.setBlock(position, Machines.fusion_control_laser_beam.defaultBlockState(), 3);
             // TEST why would we need block updates for this? Can this just be set to 2 for Client updates?
-            if(player != null){
-              AdvancementUtil.grantAdvancement(player, CustomAdvancements.FUSION_ENERGY);
-            }
+            AdvancementUtil.grantAdvancement(player_name, level, CustomAdvancements.FUSION_ENERGY);
           }
           else{
             level.removeBlock(position, false);

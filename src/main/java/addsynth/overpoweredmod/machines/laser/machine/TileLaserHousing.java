@@ -6,7 +6,6 @@ import addsynth.core.block_network.IBlockNetworkUser;
 import addsynth.core.game.tiles.TileBase;
 import addsynth.core.util.game.tileentity.ITickingTileEntity;
 import addsynth.core.util.game.tileentity.TileEntityUtil;
-import addsynth.core.util.player.PlayerUtil;
 import addsynth.energy.lib.main.Energy;
 import addsynth.energy.lib.main.IEnergyConsumer;
 import addsynth.energy.lib.main.Receiver;
@@ -18,7 +17,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -32,7 +30,6 @@ public final class TileLaserHousing extends TileBase implements IBlockNetworkUse
   private boolean power_switch = true;
 
   private LaserNetwork network;
-  private ServerPlayer player;
   private int laser_distance = Config.default_laser_distance.get();
 
   /** Set by {@link LaserNetwork#updateLaserNetwork()} method and used by
@@ -71,7 +68,7 @@ public final class TileLaserHousing extends TileBase implements IBlockNetworkUse
     power_switch = nbt.getBoolean("Power Switch");
     laser_distance = nbt.getInt("Laser Distance");
     auto_shutoff = nbt.getBoolean("Auto Shutoff");
-    player = PlayerUtil.getPlayer(level, nbt.getString("Player"));
+    loadPlayerData(nbt);
   }
 
   @Override
@@ -81,9 +78,7 @@ public final class TileLaserHousing extends TileBase implements IBlockNetworkUse
     nbt.putBoolean("Power Switch", power_switch);
     nbt.putInt("Laser Distance", laser_distance);
     nbt.putBoolean("Auto Shutoff", auto_shutoff);
-    if(player != null){
-      nbt.putString("Player", player.getGameProfile().getName());
-    }
+    savePlayerData(nbt);
     return nbt;
   }
 
@@ -137,15 +132,6 @@ public final class TileLaserHousing extends TileBase implements IBlockNetworkUse
   public final void update_data(){
   }
 
-  public final void setPlayer(final ServerPlayer player){
-    this.player = player;
-    super.update_data();
-  }
-
-  public final ServerPlayer getPlayer(){
-    return player;
-  }
-
   @Override
   public final void togglePowerSwitch(){
     network.running = !network.running;
@@ -161,9 +147,7 @@ public final class TileLaserHousing extends TileBase implements IBlockNetworkUse
   @Override
   @Nullable
   public AbstractContainerMenu createMenu(int id, Inventory player_inventory, Player player){
-    if(player instanceof ServerPlayer){
-      this.player = (ServerPlayer)player;
-    }
+    setPlayerAccessed(player);
     return new ContainerLaserHousing(id, player_inventory, this);
   }
 

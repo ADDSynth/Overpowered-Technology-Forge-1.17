@@ -2,13 +2,17 @@ package addsynth.core.util.game.tileentity;
 
 import javax.annotation.Nonnull;
 import addsynth.core.ADDSynthCore;
+import addsynth.core.game.tiles.TileAbstractBase;
 import addsynth.core.util.game.MessageUtil;
 import addsynth.core.util.world.WorldUtil;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Style;
 import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
@@ -57,6 +61,17 @@ public class TileEntityUtil {
 
     message.setStyle(Style.EMPTY.withColor(ChatFormatting.RED));
     MessageUtil.send_to_all_players_in_world(level, message);
+  }
+
+  /** Call this in the {@link Block#setPlacedBy} method to set the TileEntity's
+   *  {@link TileAbstractBase#owner owner} field. This function automatically handles everything. */
+  public static final void setOwner(final Level world, final LivingEntity player, final BlockPos position){
+    if(player instanceof Player){
+      final BlockEntity tile = world.getBlockEntity(position);
+      if(tile instanceof TileAbstractBase){
+        ((TileAbstractBase)tile).setOwner((Player)player);
+      }
+    }
   }
 
 }
