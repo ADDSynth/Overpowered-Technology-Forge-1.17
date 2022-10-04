@@ -9,11 +9,11 @@
 "block.overpowered.light_block": "ライトブロック",
 "block.overpowered.null_block": "ヌルブロック",
 
-"item.overpowered.celestial_sword": "エネルギー剣",
-"item.overpowered.celestial_pickaxe": "エネルギーピッカックス",
-"item.overpowered.celestial_axe": "エネルギーアックス",
-"item.overpowered.celestial_shovel": "エネルギーシャベル",
-"item.overpowered.celestial_hoe": "エネルギーガーデニングツール",
+"item.overpowered.celestial_sword": "Celestial Sword",
+"item.overpowered.celestial_pickaxe": "Celestial Pickaxe",
+"item.overpowered.celestial_axe": "Celestial Axe",
+"item.overpowered.celestial_shovel": "Celestial Shovel",
+"item.overpowered.celestial_hoe": "Celestial Hoe",
 
 "item.overpowered.void_sword": "ヌル剣",
 "item.overpowered.void_pickaxe": "ヌルピックアックス",

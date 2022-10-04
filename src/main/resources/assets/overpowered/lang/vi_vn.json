@@ -9,11 +9,11 @@
 "block.overpowered.light_block": "Khối ánh sáng",
 "block.overpowered.null_block": "Khối không có gì",
 
-"item.overpowered.celestial_sword": "Thanh kiếm năng lượng",
-"item.overpowered.celestial_pickaxe": "Năng lượng Pickaxe",
-"item.overpowered.celestial_axe": "năng lượng rìu",
-"item.overpowered.celestial_shovel": "Xẻng năng lượng",
-"item.overpowered.celestial_hoe": "năng lượng cuốc",
+"item.overpowered.celestial_sword": "Celestial Sword",
+"item.overpowered.celestial_pickaxe": "Celestial Pickaxe",
+"item.overpowered.celestial_axe": "Celestial Axe",
+"item.overpowered.celestial_shovel": "Celestial Shovel",
+"item.overpowered.celestial_hoe": "Celestial Hoe",
 
 "item.overpowered.void_sword": "thanh kiếm bóng tối",
 "item.overpowered.void_pickaxe": "công cụ khai thác tối",

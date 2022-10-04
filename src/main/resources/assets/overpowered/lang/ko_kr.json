@@ -9,11 +9,11 @@
 "block.overpowered.light_block": "라이트 블록",
 "block.overpowered.null_block": "널 블록",
 
-"item.overpowered.celestial_sword": "에너지 검",
-"item.overpowered.celestial_pickaxe": "에너지 곡괭이",
-"item.overpowered.celestial_axe": "에너지 도끼",
-"item.overpowered.celestial_shovel": "에너지 삽",
-"item.overpowered.celestial_hoe": "에너지 괭이",
+"item.overpowered.celestial_sword": "Celestial Sword",
+"item.overpowered.celestial_pickaxe": "Celestial Pickaxe",
+"item.overpowered.celestial_axe": "Celestial Axe",
+"item.overpowered.celestial_shovel": "Celestial Shovel",
+"item.overpowered.celestial_hoe": "Celestial Hoe",
 
 "item.overpowered.void_sword": "부정적인 검",
 "item.overpowered.void_pickaxe": "어두운 곡괭이",

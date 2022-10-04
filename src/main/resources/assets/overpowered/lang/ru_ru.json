@@ -9,11 +9,11 @@
 "block.overpowered.light_block": "Световой блок",
 "block.overpowered.null_block": "нулевой блок",
 
-"item.overpowered.celestial_sword": "Энергетический меч",
-"item.overpowered.celestial_pickaxe": "Энергетический пикакс",
-"item.overpowered.celestial_axe": "Энергетический топор",
-"item.overpowered.celestial_shovel": "Энергетическая лопата",
-"item.overpowered.celestial_hoe": "Энергетическая мотыга",
+"item.overpowered.celestial_sword": "Celestial Sword",
+"item.overpowered.celestial_pickaxe": "Celestial Pickaxe",
+"item.overpowered.celestial_axe": "Celestial Axe",
+"item.overpowered.celestial_shovel": "Celestial Shovel",
+"item.overpowered.celestial_hoe": "Celestial Hoe",
 
 "item.overpowered.void_sword": "Отрицательный меч",
 "item.overpowered.void_pickaxe": "Отрицательная пика",

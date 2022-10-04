@@ -9,11 +9,11 @@
 "block.overpowered.light_block": "Blok świetlny",
 "block.overpowered.null_block": "blok zerowy",
 
-"item.overpowered.celestial_sword": "Miecz Energetyczny",
-"item.overpowered.celestial_pickaxe": "kilof energii",
-"item.overpowered.celestial_axe": "Topór energetyczny",
-"item.overpowered.celestial_shovel": "Łopata energetyczna",
-"item.overpowered.celestial_hoe": "Energii Motyka",
+"item.overpowered.celestial_sword": "Celestial Sword",
+"item.overpowered.celestial_pickaxe": "Celestial Pickaxe",
+"item.overpowered.celestial_axe": "Celestial Axe",
+"item.overpowered.celestial_shovel": "Celestial Shovel",
+"item.overpowered.celestial_hoe": "Celestial Hoe",
 
 "item.overpowered.void_sword": "ciemny miecz",
 "item.overpowered.void_pickaxe": "ciemny kilof",

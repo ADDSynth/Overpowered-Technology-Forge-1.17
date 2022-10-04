@@ -9,11 +9,11 @@
 "block.overpowered.light_block": "Світлий блок",
 "block.overpowered.null_block": "нульовий блок",
 
-"item.overpowered.celestial_sword": "Енергетичний меч",
-"item.overpowered.celestial_pickaxe": "енергетична кирка",
-"item.overpowered.celestial_axe": "енергетична сокира",
-"item.overpowered.celestial_shovel": "Енергетична лопата",
-"item.overpowered.celestial_hoe": "інструмент садівництва енергії",
+"item.overpowered.celestial_sword": "Celestial Sword",
+"item.overpowered.celestial_pickaxe": "Celestial Pickaxe",
+"item.overpowered.celestial_axe": "Celestial Axe",
+"item.overpowered.celestial_shovel": "Celestial Shovel",
+"item.overpowered.celestial_hoe": "Celestial Hoe",
 
 "item.overpowered.void_sword": "нульовий меч",
 "item.overpowered.void_pickaxe": "темний інструмент видобутку",

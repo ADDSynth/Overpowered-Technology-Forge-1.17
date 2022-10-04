@@ -9,11 +9,11 @@
 "block.overpowered.light_block": "光塊",
 "block.overpowered.null_block": "空塊",
 
-"item.overpowered.celestial_sword": "能量劍",
-"item.overpowered.celestial_pickaxe": "超級採礦工具",
-"item.overpowered.celestial_axe": "能量斧頭",
-"item.overpowered.celestial_shovel": "能量鏟",
-"item.overpowered.celestial_hoe": "能量鋤頭",
+"item.overpowered.celestial_sword": "Celestial Sword",
+"item.overpowered.celestial_pickaxe": "Celestial Pickaxe",
+"item.overpowered.celestial_axe": "Celestial Axe",
+"item.overpowered.celestial_shovel": "Celestial Shovel",
+"item.overpowered.celestial_hoe": "Celestial Hoe",
 
 "item.overpowered.void_sword": "黑暗的劍",
 "item.overpowered.void_pickaxe": "黑暗採礦工具",

@@ -9,11 +9,11 @@
 "block.overpowered.light_block": "بلوک نور",
 "block.overpowered.null_block": "بلوک صفر",
 
-"item.overpowered.celestial_sword": "شمشیر انرژی",
-"item.overpowered.celestial_pickaxe": "ابزار استخراج از قدرت",
-"item.overpowered.celestial_axe": "انرژی تبر",
-"item.overpowered.celestial_shovel": "حفاری ابزار قدرت",
-"item.overpowered.celestial_hoe": "ابزار انرژی",
+"item.overpowered.celestial_sword": "Celestial Sword",
+"item.overpowered.celestial_pickaxe": "Celestial Pickaxe",
+"item.overpowered.celestial_axe": "Celestial Axe",
+"item.overpowered.celestial_shovel": "Celestial Shovel",
+"item.overpowered.celestial_hoe": "Celestial Hoe",
 
 "item.overpowered.void_sword": "شمشیر تیره",
 "item.overpowered.void_pickaxe": "Dark Pickaxe [نیاز به ترجمه دارد]",

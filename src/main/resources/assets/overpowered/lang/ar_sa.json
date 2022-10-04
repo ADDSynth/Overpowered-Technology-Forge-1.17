@@ -9,11 +9,11 @@
 "block.overpowered.light_block": "كتلة الضوء",
 "block.overpowered.null_block": "كتلة من لا شيء",
 
-"item.overpowered.celestial_sword": "سيف الطاقة",
-"item.overpowered.celestial_pickaxe": "معول الطاقة",
-"item.overpowered.celestial_axe": "فأس الطاقة",
-"item.overpowered.celestial_shovel": "مجرفة الطاقة",
-"item.overpowered.celestial_hoe": "مجرفة الطاقة",
+"item.overpowered.celestial_sword": "Celestial Sword",
+"item.overpowered.celestial_pickaxe": "Celestial Pickaxe",
+"item.overpowered.celestial_axe": "Celestial Axe",
+"item.overpowered.celestial_shovel": "Celestial Shovel",
+"item.overpowered.celestial_hoe": "Celestial Hoe",
 
 "item.overpowered.void_sword": "السيف باطل",
 "item.overpowered.void_pickaxe": "معول لاغية",

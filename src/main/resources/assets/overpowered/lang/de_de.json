@@ -9,11 +9,11 @@
 "block.overpowered.light_block": "Leichter Block",
 "block.overpowered.null_block": "Nullblock",
 
-"item.overpowered.celestial_sword": "Energie-Schwert",
-"item.overpowered.celestial_pickaxe": "Energie-Spitzhacke",
-"item.overpowered.celestial_axe": "Energie Axt",
-"item.overpowered.celestial_shovel": "Energieschaufel",
-"item.overpowered.celestial_hoe": "Energiehacke",
+"item.overpowered.celestial_sword": "Celestial Sword",
+"item.overpowered.celestial_pickaxe": "Celestial Pickaxe",
+"item.overpowered.celestial_axe": "Celestial Axe",
+"item.overpowered.celestial_shovel": "Celestial Shovel",
+"item.overpowered.celestial_hoe": "Celestial Hoe",
 
 "item.overpowered.void_sword": "Null-Schwert",
 "item.overpowered.void_pickaxe": "Null Spitzhacke",

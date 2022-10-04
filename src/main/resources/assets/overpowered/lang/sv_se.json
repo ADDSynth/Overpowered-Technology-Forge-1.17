@@ -9,11 +9,11 @@
 "block.overpowered.light_block": "Ljus block",
 "block.overpowered.null_block": "Null Block",
 
-"item.overpowered.celestial_sword": "Energi svärd",
-"item.overpowered.celestial_pickaxe": "Energy Pickaxe [behöver översätta]",
-"item.overpowered.celestial_axe": "Energi Ax",
-"item.overpowered.celestial_shovel": "Energi Skyffel",
-"item.overpowered.celestial_hoe": "energi trädgårdsarbete verktyg",
+"item.overpowered.celestial_sword": "Celestial Sword",
+"item.overpowered.celestial_pickaxe": "Celestial Pickaxe",
+"item.overpowered.celestial_axe": "Celestial Axe",
+"item.overpowered.celestial_shovel": "Celestial Shovel",
+"item.overpowered.celestial_hoe": "Celestial Hoe",
 
 "item.overpowered.void_sword": "mörkt svärd",
 "item.overpowered.void_pickaxe": "mörkt gruvverktyg",
