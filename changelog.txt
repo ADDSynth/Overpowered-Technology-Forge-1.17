@@ -21,6 +21,8 @@ NEW:
     - Only supports a maximum of 16 machines right now.
   The Circuit Fabricator now supports additional recipes than just the circuit items.
   Portal spawn time can now be configured.
+  Added an advancement that is awarded when you activate an Energy Suspension Bridge
+    with the maximum possible length.
 CHANGED:
   Increased the chance to drop an Unidentified Ring when killing enemy mobs.
   The Dimensional Anchor is now registered as a Curios Charm, if you
@@ -37,6 +39,8 @@ FIXED:
     or the proper laser type.
   Fixed de_de.json language files. Fixed "Lasers" and "Auto Shutoff" not being translated.
     See: https://github.com/ADDSynth/Overpowered-Forge-1.14/commit/5f4418eadb862447e4b58be2b637d0f230d717f4
+  Fixed Energy Suspension Bridge maximum length was actually 1 less than what is set
+    in the configuration.
 
 
 

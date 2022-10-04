@@ -47,6 +47,7 @@ public final class OverpoweredJEI implements IModPlugin {
       blacklist.add(new ItemStack(Tools.magic_ring[2]));
       blacklist.add(new ItemStack(Tools.magic_ring[3]));
     }
+    blacklist.add(new ItemStack(Machines.bridge_image));
     jeiRuntime.getIngredientManager().removeIngredientsAtRuntime(VanillaTypes.ITEM, blacklist);
   }
 

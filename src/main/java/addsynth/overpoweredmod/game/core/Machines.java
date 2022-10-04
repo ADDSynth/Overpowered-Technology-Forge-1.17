@@ -1,6 +1,7 @@
 package addsynth.overpoweredmod.game.core;
 
 import addsynth.overpoweredmod.Debug;
+import addsynth.overpoweredmod.OverpoweredTechnology;
 import addsynth.overpoweredmod.machines.advanced_ore_refinery.AdvancedOreRefineryBlock;
 import addsynth.overpoweredmod.machines.crystal_matter_generator.CrystalMatterGeneratorBlock;
 import addsynth.overpoweredmod.machines.energy_extractor.CrystalEnergyExtractorBlock;
@@ -19,6 +20,7 @@ import addsynth.overpoweredmod.machines.portal.control_panel.PortalControlPanelB
 import addsynth.overpoweredmod.machines.portal.frame.PortalFrameBlock;
 import addsynth.overpoweredmod.machines.suspension_bridge.EnergyBridge;
 import addsynth.overpoweredmod.machines.suspension_bridge.EnergySuspensionBridgeBlock;
+import net.minecraft.world.item.Item;
 
 public final class Machines {
 
@@ -54,6 +56,8 @@ public final class Machines {
   public static final EnergyBridge                cyan_energy_bridge       = new EnergyBridge("cyan_energy_bridge", Lens.CYAN);
   public static final EnergyBridge                blue_energy_bridge       = new EnergyBridge("blue_energy_bridge", Lens.BLUE);
   public static final EnergyBridge                magenta_energy_bridge    = new EnergyBridge("magenta_energy_bridge", Lens.MAGENTA);
+
+  public static final Item bridge_image = OverpoweredTechnology.registry.register_ItemBlock(cyan_energy_bridge);
 
   static {
     Debug.log_setup_info("Finished loading Machines class.");

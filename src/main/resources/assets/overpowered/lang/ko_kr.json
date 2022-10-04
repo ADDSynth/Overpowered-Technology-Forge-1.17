@@ -227,6 +227,8 @@
 "advancements.overpowered.fire_maximum_laser.description": "레이저를 최대 거리로 발사하십시오",
 "advancements.overpowered.energy_suspension_bridge.title": "Energy Suspension Bridge",
 "advancements.overpowered.energy_suspension_bridge.description": "Craft an Energy Suspension Bridge",
+"advancements.overpowered.maximum_bridge_length.title": "Bridge Builder",
+"advancements.overpowered.maximum_bridge_length.description": "Activate an Energy Suspension Bridge with the longest distance possible.",
 "advancements.overpowered.gem_converter.title": "보석 변환기",
 "advancements.overpowered.gem_converter.description": "보석 변환기를 만들다",
 "advancements.overpowered.convert_a_thousand_gems.title": "마스터 변환기",

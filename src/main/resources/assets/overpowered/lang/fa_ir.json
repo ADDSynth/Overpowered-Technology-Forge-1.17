@@ -227,6 +227,8 @@
 "advancements.overpowered.fire_maximum_laser.description": "حداکثر فاصله را با لیزر آتش بزنید",
 "advancements.overpowered.energy_suspension_bridge.title": "Energy Suspension Bridge",
 "advancements.overpowered.energy_suspension_bridge.description": "Craft an Energy Suspension Bridge",
+"advancements.overpowered.maximum_bridge_length.title": "Bridge Builder",
+"advancements.overpowered.maximum_bridge_length.description": "Activate an Energy Suspension Bridge with the longest distance possible.",
 "advancements.overpowered.gem_converter.title": "مبدل گوهر",
 "advancements.overpowered.gem_converter.description": "مبدل گوهر را تهیه کنید",
 "advancements.overpowered.convert_a_thousand_gems.title": "استاد مبدل",

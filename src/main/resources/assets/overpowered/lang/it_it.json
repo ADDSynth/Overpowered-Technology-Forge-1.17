@@ -227,6 +227,8 @@
 "advancements.overpowered.fire_maximum_laser.description": "Spara un laser alla massima distanza",
 "advancements.overpowered.energy_suspension_bridge.title": "Energy Suspension Bridge",
 "advancements.overpowered.energy_suspension_bridge.description": "Craft an Energy Suspension Bridge",
+"advancements.overpowered.maximum_bridge_length.title": "Bridge Builder",
+"advancements.overpowered.maximum_bridge_length.description": "Activate an Energy Suspension Bridge with the longest distance possible.",
 "advancements.overpowered.gem_converter.title": "Convertitore di gemme",
 "advancements.overpowered.gem_converter.description": "Crea un convertitore di gemme",
 "advancements.overpowered.convert_a_thousand_gems.title": "convertitore esperto",

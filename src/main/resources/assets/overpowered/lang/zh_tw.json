@@ -227,6 +227,8 @@
 "advancements.overpowered.fire_maximum_laser.description": "發射激光最大距離",
 "advancements.overpowered.energy_suspension_bridge.title": "Energy Suspension Bridge",
 "advancements.overpowered.energy_suspension_bridge.description": "Craft an Energy Suspension Bridge",
+"advancements.overpowered.maximum_bridge_length.title": "Bridge Builder",
+"advancements.overpowered.maximum_bridge_length.description": "Activate an Energy Suspension Bridge with the longest distance possible.",
 "advancements.overpowered.gem_converter.title": "寶石轉換器",
 "advancements.overpowered.gem_converter.description": "製作寶石轉換器",
 "advancements.overpowered.convert_a_thousand_gems.title": "專家轉換器",

@@ -277,6 +277,16 @@ public final class RegistryUtil { // cannot be named GameRegistry because it con
   /** Use this to register vanilla ItemBlocks.
    *  @param block The block you want to register an ItemBlock for. Cannot be null!
    */
+  public final BlockItem register_ItemBlock(final Block block){
+    if(block == null){
+      throw new NullPointerException("Tried to register an ItemBlock for a null block reference! Register your block first!");
+    }
+    return register_ItemBlock(new BlockItem(block, new Item.Properties()), block);
+  }
+
+  /** Use this to register vanilla ItemBlocks.
+   *  @param block The block you want to register an ItemBlock for. Cannot be null!
+   */
   public final BlockItem register_ItemBlock(final Block block, final Item.Properties properties){
     if(block == null){
       throw new NullPointerException("Tried to register an ItemBlock for a null block reference! Register your block first!");

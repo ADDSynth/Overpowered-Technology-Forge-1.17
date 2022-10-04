@@ -11,6 +11,9 @@ public final class CustomAdvancements {
   public static final ResourceLocation FIRE_MAXIMUM_DISTANCE =
     new ResourceLocation(OverpoweredTechnology.MOD_ID, "overpowered/fire_maximum_laser");
 
+  public static final ResourceLocation MAXIMUM_BRIDGE_LENGTH =
+    new ResourceLocation(OverpoweredTechnology.MOD_ID, "overpowered/maximum_bridge_length");
+
   public static final ResourceLocation PORTAL =
     new ResourceLocation(OverpoweredTechnology.MOD_ID, "overpowered/portal");
 

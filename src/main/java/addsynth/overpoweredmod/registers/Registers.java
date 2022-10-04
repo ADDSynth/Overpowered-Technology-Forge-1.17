@@ -181,7 +181,9 @@ public final class Registers {
       }
     }
     
+    // Items for advancements only
     game.register(Portal.portal_image);
+    game.register(Machines.bridge_image);
 
     OverpoweredTechnology.log.info("Finished Item Registration Event.");
   }
