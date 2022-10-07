@@ -1,5 +1,6 @@
 package addsynth.material;
 
+import addsynth.core.game.RegistryUtil;
 import addsynth.material.compat.MaterialsCompat;
 import addsynth.material.compat.recipe.BronzeModAbsentCondition;
 import addsynth.material.compat.recipe.SteelModAbsentCondition;
@@ -74,11 +75,11 @@ public final class MaterialsRegister {
     game.register(Material.AMETHYST.block_item);
 
     // gem ore blocks
-    game.register(ADDSynthMaterials.registry.getItemBlock(Material.RUBY.ore));
-    game.register(ADDSynthMaterials.registry.getItemBlock(Material.TOPAZ.ore));
-    game.register(ADDSynthMaterials.registry.getItemBlock(Material.CITRINE.ore));
-    game.register(ADDSynthMaterials.registry.getItemBlock(Material.SAPPHIRE.ore));
-    game.register(ADDSynthMaterials.registry.getItemBlock(Material.AMETHYST.ore));
+    game.register(RegistryUtil.getItemBlock(Material.RUBY.ore));
+    game.register(RegistryUtil.getItemBlock(Material.TOPAZ.ore));
+    game.register(RegistryUtil.getItemBlock(Material.CITRINE.ore));
+    game.register(RegistryUtil.getItemBlock(Material.SAPPHIRE.ore));
+    game.register(RegistryUtil.getItemBlock(Material.AMETHYST.ore));
 
     if(Features.crystal_matter_generator.get()){ // REMOVE shards
       game.register(Material.RUBY.shard);
@@ -110,11 +111,11 @@ public final class MaterialsRegister {
     game.register(Material.TITANIUM.block_item);
     
     // metal ores
-    game.register(ADDSynthMaterials.registry.getItemBlock(Material.TIN.ore));
-    game.register(ADDSynthMaterials.registry.getItemBlock(Material.ALUMINUM.ore));
-    game.register(ADDSynthMaterials.registry.getItemBlock(Material.SILVER.ore));
-    game.register(ADDSynthMaterials.registry.getItemBlock(Material.PLATINUM.ore));
-    game.register(ADDSynthMaterials.registry.getItemBlock(Material.TITANIUM.ore));
+    game.register(RegistryUtil.getItemBlock(Material.TIN.ore));
+    game.register(RegistryUtil.getItemBlock(Material.ALUMINUM.ore));
+    game.register(RegistryUtil.getItemBlock(Material.SILVER.ore));
+    game.register(RegistryUtil.getItemBlock(Material.PLATINUM.ore));
+    game.register(RegistryUtil.getItemBlock(Material.TITANIUM.ore));
     
     // metal plates
     if(MaterialsCompat.addsynth_energy_loaded){
@@ -134,9 +135,9 @@ public final class MaterialsRegister {
     
     // other material items
     game.register(Material.SILICON.item);
-    game.register(ADDSynthMaterials.registry.getItemBlock(Material.SILICON.ore));
+    game.register(RegistryUtil.getItemBlock(Material.SILICON.ore));
     game.register(Material.ROSE_QUARTZ.gem);
-    game.register(ADDSynthMaterials.registry.getItemBlock(Material.ROSE_QUARTZ.ore));
+    game.register(RegistryUtil.getItemBlock(Material.ROSE_QUARTZ.ore));
   }
 
   @SubscribeEvent

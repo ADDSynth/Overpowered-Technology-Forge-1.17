@@ -4,6 +4,7 @@ import java.text.NumberFormat;
 import java.util.List;
 import javax.annotation.Nullable;
 import addsynth.overpoweredmod.config.MachineValues;
+import addsynth.overpoweredmod.game.Names;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
@@ -13,8 +14,8 @@ import net.minecraft.world.level.Level;
 
 public final class EnergyCrystalShards extends OverpoweredItem {
 
-  public EnergyCrystalShards(String name){
-    super(name);
+  public EnergyCrystalShards(){
+    super(Names.ENERGY_CRYSTAL_SHARDS);
   }
 
   @Override

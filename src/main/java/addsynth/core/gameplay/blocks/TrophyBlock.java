@@ -1,10 +1,8 @@
 package addsynth.core.gameplay.blocks;
 
 import javax.annotation.Nullable;
-import addsynth.core.ADDSynthCore;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -31,10 +29,9 @@ public final class TrophyBlock extends Block implements SimpleWaterloggedBlock {
 
   private static final VoxelShape collision_box = Shapes.box(0.125, 0.0, 0.125, 0.875, 0.9375, 0.875);
 
-  public TrophyBlock(String name){
+  public TrophyBlock(){
     super(Block.Properties.of(Material.METAL).sound(SoundType.METAL).strength(3.0f, 6.0f).requiresCorrectToolForDrops());
     this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(WATERLOGGED, false));
-    ADDSynthCore.registry.register_block(this, name, new Item.Properties().tab(ADDSynthCore.creative_tab));
   }
 
   @Override

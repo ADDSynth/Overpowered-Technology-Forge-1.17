@@ -4,6 +4,7 @@ import java.util.List;
 import javax.annotation.Nullable;
 import addsynth.core.gameplay.Core;
 import addsynth.core.gameplay.items.CoreItem;
+import addsynth.core.gameplay.registers.Names;
 import addsynth.core.util.game.MessageUtil;
 import addsynth.core.util.player.PlayerUtil;
 import net.minecraft.core.BlockPos;
@@ -33,8 +34,8 @@ public final class MusicSheet extends CoreItem {
 
   // See how vanilla handles the Ender Eye, an item that is used on blocks and by itself.
 
-  public MusicSheet(final String name){
-    super(name);
+  public MusicSheet(){
+    super(Names.MUSIC_SHEET);
   }
 
   @Override

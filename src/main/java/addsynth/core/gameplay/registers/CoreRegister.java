@@ -5,7 +5,6 @@ import addsynth.core.config.Features;
 import addsynth.core.game.RegistryUtil;
 import addsynth.core.gameplay.Core;
 import addsynth.core.gameplay.Trophy;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -31,9 +30,9 @@ public final class CoreRegister {
     if(Features.team_manager.get()){  game.register(Core.team_manager);  }
     
     if(Features.trophies()){
-      if(Features.bronze_trophy.get()){   game.register(Trophy.bronze); }
-      if(Features.silver_trophy.get()){   game.register(Trophy.silver); }
-      if(Features.gold_trophy.get()){     game.register(Trophy.gold); }
+      if(Features.bronze_trophy.get()){   game.register(Trophy.bronze);   }
+      if(Features.silver_trophy.get()){   game.register(Trophy.silver);   }
+      if(Features.gold_trophy.get()){     game.register(Trophy.gold);     }
       if(Features.platinum_trophy.get()){ game.register(Trophy.platinum); }
     }
     // game.register(Core.test_block);
@@ -48,27 +47,27 @@ public final class CoreRegister {
     final IForgeRegistry<Item> game = event.getRegistry();
 
     if(Features.caution_block.get()){
-      game.register(ADDSynthCore.registry.getItemBlock(Core.caution_block));
+      game.register(RegistryUtil.getItemBlock(Core.caution_block));
     }
     if(Features.music_box.get()){
-      game.register(ADDSynthCore.registry.getItemBlock(Core.music_box));
+      game.register(RegistryUtil.getItemBlock(Core.music_box));
       if(Features.music_sheet.get()){
         game.register(Core.music_sheet);
       }
     }
     if(Features.team_manager.get()){
-      game.register(ADDSynthCore.registry.getItemBlock(Core.team_manager));
+      game.register(RegistryUtil.getItemBlock(Core.team_manager));
     }
     
     if(Features.trophies()){
       game.register(Trophy.trophy_base);
-      if(Features.bronze_trophy.get()){   game.register(Trophy.BRONZE.item_block); }
-      if(Features.silver_trophy.get()){   game.register(Trophy.SILVER.item_block); }
-      if(Features.gold_trophy.get()){     game.register(Trophy.GOLD.item_block); }
+      if(Features.bronze_trophy.get()){   game.register(Trophy.BRONZE.item_block);   }
+      if(Features.silver_trophy.get()){   game.register(Trophy.SILVER.item_block);   }
+      if(Features.gold_trophy.get()){     game.register(Trophy.GOLD.item_block);     }
       if(Features.platinum_trophy.get()){ game.register(Trophy.PLATINUM.item_block); }
     }
     
-    // game.register(ADDSynthCore.registry.getItemBlock(Core.test_block));
+    // game.register(RegistryUtil.getItemBlock(Core.test_block);
 
     ADDSynthCore.log.info("Done registering items.");
   }
@@ -76,7 +75,7 @@ public final class CoreRegister {
   @SubscribeEvent
   public static final void register_tileentities(final RegistryEvent.Register<BlockEntityType<?>> event){
     final IForgeRegistry<BlockEntityType<?>> game = event.getRegistry();
-    RegistryUtil.register(game, Tiles.MUSIC_BOX, new ResourceLocation(ADDSynthCore.MOD_ID, "music_box"));
+    RegistryUtil.register(game, Tiles.MUSIC_BOX, Names.MUSIC_BOX);
   }
 
   @SubscribeEvent

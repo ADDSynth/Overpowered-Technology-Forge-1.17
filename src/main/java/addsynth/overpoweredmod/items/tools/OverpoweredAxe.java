@@ -1,7 +1,7 @@
 package addsynth.overpoweredmod.items.tools;
 
-import addsynth.overpoweredmod.OverpoweredTechnology;
 import addsynth.overpoweredmod.assets.CreativeTabs;
+import addsynth.overpoweredmod.game.Names;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -9,9 +9,9 @@ import net.minecraft.world.item.Rarity;
 
 public final class OverpoweredAxe extends AxeItem {
 
-  public OverpoweredAxe(final String name){
+  public OverpoweredAxe(){
     super(OverpoweredTiers.CELESTIAL, 14.0f, -3.0f, new Item.Properties().tab(CreativeTabs.tools_creative_tab));
-    OverpoweredTechnology.registry.register_item(this, name);
+    setRegistryName(Names.CELESTIAL_AXE);
   }
 
   @Override

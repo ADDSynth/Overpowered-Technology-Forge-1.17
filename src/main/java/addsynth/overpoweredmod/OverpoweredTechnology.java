@@ -1,7 +1,6 @@
 package addsynth.overpoweredmod;
 
 import java.io.File;
-import addsynth.core.game.RegistryUtil;
 import addsynth.core.recipe.RecipeUtil;
 import addsynth.core.util.CommonUtil;
 import addsynth.core.util.constants.DevStage;
@@ -60,8 +59,6 @@ public class OverpoweredTechnology {
   public static final DevStage DEV_STAGE = DevStage.DEVELOPMENT;
     
   public static final Logger log = LogManager.getLogger(MOD_NAME);
-
-  public static final RegistryUtil registry = new RegistryUtil(MOD_ID);
 
   private static boolean config_loaded;
 

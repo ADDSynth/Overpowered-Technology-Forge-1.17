@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.util.Comparator;
 import java.util.TreeSet;
 import addsynth.core.config.Config;
-import addsynth.core.game.RegistryUtil;
 import addsynth.core.util.color.ColorUtil;
 import addsynth.core.util.java.FileUtil;
 import net.minecraft.core.BlockPos;
@@ -50,7 +49,6 @@ public final class Debug {
   }
 
   public static final void debug(){
-    RegistryUtil.safety_check();
     if(Config.dump_map_colors.get()){
       ColorUtil.dump_map_colors();
     }

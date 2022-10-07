@@ -1,16 +1,17 @@
 package addsynth.energy.gameplay.machines.energy_diagnostics;
 
 import javax.annotation.Nullable;
+import addsynth.core.game.RegistryUtil;
 import addsynth.core.game.blocks.TileEntityBlock;
 import addsynth.core.util.game.MinecraftUtility;
 import addsynth.energy.ADDSynthEnergy;
 import addsynth.energy.gameplay.client.GuiProvider;
+import addsynth.energy.registers.Names;
 import addsynth.energy.registers.Tiles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
@@ -22,9 +23,9 @@ import net.minecraft.world.phys.BlockHitResult;
 
 public final class EnergyDiagnosticsBlock extends TileEntityBlock {
 
-  public EnergyDiagnosticsBlock(final String name){
+  public EnergyDiagnosticsBlock(){
     super(Properties.of(Material.METAL, MaterialColor.WOOL));
-    ADDSynthEnergy.registry.register_block(this, name, new Item.Properties().tab(ADDSynthEnergy.creative_tab));
+    RegistryUtil.register_block(this, Names.ENERGY_DIAGNOSTICS_BLOCK, ADDSynthEnergy.creative_tab);
   }
 
   @Override

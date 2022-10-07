@@ -42,13 +42,12 @@ public final class ADDSynthCore {
 
   private static boolean config_loaded;
   public static final Logger log = LogManager.getLogger(NAME);
-  public static final RegistryUtil registry = new RegistryUtil(MOD_ID);
 
   public static final CreativeModeTab creative_tab = new CreativeModeTab("addsynthcore"){
     @Override
     public final ItemStack makeIcon(){
-      return Features.caution_block.get() ? new ItemStack(registry.getItemBlock(Core.caution_block), 1) :
-             Features.music_box.get()     ? new ItemStack(registry.getItemBlock(Core.music_box), 1) :
+      return Features.caution_block.get() ? new ItemStack(RegistryUtil.getItemBlock(Core.caution_block), 1) :
+             Features.music_box.get()     ? new ItemStack(RegistryUtil.getItemBlock(Core.music_box), 1) :
              Features.team_manager.get()  ? new ItemStack(Core.team_manager, 1) :
              new ItemStack(Blocks.GRASS, 1);
     }

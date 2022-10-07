@@ -4,11 +4,12 @@ import addsynth.core.util.game.MinecraftUtility;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.material.Material;
 
+@Deprecated
 public final class BlockGrassNoDestroy extends Block {
 
-  public BlockGrassNoDestroy(String name){
+  public BlockGrassNoDestroy(){
     super(MinecraftUtility.setUnbreakable(Block.Properties.of(Material.GRASS)));
-    // MAYBE: Registers.add(this, name, false);
+    // MAYBE: setRegistryName(new ResourceLocation(OverpoweredTechnology.MOD_ID, "grass_block"));
   }
 
   /*

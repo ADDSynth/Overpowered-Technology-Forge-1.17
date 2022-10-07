@@ -4,6 +4,7 @@ import addsynth.overpoweredmod.Debug;
 import addsynth.overpoweredmod.blocks.IronFrameBlock;
 import addsynth.overpoweredmod.blocks.LightBlock;
 import addsynth.overpoweredmod.blocks.NullBlock;
+import addsynth.overpoweredmod.game.Names;
 import addsynth.overpoweredmod.items.EnergyCrystal;
 import addsynth.overpoweredmod.items.EnergyCrystalShards;
 import addsynth.overpoweredmod.items.OverpoweredItem;
@@ -18,16 +19,16 @@ public final class Init {
     Debug.log_setup_info("Begin loading Init class...");
   }
 
-  public static final Item                    celestial_gem            = new OverpoweredItem("celestial_gem");
-  public static final Item                    energy_crystal_shards    = new EnergyCrystalShards("energy_crystal_shards");
-  public static final Item                    energy_crystal           = new EnergyCrystal("energy_crystal");
-  public static final Block                   light_block              = new LightBlock("light_block");
+  public static final Item                    celestial_gem            = new OverpoweredItem(Names.CELESTIAL_GEM);
+  public static final Item                    energy_crystal_shards    = new EnergyCrystalShards();
+  public static final Item                    energy_crystal           = new EnergyCrystal();
+  public static final Block                   light_block              = new LightBlock();
 
-  public static final Item                    void_crystal             = new VoidCrystal("void_crystal");
-  public static final Block                   null_block               = new NullBlock("null_block");
+  public static final Item                    void_crystal             = new VoidCrystal();
+  public static final Block                   null_block               = new NullBlock();
 
-  public static final Block                   iron_frame_block         = new IronFrameBlock("iron_frame_block");
-  public static final BlackHoleBlock          black_hole               = new BlackHoleBlock("black_hole");
+  public static final Block                   iron_frame_block         = new IronFrameBlock();
+  public static final BlackHoleBlock          black_hole               = new BlackHoleBlock();
 
   static {
     Debug.log_setup_info("Finished loading Init class.");

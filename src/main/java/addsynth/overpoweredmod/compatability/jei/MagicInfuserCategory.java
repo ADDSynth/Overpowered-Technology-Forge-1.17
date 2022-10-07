@@ -1,6 +1,7 @@
 package addsynth.overpoweredmod.compatability.jei;
 
 import addsynth.overpoweredmod.OverpoweredTechnology;
+import addsynth.overpoweredmod.game.Names;
 import addsynth.overpoweredmod.game.core.Machines;
 import addsynth.overpoweredmod.machines.magic_infuser.recipes.MagicInfuserRecipe;
 import net.minecraft.network.chat.Component;
@@ -17,7 +18,7 @@ import mezz.jei.api.recipe.category.IRecipeCategory;
 
 public final class MagicInfuserCategory implements IRecipeCategory<MagicInfuserRecipe> {
 
-  public static final ResourceLocation id = new ResourceLocation(OverpoweredTechnology.MOD_ID, "magic_infuser");
+  public static final ResourceLocation id = Names.MAGIC_INFUSER;
   private static final ResourceLocation gui_texture = new ResourceLocation(OverpoweredTechnology.MOD_ID, "textures/gui/gui_textures.png");
   private final IDrawable background;
   private final IDrawable icon;

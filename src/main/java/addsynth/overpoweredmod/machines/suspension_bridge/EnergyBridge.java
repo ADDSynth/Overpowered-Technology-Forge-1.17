@@ -5,6 +5,7 @@ import addsynth.overpoweredmod.OverpoweredTechnology;
 import addsynth.overpoweredmod.game.core.Lens;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RotatedPillarBlock;
@@ -27,7 +28,7 @@ public final class EnergyBridge extends RotatedPillarBlock {
     super(Block.Properties.of(
       new Material(lens.color, false, true, true, false, false, false, PushReaction.BLOCK)
     ).lightLevel((blockstate)->{return 11;}).strength(-1.0f, Constants.infinite_resistance).noOcclusion().noDrops());
-    OverpoweredTechnology.registry.register_block(this, name);
+    setRegistryName(new ResourceLocation(OverpoweredTechnology.MOD_ID, name));
   }
 
   public final BlockState getRotated(final Direction.Axis axis){

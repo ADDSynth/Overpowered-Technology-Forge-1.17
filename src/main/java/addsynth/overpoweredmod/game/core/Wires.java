@@ -9,7 +9,7 @@ public final class Wires {
     Debug.log_setup_info("Begin loading Wires class...");
   }
 
-  public static final DataCable               data_cable               = new DataCable("data_cable");
+  public static final DataCable               data_cable               = new DataCable();
 
   static {
     Debug.log_setup_info("Finished loading Wires class.");

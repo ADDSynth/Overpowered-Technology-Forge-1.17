@@ -3,7 +3,7 @@ package addsynth.overpoweredmod.blocks.dimension.tree;
 import addsynth.core.block_network.Node;
 import addsynth.core.util.block.BlockUtil;
 import addsynth.core.util.world.WorldUtil;
-import addsynth.overpoweredmod.OverpoweredTechnology;
+import addsynth.overpoweredmod.game.Names;
 import addsynth.overpoweredmod.game.core.Init;
 import addsynth.overpoweredmod.game.core.Portal;
 import net.minecraft.core.BlockPos;
@@ -17,9 +17,9 @@ import net.minecraft.world.level.material.Material;
 
 public final class UnknownWood extends Block {
 
-  public UnknownWood(final String name){
+  public UnknownWood(){
     super(Block.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2.0f));
-    OverpoweredTechnology.registry.register_block(this, name);
+    setRegistryName(Names.UNKNOWN_WOOD);
   }
 
   // TEST: I think I prefer this one because it works if the player is in Creative Mode as well.

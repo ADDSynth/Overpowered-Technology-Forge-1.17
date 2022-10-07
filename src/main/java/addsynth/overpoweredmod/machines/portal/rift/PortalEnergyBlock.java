@@ -1,8 +1,9 @@
 package addsynth.overpoweredmod.machines.portal.rift;
 
 import javax.annotation.Nullable;
+import addsynth.core.game.RegistryUtil;
 import addsynth.core.game.blocks.TileEntityBlock;
-import addsynth.overpoweredmod.OverpoweredTechnology;
+import addsynth.overpoweredmod.game.Names;
 import addsynth.overpoweredmod.registers.Tiles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -33,9 +34,9 @@ public final class PortalEnergyBlock extends TileEntityBlock {
 
   public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.HORIZONTAL_AXIS;
 
-  public PortalEnergyBlock(final String name){
+  public PortalEnergyBlock(){
     super(Block.Properties.of(Material.PORTAL).noCollission().noDrops());
-    OverpoweredTechnology.registry.register_block(this, name, new Item.Properties());
+    RegistryUtil.register_block(this, Names.PORTAL_RIFT, new Item.Properties());
     // Portal Energy Block needs an ItemBlock form to use as an icon for the Achievement.
   }
 

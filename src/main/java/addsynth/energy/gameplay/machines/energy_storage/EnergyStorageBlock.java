@@ -2,9 +2,11 @@ package addsynth.energy.gameplay.machines.energy_storage;
 
 import java.util.List;
 import javax.annotation.Nullable;
+import addsynth.core.game.RegistryUtil;
 import addsynth.core.util.game.MinecraftUtility;
 import addsynth.energy.ADDSynthEnergy;
 import addsynth.energy.lib.blocks.MachineBlock;
+import addsynth.energy.registers.Names;
 import addsynth.energy.registers.Tiles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -14,7 +16,6 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.BlockGetter;
@@ -31,9 +32,9 @@ import net.minecraftforge.fmllegacy.network.NetworkHooks;
 
 public final class EnergyStorageBlock extends MachineBlock {
 
-  public EnergyStorageBlock(final String name){
+  public EnergyStorageBlock(){
     super(Block.Properties.of(Material.METAL, MaterialColor.SNOW).noOcclusion().strength(3.5f, 6.0f));
-    ADDSynthEnergy.registry.register_block(this, name, new Item.Properties().tab(ADDSynthEnergy.creative_tab));
+    RegistryUtil.register_block(this, Names.ENERGY_STORAGE, ADDSynthEnergy.creative_tab);
   }
 
   @Override

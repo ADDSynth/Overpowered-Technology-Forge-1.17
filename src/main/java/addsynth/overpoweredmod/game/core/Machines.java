@@ -1,7 +1,8 @@
 package addsynth.overpoweredmod.game.core;
 
+import addsynth.core.game.RegistryUtil;
 import addsynth.overpoweredmod.Debug;
-import addsynth.overpoweredmod.OverpoweredTechnology;
+import addsynth.overpoweredmod.game.Names;
 import addsynth.overpoweredmod.machines.advanced_ore_refinery.AdvancedOreRefineryBlock;
 import addsynth.overpoweredmod.machines.crystal_matter_generator.CrystalMatterGeneratorBlock;
 import addsynth.overpoweredmod.machines.energy_extractor.CrystalEnergyExtractorBlock;
@@ -28,26 +29,26 @@ public final class Machines {
     Debug.log_setup_info("Begin loading Machines class...");
   }
 
-  public static final CrystalEnergyExtractorBlock crystal_energy_extractor = new CrystalEnergyExtractorBlock("crystal_energy_extractor");
-  public static final GemConverterBlock           gem_converter            = new GemConverterBlock("gem_converter");
-  public static final InverterBlock               inverter                 = new InverterBlock("inverter");
-  public static final MagicInfuserBlock           magic_infuser            = new MagicInfuserBlock("magic_infuser");
-  public static final IdentifierBlock             identifier               = new IdentifierBlock("identifier");
-  public static final PortalControlPanelBlock     portal_control_panel     = new PortalControlPanelBlock("portal_control_panel");
-  public static final PortalFrameBlock            portal_frame             = new PortalFrameBlock("portal_frame");
-  public static final CrystalMatterGeneratorBlock crystal_matter_generator = new CrystalMatterGeneratorBlock("crystal_matter_generator");
-  public static final AdvancedOreRefineryBlock    advanced_ore_refinery    = new AdvancedOreRefineryBlock("advanced_ore_refinery");
-  public static final PlasmaGeneratorBlock        plasma_generator         = new PlasmaGeneratorBlock("plasma_generator");
+  public static final CrystalEnergyExtractorBlock crystal_energy_extractor = new CrystalEnergyExtractorBlock();
+  public static final GemConverterBlock           gem_converter            = new GemConverterBlock();
+  public static final InverterBlock               inverter                 = new InverterBlock();
+  public static final MagicInfuserBlock           magic_infuser            = new MagicInfuserBlock();
+  public static final IdentifierBlock             identifier               = new IdentifierBlock();
+  public static final PortalControlPanelBlock     portal_control_panel     = new PortalControlPanelBlock();
+  public static final PortalFrameBlock            portal_frame             = new PortalFrameBlock();
+  public static final CrystalMatterGeneratorBlock crystal_matter_generator = new CrystalMatterGeneratorBlock();
+  public static final AdvancedOreRefineryBlock    advanced_ore_refinery    = new AdvancedOreRefineryBlock();
+  public static final PlasmaGeneratorBlock        plasma_generator         = new PlasmaGeneratorBlock();
 
-  public static final FusionEnergyConverterBlock  fusion_converter         = new FusionEnergyConverterBlock("fusion_energy_converter");
-  public static final FusionChamberBlock          fusion_chamber           = new FusionChamberBlock("fusion_chamber");
-  public static final FusionControlUnit           fusion_control_unit      = new FusionControlUnit("fusion_control_unit");
-  public static final LaserCannon                 fusion_control_laser     = new LaserCannon("fusion_control_laser", -1);
-  public static final FusionControlLaserBeam      fusion_control_laser_beam = new FusionControlLaserBeam("fusion_control_laser_beam");
+  public static final FusionEnergyConverterBlock  fusion_converter         = new FusionEnergyConverterBlock();
+  public static final FusionChamberBlock          fusion_chamber           = new FusionChamberBlock();
+  public static final FusionControlUnit           fusion_control_unit      = new FusionControlUnit();
+  public static final LaserCannon                 fusion_control_laser     = new LaserCannon(Names.FUSION_CONTROL_LASER, -1);
+  public static final FusionControlLaserBeam      fusion_control_laser_beam = new FusionControlLaserBeam();
 
-  public static final LaserHousingBlock           laser_housing            = new LaserHousingBlock("laser_housing");
+  public static final LaserHousingBlock           laser_housing            = new LaserHousingBlock();
 
-  public static final EnergySuspensionBridgeBlock energy_suspension_bridge = new EnergySuspensionBridgeBlock("energy_suspension_bridge");
+  public static final EnergySuspensionBridgeBlock energy_suspension_bridge = new EnergySuspensionBridgeBlock();
   public static final EnergyBridge                white_energy_bridge      = new EnergyBridge("white_energy_bridge", Lens.WHITE);
   public static final EnergyBridge                red_energy_bridge        = new EnergyBridge("red_energy_bridge", Lens.RED);
   public static final EnergyBridge                orange_energy_bridge     = new EnergyBridge("orange_energy_bridge", Lens.ORANGE);
@@ -57,7 +58,7 @@ public final class Machines {
   public static final EnergyBridge                blue_energy_bridge       = new EnergyBridge("blue_energy_bridge", Lens.BLUE);
   public static final EnergyBridge                magenta_energy_bridge    = new EnergyBridge("magenta_energy_bridge", Lens.MAGENTA);
 
-  public static final Item bridge_image = OverpoweredTechnology.registry.register_ItemBlock(cyan_energy_bridge);
+  public static final Item bridge_image = RegistryUtil.register_ItemBlock(cyan_energy_bridge);
 
   static {
     Debug.log_setup_info("Finished loading Machines class.");

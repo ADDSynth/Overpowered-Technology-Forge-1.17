@@ -4,6 +4,7 @@ import java.util.List;
 import javax.annotation.Nullable;
 import addsynth.core.game.items.ItemValue;
 import addsynth.overpoweredmod.compatability.curios.RingEffects;
+import addsynth.overpoweredmod.game.Names;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.Item;
@@ -17,7 +18,7 @@ import top.theillusivec4.curios.api.type.capability.ICurioItem;
 public final class Ring extends OverpoweredItem implements ICurioItem {
 
   public Ring(final int ring_id){
-    super("magic_ring_"+ring_id, new Item.Properties().stacksTo(1));
+    super(Names.MAGIC_RING[ring_id], new Item.Properties().stacksTo(1));
   }
 
   @Override

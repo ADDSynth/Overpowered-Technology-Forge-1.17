@@ -2,15 +2,16 @@ package addsynth.energy.gameplay.machines.energy_wire;
 
 import javax.annotation.Nullable;
 import addsynth.core.block_network.BlockNetworkUtil;
+import addsynth.core.game.RegistryUtil;
 import addsynth.energy.ADDSynthEnergy;
 import addsynth.energy.gameplay.machines.energy_diagnostics.TileEnergyDiagnostics;
 import addsynth.energy.lib.blocks.Wire;
 import addsynth.energy.lib.energy_network.tiles.AbstractEnergyNetworkTile;
 import addsynth.energy.lib.main.IEnergyUser;
+import addsynth.energy.registers.Names;
 import addsynth.energy.registers.Tiles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -23,9 +24,9 @@ import net.minecraft.world.level.material.MaterialColor;
 
 public final class EnergyWire extends Wire {
 
-  public EnergyWire(final String name){
+  public EnergyWire(){
     super(Block.Properties.of(Material.WOOL, MaterialColor.COLOR_GRAY).strength(0.1f, 0.0f));
-    ADDSynthEnergy.registry.register_block(this, name, new Item.Properties().tab(ADDSynthEnergy.creative_tab));
+    RegistryUtil.register_block(this, Names.ENERGY_WIRE, ADDSynthEnergy.creative_tab);
   }
 
   @Override

@@ -1,5 +1,6 @@
 package addsynth.overpoweredmod.items;
 
+import addsynth.overpoweredmod.game.Names;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -7,8 +8,8 @@ import net.minecraft.world.item.ItemStack;
 
 public final class PlasmaItem extends OverpoweredItem {
 
-  public PlasmaItem(final String name){
-    super(name);
+  public PlasmaItem(){
+    super(Names.PLASMA);
   }
 
   @Override

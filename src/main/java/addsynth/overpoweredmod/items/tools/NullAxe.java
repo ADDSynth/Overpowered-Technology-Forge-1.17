@@ -1,7 +1,7 @@
 package addsynth.overpoweredmod.items.tools;
 
-import addsynth.overpoweredmod.OverpoweredTechnology;
 import addsynth.overpoweredmod.assets.CreativeTabs;
+import addsynth.overpoweredmod.game.Names;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -9,9 +9,9 @@ import net.minecraft.world.item.Rarity;
 
 public class NullAxe extends AxeItem {
 
-  public NullAxe(final String name){
+  public NullAxe(){
     super(OverpoweredTiers.VOID, 14.0f, -3.0f, new Item.Properties().tab(CreativeTabs.tools_creative_tab));
-    OverpoweredTechnology.registry.register_item(this, name);
+    setRegistryName(Names.VOID_AXE);
   }
 
   @Override

@@ -2,10 +2,10 @@ package addsynth.overpoweredmod.machines.laser.cannon;
 
 import java.util.List;
 import javax.annotation.Nullable;
+import addsynth.core.game.RegistryUtil;
 import addsynth.core.util.block.BlockShape;
 import addsynth.core.util.constants.DirectionConstant;
 import addsynth.core.util.world.WorldUtil;
-import addsynth.overpoweredmod.OverpoweredTechnology;
 import addsynth.overpoweredmod.assets.CreativeTabs;
 import addsynth.overpoweredmod.game.core.Laser;
 import addsynth.overpoweredmod.game.core.Machines;
@@ -13,7 +13,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
-import net.minecraft.world.item.Item;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -107,10 +107,10 @@ public final class LaserCannon extends Block implements SimpleWaterloggedBlock {
     return shape;
   }
 
-  public LaserCannon(final String name, final int color){
+  public LaserCannon(final ResourceLocation name, final int color){
     super(Block.Properties.of(Material.METAL, color >= 0 ? MaterialColor.STONE : MaterialColor.COLOR_GRAY)
       .sound(SoundType.METAL).strength(3.5f, 6.0f).dynamicShape());
-    OverpoweredTechnology.registry.register_block(this, name, new Item.Properties().tab(CreativeTabs.creative_tab));
+    RegistryUtil.register_block(this, name, CreativeTabs.creative_tab);
     this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(WATERLOGGED, false));
     this.color = color;
   }

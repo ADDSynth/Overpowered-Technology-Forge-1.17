@@ -1,6 +1,7 @@
 package addsynth.overpoweredmod.compatability.jei;
 
 import addsynth.overpoweredmod.OverpoweredTechnology;
+import addsynth.overpoweredmod.game.Names;
 import addsynth.overpoweredmod.game.core.Machines;
 import addsynth.overpoweredmod.machines.advanced_ore_refinery.OreRefineryRecipe;
 import mezz.jei.api.constants.VanillaTypes;
@@ -17,7 +18,7 @@ import net.minecraft.world.item.ItemStack;
 
 public final class AdvancedOreRefineryCategory  implements IRecipeCategory<OreRefineryRecipe> {
 
-  public static final ResourceLocation id = new ResourceLocation(OverpoweredTechnology.MOD_ID, "advanced_ore_refinery");
+  public static final ResourceLocation id = Names.ADVANCED_ORE_REFINERY;
   private final ResourceLocation gui_texture = new ResourceLocation(OverpoweredTechnology.MOD_ID, "textures/gui/gui_textures.png");
   private final IDrawable background;
   private final IDrawable icon;

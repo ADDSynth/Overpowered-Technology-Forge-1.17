@@ -16,21 +16,21 @@ public final class Tools {
     Debug.log_setup_info("Begin loading Tools class...");
   }
 
-  public static final Toolset overpowered_tools = new Toolset( // MAYBE: should I automatically assign tools their names? and just provide the base name? I should also pass the Mod ID to register translation keys as well.
-    new OverpoweredSword("celestial_sword"),
-    new OverpoweredShovel("celestial_shovel"),
-    new OverpoweredPickaxe("celestial_pickaxe"),
-    new OverpoweredAxe("celestial_axe"),
-    new OverpoweredHoe("celestial_hoe"),
+  public static final Toolset overpowered_tools = new Toolset(
+    new OverpoweredSword(),
+    new OverpoweredShovel(),
+    new OverpoweredPickaxe(),
+    new OverpoweredAxe(),
+    new OverpoweredHoe(),
     Init.celestial_gem
   );
   
   public static final Toolset void_toolset = new Toolset(
-    new NullSword("void_sword"),
-    new NullShovel("void_shovel"),
-    new NullPickaxe("void_pickaxe"),
-    new NullAxe("void_axe"),
-    new NullHoe("void_hoe"),
+    new NullSword(),
+    new NullShovel(),
+    new NullPickaxe(),
+    new NullAxe(),
+    new NullHoe(),
     Init.void_crystal
   );
 

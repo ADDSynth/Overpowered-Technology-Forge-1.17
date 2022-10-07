@@ -1,10 +1,10 @@
 package addsynth.overpoweredmod.blocks;
 
-import addsynth.overpoweredmod.OverpoweredTechnology;
+import addsynth.core.game.RegistryUtil;
 import addsynth.overpoweredmod.assets.CreativeTabs;
+import addsynth.overpoweredmod.game.Names;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
@@ -15,9 +15,9 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 public final class NullBlock extends Block {
 
-  public NullBlock(final String name){
+  public NullBlock(){
     super(Block.Properties.of(Material.AIR).noCollission());
-    OverpoweredTechnology.registry.register_block(this, name, new Item.Properties().tab(CreativeTabs.creative_tab));
+    RegistryUtil.register_block(this, Names.NULL_BLOCK, CreativeTabs.creative_tab);
   }
 
   @Override

@@ -45,14 +45,14 @@ public final class Registers {
 
     final IForgeRegistry<Item> game = event.getRegistry();
 
-    game.register(ADDSynthEnergy.registry.getItemBlock(EnergyBlocks.wire));
-    game.register(ADDSynthEnergy.registry.getItemBlock(EnergyBlocks.generator));
-    if(Config.energy_storage_container.get()){   game.register(ADDSynthEnergy.registry.getItemBlock(EnergyBlocks.energy_storage)); }
-    game.register(ADDSynthEnergy.registry.getItemBlock(EnergyBlocks.compressor));
-    if(Config.electric_furnace.get()){           game.register(ADDSynthEnergy.registry.getItemBlock(EnergyBlocks.electric_furnace)); }
-    game.register(ADDSynthEnergy.registry.getItemBlock(EnergyBlocks.circuit_fabricator));
-    if(Config.universal_energy_interface.get()){ game.register(ADDSynthEnergy.registry.getItemBlock(EnergyBlocks.universal_energy_machine)); }
-    game.register(ADDSynthEnergy.registry.getItemBlock(EnergyBlocks.energy_diagnostics_block));
+    game.register(RegistryUtil.getItemBlock(EnergyBlocks.wire));
+    game.register(RegistryUtil.getItemBlock(EnergyBlocks.generator));
+    if(Config.energy_storage_container.get()){   game.register(RegistryUtil.getItemBlock(EnergyBlocks.energy_storage)); }
+    game.register(RegistryUtil.getItemBlock(EnergyBlocks.compressor));
+    if(Config.electric_furnace.get()){           game.register(RegistryUtil.getItemBlock(EnergyBlocks.electric_furnace)); }
+    game.register(RegistryUtil.getItemBlock(EnergyBlocks.circuit_fabricator));
+    if(Config.universal_energy_interface.get()){ game.register(RegistryUtil.getItemBlock(EnergyBlocks.universal_energy_machine)); }
+    game.register(RegistryUtil.getItemBlock(EnergyBlocks.energy_diagnostics_block));
 
     game.register(EnergyItems.power_core);
     game.register(EnergyItems.advanced_power_core);

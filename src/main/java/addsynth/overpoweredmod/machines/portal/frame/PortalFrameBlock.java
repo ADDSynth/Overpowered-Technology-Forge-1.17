@@ -1,17 +1,17 @@
 package addsynth.overpoweredmod.machines.portal.frame;
 
 import javax.annotation.Nullable;
+import addsynth.core.game.RegistryUtil;
 import addsynth.core.util.game.MinecraftUtility;
 import addsynth.energy.lib.blocks.MachineBlock;
-import addsynth.overpoweredmod.OverpoweredTechnology;
 import addsynth.overpoweredmod.assets.CreativeTabs;
+import addsynth.overpoweredmod.game.Names;
 import addsynth.overpoweredmod.machines.data_cable.DataCable;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
@@ -21,9 +21,9 @@ import net.minecraftforge.fmllegacy.network.NetworkHooks;
 
 public final class PortalFrameBlock extends MachineBlock {
 
-  public PortalFrameBlock(final String name){
+  public PortalFrameBlock(){
     super(MaterialColor.WOOL);
-    OverpoweredTechnology.registry.register_block(this, name, new Item.Properties().tab(CreativeTabs.creative_tab));
+    RegistryUtil.register_block(this, Names.PORTAL_FRAME, CreativeTabs.creative_tab);
     DataCable.addAttachableBlock(this);
   }
 

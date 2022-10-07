@@ -1,8 +1,8 @@
 package addsynth.overpoweredmod.items.tools;
 
 import addsynth.core.game.items.ToolConstants;
-import addsynth.overpoweredmod.OverpoweredTechnology;
 import addsynth.overpoweredmod.assets.CreativeTabs;
+import addsynth.overpoweredmod.game.Names;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
@@ -10,9 +10,9 @@ import net.minecraft.world.item.SwordItem;
 
 public class NullSword extends SwordItem {
 
-  public NullSword(final String name){
+  public NullSword(){
     super(OverpoweredTiers.VOID, ToolConstants.sword_damage, ToolConstants.sword_speed, new Item.Properties().tab(CreativeTabs.tools_creative_tab));
-    OverpoweredTechnology.registry.register_item(this, name);
+    setRegistryName(Names.VOID_SWORD);
   }
 
   @Override

@@ -2,14 +2,14 @@ package addsynth.overpoweredmod.machines.fusion.control;
 
 import java.util.List;
 import javax.annotation.Nullable;
+import addsynth.core.game.RegistryUtil;
 import addsynth.energy.lib.blocks.MachineBlock;
-import addsynth.overpoweredmod.OverpoweredTechnology;
 import addsynth.overpoweredmod.assets.CreativeTabs;
+import addsynth.overpoweredmod.game.Names;
 import addsynth.overpoweredmod.machines.data_cable.DataCable;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.BlockGetter;
@@ -19,9 +19,9 @@ import net.minecraft.world.level.material.MaterialColor;
 
 public final class FusionControlUnit extends MachineBlock {
 
-  public FusionControlUnit(final String name){
+  public FusionControlUnit(){
     super(MaterialColor.WOOL);
-    OverpoweredTechnology.registry.register_block(this, name, new Item.Properties().tab(CreativeTabs.creative_tab));
+    RegistryUtil.register_block(this, Names.FUSION_CONTROL_UNIT, CreativeTabs.creative_tab);
     DataCable.addAttachableBlock(this);
   }
 

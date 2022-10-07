@@ -8,11 +8,12 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 
+@Deprecated
 public final class BlockAirNoDestroy extends AirBlock {
 
-  public BlockAirNoDestroy(String name) {
+  public BlockAirNoDestroy(){
     super(Block.Properties.of(Material.AIR));
-    // MAYBE: Registers.add(this, name, false);
+    // MAYBE: setRegistryName(new ResourceLocation(OverpoweredTechnology.MOD_ID, "air"));
   }
 
   @Override

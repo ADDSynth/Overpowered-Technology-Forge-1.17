@@ -3,7 +3,6 @@ package addsynth.material;
 import java.io.File;
 import java.util.stream.Stream;
 import addsynth.core.ADDSynthCore;
-import addsynth.core.game.RegistryUtil;
 import addsynth.core.util.CommonUtil;
 import addsynth.core.util.constants.DevStage;
 import addsynth.material.compat.MaterialsCompat;
@@ -37,7 +36,6 @@ public final class ADDSynthMaterials {
   public static final DevStage DEV_STAGE = DevStage.DEVELOPMENT;
 
   public static final Logger log = LogManager.getLogger(MOD_NAME);
-  public static final RegistryUtil registry = new RegistryUtil(MOD_ID);
   private static boolean config_loaded;
 
   public static final CreativeModeTab creative_tab = new CreativeModeTab(MOD_ID){

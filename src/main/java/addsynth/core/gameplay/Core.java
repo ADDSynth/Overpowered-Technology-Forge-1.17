@@ -11,9 +11,9 @@ public final class Core {
 
   public static final TestBlock        test_block              = new TestBlock();
 
-  public static final Block            caution_block           = new CautionBlock("caution_block");
-  public static final MusicBox         music_box               = new MusicBox("music_box");
-  public static final MusicSheet       music_sheet             = new MusicSheet("music_sheet");
+  public static final Block            caution_block           = new CautionBlock();
+  public static final MusicBox         music_box               = new MusicBox();
+  public static final MusicSheet       music_sheet             = new MusicSheet();
   public static final TeamManagerBlock team_manager            = new TeamManagerBlock();
 
 }

@@ -1,8 +1,8 @@
 package addsynth.overpoweredmod.items.tools;
 
 import addsynth.core.game.items.ToolConstants;
-import addsynth.overpoweredmod.OverpoweredTechnology;
 import addsynth.overpoweredmod.assets.CreativeTabs;
+import addsynth.overpoweredmod.game.Names;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.PickaxeItem;
@@ -10,10 +10,10 @@ import net.minecraft.world.item.Rarity;
 
 public class OverpoweredPickaxe extends PickaxeItem {
 
-  public OverpoweredPickaxe(final String name){
+  public OverpoweredPickaxe(){
     super(OverpoweredTiers.CELESTIAL_PICKAXE, ToolConstants.pickaxe_damage, ToolConstants.pickaxe_speed,
       new Item.Properties().tab(CreativeTabs.tools_creative_tab));
-    OverpoweredTechnology.registry.register_item(this, name);
+    setRegistryName(Names.CELESTIAL_PICKAXE);
   }
 
   @Override

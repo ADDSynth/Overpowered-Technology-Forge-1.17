@@ -1,8 +1,9 @@
 package addsynth.overpoweredmod.machines.black_hole;
 
 import javax.annotation.Nullable;
+import addsynth.core.game.RegistryUtil;
 import addsynth.core.game.blocks.TileEntityBlock;
-import addsynth.overpoweredmod.OverpoweredTechnology;
+import addsynth.overpoweredmod.game.Names;
 import addsynth.overpoweredmod.registers.Tiles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.LivingEntity;
@@ -22,11 +23,11 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 public final class BlackHoleBlock extends TileEntityBlock {
 
-  public BlackHoleBlock(final String name){
+  public BlackHoleBlock(){
     super(Block.Properties.of(Material.PORTAL, MaterialColor.COLOR_BLACK).noCollission());
     // setResistance(100.0f);
-    OverpoweredTechnology.registry.register_block(this, name);
-    OverpoweredTechnology.registry.register_ItemBlock(new BlackHoleItem(this));
+    setRegistryName(Names.BLACK_HOLE);
+    RegistryUtil.register_ItemBlock(new BlackHoleItem(this), Names.BLACK_HOLE);
   }
 
   @Override
