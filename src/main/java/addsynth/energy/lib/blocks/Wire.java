@@ -8,7 +8,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
@@ -57,15 +56,13 @@ public abstract class Wire extends TileEntityBlock implements SimpleWaterloggedB
   @Nullable
   @SuppressWarnings("resource")
   public final BlockState getStateForPlacement(final BlockPlaceContext context){
-    final Level world = context.getLevel();
-    final BlockPos position  = context.getClickedPos();
-    final boolean[] valid_sides = get_valid_sides(world, position);
-    return getState(defaultBlockState(), valid_sides, world, position);
+    return getState(defaultBlockState(), context.getLevel(), context.getClickedPos());
   }
 
   protected abstract boolean[] get_valid_sides(BlockGetter world, BlockPos pos);
 
-  private static final BlockState getState(final BlockState state, final boolean[] valid_sides, final LevelAccessor world, final BlockPos position){
+  private final BlockState getState(final BlockState state, final LevelAccessor world, final BlockPos position){
+    final boolean[] valid_sides = get_valid_sides(world, position);
     return state.setValue(DOWN,  valid_sides[DirectionConstant.DOWN ]).setValue(UP,    valid_sides[DirectionConstant.UP   ])
                 .setValue(NORTH, valid_sides[DirectionConstant.NORTH]).setValue(SOUTH, valid_sides[DirectionConstant.SOUTH])
                 .setValue(WEST,  valid_sides[DirectionConstant.WEST ]).setValue(EAST,  valid_sides[DirectionConstant.EAST ])
@@ -90,7 +87,7 @@ public abstract class Wire extends TileEntityBlock implements SimpleWaterloggedB
     if(state.getValue(WATERLOGGED)){
       world.getLiquidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(world));
     }
-    return getState(state, get_valid_sides(world, currentPos), world, currentPos);
+    return getState(state, world, currentPos);
   }
 
   @Override
