@@ -19,8 +19,8 @@ public final class Config {
   public static ForgeConfigSpec.BooleanValue         universal_energy_interface;
   public static ForgeConfigSpec.ConfigValue<Integer> universal_energy_interface_buffer;
 
-  private static final int DEFAULT_ENERGY_STORAGE_CAPACITY       = 1_000_000;
-  private static final int DEFAULT_ENERGY_STORAGE_MAX_EXTRACT        =   500;
+  private static final int DEFAULT_ENERGY_STORAGE_CAPACITY         = 200_000;
+  private static final int DEFAULT_ENERGY_STORAGE_MAX_EXTRACT        =   100;
   private static final int DEFAULT_UNIVERSAL_ENERGY_INTERFACE_BUFFER = 1_000;
 
   private static final Pair<Config, ForgeConfigSpec> SPEC_PAIR = new ForgeConfigSpec.Builder().configure(Config::new);

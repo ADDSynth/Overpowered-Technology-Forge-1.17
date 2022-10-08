@@ -29,6 +29,8 @@ CHANGED:
     have the Curios mod installed.
   The Energized Power Core and Nullified Power Core are now crafted using the
     Circuit Fabricator from ADDSynth Energy.
+  Changed Energy Storage Container's default maximum energy from 1,000,000 to 200,000.
+    - This is mainly because I plan to add different types of batteries in the future.
 FIXED:
   Fixed Unidentified Chainmail armor dropping as often as Gold armor.
   Optimized Lasers:
