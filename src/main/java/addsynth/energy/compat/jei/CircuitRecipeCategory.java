@@ -20,8 +20,7 @@ import mezz.jei.api.recipe.category.IRecipeCategory;
 public final class CircuitRecipeCategory implements IRecipeCategory<CircuitFabricatorRecipe> {
 
   public static final ResourceLocation id = Names.CIRCUIT_FABRICATOR;
-  // OPTIMIZE: Why aren't these static? I'm sure there's a good reason.
-  private final ResourceLocation gui_texture = new ResourceLocation(ADDSynthEnergy.MOD_ID, "textures/gui/circuit_fabricator.png");
+  private static final ResourceLocation gui_texture = new ResourceLocation(ADDSynthEnergy.MOD_ID, "textures/gui/circuit_fabricator.png");
   private final IDrawable background;
   private final IDrawable icon;
 

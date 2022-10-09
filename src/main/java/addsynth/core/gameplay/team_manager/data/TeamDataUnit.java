@@ -45,15 +45,15 @@ public final class TeamDataUnit {
   
   public static final TeamDataUnit decode(final FriendlyByteBuf data){
     final TeamDataUnit team = new TeamDataUnit();
-    team.name = NetworkUtil.readString(data);
-    team.display_name = new TextComponent(NetworkUtil.readString(data));
+    team.name = data.readUtf();
+    team.display_name = new TextComponent(data.readUtf());
     team.color = data.readByte();
     team.pvp = data.readBoolean();
     team.see_invisible_allys = data.readBoolean();
     team.nametag_option = data.readByte();
     team.death_message_option = data.readByte();
-    team.prefix = new TextComponent(NetworkUtil.readString(data));
-    team.suffix = new TextComponent(NetworkUtil.readString(data));
+    team.prefix = new TextComponent(data.readUtf());
+    team.suffix = new TextComponent(data.readUtf());
     team.players = new ArrayList<Component>();
     for(final Component t : NetworkUtil.readTextComponentArray(data)){
       team.players.add(t);

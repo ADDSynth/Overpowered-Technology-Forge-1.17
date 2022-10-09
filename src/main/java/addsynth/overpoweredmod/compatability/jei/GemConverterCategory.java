@@ -19,7 +19,7 @@ import mezz.jei.api.recipe.category.IRecipeCategory;
 public final class GemConverterCategory implements IRecipeCategory<GemConverterRecipe> {
 
   public static final ResourceLocation id = Names.GEM_CONVERTER;
-  private final ResourceLocation gui_texture = new ResourceLocation(OverpoweredTechnology.MOD_ID, "textures/gui/gui_textures.png");
+  private static final ResourceLocation gui_texture = new ResourceLocation(OverpoweredTechnology.MOD_ID, "textures/gui/gui_textures.png");
   private final IDrawable background;
   private final IDrawable icon;
 

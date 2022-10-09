@@ -15,14 +15,8 @@ public class NullHoe extends HoeItem {
   }
 
   @Override
-  public boolean canBeDepleted(){
-    return false;
-  }
-
-  @Override
-  public boolean isFoil(ItemStack stack)
-  {
-      return true;
+  public boolean isFoil(ItemStack stack){
+    return true;
   }
   
   @Override

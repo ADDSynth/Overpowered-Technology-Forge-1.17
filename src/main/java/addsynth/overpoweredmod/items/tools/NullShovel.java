@@ -16,13 +16,8 @@ public class NullShovel extends ShovelItem {
   }
 
   @Override
-  public boolean canBeDepleted(){
-    return false;
-  }
-
-  @Override
   public boolean isFoil(ItemStack stack){
-      return true;
+    return true;
   }
   
   @Override

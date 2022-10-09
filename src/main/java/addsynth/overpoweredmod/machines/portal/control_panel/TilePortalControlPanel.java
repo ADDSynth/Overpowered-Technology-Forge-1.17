@@ -197,7 +197,7 @@ public final class TilePortalControlPanel extends TileManualMachine implements I
       final int x = lowest_portal_frame.getX();
       final int y = lowest_portal_frame.getY();
       final int z = lowest_portal_frame.getZ();
-      if(check_portal_frame(x,  y,  z,level) && check_portal_frame(x+2,y,  z,level) && // OPTIMIZE this too
+      if(check_portal_frame(x,  y,  z,level) && check_portal_frame(x+2,y,  z,level) &&
          check_portal_frame(x+4,y,  z,level) && check_portal_frame(x,  y+2,z,level) &&
          check_portal_frame(x+4,y+2,z,level) && check_portal_frame(x  ,y+4,z,level) &&
          check_portal_frame(x+2,y+4,z,level) && check_portal_frame(x+4,y+4,z,level)){

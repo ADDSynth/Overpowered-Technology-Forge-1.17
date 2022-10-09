@@ -16,11 +16,6 @@ public class NullPickaxe extends PickaxeItem {
   }
 
   @Override
-  public boolean canBeDepleted(){
-    return false;
-  }
-
-  @Override
   public boolean isFoil(ItemStack stack){
     return true;
   }

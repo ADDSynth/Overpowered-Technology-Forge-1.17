@@ -24,6 +24,7 @@ import net.minecraft.world.level.block.state.BlockState;
 public final class TileFusionChamber extends TileStorageMachine implements MenuProvider {
 
   public static final Item[] input_filter = new Item[]{ModItems.fusion_core};
+  private static final SlotData[] slot_data = {new SlotData(input_filter, 1)};
 
   /** A standard TNT explosion is size of 4. */
   private static final float FUSION_CHAMBER_EXPLOSION_SIZE = 10.0f;
@@ -32,7 +33,7 @@ public final class TileFusionChamber extends TileStorageMachine implements MenuP
   private boolean on;
 
   public TileFusionChamber(BlockPos position, BlockState blockstate){
-    super(Tiles.FUSION_CHAMBER, position, blockstate, new SlotData[]{new SlotData(input_filter,1)}); // OPTIMIZE: This can be simplified too.
+    super(Tiles.FUSION_CHAMBER, position, blockstate, slot_data);
   }
 
   public final boolean has_fusion_core(){

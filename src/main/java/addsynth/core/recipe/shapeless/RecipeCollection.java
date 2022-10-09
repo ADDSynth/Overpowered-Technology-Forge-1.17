@@ -9,6 +9,7 @@ import addsynth.core.recipe.RecipeUtil;
 import addsynth.material.MaterialsUtil;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.SimpleContainer;
+import net.minecraft.world.entity.player.StackedContents;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -88,18 +89,30 @@ public class RecipeCollection <T extends AbstractRecipe> {
     return false;
   }
 
-  /** Returns the recipe output, or null if there is no matching recipe. */
+  /** Returns the recipe output, or ItemStack.EMPTY if there is no matching recipe. */
   @Nonnull
-  public final ItemStack getResult(final ItemStack input, final Level world){
-    return getResult(new ItemStack[] {input}, world);
+  public final ItemStack getResult(final ItemStack input){
+    return getResult(new ItemStack[] {input});
   }
 
   /** Returns the recipe output, or ItemStack.EMPTY if there is no matching recipe. */
   @Nonnull
-  public final ItemStack getResult(final ItemStack[] input, final Level world){
-    final SimpleContainer inventory = new SimpleContainer(input); // OPTIMIZE this by skipping converting the ItemStacks into an inventory, and using RecipeItemHelper directly. And remove world argument.
+  public final ItemStack getResult(final ItemStack[] input){
+    final StackedContents recipe_item_helper = new StackedContents();
+    int count;
+    
     for(final T recipe : recipes){
-      if(recipe.matches(inventory, world)){
+    
+      recipe_item_helper.clear();
+      count = 0;
+      
+      for(final ItemStack stack : input){
+        if(stack.isEmpty() == false){
+          count += 1;
+          recipe_item_helper.accountStack(stack);
+        }
+      }
+      if(count == recipe.getIngredients().size() && recipe_item_helper.canCraft(recipe, null)){
         return recipe.getResultItem().copy();
       }
     }

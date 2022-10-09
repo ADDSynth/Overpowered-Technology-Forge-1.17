@@ -15,13 +15,8 @@ public class NullAxe extends AxeItem {
   }
 
   @Override
-  public boolean canBeDepleted(){ // TODO: delete this, Null Tools can be used up
-    return false;
-  }
-
-  @Override
   public boolean isFoil(ItemStack stack){
-      return true;
+    return true;
   }
   
   @Override

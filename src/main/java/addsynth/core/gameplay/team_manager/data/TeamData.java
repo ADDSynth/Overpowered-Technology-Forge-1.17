@@ -166,9 +166,9 @@ public final class TeamData {
     for(i = 0; i < length; i++){
       objectives[i] = ObjectiveDataUnit.decode(data);
     }
-    display_slot_objective[0] = NetworkUtil.readString(data);
-    display_slot_objective[1] = NetworkUtil.readString(data);
-    display_slot_objective[2] = NetworkUtil.readString(data);
+    display_slot_objective[0] = data.readUtf();
+    display_slot_objective[1] = data.readUtf();
+    display_slot_objective[2] = data.readUtf();
     
     changed = true;
   }

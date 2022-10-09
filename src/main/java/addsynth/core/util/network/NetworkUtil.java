@@ -40,15 +40,6 @@ public final class NetworkUtil {
     return positions;
   }
 
-  public static final void writeString(final FriendlyByteBuf data, final String string){
-    data.writeUtf(string);
-  }
-
-  @Deprecated
-  public static final String readString(final FriendlyByteBuf data){ // OPTIMIZE: our own read/writeString functions are no longer needed for Minecraft 1.16
-    return data.readUtf();
-  }
-
   public static final void writeStringArray(final FriendlyByteBuf data, final String[] string_array){
     data.writeInt(string_array.length);
     for(final String s : string_array){
@@ -78,7 +69,7 @@ public final class NetworkUtil {
     final int length = data.readInt();
     final Component[] text_components = new Component[length];
     for(i = 0; i < length; i++){
-      text_components[i] = new TextComponent(readString(data));
+      text_components[i] = new TextComponent(data.readUtf());
     }
     return text_components;
   }

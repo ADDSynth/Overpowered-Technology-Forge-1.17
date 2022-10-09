@@ -49,7 +49,7 @@ public final class MachineInventory implements IInventoryResponder, IInventorySy
   /** Your TileEntity MUST call this in its constructor! */
   public final void setRecipeProvider(final RecipeCollection recipe_collection){
     resultProvider = (ItemStack[] input) -> {
-      return recipe_collection.getResult(input, null);
+      return recipe_collection.getResult(input);
     };
   }
 

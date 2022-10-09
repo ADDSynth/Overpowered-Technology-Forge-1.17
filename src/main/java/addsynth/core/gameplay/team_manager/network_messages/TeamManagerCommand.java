@@ -3,7 +3,6 @@ package addsynth.core.gameplay.team_manager.network_messages;
 import java.util.function.Supplier;
 import addsynth.core.gameplay.team_manager.data.TeamData;
 import addsynth.core.util.game.MessageUtil;
-import addsynth.core.util.network.NetworkUtil;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.TextComponent;
@@ -55,7 +54,7 @@ public final class TeamManagerCommand {
       data.writeUtf(message.team_name);
     }
     public static DeleteTeam decode(FriendlyByteBuf data){
-      return new DeleteTeam(NetworkUtil.readString(data));
+      return new DeleteTeam(data.readUtf());
     }
     @SuppressWarnings("resource")
     public static void handle(DeleteTeam message, Supplier<NetworkEvent.Context> context_supplier){
@@ -82,7 +81,7 @@ public final class TeamManagerCommand {
       data.writeUtf(message.objective_name);
     }
     public static DeleteObjective decode(FriendlyByteBuf data){
-      return new DeleteObjective(NetworkUtil.readString(data));
+      return new DeleteObjective(data.readUtf());
     }
     @SuppressWarnings("resource")
     public static void handle(DeleteObjective message, Supplier<NetworkEvent.Context> context_supplier){
@@ -112,7 +111,7 @@ public final class TeamManagerCommand {
       data.writeInt(message.display_slot);
     }
     public static SetDisplaySlot decode(FriendlyByteBuf data){
-      return new SetDisplaySlot(NetworkUtil.readString(data), data.readInt());
+      return new SetDisplaySlot(data.readUtf(), data.readInt());
     }
     @SuppressWarnings("resource")
     public static void handle(SetDisplaySlot message, Supplier<NetworkEvent.Context> context_supplier){
@@ -143,7 +142,7 @@ public final class TeamManagerCommand {
       data.writeUtf(message.team);
     }
     public static AddPlayerToTeam decode(FriendlyByteBuf data){
-      return new AddPlayerToTeam(NetworkUtil.readString(data), NetworkUtil.readString(data));
+      return new AddPlayerToTeam(data.readUtf(), data.readUtf());
     }
     @SuppressWarnings("resource")
     public static void handle(AddPlayerToTeam message, Supplier<NetworkEvent.Context> context_supplier){
@@ -174,7 +173,7 @@ public final class TeamManagerCommand {
       data.writeUtf(message.team_name);
     }
     public static RemovePlayerFromTeam decode(FriendlyByteBuf data){
-      return new RemovePlayerFromTeam(NetworkUtil.readString(data), NetworkUtil.readString(data));
+      return new RemovePlayerFromTeam(data.readUtf(), data.readUtf());
     }
     @SuppressWarnings("resource")
     public static void handle(RemovePlayerFromTeam message, Supplier<NetworkEvent.Context> context_supplier){
@@ -212,7 +211,7 @@ public final class TeamManagerCommand {
       data.writeInt(message.new_score_value);
     }
     public static SetScore decode(FriendlyByteBuf data){
-      return new SetScore(NetworkUtil.readString(data), NetworkUtil.readString(data), data.readInt());
+      return new SetScore(data.readUtf(), data.readUtf(), data.readInt());
     }
     @SuppressWarnings("resource")
     public static void handle(SetScore message, Supplier<NetworkEvent.Context> context_supplier){
@@ -246,7 +245,7 @@ public final class TeamManagerCommand {
       data.writeInt(message.score_to_add);
     }
     public static AddScore decode(FriendlyByteBuf data){
-      return new AddScore(NetworkUtil.readString(data), NetworkUtil.readString(data), data.readInt());
+      return new AddScore(data.readUtf(), data.readUtf(), data.readInt());
     }
     @SuppressWarnings("resource")
     public static void handle(AddScore message, Supplier<NetworkEvent.Context> context_supplier){
@@ -280,7 +279,7 @@ public final class TeamManagerCommand {
       data.writeInt(message.score_to_subtract);
     }
     public static SubtractScore decode(FriendlyByteBuf data){
-      return new SubtractScore(NetworkUtil.readString(data), NetworkUtil.readString(data), data.readInt());
+      return new SubtractScore(data.readUtf(), data.readUtf(), data.readInt());
     }
     @SuppressWarnings("resource")
     public static void handle(SubtractScore message, Supplier<NetworkEvent.Context> context_supplier){
@@ -311,7 +310,7 @@ public final class TeamManagerCommand {
       data.writeUtf(message.player);
     }
     public static ResetScore decode(FriendlyByteBuf data){
-      return new ResetScore(NetworkUtil.readString(data), NetworkUtil.readString(data));
+      return new ResetScore(data.readUtf(), data.readUtf());
     }
     @SuppressWarnings("resource")
     public static void handle(ResetScore message, Supplier<NetworkEvent.Context> context_supplier){
@@ -345,7 +344,7 @@ public final class TeamManagerCommand {
       data.writeUtf(message.criteria);
     }
     public static AddObjective decode(FriendlyByteBuf data){
-      return new AddObjective(NetworkUtil.readString(data), NetworkUtil.readString(data), NetworkUtil.readString(data));
+      return new AddObjective(data.readUtf(), data.readUtf(), data.readUtf());
     }
     @SuppressWarnings("resource")
     public static void handle(AddObjective message, Supplier<NetworkEvent.Context> context_supplier){
@@ -377,7 +376,7 @@ public final class TeamManagerCommand {
       data.writeUtf(message.criteria);
     }
     public static EditObjective decode(FriendlyByteBuf data){
-      return new EditObjective(NetworkUtil.readString(data), NetworkUtil.readString(data), NetworkUtil.readString(data));
+      return new EditObjective(data.readUtf(), data.readUtf(), data.readUtf());
     }
     @SuppressWarnings("resource")
     public static void handle(EditObjective message, Supplier<NetworkEvent.Context> context_supplier){
@@ -429,15 +428,15 @@ public final class TeamManagerCommand {
     }
     public static AddTeam decode(FriendlyByteBuf data){
       return new AddTeam(
-        NetworkUtil.readString(data),
-        NetworkUtil.readString(data),
+        data.readUtf(),
+        data.readUtf(),
         data.readBoolean(),
         data.readBoolean(),
         data.readInt(),
         data.readInt(),
         data.readInt(),
-        NetworkUtil.readString(data),
-        NetworkUtil.readString(data)
+        data.readUtf(),
+        data.readUtf()
       );
     }
     @SuppressWarnings("resource")
@@ -492,15 +491,15 @@ public final class TeamManagerCommand {
     }
     public static EditTeam decode(FriendlyByteBuf data){
       return new EditTeam(
-        NetworkUtil.readString(data),
-        NetworkUtil.readString(data),
+        data.readUtf(),
+        data.readUtf(),
         data.readBoolean(),
         data.readBoolean(),
         data.readInt(),
         data.readInt(),
         data.readInt(),
-        NetworkUtil.readString(data),
-        NetworkUtil.readString(data)
+        data.readUtf(),
+        data.readUtf()
       );
     }
     @SuppressWarnings("resource")
