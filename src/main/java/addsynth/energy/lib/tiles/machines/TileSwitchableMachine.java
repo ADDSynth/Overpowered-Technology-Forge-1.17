@@ -94,11 +94,11 @@ public abstract class TileSwitchableMachine extends TileAbstractWorkMachine impl
   }
 
   @Override
-  public final String getStatus(){
+  public String getStatus(){
     if(state == MachineState.POWERING_OFF || state == MachineState.POWERING_ON){
       return super.getStatus() + " " + StringUtil.toPercentageString(getPowerCycleTimePercentage(), RoundMode.Floor);
     }
-    return super.getStatus();
+    return state.getStatus();
   }
 
 }

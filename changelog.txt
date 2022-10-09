@@ -23,6 +23,7 @@ NEW:
   Portal spawn time can now be configured.
   Added an advancement that is awarded when you activate an Energy Suspension Bridge
     with the maximum possible length.
+  Added additional machine states to indicate output is full or machine isn't getting energy.
 CHANGED:
   Increased the chance to drop an Unidentified Ring when killing enemy mobs.
   The Dimensional Anchor is now registered as a Curios Charm, if you
@@ -31,6 +32,7 @@ CHANGED:
     Circuit Fabricator from ADDSynth Energy.
   Changed Energy Storage Container's default maximum energy from 1,000,000 to 200,000.
     - This is mainly because I plan to add different types of batteries in the future.
+  Machine State status message is now color-coded.
 FIXED:
   Fixed Unidentified Chainmail armor dropping as often as Gold armor.
   Optimized Lasers:

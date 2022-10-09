@@ -7,7 +7,11 @@ import net.minecraft.world.item.ItemStack;
 
 public final class JobSystem {
 
+  /** If resultProvider is null, the TileEntity wants to handle the logic itself. */
   public static final WorkJob[] getJobs(final ItemStack[] inventory, final Function<ItemStack[], ItemStack> result_provider){
+    if(result_provider == null){
+      return getJobs(inventory);
+    }
     final ArrayList<WorkJob> jobs = new ArrayList<>(64); // isn't being used right now, but ideally, this should stay in the order we add them, so use some kind of Queue.
     boolean exists;
     ItemStack result;

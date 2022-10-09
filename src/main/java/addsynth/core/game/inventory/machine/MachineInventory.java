@@ -25,6 +25,7 @@ public final class MachineInventory implements IInventoryResponder, IInventorySy
   private final WorkingInventory working_inventory;
   private final OutputInventory output_inventory;
   private boolean changed;
+  private boolean can_add;
   private boolean can_work;
   @Nonnull
   private WorkJob[] jobs = new WorkJob[0];
@@ -79,16 +80,27 @@ public final class MachineInventory implements IInventoryResponder, IInventorySy
    *  this once per tick, or when we need to recheck the input inventory. */
   @Override
   public final void recheck(){
+    // if resultProvider is null, the TileEntity wants to handle the logic itself.
+    jobs = JobSystem.getJobs(input_inventory.getItemStacks(), resultProvider);
+    can_add = set_can_add();
+    can_work = jobs.length > 0 && can_add;
+  }
+
+  private final boolean set_can_add(){
+    if(input_inventory.isEmpty()){
+      return true; // so status message can return IDLE instead of OUTPUT FULL
+    }
     if(resultProvider != null){
-      // !! We still need to get the result of the input, because we ALSO need to check if we can output it into the output slots!
-      jobs = JobSystem.getJobs(input_inventory.getItemStacks(), resultProvider);
-      can_work = jobs.length > 0 ? output_inventory.can_add(0, jobs[0].getResult()) : false;
+      if(jobs.length > 0){
+        // !! We still need to get the result of the input, because we ALSO need to check if we can output it into the output slots!
+        return output_inventory.can_add(0, jobs[0].getResult());
+      }
     }
-    else{
-      // TileEntity wants to handle the logic itself
-      jobs = JobSystem.getJobs(input_inventory.getItemStacks());
-      can_work = jobs.length > 0 && output_inventory.isEmpty();
-    }
+    return output_inventory.isEmpty();
+  }
+
+  public final boolean can_add_to_output(){
+    return can_add;
   }
 
   @Override
