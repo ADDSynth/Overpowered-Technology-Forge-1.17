@@ -4,6 +4,7 @@ import addsynth.core.gui.util.GuiUtil;
 import addsynth.core.util.StringUtil;
 import addsynth.energy.lib.gui.GuiEnergyBase;
 import addsynth.energy.lib.gui.widgets.AutoShutoffCheckbox;
+import addsynth.energy.lib.gui.widgets.EnergyProgressBar;
 import addsynth.energy.lib.gui.widgets.OnOffSwitch;
 import addsynth.overpoweredmod.OverpoweredTechnology;
 import addsynth.overpoweredmod.game.NetworkHandler;
@@ -31,25 +32,27 @@ public final class GuiLaserHousing extends GuiEnergyBase<TileLaserHousing, Conta
   private final String distance_text        = StringUtil.translate("gui.overpowered.laser_housing.distance");
 
   private EditBox text_box;
+  private final EnergyProgressBar energy_bar = new EnergyProgressBar(9, 79, 163, 16, 22, 162);
 
+  private static final int gui_height = 115;
   private static final int space = 4;
 
-  private static final int line_1 = 36;
-  private static final int text_box_width = 50;
-  private static final int text_box_height = 14;
-  private static final int text_box_x = 60; // 6 + fontRendererObj.getStringWidth("Distance") + space
-  private static final int text_box_y = line_1 + 8 + space;
-  private static final int line_2 = text_box_y + 3;
+  private static final int line_1 = 39;
+  private static final int text_box_width = 48;
+  private static final int text_box_height = 15;
+  private static final int text_box_x = 151;
+  private static final int text_box_y = line_1 -3;
+  private static final int line_2 = text_box_y + text_box_height + space;
 
-  private static final int line_3 = text_box_y + text_box_height + space;
-  private static final int line_4 = line_3 + 8 + space;
-  private static final int line_5 = line_4 + 8 + space;
+  private static final int line_3 = line_2 + 8 + space;
+  private static final int line_4 = 84; // line_3 (67) + 8 + 13
+  private static final int line_5 = gui_height - 14;
 
-  private static final int check_box_x = 70;
+  private static final int check_box_x = 62;
   private static final int check_box_y = 19;
 
   public GuiLaserHousing(final ContainerLaserHousing container, final Inventory player_inventory, final Component title){
-    super(176, 104, container, player_inventory, title, laser_machine_gui_texture);
+    super(208, gui_height, container, player_inventory, title, laser_machine_gui_texture);
   }
 
   private static final class LaserDistanceTextField extends EditBox {
@@ -119,22 +122,24 @@ public final class GuiLaserHousing extends GuiEnergyBase<TileLaserHousing, Conta
   public final void render(PoseStack matrix, final int mouseX, final int mouseY, final float partialTicks){
     super.render(matrix, mouseX, mouseY, partialTicks);
     if(text_box != null){ // See how Minecraft draws the TextBox on the Anvil screen.
-      text_box.render(matrix, mouseX, mouseY, partialTicks); // FIX: Text Box is not properly added to the list of widgets, that's why I have to render it manually.
+      text_box.render(matrix, mouseX, mouseY, partialTicks);
     }
   }
 
   @Override
   protected final void renderBg(PoseStack matrix, float partialTicks, int mouseX, int mouseY){
     guiUtil.draw_background_texture(matrix);
+    energy_bar.drawHorizontal(matrix, this, energy);
   }
 
   @Override
   protected final void renderLabels(PoseStack matrix, int mouseX, int mouseY){
     guiUtil.draw_title(matrix, this.title);
     GuiUtil.draw_text_left(matrix, lasers_text+": "+tile.number_of_lasers, 6, line_1);
-    GuiUtil.draw_text_left(matrix, distance_text+": ", 6, line_2);
+    GuiUtil.draw_text_right(matrix, distance_text+": ", text_box_x - 2, line_1);
     draw_energy_requirements(matrix);
-    draw_energy_difference(matrix, line_5);
+    GuiUtil.draw_text_right(matrix, energy_bar.getEnergyPercentage(), imageWidth - 6, line_4);
+    draw_energy_difference_center(matrix, line_5);
   }
 
   private final void draw_energy_requirements(final PoseStack matrix){
@@ -147,14 +152,14 @@ public final class GuiLaserHousing extends GuiEnergyBase<TileLaserHousing, Conta
     final int word_2_width = font.width(word_2);
     
     if(Math.max(word_1_width, word_2_width) == word_1_width){
-      GuiUtil.draw_text_left(matrix, word_1, 6, line_3);
-      GuiUtil.draw_text_left(matrix, current_energy_text+":", 6, line_4);
-      GuiUtil.draw_text_right(matrix, current_energy, 6 + word_1_width, line_4);
+      GuiUtil.draw_text_left(matrix, word_1, 6, line_2);
+      GuiUtil.draw_text_left(matrix, current_energy_text+":", 6, line_3);
+      GuiUtil.draw_text_right(matrix, current_energy, 6 + word_1_width, line_3);
     }
     else{
-      GuiUtil.draw_text_left(matrix, required_energy_text+":", 6, line_3);
-      GuiUtil.draw_text_right(matrix, required_energy, 6 + word_2_width, line_3);
-      GuiUtil.draw_text_left(matrix, word_2, 6, line_4);
+      GuiUtil.draw_text_left(matrix, required_energy_text+":", 6, line_2);
+      GuiUtil.draw_text_right(matrix, required_energy, 6 + word_2_width, line_2);
+      GuiUtil.draw_text_left(matrix, word_2, 6, line_3);
     }
   }
 
