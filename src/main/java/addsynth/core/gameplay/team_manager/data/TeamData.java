@@ -14,7 +14,7 @@ import addsynth.core.util.StringUtil;
 import addsynth.core.util.debug.DebugUtil;
 import addsynth.core.util.network.NetworkUtil;
 import addsynth.core.util.server.ServerUtils;
-import addsynth.core.util.time.TimeConstants;
+import addsynth.core.util.time.TickHandler;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.scores.Objective;
@@ -41,7 +41,7 @@ public final class TeamData {
   private static int number_of_objectives;
   private static Objective[] objective_array;
 
-  private static int tick_time;
+  private static final TickHandler tick_handler = new TickHandler();
 
   private static ArrayList<Component> non_team_players = new ArrayList<Component>();
   private static TeamDataUnit[] teams;
@@ -55,10 +55,8 @@ public final class TeamData {
   public static final void serverTick(final ServerTickEvent event){
     if(event.phase == Phase.END){
       DebugUtil.beginSection("Team Manager Data Update");
-      tick_time += 1; // TODO: Another spot to use a TickHandler.
-      if(tick_time >= TimeConstants.ticks_per_second){
+      if(tick_handler.tick()){
         sync();
-        tick_time = 0;
       }
       DebugUtil.endSection();
     }

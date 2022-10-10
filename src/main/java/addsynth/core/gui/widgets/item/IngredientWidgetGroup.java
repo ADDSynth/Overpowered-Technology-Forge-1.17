@@ -1,7 +1,7 @@
 package addsynth.core.gui.widgets.item;
 
 import addsynth.core.util.java.ArrayUtil;
-import addsynth.core.util.time.TimeConstants;
+import addsynth.core.util.time.TickHandler;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.world.item.ItemStack;
@@ -11,7 +11,7 @@ public final class IngredientWidgetGroup {
   private IngredientWidget[] ingredient;
   private int max_length;
   private int length;
-  private static int tick;
+  private static final TickHandler tick_handler = new TickHandler();
   private int i;
 
   public IngredientWidgetGroup(int max_number_of_ingredients){
@@ -32,12 +32,10 @@ public final class IngredientWidgetGroup {
   }
 
   public final void tick(){
-    tick += 1; // TODO: another spot for a tick handler.
-    if(tick >= TimeConstants.ticks_per_second){
+    if(tick_handler.tick()){
       for(i = 0; i < length; i++){
         ingredient[i].update();
       }
-      tick = 0;
     }
   }
 
@@ -50,10 +48,10 @@ public final class IngredientWidgetGroup {
     for(i = 0; i < length; i++){
       ingredient[i].setIngredient(recipe[i]);
     }
-    tick = 0;
+    tick_handler.reset();
   }
 
-  /*
+  /* DELETE? And also remove the ArrayUtil import.
   public final IngredientWidget get(final int index){
     if(ArrayUtil.isInsideBounds(index, ingredient.length)){
       return ingredient[index];

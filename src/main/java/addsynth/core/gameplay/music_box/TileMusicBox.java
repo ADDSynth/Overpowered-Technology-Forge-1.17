@@ -47,7 +47,7 @@ public final class TileMusicBox extends TileBase implements ITickingTileEntity {
       if(count == 0){
         music_grid.play_frame(level, worldPosition, playhead);
       }
-      count += 1; // TODO: Also use a Tick Handler here.
+      count++;
       if(count >= music_grid.getTempo()){
         count = 0;
         playhead += 1;
