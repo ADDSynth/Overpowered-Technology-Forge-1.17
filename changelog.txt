@@ -1,4 +1,9 @@
 v1.5 - TBD
+INFO:
+  I was originally planning to split the mod into 3 seperate files, starting with
+    this version. However, development is taking longer than expected, and that's
+    why I've decided to delay some of the things I was planning for this version
+    until the next major relase.
 NEW:
   Added new items.
   Added 5 new beam emitter type items.
@@ -24,6 +29,8 @@ NEW:
   Added an advancement that is awarded when you activate an Energy Suspension Bridge
     with the maximum possible length.
   Added additional machine states to indicate output is full or machine isn't getting energy.
+  Added a config option to ADDSynthCore that let's you change whether Project E EMC values
+    are defined by the developer, or calculated accurately.
 CHANGED:
   Increased the chance to drop an Unidentified Ring when killing enemy mobs.
   The Dimensional Anchor is now registered as a Curios Charm, if you
@@ -32,7 +39,7 @@ CHANGED:
     Circuit Fabricator from ADDSynth Energy.
   Changed Energy Storage Container's default maximum energy from 1,000,000 to 200,000.
     - This is mainly because I plan to add different types of batteries in the future.
-  Machine State status message is now color-coded.
+  Some Machine State status messages are now color-coded.
 FIXED:
   Fixed Unidentified Chainmail armor dropping as often as Gold armor.
   Optimized Lasers:
@@ -46,6 +53,18 @@ FIXED:
   Fixed Energy Suspension Bridge maximum length was actually 1 less than what is set
     in the configuration.
   Fix not loading MachineValues config correctly. Yay! Sorry about that!
+KNOWN PROBLEMS:
+  If you edit the configuration option that changes the Maximum Energy Suspension Bridge
+    Length to a lower value, while you have a bridge active in your world, then the
+    Energy Suspension Bridge will not recognize it, and won't be able to turn it off.
+    The energy bridge will exist as actual indestructable blocks in the world, not controlled
+    by the Energy Suspsension Bridge.
+    - I will try to fix this as soon as I can!
+  Passive Machines (Crystal Matter Generator and Plasma Generator) will continue consuming energy
+    even though the output slot is full and can't insert any more items.
+DEVELOPER ONLY:
+  Magic Infuser recipes are now defined by .json recipe files in a DataPack. You can define
+  your own recipes, as long as they are formatted properly.
 
 
 
