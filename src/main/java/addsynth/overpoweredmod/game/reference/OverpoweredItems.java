@@ -53,8 +53,10 @@ public final class OverpoweredItems {
   public static final Item[][] unidentified_armor = new Item[5][4];
   static {
     for(ArmorMaterial material : ArmorMaterial.values()){
-      for(EquipmentType type : EquipmentType.values()){
-        unidentified_armor[material.ordinal()][type.ordinal()] = new UnidentifiedItem(material, type);
+      if(material != ArmorMaterial.NETHERITE){
+        for(EquipmentType type : EquipmentType.values()){
+          unidentified_armor[material.ordinal()][type.ordinal()] = new UnidentifiedItem(material, type);
+        }
       }
     }
   }

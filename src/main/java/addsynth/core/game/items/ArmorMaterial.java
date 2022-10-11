@@ -6,7 +6,8 @@ public enum ArmorMaterial {
   CHAINMAIL("chainmail"),
   IRON("iron"),
   GOLD("gold"),
-  DIAMOND("diamond");
+  DIAMOND("diamond"),
+  NETHERITE("netherite");
 
   public final String name;
 

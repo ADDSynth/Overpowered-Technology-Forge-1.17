@@ -96,6 +96,14 @@ public final class ItemUtil {
       case BOOTS:      armor = Items.DIAMOND_BOOTS; break;
       }
       break;
+    case NETHERITE:
+      switch(equipment_type){
+      case HELMET:     armor = Items.NETHERITE_HELMET; break;
+      case CHESTPLATE: armor = Items.NETHERITE_CHESTPLATE; break;
+      case LEGGINGS:   armor = Items.NETHERITE_LEGGINGS; break;
+      case BOOTS:      armor = Items.NETHERITE_BOOTS; break;
+      }
+      break;
     }
     return armor;
   }
