@@ -40,7 +40,7 @@ public final class GemConverterCategory implements IRecipeCategory<GemConverterR
 
   @Override
   public Component getTitle(){
-    return new TranslatableComponent("block.overpowered.gem_converter");
+    return new TranslatableComponent(OverpoweredBlocks.gem_converter.getDescriptionId());
   }
 
   @Override

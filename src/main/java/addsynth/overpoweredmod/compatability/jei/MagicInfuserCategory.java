@@ -40,7 +40,7 @@ public final class MagicInfuserCategory implements IRecipeCategory<MagicInfuserR
 
   @Override
   public Component getTitle(){
-    return new TranslatableComponent("block.overpowered.magic_infuser");
+    return new TranslatableComponent(OverpoweredBlocks.magic_infuser.getDescriptionId());
   }
 
   @Override

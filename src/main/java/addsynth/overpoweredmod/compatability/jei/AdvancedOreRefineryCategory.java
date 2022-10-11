@@ -40,7 +40,7 @@ public final class AdvancedOreRefineryCategory  implements IRecipeCategory<OreRe
 
   @Override
   public Component getTitle(){
-    return new TranslatableComponent("block.overpowered.advanced_ore_refinery");
+    return new TranslatableComponent(OverpoweredBlocks.advanced_ore_refinery.getDescriptionId());
   }
 
   @Override

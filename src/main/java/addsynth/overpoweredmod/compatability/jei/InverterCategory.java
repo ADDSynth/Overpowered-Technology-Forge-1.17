@@ -40,7 +40,7 @@ public final class InverterCategory implements IRecipeCategory<InverterRecipe> {
 
   @Override
   public Component getTitle(){
-    return new TranslatableComponent("block.overpowered.inverter");
+    return new TranslatableComponent(OverpoweredBlocks.inverter.getDescriptionId());
   }
 
   @Override

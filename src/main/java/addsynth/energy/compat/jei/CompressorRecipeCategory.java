@@ -36,7 +36,7 @@ public final class CompressorRecipeCategory implements IRecipeCategory<Compresso
 
   @Override
   public Component getTitle(){
-    return new TranslatableComponent("block.addsynth_energy.compressor");
+    return new TranslatableComponent(EnergyBlocks.compressor.getDescriptionId());
   }
 
   @Override

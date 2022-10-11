@@ -43,7 +43,7 @@ public final class CircuitRecipeCategory implements IRecipeCategory<CircuitFabri
 
   @Override
   public Component getTitle(){
-    return new TranslatableComponent("block.addsynth_energy.circuit_fabricator");
+    return new TranslatableComponent(EnergyBlocks.circuit_fabricator.getDescriptionId());
   }
 
   @Override
