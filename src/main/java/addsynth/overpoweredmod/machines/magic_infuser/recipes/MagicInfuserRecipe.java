@@ -1,7 +1,7 @@
 package addsynth.overpoweredmod.machines.magic_infuser.recipes;
 
 import addsynth.core.recipe.shapeless.AbstractRecipe;
-import addsynth.overpoweredmod.game.core.Machines;
+import addsynth.overpoweredmod.game.reference.OverpoweredBlocks;
 import net.minecraft.core.NonNullList;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.EnchantedBookItem;
@@ -29,7 +29,7 @@ public final class MagicInfuserRecipe extends AbstractRecipe {
 
   @Override
   public ItemStack getToastSymbol(){
-    return new ItemStack(Machines.magic_infuser, 1);
+    return new ItemStack(OverpoweredBlocks.magic_infuser, 1);
   }
 
   @Override

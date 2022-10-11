@@ -2,7 +2,7 @@ package addsynth.overpoweredmod.blocks;
 
 import addsynth.core.game.RegistryUtil;
 import addsynth.overpoweredmod.assets.CreativeTabs;
-import addsynth.overpoweredmod.game.Names;
+import addsynth.overpoweredmod.game.reference.Names;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.BlockGetter;

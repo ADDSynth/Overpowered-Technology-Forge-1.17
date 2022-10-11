@@ -1,8 +1,8 @@
 package addsynth.overpoweredmod.compatability.jei;
 
 import addsynth.overpoweredmod.OverpoweredTechnology;
-import addsynth.overpoweredmod.game.Names;
-import addsynth.overpoweredmod.game.core.Machines;
+import addsynth.overpoweredmod.game.reference.Names;
+import addsynth.overpoweredmod.game.reference.OverpoweredBlocks;
 import addsynth.overpoweredmod.machines.magic_infuser.recipes.MagicInfuserRecipe;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
@@ -25,7 +25,7 @@ public final class MagicInfuserCategory implements IRecipeCategory<MagicInfuserR
 
   public MagicInfuserCategory(final IGuiHelper gui_helper){
     background = gui_helper.createDrawable(gui_texture, 0, 16, 92, 18);
-          icon = gui_helper.createDrawableIngredient(new ItemStack(Machines.magic_infuser));
+          icon = gui_helper.createDrawableIngredient(new ItemStack(OverpoweredBlocks.magic_infuser));
   }
 
   @Override

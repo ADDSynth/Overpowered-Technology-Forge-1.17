@@ -1,15 +1,15 @@
 package addsynth.overpoweredmod.items.tools;
 
-import addsynth.overpoweredmod.game.core.Init;
+import addsynth.overpoweredmod.game.reference.OverpoweredItems;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.Tiers;
 import net.minecraft.world.item.crafting.Ingredient;
 
 public enum OverpoweredTiers implements Tier {
-  CELESTIAL        (4, Tiers.DIAMOND.getUses()*3, 12.0f, 4.0f, 0, Ingredient.of(Init.celestial_gem)),
-  CELESTIAL_PICKAXE(4, Tiers.DIAMOND.getUses()*3, 16.0f, 4.0f, 0, Ingredient.of(Init.celestial_gem)),
-  CELESTIAL_SWORD  (4, 1000,                      12.0f, 4.0f, 0, Ingredient.of(Init.celestial_gem)),
-  VOID             (4, Tiers.DIAMOND.getUses()*5, 12.0f, 5.0f, 0, Ingredient.of(Init.void_crystal));
+  CELESTIAL        (4, Tiers.DIAMOND.getUses()*3, 12.0f, 4.0f, 0, Ingredient.of(OverpoweredItems.celestial_gem)),
+  CELESTIAL_PICKAXE(4, Tiers.DIAMOND.getUses()*3, 16.0f, 4.0f, 0, Ingredient.of(OverpoweredItems.celestial_gem)),
+  CELESTIAL_SWORD  (4, 1000,                      12.0f, 4.0f, 0, Ingredient.of(OverpoweredItems.celestial_gem)),
+  VOID             (4, Tiers.DIAMOND.getUses()*5, 12.0f, 5.0f, 0, Ingredient.of(OverpoweredItems.void_crystal));
   // MAYBE: Add Unimatter Tools, THESE will have Integer.MAX_VALUE durability.
 
   private final int harvestLevel;

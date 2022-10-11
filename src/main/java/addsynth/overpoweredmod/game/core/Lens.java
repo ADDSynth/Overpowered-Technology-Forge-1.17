@@ -1,8 +1,7 @@
 package addsynth.overpoweredmod.game.core;
 
 import addsynth.core.game.items.ItemUtil;
-import addsynth.overpoweredmod.Debug;
-import addsynth.overpoweredmod.game.Names;
+import addsynth.overpoweredmod.game.reference.Names;
 import addsynth.overpoweredmod.items.LensItem;
 import net.minecraft.ChatFormatting;
 import net.minecraft.resources.ResourceLocation;
@@ -20,10 +19,6 @@ public enum Lens {
   CYAN   (5, Names.CYAN_LENS,    ChatFormatting.AQUA,         MaterialColor.DIAMOND),
   BLUE   (6, Names.BLUE_LENS,    ChatFormatting.BLUE,         MaterialColor.LAPIS),
   MAGENTA(7, Names.MAGENTA_LENS, ChatFormatting.LIGHT_PURPLE, MaterialColor.COLOR_MAGENTA);
-
-  static {
-    Debug.log_setup_info("Begin loading Lens class...");
-  }
 
   public final LensItem lens;
   public final MaterialColor color;
@@ -60,8 +55,4 @@ public enum Lens {
     return -1;
   }
   
-  static {
-    Debug.log_setup_info("Finished loading Lens class.");
-  }
-
 }

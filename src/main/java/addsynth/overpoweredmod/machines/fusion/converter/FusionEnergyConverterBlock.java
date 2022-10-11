@@ -6,7 +6,7 @@ import addsynth.core.game.RegistryUtil;
 import addsynth.core.util.game.tileentity.TileEntityUtil;
 import addsynth.energy.lib.blocks.MachineBlock;
 import addsynth.overpoweredmod.assets.CreativeTabs;
-import addsynth.overpoweredmod.game.Names;
+import addsynth.overpoweredmod.game.reference.Names;
 import addsynth.overpoweredmod.machines.data_cable.DataCable;
 import addsynth.overpoweredmod.registers.Tiles;
 import net.minecraft.core.BlockPos;

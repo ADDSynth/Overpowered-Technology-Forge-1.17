@@ -11,7 +11,7 @@ import addsynth.overpoweredmod.assets.CustomStats;
 import addsynth.overpoweredmod.compatability.CompatabilityManager;
 import addsynth.overpoweredmod.compatability.curios.RingEffects;
 import addsynth.overpoweredmod.config.MachineValues;
-import addsynth.overpoweredmod.game.core.Tools;
+import addsynth.overpoweredmod.game.reference.OverpoweredItems;
 import addsynth.overpoweredmod.items.UnidentifiedItem;
 import addsynth.overpoweredmod.registers.Tiles;
 import net.minecraft.core.BlockPos;
@@ -30,14 +30,17 @@ import net.minecraft.world.level.block.state.BlockState;
 public final class TileIdentifier extends TileStandardWorkMachine implements MenuProvider {
 
   private static final Item[] unidentified_armor = ArrayUtil.combine_arrays(
-    Tools.unidentified_armor[0],
-    Tools.unidentified_armor[1],
-    Tools.unidentified_armor[2],
-    Tools.unidentified_armor[3],
-    Tools.unidentified_armor[4]
+    OverpoweredItems.unidentified_armor[0],
+    OverpoweredItems.unidentified_armor[1],
+    OverpoweredItems.unidentified_armor[2],
+    OverpoweredItems.unidentified_armor[3],
+    OverpoweredItems.unidentified_armor[4]
   );
+  private static final Item[] rings = {
+    OverpoweredItems.ring_0, OverpoweredItems.ring_1, OverpoweredItems.ring_2, OverpoweredItems.ring_3
+  };
   public static final Item[] input_filter = CompatabilityManager.are_rings_enabled() ?
-    ArrayUtil.combine_arrays(unidentified_armor, Tools.ring) : unidentified_armor;
+    ArrayUtil.combine_arrays(unidentified_armor, rings) : unidentified_armor;
 
   public TileIdentifier(BlockPos position, BlockState blockstate){
     super(Tiles.IDENTIFIER, position, blockstate, 1, input_filter, 1, MachineValues.identifier);
@@ -59,9 +62,17 @@ public final class TileIdentifier extends TileStandardWorkMachine implements Men
         final UnidentifiedItem item = (UnidentifiedItem)(input.getItem());
         if(item.ring_id >= 0){
           // Identify Ring
-          final ItemStack stack = new ItemStack(Tools.magic_ring[item.ring_id]);
-          RingEffects.set_ring_effects(stack);
-          inventory.getOutputInventory().setStackInSlot(0, stack);
+          final ItemStack stack = switch(item.ring_id){ // New switch expression, standardized in Java 14
+            case 0 -> new ItemStack(OverpoweredItems.magic_ring_0);
+            case 1 -> new ItemStack(OverpoweredItems.magic_ring_1);
+            case 2 -> new ItemStack(OverpoweredItems.magic_ring_2);
+            case 3 -> new ItemStack(OverpoweredItems.magic_ring_3);
+            default -> null;
+          };
+          if(stack != null){
+            RingEffects.set_ring_effects(stack);
+            inventory.getOutputInventory().setStackInSlot(0, stack);
+          }
         }
         else{
           // Identify Armor

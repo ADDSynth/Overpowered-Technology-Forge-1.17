@@ -1,7 +1,7 @@
 package addsynth.overpoweredmod.machines.inverter;
 
 import java.util.ArrayList;
-import addsynth.overpoweredmod.game.core.Init;
+import addsynth.overpoweredmod.game.reference.OverpoweredItems;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
@@ -17,8 +17,8 @@ public final class InverterRecipe {
 
   public static final ArrayList<InverterRecipe> get_recipes(){
     final ArrayList<InverterRecipe> list = new ArrayList<>(2);
-    list.add(new InverterRecipe(Init.energy_crystal, Init.void_crystal));
-    list.add(new InverterRecipe(Init.void_crystal, Init.energy_crystal));
+    list.add(new InverterRecipe(OverpoweredItems.energy_crystal, OverpoweredItems.void_crystal));
+    list.add(new InverterRecipe(OverpoweredItems.void_crystal, OverpoweredItems.energy_crystal));
     return list;
   }
 

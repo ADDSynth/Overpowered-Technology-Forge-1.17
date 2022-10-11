@@ -1,12 +1,11 @@
 package addsynth.overpoweredmod.assets;
 
 import addsynth.core.game.items.ArmorMaterial;
-import addsynth.overpoweredmod.Debug;
 import addsynth.overpoweredmod.OverpoweredTechnology;
 import addsynth.overpoweredmod.compatability.CompatabilityManager;
 import addsynth.overpoweredmod.config.Config;
 import addsynth.overpoweredmod.config.Features;
-import addsynth.overpoweredmod.game.core.Tools;
+import addsynth.overpoweredmod.game.reference.OverpoweredItems;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.predicates.LootItemKilledByPlayerCondition;
@@ -22,10 +21,6 @@ public final class LootTables {
 // https://minecraft.gamepedia.com/Loot_table
 // https://minecraft.gamepedia.com/Status_effect#Luck
 // https://github.com/Vazkii/Botania/blob/master/src/main/java/vazkii/botania/common/core/loot/LootHandler.java
-
-  static {
-    Debug.log_setup_info("LootTables class was loaded.");
-  }
 
   private static final float default_spawn_chance = 1.0f / 100.0f; // before, it was just with rings and it was 1 / 15 chance.
   private static final float spawn_chance = default_spawn_chance;
@@ -60,31 +55,31 @@ public final class LootTables {
   
   private static final LootPool build_loot_pool(){
     final LootPool.Builder loot = new LootPool.Builder();
-    loot.add(LootItem.lootTableItem(Tools.unidentified_armor[ArmorMaterial.LEATHER.ordinal()][0]).setWeight(leather_weight));
-    loot.add(LootItem.lootTableItem(Tools.unidentified_armor[ArmorMaterial.LEATHER.ordinal()][1]).setWeight(leather_weight));
-    loot.add(LootItem.lootTableItem(Tools.unidentified_armor[ArmorMaterial.LEATHER.ordinal()][2]).setWeight(leather_weight));
-    loot.add(LootItem.lootTableItem(Tools.unidentified_armor[ArmorMaterial.LEATHER.ordinal()][3]).setWeight(leather_weight));
-    loot.add(LootItem.lootTableItem(Tools.unidentified_armor[ArmorMaterial.GOLD.ordinal()][0]).setWeight(gold_weight));
-    loot.add(LootItem.lootTableItem(Tools.unidentified_armor[ArmorMaterial.GOLD.ordinal()][1]).setWeight(gold_weight));
-    loot.add(LootItem.lootTableItem(Tools.unidentified_armor[ArmorMaterial.GOLD.ordinal()][2]).setWeight(gold_weight));
-    loot.add(LootItem.lootTableItem(Tools.unidentified_armor[ArmorMaterial.GOLD.ordinal()][3]).setWeight(gold_weight));
-    loot.add(LootItem.lootTableItem(Tools.unidentified_armor[ArmorMaterial.CHAINMAIL.ordinal()][0]).setWeight(chainmail_weight));
-    loot.add(LootItem.lootTableItem(Tools.unidentified_armor[ArmorMaterial.CHAINMAIL.ordinal()][1]).setWeight(chainmail_weight));
-    loot.add(LootItem.lootTableItem(Tools.unidentified_armor[ArmorMaterial.CHAINMAIL.ordinal()][2]).setWeight(chainmail_weight));
-    loot.add(LootItem.lootTableItem(Tools.unidentified_armor[ArmorMaterial.CHAINMAIL.ordinal()][3]).setWeight(chainmail_weight));
-    loot.add(LootItem.lootTableItem(Tools.unidentified_armor[ArmorMaterial.IRON.ordinal()][0]).setWeight(iron_weight));
-    loot.add(LootItem.lootTableItem(Tools.unidentified_armor[ArmorMaterial.IRON.ordinal()][1]).setWeight(iron_weight));
-    loot.add(LootItem.lootTableItem(Tools.unidentified_armor[ArmorMaterial.IRON.ordinal()][2]).setWeight(iron_weight));
-    loot.add(LootItem.lootTableItem(Tools.unidentified_armor[ArmorMaterial.IRON.ordinal()][3]).setWeight(iron_weight));
-    loot.add(LootItem.lootTableItem(Tools.unidentified_armor[ArmorMaterial.DIAMOND.ordinal()][0]).setWeight(diamond_weight));
-    loot.add(LootItem.lootTableItem(Tools.unidentified_armor[ArmorMaterial.DIAMOND.ordinal()][1]).setWeight(diamond_weight));
-    loot.add(LootItem.lootTableItem(Tools.unidentified_armor[ArmorMaterial.DIAMOND.ordinal()][2]).setWeight(diamond_weight));
-    loot.add(LootItem.lootTableItem(Tools.unidentified_armor[ArmorMaterial.DIAMOND.ordinal()][3]).setWeight(diamond_weight));
+    loot.add(LootItem.lootTableItem(OverpoweredItems.unidentified_armor[ArmorMaterial.LEATHER.ordinal()][0]).setWeight(leather_weight));
+    loot.add(LootItem.lootTableItem(OverpoweredItems.unidentified_armor[ArmorMaterial.LEATHER.ordinal()][1]).setWeight(leather_weight));
+    loot.add(LootItem.lootTableItem(OverpoweredItems.unidentified_armor[ArmorMaterial.LEATHER.ordinal()][2]).setWeight(leather_weight));
+    loot.add(LootItem.lootTableItem(OverpoweredItems.unidentified_armor[ArmorMaterial.LEATHER.ordinal()][3]).setWeight(leather_weight));
+    loot.add(LootItem.lootTableItem(OverpoweredItems.unidentified_armor[ArmorMaterial.GOLD.ordinal()][0]).setWeight(gold_weight));
+    loot.add(LootItem.lootTableItem(OverpoweredItems.unidentified_armor[ArmorMaterial.GOLD.ordinal()][1]).setWeight(gold_weight));
+    loot.add(LootItem.lootTableItem(OverpoweredItems.unidentified_armor[ArmorMaterial.GOLD.ordinal()][2]).setWeight(gold_weight));
+    loot.add(LootItem.lootTableItem(OverpoweredItems.unidentified_armor[ArmorMaterial.GOLD.ordinal()][3]).setWeight(gold_weight));
+    loot.add(LootItem.lootTableItem(OverpoweredItems.unidentified_armor[ArmorMaterial.CHAINMAIL.ordinal()][0]).setWeight(chainmail_weight));
+    loot.add(LootItem.lootTableItem(OverpoweredItems.unidentified_armor[ArmorMaterial.CHAINMAIL.ordinal()][1]).setWeight(chainmail_weight));
+    loot.add(LootItem.lootTableItem(OverpoweredItems.unidentified_armor[ArmorMaterial.CHAINMAIL.ordinal()][2]).setWeight(chainmail_weight));
+    loot.add(LootItem.lootTableItem(OverpoweredItems.unidentified_armor[ArmorMaterial.CHAINMAIL.ordinal()][3]).setWeight(chainmail_weight));
+    loot.add(LootItem.lootTableItem(OverpoweredItems.unidentified_armor[ArmorMaterial.IRON.ordinal()][0]).setWeight(iron_weight));
+    loot.add(LootItem.lootTableItem(OverpoweredItems.unidentified_armor[ArmorMaterial.IRON.ordinal()][1]).setWeight(iron_weight));
+    loot.add(LootItem.lootTableItem(OverpoweredItems.unidentified_armor[ArmorMaterial.IRON.ordinal()][2]).setWeight(iron_weight));
+    loot.add(LootItem.lootTableItem(OverpoweredItems.unidentified_armor[ArmorMaterial.IRON.ordinal()][3]).setWeight(iron_weight));
+    loot.add(LootItem.lootTableItem(OverpoweredItems.unidentified_armor[ArmorMaterial.DIAMOND.ordinal()][0]).setWeight(diamond_weight));
+    loot.add(LootItem.lootTableItem(OverpoweredItems.unidentified_armor[ArmorMaterial.DIAMOND.ordinal()][1]).setWeight(diamond_weight));
+    loot.add(LootItem.lootTableItem(OverpoweredItems.unidentified_armor[ArmorMaterial.DIAMOND.ordinal()][2]).setWeight(diamond_weight));
+    loot.add(LootItem.lootTableItem(OverpoweredItems.unidentified_armor[ArmorMaterial.DIAMOND.ordinal()][3]).setWeight(diamond_weight));
     if(CompatabilityManager.are_rings_enabled()){
-      loot.add(LootItem.lootTableItem(Tools.ring[0]).setWeight(ring_weight));
-      loot.add(LootItem.lootTableItem(Tools.ring[1]).setWeight(ring_weight));
-      loot.add(LootItem.lootTableItem(Tools.ring[2]).setWeight(ring_weight));
-      loot.add(LootItem.lootTableItem(Tools.ring[3]).setWeight(ring_weight));
+      loot.add(LootItem.lootTableItem(OverpoweredItems.ring_0).setWeight(ring_weight));
+      loot.add(LootItem.lootTableItem(OverpoweredItems.ring_1).setWeight(ring_weight));
+      loot.add(LootItem.lootTableItem(OverpoweredItems.ring_2).setWeight(ring_weight));
+      loot.add(LootItem.lootTableItem(OverpoweredItems.ring_3).setWeight(ring_weight));
     }
     loot.when(LootItemKilledByPlayerCondition.killedByPlayer());
     loot.when(LootItemRandomChanceCondition.randomChance(spawn_chance));

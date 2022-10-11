@@ -1,6 +1,5 @@
 package addsynth.overpoweredmod.game;
 
-import addsynth.overpoweredmod.Debug;
 import addsynth.overpoweredmod.OverpoweredTechnology;
 import addsynth.overpoweredmod.machines.gem_converter.CycleGemConverterMessage;
 import addsynth.overpoweredmod.machines.laser.network_messages.LaserClientSyncMessage;
@@ -25,8 +24,6 @@ public final class NetworkHandler {
   );
 
   public static final void registerMessages(){
-    Debug.log_setup_info("Begin Registering Network Messages...");
-
     INSTANCE.registerMessage(0,
       CycleGemConverterMessage.class,
       CycleGemConverterMessage::encode,
@@ -70,8 +67,6 @@ public final class NetworkHandler {
       RotateBridgeMessage::decode,
       RotateBridgeMessage::handle
     );
-
-    Debug.log_setup_info("Finished Registering Network Messages.");
   }
 
 }

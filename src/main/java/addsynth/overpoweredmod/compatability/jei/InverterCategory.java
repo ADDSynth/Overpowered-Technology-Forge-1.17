@@ -1,8 +1,8 @@
 package addsynth.overpoweredmod.compatability.jei;
 
 import addsynth.overpoweredmod.OverpoweredTechnology;
-import addsynth.overpoweredmod.game.Names;
-import addsynth.overpoweredmod.game.core.Machines;
+import addsynth.overpoweredmod.game.reference.Names;
+import addsynth.overpoweredmod.game.reference.OverpoweredBlocks;
 import addsynth.overpoweredmod.machines.inverter.InverterRecipe;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
@@ -25,7 +25,7 @@ public final class InverterCategory implements IRecipeCategory<InverterRecipe> {
 
   public InverterCategory(final IGuiHelper gui_helper){
     background = gui_helper.createDrawable(gui_texture, 18, 16, 74, 18);
-    icon = gui_helper.createDrawableIngredient(new ItemStack(Machines.inverter));
+    icon = gui_helper.createDrawableIngredient(new ItemStack(OverpoweredBlocks.inverter));
   }
 
   @Override

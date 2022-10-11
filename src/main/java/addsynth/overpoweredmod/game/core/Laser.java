@@ -1,7 +1,6 @@
 package addsynth.overpoweredmod.game.core;
 
-import addsynth.overpoweredmod.Debug;
-import addsynth.overpoweredmod.game.Names;
+import addsynth.overpoweredmod.game.reference.Names;
 import addsynth.overpoweredmod.machines.laser.beam.LaserBeam;
 import addsynth.overpoweredmod.machines.laser.cannon.LaserCannon;
 import net.minecraft.world.level.block.Block;
@@ -17,10 +16,6 @@ public enum Laser {
   BLUE   (6),
   MAGENTA(7);
 
-  static {
-    Debug.log_setup_info("Begin loading Lasers class...");
-  }
-
   public final LaserCannon cannon;
   public final Block beam;
 
@@ -31,10 +26,6 @@ public enum Laser {
   private Laser(final int color){
     this.cannon = new LaserCannon(Names.LASER[color], color);
     this.beam   = new LaserBeam(Names.LASER_BEAM[color]);
-  }
-
-  static {
-    Debug.log_setup_info("Finished loading Lasers class.");
   }
 
 }

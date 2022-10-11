@@ -5,8 +5,8 @@ import addsynth.core.game.inventory.SlotData;
 import addsynth.core.game.tiles.TileStorageMachine;
 import addsynth.core.util.game.data.AdvancementUtil;
 import addsynth.overpoweredmod.assets.CustomAdvancements;
-import addsynth.overpoweredmod.game.core.Machines;
-import addsynth.overpoweredmod.game.core.ModItems;
+import addsynth.overpoweredmod.game.reference.OverpoweredBlocks;
+import addsynth.overpoweredmod.game.reference.OverpoweredItems;
 import addsynth.overpoweredmod.registers.Tiles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -23,7 +23,7 @@ import net.minecraft.world.level.block.state.BlockState;
 
 public final class TileFusionChamber extends TileStorageMachine implements MenuProvider {
 
-  public static final Item[] input_filter = new Item[]{ModItems.fusion_core};
+  public static final Item[] input_filter = new Item[]{OverpoweredItems.fusion_core};
   private static final SlotData[] slot_data = {new SlotData(input_filter, 1)};
 
   /** A standard TNT explosion is size of 4. */
@@ -58,7 +58,7 @@ public final class TileFusionChamber extends TileStorageMachine implements MenuP
           if(state){
             // TODO: DO NOT INSERT a Laser Effect block in the world! Replace this with some sort of
             //       OpenGL special effects that doesn't touch the world and immune to player interference.
-            level.setBlock(position, Machines.fusion_control_laser_beam.defaultBlockState(), 3);
+            level.setBlock(position, OverpoweredBlocks.fusion_control_laser_beam.defaultBlockState(), 3);
             // TEST why would we need block updates for this? Can this just be set to 2 for Client updates?
             AdvancementUtil.grantAdvancement(player_name, level, CustomAdvancements.FUSION_ENERGY);
           }

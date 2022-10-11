@@ -1,14 +1,9 @@
 package addsynth.overpoweredmod.config;
 
 import org.apache.commons.lang3.tuple.Pair;
-import addsynth.overpoweredmod.Debug;
 import net.minecraftforge.common.ForgeConfigSpec;
 
 public final class Features {
-
-  static {
-    Debug.log_setup_info("Features class was loaded.");
-  }
 
   public static ForgeConfigSpec.BooleanValue celestial_tools;
   public static ForgeConfigSpec.BooleanValue void_tools;

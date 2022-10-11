@@ -1,8 +1,8 @@
 package addsynth.overpoweredmod.compatability.jei;
 
 import addsynth.overpoweredmod.OverpoweredTechnology;
-import addsynth.overpoweredmod.game.Names;
-import addsynth.overpoweredmod.game.core.Machines;
+import addsynth.overpoweredmod.game.reference.Names;
+import addsynth.overpoweredmod.game.reference.OverpoweredBlocks;
 import addsynth.overpoweredmod.machines.gem_converter.GemConverterRecipe;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
@@ -25,7 +25,7 @@ public final class GemConverterCategory implements IRecipeCategory<GemConverterR
 
   public GemConverterCategory(final IGuiHelper gui_helper){
     background = gui_helper.createDrawable(gui_texture, 18, 16, 74, 18);
-    icon = gui_helper.createDrawableIngredient(new ItemStack(Machines.gem_converter));
+    icon = gui_helper.createDrawableIngredient(new ItemStack(OverpoweredBlocks.gem_converter));
   }
 
   @Override

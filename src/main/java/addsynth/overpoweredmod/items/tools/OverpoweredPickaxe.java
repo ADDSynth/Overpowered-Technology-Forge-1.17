@@ -2,7 +2,7 @@ package addsynth.overpoweredmod.items.tools;
 
 import addsynth.core.game.items.ToolConstants;
 import addsynth.overpoweredmod.assets.CreativeTabs;
-import addsynth.overpoweredmod.game.Names;
+import addsynth.overpoweredmod.game.reference.Names;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.PickaxeItem;

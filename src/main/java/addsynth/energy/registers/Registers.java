@@ -2,7 +2,6 @@ package addsynth.energy.registers;
 
 import addsynth.core.game.RegistryUtil;
 import addsynth.energy.ADDSynthEnergy;
-import addsynth.energy.Debug;
 import addsynth.energy.gameplay.Config;
 import addsynth.energy.gameplay.EnergyBlocks;
 import addsynth.energy.gameplay.EnergyItems;
@@ -23,8 +22,6 @@ public final class Registers {
 
   @SubscribeEvent
   public static final void registerBlocks(final RegistryEvent.Register<Block> event){
-    Debug.log_setup_info("Begin registering blocks...");
-
     final IForgeRegistry<Block> game = event.getRegistry();
 
     game.register(EnergyBlocks.wire);
@@ -35,14 +32,10 @@ public final class Registers {
     game.register(EnergyBlocks.circuit_fabricator);
     if(Config.universal_energy_interface.get()){ game.register(EnergyBlocks.universal_energy_machine); }
     game.register(EnergyBlocks.energy_diagnostics_block);
-    
-    Debug.log_setup_info("Done registering blocks.");
   }
 
   @SubscribeEvent
   public static final void registerItems(final RegistryEvent.Register<Item> event){
-    Debug.log_setup_info("Begin registering items...");
-
     final IForgeRegistry<Item> game = event.getRegistry();
 
     game.register(RegistryUtil.getItemBlock(EnergyBlocks.wire));
@@ -65,13 +58,10 @@ public final class Registers {
     game.register(EnergyItems.circuit_tier_6);
     game.register(EnergyItems.circuit_tier_7);
     game.register(EnergyItems.circuit_tier_8);
-
-    Debug.log_setup_info("Done registering items.");
   }
 
   @SubscribeEvent
   public static final void registerTileEntities(final RegistryEvent.Register<BlockEntityType<?>> event){
-    Debug.log_setup_info("Begin registering tile entities...");
     final IForgeRegistry<BlockEntityType<?>> game = event.getRegistry();
     RegistryUtil.register(game, Tiles.ENERGY_WIRE,                Names.ENERGY_WIRE);
     RegistryUtil.register(game, Tiles.GENERATOR,                  Names.GENERATOR);
@@ -81,12 +71,10 @@ public final class Registers {
     RegistryUtil.register(game, Tiles.CIRCUIT_FABRICATOR,         Names.CIRCUIT_FABRICATOR);
     RegistryUtil.register(game, Tiles.UNIVERSAL_ENERGY_INTERFACE, Names.UNIVERSAL_ENERGY_INTERFACE);
     RegistryUtil.register(game, Tiles.ENERGY_DIAGNOSTICS_BLOCK,   Names.ENERGY_DIAGNOSTICS_BLOCK);
-    Debug.log_setup_info("Done registering tile entities.");
   }
 
   @SubscribeEvent
   public static final void registerContainers(final RegistryEvent.Register<MenuType<?>> event){
-    Debug.log_setup_info("Begin registering containers...");
     final IForgeRegistry<MenuType<?>> game = event.getRegistry();
     RegistryUtil.register(game, Containers.GENERATOR,                  Names.GENERATOR);
     RegistryUtil.register(game, Containers.ENERGY_STORAGE_CONTAINER,   Names.ENERGY_STORAGE);
@@ -94,16 +82,13 @@ public final class Registers {
     RegistryUtil.register(game, Containers.ELECTRIC_FURNACE,           Names.ELECTRIC_FURNACE);
     RegistryUtil.register(game, Containers.CIRCUIT_FABRICATOR,         Names.CIRCUIT_FABRICATOR);
     RegistryUtil.register(game, Containers.UNIVERSAL_ENERGY_INTERFACE, Names.UNIVERSAL_ENERGY_INTERFACE);
-    Debug.log_setup_info("Done registering containers.");
   }
 
   @SubscribeEvent
   public static final void registerRecipeSerializers(final RegistryEvent.Register<RecipeSerializer<?>> event){
-    Debug.log_setup_info("Begin registering recipe serializers...");
     final IForgeRegistry<RecipeSerializer<?>> game = event.getRegistry();
     RegistryUtil.register(game,        CompressorRecipes.INSTANCE.serializer, Names.COMPRESSOR);
     RegistryUtil.register(game, CircuitFabricatorRecipes.INSTANCE.serializer, Names.CIRCUIT_FABRICATOR);
-    Debug.log_setup_info("Done registering recipe serializers.");
   }
 
 }

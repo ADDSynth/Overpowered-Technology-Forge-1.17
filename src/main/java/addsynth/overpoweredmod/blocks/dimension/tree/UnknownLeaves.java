@@ -1,6 +1,6 @@
 package addsynth.overpoweredmod.blocks.dimension.tree;
 
-import addsynth.overpoweredmod.game.Names;
+import addsynth.overpoweredmod.game.reference.Names;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.material.Material;

@@ -1,8 +1,8 @@
 package addsynth.overpoweredmod.compatability.jei;
 
 import addsynth.overpoweredmod.OverpoweredTechnology;
-import addsynth.overpoweredmod.game.Names;
-import addsynth.overpoweredmod.game.core.Machines;
+import addsynth.overpoweredmod.game.reference.Names;
+import addsynth.overpoweredmod.game.reference.OverpoweredBlocks;
 import addsynth.overpoweredmod.machines.advanced_ore_refinery.OreRefineryRecipe;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.IRecipeLayout;
@@ -25,7 +25,7 @@ public final class AdvancedOreRefineryCategory  implements IRecipeCategory<OreRe
 
   public AdvancedOreRefineryCategory(final IGuiHelper gui_helper){
     background = gui_helper.createDrawable(gui_texture, 18, 16, 74, 18);
-    icon = gui_helper.createDrawableIngredient(new ItemStack(Machines.advanced_ore_refinery));
+    icon = gui_helper.createDrawableIngredient(new ItemStack(OverpoweredBlocks.advanced_ore_refinery));
   }
 
   @Override

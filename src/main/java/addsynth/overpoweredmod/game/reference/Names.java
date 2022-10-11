@@ -1,4 +1,4 @@
-package addsynth.overpoweredmod.game;
+package addsynth.overpoweredmod.game.reference;
 
 import addsynth.overpoweredmod.OverpoweredTechnology;
 import net.minecraft.resources.ResourceLocation;

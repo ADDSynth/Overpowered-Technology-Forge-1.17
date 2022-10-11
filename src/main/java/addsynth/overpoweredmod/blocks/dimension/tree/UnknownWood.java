@@ -3,9 +3,9 @@ package addsynth.overpoweredmod.blocks.dimension.tree;
 import addsynth.core.block_network.Node;
 import addsynth.core.util.block.BlockUtil;
 import addsynth.core.util.world.WorldUtil;
-import addsynth.overpoweredmod.game.Names;
-import addsynth.overpoweredmod.game.core.Init;
-import addsynth.overpoweredmod.game.core.Portal;
+import addsynth.overpoweredmod.game.reference.Names;
+import addsynth.overpoweredmod.game.reference.OverpoweredBlocks;
+import addsynth.overpoweredmod.game.reference.OverpoweredItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -33,12 +33,12 @@ public final class UnknownWood extends Block {
           }
         }
       );
-      WorldUtil.spawnItemStack(world, position, new ItemStack(Init.void_crystal, 1));
+      WorldUtil.spawnItemStack(world, position, new ItemStack(OverpoweredItems.void_crystal, 1));
     }
   }
 
   private static final boolean valid(final Node node, final BlockPos from){
-    return node.block == Portal.unknown_wood || node.block == Portal.unknown_leaves || node.position == from;
+    return node.block == OverpoweredBlocks.unknown_wood || node.block == OverpoweredBlocks.unknown_leaves || node.position == from;
   }
 
 }

@@ -4,7 +4,7 @@ import java.text.NumberFormat;
 import java.util.List;
 import javax.annotation.Nullable;
 import addsynth.overpoweredmod.config.MachineValues;
-import addsynth.overpoweredmod.game.Names;
+import addsynth.overpoweredmod.game.reference.Names;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;

@@ -2,8 +2,7 @@ package addsynth.overpoweredmod.assets;
 
 import addsynth.overpoweredmod.config.Config;
 import addsynth.overpoweredmod.config.Features;
-import addsynth.overpoweredmod.game.core.Init;
-import addsynth.overpoweredmod.game.core.Tools;
+import addsynth.overpoweredmod.game.reference.OverpoweredItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -14,7 +13,7 @@ public final class CreativeTabs {
   {
     @Override
     public final ItemStack makeIcon(){
-      return new ItemStack(Init.celestial_gem, 1);
+      return new ItemStack(OverpoweredItems.celestial_gem, 1);
     }
   };
 
@@ -35,9 +34,9 @@ public final class CreativeTabs {
     {
       @Override
       public final ItemStack makeIcon(){
-        return Features.celestial_tools.get() ? new ItemStack(Tools.overpowered_tools.pickaxe, 1) :
-               Features.identifier.get()      ? new ItemStack(Tools.unidentified_armor[2][0], 1) :
-               Features.void_tools.get()      ? new ItemStack(Tools.void_toolset.sword, 1) :
+        return Features.celestial_tools.get() ? new ItemStack(OverpoweredItems.celestial_pickaxe, 1) :
+               Features.identifier.get()      ? new ItemStack(OverpoweredItems.unidentified_armor[2][0], 1) :
+               Features.void_tools.get()      ? new ItemStack(OverpoweredItems.void_sword, 1) :
                new ItemStack(Items.STONE_SHOVEL, 1);
       }
     }

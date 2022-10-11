@@ -12,7 +12,7 @@ import addsynth.core.util.world.WorldUtil;
 import addsynth.overpoweredmod.OverpoweredTechnology;
 import addsynth.overpoweredmod.assets.CustomAdvancements;
 import addsynth.overpoweredmod.config.Config;
-import addsynth.overpoweredmod.game.core.Init;
+import addsynth.overpoweredmod.game.reference.OverpoweredBlocks;
 import addsynth.overpoweredmod.items.DimensionalAnchor;
 import addsynth.overpoweredmod.registers.Tiles;
 import net.minecraft.core.BlockPos;
@@ -200,7 +200,7 @@ public final class TileBlackHole extends BlockEntity implements ITickingTileEnti
       position.setY(y);
       position.setZ(z);
       block = level.getBlockState(position).getBlock();
-      if(block != Blocks.AIR && block != Init.black_hole){
+      if(block != Blocks.AIR && block != OverpoweredBlocks.black_hole){
         if(BlockMath.is_inside_sphere(worldPosition, radius, position)){
           if(Config.black_holes_erase_bedrock.get()){
             WorldUtil.delete_block(level, position);

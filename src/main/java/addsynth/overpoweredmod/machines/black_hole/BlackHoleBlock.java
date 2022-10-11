@@ -3,7 +3,7 @@ package addsynth.overpoweredmod.machines.black_hole;
 import javax.annotation.Nullable;
 import addsynth.core.game.RegistryUtil;
 import addsynth.core.game.blocks.TileEntityBlock;
-import addsynth.overpoweredmod.game.Names;
+import addsynth.overpoweredmod.game.reference.Names;
 import addsynth.overpoweredmod.registers.Tiles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.LivingEntity;

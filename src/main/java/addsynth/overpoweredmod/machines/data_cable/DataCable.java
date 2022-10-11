@@ -7,7 +7,7 @@ import addsynth.core.game.RegistryUtil;
 import addsynth.core.util.block.BlockShape;
 import addsynth.energy.lib.blocks.Wire;
 import addsynth.overpoweredmod.assets.CreativeTabs;
-import addsynth.overpoweredmod.game.Names;
+import addsynth.overpoweredmod.game.reference.Names;
 import addsynth.overpoweredmod.registers.Tiles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

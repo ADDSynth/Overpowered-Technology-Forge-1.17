@@ -6,7 +6,7 @@ import javax.annotation.Nullable;
 import addsynth.core.game.RegistryUtil;
 import addsynth.overpoweredmod.assets.CreativeTabs;
 import addsynth.overpoweredmod.config.MachineValues;
-import addsynth.overpoweredmod.game.Names;
+import addsynth.overpoweredmod.game.reference.Names;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;

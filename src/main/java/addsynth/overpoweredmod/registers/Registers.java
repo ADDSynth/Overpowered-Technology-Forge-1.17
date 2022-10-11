@@ -1,13 +1,14 @@
 package addsynth.overpoweredmod.registers;
 
 import addsynth.core.game.RegistryUtil;
-import addsynth.overpoweredmod.Debug;
 import addsynth.overpoweredmod.OverpoweredTechnology;
 import addsynth.overpoweredmod.assets.Sounds;
 import addsynth.overpoweredmod.compatability.CompatabilityManager;
 import addsynth.overpoweredmod.config.Features;
-import addsynth.overpoweredmod.game.Names;
 import addsynth.overpoweredmod.game.core.*;
+import addsynth.overpoweredmod.game.reference.Names;
+import addsynth.overpoweredmod.game.reference.OverpoweredBlocks;
+import addsynth.overpoweredmod.game.reference.OverpoweredItems;
 import addsynth.overpoweredmod.machines.magic_infuser.recipes.MagicInfuserRecipes;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.inventory.MenuType;
@@ -24,53 +25,49 @@ import net.minecraftforge.registries.IForgeRegistry;
 @EventBusSubscriber(modid = OverpoweredTechnology.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
 public final class Registers {
 
-  static {
-    Debug.log_setup_info("Registers class was loaded.");
-  }
-
   @SubscribeEvent
   public static final void registerBlocks(final RegistryEvent.Register<Block> event){
     OverpoweredTechnology.log.info("Begin Block Registration Event...");
     
     final IForgeRegistry<Block> game = event.getRegistry();
     
-    if(Features.light_block.get()){ game.register(Init.light_block); }
-    if(Features.null_block.get()){ game.register(Init.null_block); }
+    if(Features.light_block.get()){ game.register(OverpoweredBlocks.light_block); }
+    if(Features.null_block.get()){ game.register(OverpoweredBlocks.null_block); }
     
-    if(Features.iron_frame_block.get()){ game.register(Init.iron_frame_block); }
-    if(Features.black_hole.get()){ game.register(Init.black_hole); }
+    if(Features.iron_frame_block.get()){ game.register(OverpoweredBlocks.iron_frame_block); }
+    if(Features.black_hole.get()){ game.register(OverpoweredBlocks.black_hole); }
     
-    game.register(Wires.data_cable);
-    if(Features.crystal_energy_extractor.get()){ game.register(Machines.crystal_energy_extractor); }
-    if(Features.gem_converter.get()){ game.register(Machines.gem_converter); }
-    game.register(Machines.inverter);
-    if(Features.magic_infuser.get()){ game.register(Machines.magic_infuser); }
-    if(Features.identifier.get()){ game.register(Machines.identifier); }
+    game.register(OverpoweredBlocks.data_cable);
+    if(Features.crystal_energy_extractor.get()){ game.register(OverpoweredBlocks.crystal_energy_extractor); }
+    if(Features.gem_converter.get()){ game.register(OverpoweredBlocks.gem_converter); }
+    game.register(OverpoweredBlocks.inverter);
+    if(Features.magic_infuser.get()){ game.register(OverpoweredBlocks.magic_infuser); }
+    if(Features.identifier.get()){ game.register(OverpoweredBlocks.identifier); }
     if(Features.energy_suspension_bridge.get()){
-      game.register(Machines.energy_suspension_bridge);
-      game.register(Machines.white_energy_bridge);
-      game.register(Machines.red_energy_bridge);
-      game.register(Machines.orange_energy_bridge);
-      game.register(Machines.yellow_energy_bridge);
-      game.register(Machines.green_energy_bridge);
-      game.register(Machines.cyan_energy_bridge);
-      game.register(Machines.blue_energy_bridge);
-      game.register(Machines.magenta_energy_bridge);
+      game.register(OverpoweredBlocks.energy_suspension_bridge);
+      game.register(OverpoweredBlocks.white_energy_bridge);
+      game.register(OverpoweredBlocks.red_energy_bridge);
+      game.register(OverpoweredBlocks.orange_energy_bridge);
+      game.register(OverpoweredBlocks.yellow_energy_bridge);
+      game.register(OverpoweredBlocks.green_energy_bridge);
+      game.register(OverpoweredBlocks.cyan_energy_bridge);
+      game.register(OverpoweredBlocks.blue_energy_bridge);
+      game.register(OverpoweredBlocks.magenta_energy_bridge);
     }
     if(Features.portal.get()){
-      game.register(Machines.portal_control_panel);
-      game.register(Machines.portal_frame);
-      game.register(Portal.portal);
+      game.register(OverpoweredBlocks.portal_control_panel);
+      game.register(OverpoweredBlocks.portal_frame);
+      game.register(OverpoweredBlocks.portal);
       if(Features.unknown_dimension.get()){
-        game.register(Portal.unknown_wood);
-        game.register(Portal.unknown_leaves);
+        game.register(OverpoweredBlocks.unknown_wood);
+        game.register(OverpoweredBlocks.unknown_leaves);
       }
     }
-    game.register(Machines.plasma_generator);
-    if(Features.crystal_matter_generator.get()){ game.register(Machines.crystal_matter_generator); }
-    if(Features.advanced_ore_refinery.get()){ game.register(Machines.advanced_ore_refinery); }
+    game.register(OverpoweredBlocks.plasma_generator);
+    if(Features.crystal_matter_generator.get()){ game.register(OverpoweredBlocks.crystal_matter_generator); }
+    if(Features.advanced_ore_refinery.get()){ game.register(OverpoweredBlocks.advanced_ore_refinery); }
     if(Features.lasers.get()){
-      game.register(Machines.laser_housing);
+      game.register(OverpoweredBlocks.laser_housing);
       // MAYBE: everywhere I check for each laser is enabled, I should've had the config change an enabled boolean variable in the Laser class!
       if(Features.white_laser.get()){   game.register(Laser.WHITE.cannon);   game.register(Laser.WHITE.beam);   }
       if(Features.red_laser.get()){     game.register(Laser.RED.cannon);     game.register(Laser.RED.beam);     }
@@ -82,11 +79,11 @@ public final class Registers {
       if(Features.magenta_laser.get()){ game.register(Laser.MAGENTA.cannon); game.register(Laser.MAGENTA.beam); }
     }
     if(Features.fusion.get()){
-      game.register(Machines.fusion_converter);
-      game.register(Machines.fusion_control_unit);
-      game.register(Machines.fusion_chamber);
-      game.register(Machines.fusion_control_laser);
-      game.register(Machines.fusion_control_laser_beam);
+      game.register(OverpoweredBlocks.fusion_converter);
+      game.register(OverpoweredBlocks.fusion_control_unit);
+      game.register(OverpoweredBlocks.fusion_chamber);
+      game.register(OverpoweredBlocks.fusion_control_laser);
+      game.register(OverpoweredBlocks.fusion_control_laser_beam);
     }
     
     OverpoweredTechnology.log.info("Finished Block Registration Event.");
@@ -98,53 +95,53 @@ public final class Registers {
     
     final IForgeRegistry<Item> game = event.getRegistry();
 
-    game.register(Init.celestial_gem);
-    game.register(Init.energy_crystal_shards);
-    game.register(Init.energy_crystal);
-    if(Features.light_block.get()){ game.register(RegistryUtil.getItemBlock(Init.light_block)); }
-    game.register(Init.void_crystal);
-    if(Features.null_block.get()){ game.register(RegistryUtil.getItemBlock(Init.null_block)); }
+    game.register(OverpoweredItems.celestial_gem);
+    game.register(OverpoweredItems.energy_crystal_shards);
+    game.register(OverpoweredItems.energy_crystal);
+    if(Features.light_block.get()){ game.register(RegistryUtil.getItemBlock(OverpoweredBlocks.light_block)); }
+    game.register(OverpoweredItems.void_crystal);
+    if(Features.null_block.get()){ game.register(RegistryUtil.getItemBlock(OverpoweredBlocks.null_block)); }
     
-    game.register(ModItems.energized_power_core);
-    game.register(ModItems.nullified_power_core);
-    game.register(ModItems.energy_grid);
-    game.register(ModItems.vacuum_container);
+    game.register(OverpoweredItems.energized_power_core);
+    game.register(OverpoweredItems.nullified_power_core);
+    game.register(OverpoweredItems.energy_grid);
+    game.register(OverpoweredItems.vacuum_container);
     
-    game.register(ModItems.beam_emitter);
-    game.register(ModItems.destructive_laser);
-    game.register(ModItems.heavy_light_emitter);
-    game.register(ModItems.energy_stabilizer);
-    game.register(ModItems.scanning_laser);
-    game.register(ModItems.matter_energy_transformer);
-    game.register(ModItems.high_frequency_beam);
+    game.register(OverpoweredItems.beam_emitter);
+    game.register(OverpoweredItems.destructive_laser);
+    game.register(OverpoweredItems.heavy_light_emitter);
+    game.register(OverpoweredItems.energy_stabilizer);
+    game.register(OverpoweredItems.scanning_laser);
+    game.register(OverpoweredItems.matter_energy_transformer);
+    game.register(OverpoweredItems.high_frequency_beam);
     
     for(Lens lens : Lens.values()){
       game.register(lens.lens);
     }
-    game.register(ModItems.plasma);
-    game.register(ModItems.fusion_core);
-    game.register(ModItems.matter_energy_converter);
-    game.register(ModItems.dimensional_flux);
-    if(Features.dimensional_anchor.get()){ game.register(ModItems.dimensional_anchor); }
+    game.register(OverpoweredItems.plasma);
+    game.register(OverpoweredItems.fusion_core);
+    game.register(OverpoweredItems.matter_energy_converter);
+    game.register(OverpoweredItems.dimensional_flux);
+    if(Features.dimensional_anchor.get()){ game.register(OverpoweredItems.dimensional_anchor); }
     
-    game.register(RegistryUtil.getItemBlock(Wires.data_cable));
-    if(Features.crystal_energy_extractor.get()){ game.register(RegistryUtil.getItemBlock(Machines.crystal_energy_extractor)); }
-    if(Features.gem_converter.get()){    game.register(RegistryUtil.getItemBlock(Machines.gem_converter)); }
-    game.register(RegistryUtil.getItemBlock(Machines.inverter));
-    if(Features.magic_infuser.get()){    game.register(RegistryUtil.getItemBlock(Machines.magic_infuser)); }
-    if(Features.identifier.get()){       game.register(RegistryUtil.getItemBlock(Machines.identifier)); }
-    if(Features.energy_suspension_bridge.get()){ game.register(RegistryUtil.getItemBlock(Machines.energy_suspension_bridge)); }
+    game.register(RegistryUtil.getItemBlock(OverpoweredBlocks.data_cable));
+    if(Features.crystal_energy_extractor.get()){ game.register(RegistryUtil.getItemBlock(OverpoweredBlocks.crystal_energy_extractor)); }
+    if(Features.gem_converter.get()){    game.register(RegistryUtil.getItemBlock(OverpoweredBlocks.gem_converter)); }
+    game.register(RegistryUtil.getItemBlock(OverpoweredBlocks.inverter));
+    if(Features.magic_infuser.get()){    game.register(RegistryUtil.getItemBlock(OverpoweredBlocks.magic_infuser)); }
+    if(Features.identifier.get()){       game.register(RegistryUtil.getItemBlock(OverpoweredBlocks.identifier)); }
+    if(Features.energy_suspension_bridge.get()){ game.register(RegistryUtil.getItemBlock(OverpoweredBlocks.energy_suspension_bridge)); }
     if(Features.portal.get()){
-      game.register(RegistryUtil.getItemBlock(Machines.portal_control_panel));
-      game.register(RegistryUtil.getItemBlock(Machines.portal_frame));
+      game.register(RegistryUtil.getItemBlock(OverpoweredBlocks.portal_control_panel));
+      game.register(RegistryUtil.getItemBlock(OverpoweredBlocks.portal_frame));
       // MAYBE: register Item versions of the unknown / weird tree  (but item order is specific. don't register them here.)
     }
-    game.register(RegistryUtil.getItemBlock(Machines.plasma_generator));
-    if(Features.crystal_matter_generator.get()){ game.register(RegistryUtil.getItemBlock(Machines.crystal_matter_generator)); }
-    if(Features.advanced_ore_refinery.get()){ game.register(RegistryUtil.getItemBlock(Machines.advanced_ore_refinery)); }
+    game.register(RegistryUtil.getItemBlock(OverpoweredBlocks.plasma_generator));
+    if(Features.crystal_matter_generator.get()){ game.register(RegistryUtil.getItemBlock(OverpoweredBlocks.crystal_matter_generator)); }
+    if(Features.advanced_ore_refinery.get()){ game.register(RegistryUtil.getItemBlock(OverpoweredBlocks.advanced_ore_refinery)); }
     
     if(Features.lasers.get()){
-      game.register(RegistryUtil.getItemBlock(Machines.laser_housing));
+      game.register(RegistryUtil.getItemBlock(OverpoweredBlocks.laser_housing));
       if(Features.white_laser.get()){   game.register(RegistryUtil.getItemBlock(Laser.WHITE.cannon));   }
       if(Features.red_laser.get()){     game.register(RegistryUtil.getItemBlock(Laser.RED.cannon));     }
       if(Features.orange_laser.get()){  game.register(RegistryUtil.getItemBlock(Laser.ORANGE.cannon));  }
@@ -156,41 +153,54 @@ public final class Registers {
     }
     
     if(Features.fusion.get()){
-      game.register(RegistryUtil.getItemBlock(Machines.fusion_converter));
-      game.register(RegistryUtil.getItemBlock(Machines.fusion_control_unit));
-      game.register(RegistryUtil.getItemBlock(Machines.fusion_chamber));
-      game.register(RegistryUtil.getItemBlock(Machines.fusion_control_laser));
+      game.register(RegistryUtil.getItemBlock(OverpoweredBlocks.fusion_converter));
+      game.register(RegistryUtil.getItemBlock(OverpoweredBlocks.fusion_control_unit));
+      game.register(RegistryUtil.getItemBlock(OverpoweredBlocks.fusion_chamber));
+      game.register(RegistryUtil.getItemBlock(OverpoweredBlocks.fusion_control_laser));
     }
     
-    if(Features.iron_frame_block.get()){ game.register(RegistryUtil.getItemBlock(Init.iron_frame_block)); }
-    if(Features.black_hole.get()){       game.register(RegistryUtil.getItemBlock(Init.black_hole)); }
+    if(Features.iron_frame_block.get()){ game.register(RegistryUtil.getItemBlock(OverpoweredBlocks.iron_frame_block)); }
+    if(Features.black_hole.get()){       game.register(RegistryUtil.getItemBlock(OverpoweredBlocks.black_hole)); }
     
     if(Features.celestial_tools.get()){
-      for(Item tool : Tools.overpowered_tools.tools){ game.register(tool); }
+      game.register(OverpoweredItems.celestial_sword);
+      game.register(OverpoweredItems.celestial_shovel);
+      game.register(OverpoweredItems.celestial_pickaxe);
+      game.register(OverpoweredItems.celestial_axe);
+      game.register(OverpoweredItems.celestial_hoe);
     }
     if(Features.void_tools.get()){
-      for(Item tool : Tools.void_toolset.tools){ game.register(tool); }
+      game.register(OverpoweredItems.void_sword);
+      game.register(OverpoweredItems.void_shovel);
+      game.register(OverpoweredItems.void_pickaxe);
+      game.register(OverpoweredItems.void_axe);
+      game.register(OverpoweredItems.void_hoe);
     }
     if(Features.identifier.get()){
-      for(Item[] armor_set : Tools.unidentified_armor){
+      for(Item[] armor_set : OverpoweredItems.unidentified_armor){
         for(Item armor : armor_set){ game.register(armor); }
       }
       if(CompatabilityManager.are_rings_enabled()){
-        for(Item ring : Tools.ring){       game.register(ring); }
-        for(Item ring : Tools.magic_ring){ game.register(ring); }
+        game.register(OverpoweredItems.ring_0);
+        game.register(OverpoweredItems.ring_1);
+        game.register(OverpoweredItems.ring_2);
+        game.register(OverpoweredItems.ring_3);
+        game.register(OverpoweredItems.magic_ring_0);
+        game.register(OverpoweredItems.magic_ring_1);
+        game.register(OverpoweredItems.magic_ring_2);
+        game.register(OverpoweredItems.magic_ring_3);
       }
     }
     
     // Items for advancements only
-    game.register(Portal.portal_image);
-    game.register(Machines.bridge_image);
+    game.register(OverpoweredItems.portal_image);
+    game.register(OverpoweredItems.bridge_image);
 
     OverpoweredTechnology.log.info("Finished Item Registration Event.");
   }
 
   @SubscribeEvent
   public static final void registerTileEntities(final RegistryEvent.Register<BlockEntityType<?>> event){ // TEST: Maybe don't register TileEntities if they aren't enabled in the config.
-    Debug.log_setup_info("Begin registering Tile Entities...");
     /*
       https://github.com/MinecraftForge/MinecraftForge/pull/4681#issuecomment-405115908
       TODO: If anyone needs an example of how to fix the warning caused by this change without breaking old saved games,
@@ -215,8 +225,6 @@ public final class Registers {
     RegistryUtil.register(game, Tiles.FUSION_ENERGY_CONVERTER,    Names.FUSION_CONVERTER);
     RegistryUtil.register(game, Tiles.FUSION_CHAMBER,             Names.FUSION_CHAMBER);
     RegistryUtil.register(game, Tiles.BLACK_HOLE,                 Names.BLACK_HOLE);
-
-    Debug.log_setup_info("Finished registering Tile Entities.");
   }
 
   @SubscribeEvent
@@ -246,18 +254,14 @@ public final class Registers {
 
   @SubscribeEvent
   public static final void registerSounds(final RegistryEvent.Register<SoundEvent> event){
-    Debug.log_setup_info("Begin Sound Registry Event...");
     final IForgeRegistry<SoundEvent> game = event.getRegistry();
     game.register(Sounds.laser_fire_sound);
-    Debug.log_setup_info("Finished Sound Registry Event.");
   }
 
   @SubscribeEvent
   public static final void registerBiomes(final RegistryEvent.Register<Biome> event){
-    Debug.log_setup_info("Begin Biome Registry Event...");
     final IForgeRegistry<Biome> game = event.getRegistry();
     // game.register(WeirdDimension.weird_biome);
-    Debug.log_setup_info("Finished Biome Registry Event.");
   }
 
 }

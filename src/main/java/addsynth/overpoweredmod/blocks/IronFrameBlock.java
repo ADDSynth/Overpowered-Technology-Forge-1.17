@@ -2,7 +2,7 @@ package addsynth.overpoweredmod.blocks;
 
 import addsynth.core.game.RegistryUtil;
 import addsynth.overpoweredmod.assets.CreativeTabs;
-import addsynth.overpoweredmod.game.Names;
+import addsynth.overpoweredmod.game.reference.Names;
 import addsynth.overpoweredmod.machines.data_cable.DataCable;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.material.Material;

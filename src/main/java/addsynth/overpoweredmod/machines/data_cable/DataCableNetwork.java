@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import addsynth.core.block_network.BlockNetwork;
 import addsynth.core.block_network.Node;
 import addsynth.overpoweredmod.config.MachineValues;
-import addsynth.overpoweredmod.game.core.Machines;
+import addsynth.overpoweredmod.game.reference.OverpoweredBlocks;
 import addsynth.overpoweredmod.machines.fusion.chamber.TileFusionChamber;
 import addsynth.overpoweredmod.machines.fusion.converter.TileFusionEnergyConverter;
 import addsynth.overpoweredmod.machines.laser.cannon.LaserCannon;
@@ -48,12 +48,12 @@ public final class DataCableNetwork extends BlockNetwork<TileDataCable> {
 
   @Override
   protected final void customSearch(final Node node){
-    if(node.block == Machines.fusion_control_unit){
+    if(node.block == OverpoweredBlocks.fusion_control_unit){
       if(scanning_units.contains(node.position) == false){
         scanning_units.add(node.position);
       }
     }
-    if(node.block == Machines.fusion_converter){
+    if(node.block == OverpoweredBlocks.fusion_converter){
       if(fusion_energy_converters.contains(node.position) == false){
         fusion_energy_converters.add(node.position);
       }
@@ -64,7 +64,7 @@ public final class DataCableNetwork extends BlockNetwork<TileDataCable> {
   public final void neighbor_was_changed(final BlockPos current_position, final BlockPos position_of_neighbor){
     // Is this optimized? Wouldn't it be better just to call updateBlockNetwork() regardless?
     Block block = world.getBlockState(position_of_neighbor).getBlock();
-    if(block == Machines.fusion_converter || block == Machines.fusion_control_unit){
+    if(block == OverpoweredBlocks.fusion_converter || block == OverpoweredBlocks.fusion_control_unit){
       // If a Fusion Converter or Fusion Control Unit was added.
       updateBlockNetwork(current_position);
       return;
@@ -73,7 +73,7 @@ public final class DataCableNetwork extends BlockNetwork<TileDataCable> {
     // Check all positions of scanning units and fusion energy converters and make sure they still exist there.
     if(update == false){
       for(BlockPos position : scanning_units){
-        if(world.getBlockState(position).getBlock() != Machines.fusion_control_unit){
+        if(world.getBlockState(position).getBlock() != OverpoweredBlocks.fusion_control_unit){
           update = true;
           break;
         }
@@ -81,7 +81,7 @@ public final class DataCableNetwork extends BlockNetwork<TileDataCable> {
     }
     if(update == false){
       for(BlockPos position : fusion_energy_converters){
-        if(world.getBlockState(position).getBlock() != Machines.fusion_converter){
+        if(world.getBlockState(position).getBlock() != OverpoweredBlocks.fusion_converter){
           update = true;
           break;
         }
@@ -122,10 +122,10 @@ public final class DataCableNetwork extends BlockNetwork<TileDataCable> {
       for(BlockPos scanning_unit : scanning_units){
         for(Direction side : Direction.values()){
           block_state = world.getBlockState(scanning_unit.relative(side));
-          if(block_state.getBlock() == Machines.fusion_control_laser){
+          if(block_state.getBlock() == OverpoweredBlocks.fusion_control_laser){
             if(block_state.getValue(LaserCannon.FACING) == side){
               position = scanning_unit.relative(side, TileFusionChamber.container_radius);
-              if(world.getBlockState(position).getBlock() == Machines.fusion_chamber){
+              if(world.getBlockState(position).getBlock() == OverpoweredBlocks.fusion_chamber){
                 // FIX: we need to keep a list of singularity containers, otherwise, if the scanning units are out of order, we immediately replace the current one.
                 if(structure == null){
                   structure = new FusionEnergyStructure(position);
