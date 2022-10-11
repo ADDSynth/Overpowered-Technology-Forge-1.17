@@ -23,7 +23,7 @@ public abstract class TileAbstractWorkMachine extends TileAbstractMachine implem
 
   public TileAbstractWorkMachine(final BlockEntityType type, BlockPos position, BlockState blockstate,
                                  final MachineState initial_state, final MachineData data){
-    super(type, position, blockstate, new Receiver(data.total_energy_needed, data.get_max_receive()));
+    super(type, position, blockstate, new Receiver(data.get_total_energy_needed(), data.get_max_receive()));
     this.state = initial_state;
   }
 

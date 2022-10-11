@@ -45,6 +45,7 @@ FIXED:
     See: https://github.com/ADDSynth/Overpowered-Forge-1.14/commit/5f4418eadb862447e4b58be2b637d0f230d717f4
   Fixed Energy Suspension Bridge maximum length was actually 1 less than what is set
     in the configuration.
+  Fix not loading MachineValues config correctly. Yay! Sorry about that!
 
 
 

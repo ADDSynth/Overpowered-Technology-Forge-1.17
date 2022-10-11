@@ -26,7 +26,10 @@ public class MachineData {
   protected final double idle_energy;
 
   /** Total amount energy needed to perform 1 operation. */
-  public final double total_energy_needed;
+  public final double get_total_energy_needed(){
+    // use functions to get because they are overriden in MachineDataConfig to get the values from the config file.
+    return get_max_receive() * get_work_time();
+  }
 
   public MachineData(MachineType type, int work_time, double energy_needed){
     this(type, work_time, energy_needed, DEFAULT_IDLE_ENERGY, 0);
@@ -42,7 +45,6 @@ public class MachineData {
     this.power_on_time       = power_on_time;
     this.max_energy_accepted = energy_needed;
     this.idle_energy         = idle_energy < 0 ? DEFAULT_IDLE_ENERGY : idle_energy;
-    this.total_energy_needed = energy_needed * work_time;
   }
 
   public int get_work_time(){
