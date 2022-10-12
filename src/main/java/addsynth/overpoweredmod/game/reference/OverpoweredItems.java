@@ -4,6 +4,7 @@ import addsynth.core.game.RegistryUtil;
 import addsynth.core.game.items.ArmorMaterial;
 import addsynth.core.game.items.EquipmentType;
 import addsynth.overpoweredmod.items.*;
+import addsynth.overpoweredmod.items.basic.*;
 import addsynth.overpoweredmod.items.tools.*;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.HoeItem;
@@ -35,7 +36,7 @@ public final class OverpoweredItems {
   public static final Item plasma                    = new PlasmaItem();
   public static final Item fusion_core               = new FusionCore();
   public static final Item matter_energy_converter   = new OverpoweredItem(Names.MATTER_ENERGY_CONVERTER);
-  public static final Item dimensional_flux          = new OverpoweredItem(Names.DIMENSIONAL_FLUX);
+  public static final Item dimensional_flux          = new DimensionalFlux();
   public static final Item dimensional_anchor        = new DimensionalAnchor();
   
   public static final SwordItem   celestial_sword   = new OverpoweredSword();

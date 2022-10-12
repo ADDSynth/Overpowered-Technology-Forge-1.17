@@ -2,7 +2,7 @@ package addsynth.overpoweredmod.game.core;
 
 import addsynth.core.game.items.ItemUtil;
 import addsynth.overpoweredmod.game.reference.Names;
-import addsynth.overpoweredmod.items.LensItem;
+import addsynth.overpoweredmod.items.basic.LensItem;
 import net.minecraft.ChatFormatting;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
