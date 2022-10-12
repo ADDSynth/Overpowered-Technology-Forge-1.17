@@ -130,7 +130,7 @@ public final class WorldUtil {
    */
   public static final void set_time(final Level world, final long world_time){
     @SuppressWarnings("resource")
-    final MinecraftServer server = ServerUtils.getServer(world);
+    final MinecraftServer server = world.getServer();
     if(server != null){
       for(ServerLevel w : server.getAllLevels()){
         w.setDayTime(world_time >= 0 ? world_time : 0);

@@ -2,8 +2,8 @@ package addsynth.core.util.player;
 
 import java.util.function.Consumer;
 import javax.annotation.Nullable;
+import addsynth.core.ADDSynthCore;
 import addsynth.core.game.items.ItemUtil;
-import addsynth.core.util.StringUtil;
 import addsynth.core.util.math.block.BlockMath;
 import addsynth.core.util.server.ServerUtils;
 import net.minecraft.core.BlockPos;
@@ -24,7 +24,7 @@ public final class PlayerUtil {
 
   public static final void allPlayersInWorld(final Level world, final Consumer<ServerPlayer> action){
     @SuppressWarnings("resource")
-    final MinecraftServer server = ServerUtils.getServer(world);
+    final MinecraftServer server = world.getServer();
     if(server != null){
       allPlayersInWorld(server, world, action);
     }
@@ -41,7 +41,7 @@ public final class PlayerUtil {
   public static final void allPlayersWithinHorizontalDistance(
   final Level world, final BlockPos position, final double distance, final Consumer<ServerPlayer> action){
     @SuppressWarnings("resource")
-    final MinecraftServer server = ServerUtils.getServer(world);
+    final MinecraftServer server = world.getServer();
     if(server != null){
       allPlayersWithinHorizontalDistance(server, world, position, distance, action);
     }
@@ -74,17 +74,33 @@ public final class PlayerUtil {
    * @param player_name
    */
   @Nullable
-  @SuppressWarnings({ "resource", "null", "deprecation" })
+  @SuppressWarnings({ "resource", "null"})
   public static final ServerPlayer getPlayer(Level world, String player_name){
-    if(StringUtil.StringExists(player_name)){
-      if(world == null){
-        return ServerUtils.getServer().getPlayerList().getPlayerByName(player_name);
-      }
-      if(world.isClientSide == false){
-        return world.getServer().getPlayerList().getPlayerByName(player_name);
-      }
+    if(world == null){
+      return getPlayer(player_name);
+    }
+    if(world.isClientSide == false){
+      return world.getServer().getPlayerList().getPlayerByName(player_name);
     }
     return null;
+  }
+
+  /** Gets the {@link ServerPlayer} using the player's name.
+   *  Get the Player's name by calling {@link Player#getName()}.
+   *  This must be called on the server side, otherwise it will return null.
+   *  Also returns null if the player isn't on the server at the moment.
+   * @param player_name
+   */
+  @Nullable
+  @Deprecated
+  @SuppressWarnings("resource")
+  public static final ServerPlayer getPlayer(String player_name){
+    final MinecraftServer server = ServerUtils.getServer();
+    if(server == null){
+      ADDSynthCore.log.error(new NullPointerException("Cannot call "+PlayerUtil.class.getSimpleName()+".getPlayer() on the Client side!"));
+      return null;
+    }
+    return server.getPlayerList().getPlayerByName(player_name);
   }
 
 }
