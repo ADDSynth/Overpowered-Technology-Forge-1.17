@@ -41,7 +41,7 @@ public final class ADDSynthMaterials {
   public static final CreativeModeTab creative_tab = new CreativeModeTab(MOD_ID){
     @Override
     public final ItemStack makeIcon(){
-      return new ItemStack(Material.RUBY.gem);
+      return new ItemStack(Material.SAPPHIRE.gem);
     }
   };
 

@@ -2,6 +2,7 @@ package addsynth.overpoweredmod.assets;
 
 import addsynth.overpoweredmod.config.Config;
 import addsynth.overpoweredmod.config.Features;
+import addsynth.overpoweredmod.game.reference.OverpoweredBlocks;
 import addsynth.overpoweredmod.game.reference.OverpoweredItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
@@ -13,7 +14,7 @@ public final class CreativeTabs {
   {
     @Override
     public final ItemStack makeIcon(){
-      return new ItemStack(OverpoweredItems.celestial_gem, 1);
+      return new ItemStack(OverpoweredBlocks.inverter, 1);
     }
   };
 
