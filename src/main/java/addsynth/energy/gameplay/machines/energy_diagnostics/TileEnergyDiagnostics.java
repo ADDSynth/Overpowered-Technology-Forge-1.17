@@ -16,6 +16,7 @@ import net.minecraft.world.level.block.state.BlockState;
 
 public final class TileEnergyDiagnostics extends TileBaseNoData implements ITickingTileEntity {
 
+  /** The gui uses this to draw the data. */
   public boolean network_exists = false;
   public final ArrayList<EnergyDiagnosticData> diagnostics_data = new ArrayList<>(20);
   public final EnergyDiagnosticData totals = new EnergyDiagnosticData("Total:");
@@ -38,37 +39,39 @@ public final class TileEnergyDiagnostics extends TileBaseNoData implements ITick
       if(tile != null){
         if(tile instanceof BasicEnergyNetworkTile){
   
-          // get Diagnostic Data
           final EnergyNetwork network = ((BasicEnergyNetworkTile)tile).getBlockNetwork();
-          final EnergyNode[] machines = network.getDiagnosticsData();
-          final int length = machines.length;
+          if(network != null){
           
-          // clear totals
-          totals.clear();
-          
-          adjustLength(length);
-          
-          // set all diagnostics data
-          int i;
-          EnergyNode node;
-          EnergyDiagnosticData diag_data;
-          for(i = 0; i < length; i++){
-            node = machines[i];
-            diag_data = diagnostics_data.get(i);
-            diag_data.set(node.getTile(), node.getEnergy());
-            totals.energy       += diag_data.energy;
-            totals.capacity     += diag_data.capacity;
-            totals.in           += diag_data.in;
-            totals.max_receive  += diag_data.max_receive;
-            totals.out          += diag_data.out;
-            totals.max_transmit += diag_data.max_transmit;
-            totals.transfer     += diag_data.transfer;
+            // get Diagnostic Data
+            final EnergyNode[] machines = network.getDiagnosticsData();
+            final int length = machines.length;
+            
+            // clear totals
+            totals.clear();
+            
+            adjustLength(length);
+            
+            // set all diagnostics data
+            int i;
+            EnergyNode node;
+            EnergyDiagnosticData diag_data;
+            for(i = 0; i < length; i++){
+              node = machines[i];
+              diag_data = diagnostics_data.get(i);
+              diag_data.set(node.getTile(), node.getEnergy());
+              totals.energy       += diag_data.energy;
+              totals.capacity     += diag_data.capacity;
+              totals.in           += diag_data.in;
+              totals.max_receive  += diag_data.max_receive;
+              totals.out          += diag_data.out;
+              totals.max_transmit += diag_data.max_transmit;
+              totals.transfer     += diag_data.transfer;
+            }
+   
+            // sync data to clients near the Diagnostics machine
+            NetworkUtil.send_to_TileEntity(NetworkHandler.INSTANCE, this, new EnergyDiagnosticsMessage(worldPosition, diagnostics_data, totals));
+            return;
           }
- 
-          // sync data to clients near the Diagnostics machine
-          NetworkUtil.send_to_TileEntity(NetworkHandler.INSTANCE, this, new EnergyDiagnosticsMessage(worldPosition, diagnostics_data, totals));
-          
-          return;
         }
       }
     }
