@@ -359,13 +359,35 @@ public class Energy {
     changed = true;
   }
 
+  public final void add(final double energy){
+    this.energy.add(energy);
+    changed = true;
+  }
+  
+  /** Subtracts energy, but doesn't allow it to go below 0. */
+  public final void subtract(final double energy){
+    final double energy_to_subtract = Math.min(energy, this.energy.get());
+    if(energy_to_subtract > 0){
+      this.energy.subtract(energy_to_subtract);
+      changed = true;
+    }
+  }
+
+  /** Subtracts the maximum amount of energy we can per tick, restricted by the maxExtract
+   *  variable. This is useful if you want your Energy object to lose energy at a constant
+   *  rate, such as standard Fuel Generators, which MUST burn the fuel once consumed. Call
+   *  this after extracting energy to be used for work. This does NOT set the energy_out
+   *  variable, although it probably should. */
+  public final void subtractAvailableEnergy(){
+    subtract(getAvailableEnergy());
+  }
+
   /** Subtracts capacity from current energy level.<br />
    *  For example, if <code>energy = 100</code> and <code>capacity = 80</code>,
    *  this function will set <code>energy</code> to 20. Energy is never set below 0.
    */
   public final void subtract_capacity(){
-    energy.subtract(Math.min(energy.get(), capacity.get()));
-    changed = true;
+    subtract(capacity.get());
   }
 
 // =================================== QUERIES ======================================

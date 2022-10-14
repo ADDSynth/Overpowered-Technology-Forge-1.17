@@ -19,8 +19,8 @@ public final class ContainerGenerator extends TileEntityContainer<TileGenerator>
   }
 
   private final void common_setup(final Inventory player_inventory){
-    make_player_inventory(player_inventory, 12, 94);
-    addSlot(new FuelSlot(tile, 0, 57, 20));
+    make_player_inventory(player_inventory, 12, 106);
+    addSlot(new FuelSlot(tile, 0, 84, 20));
   }
 
 }

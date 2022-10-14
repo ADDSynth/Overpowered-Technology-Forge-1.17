@@ -32,12 +32,19 @@ public abstract class TileStandardGenerator extends TileAbstractGenerator implem
   @Override
   public void serverTick(){
     try{
+      // standard generator behaviour
       if(energy.isEmpty()){
         if(input_inventory.isEmpty() == false){
           setGeneratorData();
           changed = true;
         }
       }
+      // TODO: To enable the Generator to use energy every tick:
+      // Multiple energy networks could extract Energy from the Generator during a tick,
+      // Either before or after this is ticked. Therefore, we can only remove any remaining
+      // energy after all TileEntities have been ticked, such as a PostServerTick or something.
+      // This is also better suited to handle the Energy.updateEnergyIO task as well, instead
+      // of inside the saveToNBT function.
       if(energy.tick()){
         changed = true;
       }

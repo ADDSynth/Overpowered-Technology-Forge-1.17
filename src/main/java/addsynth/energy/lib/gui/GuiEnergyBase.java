@@ -28,6 +28,8 @@ public abstract class GuiEnergyBase<T extends BlockEntity & IEnergyUser, C exten
   private final String energy_usage_text     = StringUtil.translate("gui.addsynth_energy.common.energy_usage");
   private final String tick_text             = StringUtil.translate("gui.addsynth_energy.common.tick");
   private final String efficiency_text       = StringUtil.translate("gui.addsynth_energy.common.efficiency");
+  protected final String max_extract_text    = StringUtil.translate("gui.addsynth_energy.common.max_extract");
+  private final String extraction_text       = StringUtil.translate("gui.addsynth_energy.common.extraction");
   /** The word 'Status' translated. */
   private final String status_text           = StringUtil.translate("gui.addsynth_energy.common.status");
   private final String time_left_text        = StringUtil.translate("gui.addsynth_energy.common.time_remaining");
@@ -63,12 +65,18 @@ public abstract class GuiEnergyBase<T extends BlockEntity & IEnergyUser, C exten
 
   protected final void draw_energy(final PoseStack matrix, final int draw_x, final int draw_y){
     if(energy != null){
-      GuiUtil.draw_text_left(matrix, energy_text+":",draw_x,draw_y);
+      GuiUtil.draw_text_left(matrix, energy_text+":", draw_x, draw_y);
       GuiUtil.draw_text_right(matrix, String.format("%.2f", energy.getEnergy()) + " / " + energy.getCapacity(), guiUtil.right_edge, draw_y);
     }
     else{
       GuiUtil.draw_text_center(matrix, null_energy_reference, (draw_x + guiUtil.right_edge) / 2, draw_y);
     }
+  }
+
+  /** Draws Energy Extraction for Generators. */
+  protected final void draw_energy_extraction(final PoseStack matrix, final int draw_y){
+    GuiUtil.draw_text_left(matrix, extraction_text+":", 6, draw_y);
+    GuiUtil.draw_text_right(matrix, String.format("%.2f", energy.get_energy_out())+" / "+energy.getMaxExtract(), guiUtil.right_edge, draw_y);
   }
 
   /** Draws the energy usage after the title. */
