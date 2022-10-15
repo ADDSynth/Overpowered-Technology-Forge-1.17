@@ -18,8 +18,6 @@ public final class Config {
   public static ForgeConfigSpec.ConfigValue<Integer> unknown_dimension_id;
   public static ForgeConfigSpec.ConfigValue<Integer> weird_biome_id;
 
-  public static ForgeConfigSpec.BooleanValue creative_tab_tools;
-
   public static ForgeConfigSpec.ConfigValue<Integer> default_laser_distance;
   public static ForgeConfigSpec.BooleanValue lasers_emit_light;
   public static ForgeConfigSpec.ConfigValue<Integer> laser_light_level;
@@ -111,11 +109,6 @@ public final class Config {
     // weird_biome_id       = get("Unknion Biome ID", IDS, 3072).getInt();
     builder.pop();
 
-    // Creative Tabs
-    // builder.push("Creative Tabs");
-    creative_tab_tools    = builder.define("Enable Tools Creative Tab", false);
-    // builder.pop();
-  
     // Laser Config
     builder.push("Lasers");
     default_laser_distance      = builder.defineInRange("Default Laser Distance", 30, 0, 1000);

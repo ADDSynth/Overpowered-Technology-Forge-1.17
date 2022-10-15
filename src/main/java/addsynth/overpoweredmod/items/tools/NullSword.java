@@ -11,7 +11,7 @@ import net.minecraft.world.item.SwordItem;
 public class NullSword extends SwordItem {
 
   public NullSword(){
-    super(OverpoweredTiers.VOID, ToolConstants.sword_damage, ToolConstants.sword_speed, new Item.Properties().tab(CreativeTabs.tools_creative_tab));
+    super(OverpoweredTiers.VOID, ToolConstants.sword_damage, ToolConstants.sword_speed, new Item.Properties().tab(CreativeTabs.creative_tab));
     setRegistryName(Names.VOID_SWORD);
   }
 

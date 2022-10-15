@@ -12,7 +12,7 @@ public class OverpoweredPickaxe extends PickaxeItem {
 
   public OverpoweredPickaxe(){
     super(OverpoweredTiers.CELESTIAL_PICKAXE, ToolConstants.pickaxe_damage, ToolConstants.pickaxe_speed,
-      new Item.Properties().tab(CreativeTabs.tools_creative_tab));
+      new Item.Properties().tab(CreativeTabs.creative_tab));
     setRegistryName(Names.CELESTIAL_PICKAXE);
   }
 

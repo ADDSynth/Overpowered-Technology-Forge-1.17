@@ -53,6 +53,9 @@ FIXED:
   Fixed Energy Suspension Bridge maximum length was actually 1 less than what is set
     in the configuration.
   Fix not loading MachineValues config correctly. Yay! Sorry about that!
+REMOVED:
+  Before now, you could still edit the config to seperate Tools into their own Creative Tab,
+    we've finally removed that.
 KNOWN PROBLEMS:
   If you edit the configuration option that changes the Maximum Energy Suspension Bridge
     Length to a lower value, while you have a bridge active in your world, then the
@@ -224,6 +227,7 @@ FIXED:
   Fixed the message that appears when you set down a Black Hole was displaying the wrong coordinates.
 REMOVED:
   Removed the ability to move some items into other Creative Tabs.
+   - There is still a config option to separate Tools into another Creative Tab, however.
   Removed the Unknown Technology item.
   Removed ADDSynthCore advancements for Caution Block, Music Box, and Scythes.
 KNOWN PROBLEMS:

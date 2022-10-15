@@ -10,7 +10,7 @@ import net.minecraft.world.item.Rarity;
 public class OverpoweredHoe extends HoeItem {
 
   public OverpoweredHoe(){
-    super(OverpoweredTiers.CELESTIAL, -4, 0.0f, new Item.Properties().tab(CreativeTabs.tools_creative_tab));
+    super(OverpoweredTiers.CELESTIAL, -4, 0.0f, new Item.Properties().tab(CreativeTabs.creative_tab));
     setRegistryName(Names.CELESTIAL_HOE);
   }
 

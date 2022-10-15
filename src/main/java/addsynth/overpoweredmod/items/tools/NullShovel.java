@@ -11,7 +11,7 @@ import net.minecraft.world.item.ShovelItem;
 public class NullShovel extends ShovelItem {
 
   public NullShovel(){
-    super(OverpoweredTiers.VOID, ToolConstants.shovel_damage, ToolConstants.shovel_speed, new Item.Properties().tab(CreativeTabs.tools_creative_tab));
+    super(OverpoweredTiers.VOID, ToolConstants.shovel_damage, ToolConstants.shovel_speed, new Item.Properties().tab(CreativeTabs.creative_tab));
     setRegistryName(Names.VOID_SHOVEL);
   }
 

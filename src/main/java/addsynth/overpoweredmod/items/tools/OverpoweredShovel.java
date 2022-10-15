@@ -11,7 +11,7 @@ import net.minecraft.world.item.ShovelItem;
 public final class OverpoweredShovel extends ShovelItem {
 
   public OverpoweredShovel(){
-    super(OverpoweredTiers.CELESTIAL, ToolConstants.axe_damage, ToolConstants.axe_speed, new Item.Properties().tab(CreativeTabs.tools_creative_tab));
+    super(OverpoweredTiers.CELESTIAL, ToolConstants.axe_damage, ToolConstants.axe_speed, new Item.Properties().tab(CreativeTabs.creative_tab));
     setRegistryName(Names.CELESTIAL_SHOVEL);
   }
 

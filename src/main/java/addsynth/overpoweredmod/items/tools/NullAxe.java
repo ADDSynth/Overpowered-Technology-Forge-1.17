@@ -10,7 +10,7 @@ import net.minecraft.world.item.Rarity;
 public class NullAxe extends AxeItem {
 
   public NullAxe(){
-    super(OverpoweredTiers.VOID, 14.0f, -3.0f, new Item.Properties().tab(CreativeTabs.tools_creative_tab));
+    super(OverpoweredTiers.VOID, 14.0f, -3.0f, new Item.Properties().tab(CreativeTabs.creative_tab));
     setRegistryName(Names.VOID_AXE);
   }
 

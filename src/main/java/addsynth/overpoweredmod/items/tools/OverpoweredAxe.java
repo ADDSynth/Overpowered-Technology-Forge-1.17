@@ -10,7 +10,7 @@ import net.minecraft.world.item.Rarity;
 public final class OverpoweredAxe extends AxeItem {
 
   public OverpoweredAxe(){
-    super(OverpoweredTiers.CELESTIAL, 14.0f, -3.0f, new Item.Properties().tab(CreativeTabs.tools_creative_tab));
+    super(OverpoweredTiers.CELESTIAL, 14.0f, -3.0f, new Item.Properties().tab(CreativeTabs.creative_tab));
     setRegistryName(Names.CELESTIAL_AXE);
   }
 

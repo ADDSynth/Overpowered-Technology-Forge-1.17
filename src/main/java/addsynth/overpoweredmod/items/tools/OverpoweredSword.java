@@ -17,7 +17,7 @@ import net.minecraft.world.item.SwordItem;
 public final class OverpoweredSword extends SwordItem {
 
   public OverpoweredSword(){ // TODO: Does Minecraft 1.16 now allow us to pass the Attack Damage and Speed as paramters? - for 1.16 only, do this when we drop support for earlier versions of MC.
-    super(OverpoweredTiers.CELESTIAL_SWORD, ToolConstants.sword_damage, ToolConstants.sword_damage, new Item.Properties().tab(CreativeTabs.tools_creative_tab));
+    super(OverpoweredTiers.CELESTIAL_SWORD, ToolConstants.sword_damage, ToolConstants.sword_damage, new Item.Properties().tab(CreativeTabs.creative_tab));
     setRegistryName(Names.CELESTIAL_SWORD);
   }
 
