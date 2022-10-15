@@ -28,8 +28,6 @@ public final class Config {
 
   public Config(final ForgeConfigSpec.Builder builder){
 
-    builder.push("Main");
-
     builder.push("Debug");
     debug_mod_detection = builder.define("Print Mod Detection Results", false);
     dump_tags           = builder.define("Dump Block & Item Tags", false);
@@ -58,8 +56,6 @@ public final class Config {
       "we encourage you to leave these values at their defaults. (However, modpack authors may want to adjust these\n"+
       "values in order to create a balanced gameplay.)")
       .define("Show Advanced Config in Client Gui", false);
-    builder.pop();
-    
     builder.pop();
   }
 

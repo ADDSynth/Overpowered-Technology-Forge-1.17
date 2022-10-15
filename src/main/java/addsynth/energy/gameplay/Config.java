@@ -12,12 +12,12 @@ public final class Config {
 
   public static ForgeConfigSpec.BooleanValue electric_furnace;
 
-  public static ForgeConfigSpec.BooleanValue         energy_storage_container;
-  public static ForgeConfigSpec.ConfigValue<Integer> energy_storage_container_capacity;
-  public static ForgeConfigSpec.ConfigValue<Integer> energy_storage_container_extract_rate;
+  public static ForgeConfigSpec.BooleanValue energy_storage_container;
+  public static ForgeConfigSpec.IntValue     energy_storage_container_capacity;
+  public static ForgeConfigSpec.IntValue     energy_storage_container_extract_rate;
 
-  public static ForgeConfigSpec.BooleanValue         universal_energy_interface;
-  public static ForgeConfigSpec.ConfigValue<Integer> universal_energy_interface_buffer;
+  public static ForgeConfigSpec.BooleanValue universal_energy_interface;
+  public static ForgeConfigSpec.IntValue     universal_energy_interface_buffer;
 
   private static final int DEFAULT_ENERGY_STORAGE_CAPACITY         = 200_000;
   private static final int DEFAULT_ENERGY_STORAGE_MAX_EXTRACT        =   100;

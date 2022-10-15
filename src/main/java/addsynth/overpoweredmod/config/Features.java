@@ -62,8 +62,6 @@ public final class Features {
 
   public Features(final ForgeConfigSpec.Builder builder){
   
-    builder.push("Feature Disable");
-  
     builder.push("Items");
     celestial_tools    = builder.define("Celestial Tools", true);
     void_tools         = builder.define("Void Tools", true);
@@ -109,7 +107,6 @@ public final class Features {
       "Instead the Portal will just spawn a Void Crystal inside the Portal frame.")
                                         .define("Unknown Dimension", true);
     
-    builder.pop();
   }
 
 }

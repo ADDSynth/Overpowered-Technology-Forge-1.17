@@ -7,12 +7,12 @@ import org.apache.commons.lang3.tuple.Pair;
 
 public final class MachineValues {
 
-  public static ForgeConfigSpec.ConfigValue<Integer> energy_crystal_energy;
-  public static ForgeConfigSpec.ConfigValue<Integer> energy_crystal_max_extract;
-  public static ForgeConfigSpec.ConfigValue<Integer> energy_crystal_shards_energy;
-  public static ForgeConfigSpec.ConfigValue<Integer> energy_crystal_shards_max_extract;
-  public static ForgeConfigSpec.ConfigValue<Integer> light_block_energy;
-  public static ForgeConfigSpec.ConfigValue<Integer> light_block_max_extract;
+  public static ForgeConfigSpec.IntValue energy_crystal_energy;
+  public static ForgeConfigSpec.IntValue energy_crystal_max_extract;
+  public static ForgeConfigSpec.IntValue energy_crystal_shards_energy;
+  public static ForgeConfigSpec.IntValue energy_crystal_shards_max_extract;
+  public static ForgeConfigSpec.IntValue light_block_energy;
+  public static ForgeConfigSpec.IntValue light_block_max_extract;
 
   // Standard Machines
   public static final MachineDataConfig gem_converter = new MachineDataConfig( 600,  35,   0.06 ,  60); // 21,000
@@ -34,11 +34,11 @@ public final class MachineValues {
   public static final MachineDataConfig advanced_ore_refinery =
     new MachineDataConfig(MachineType.ALWAYS_ON, 400, 20, 0.1, 0); // 8,000
 
-  public static ForgeConfigSpec.ConfigValue<Integer> required_energy_per_laser;
-  public static ForgeConfigSpec.ConfigValue<Integer> required_energy_per_laser_distance;
-  public static ForgeConfigSpec.ConfigValue<Integer> laser_max_receive;
+  public static ForgeConfigSpec.IntValue required_energy_per_laser;
+  public static ForgeConfigSpec.IntValue required_energy_per_laser_distance;
+  public static ForgeConfigSpec.IntValue laser_max_receive;
 
-  public static ForgeConfigSpec.ConfigValue<Integer> fusion_energy_output_per_tick;
+  public static ForgeConfigSpec.IntValue fusion_energy_output_per_tick;
 
   //    20,000      25,000      30,000      40,000
   //   180,000     225,000     270,000     360,000
@@ -62,7 +62,7 @@ public final class MachineValues {
 
   public MachineValues(final ForgeConfigSpec.Builder builder){
 
-    builder.push("Generator");
+    builder.push("Crystal Energy Extractor");
     energy_crystal_shards_energy      = builder.defineInRange("Energy Crystal Shards Produced Energy",
                                           DEFAULT_ENERGY_CRYSTAL_SHARDS_ENERGY, 0, Integer.MAX_VALUE);
     energy_crystal_shards_max_extract = builder.defineInRange("Energy Crystal Shards Extract Rate",

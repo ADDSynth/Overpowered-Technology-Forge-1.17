@@ -130,8 +130,6 @@ public final class WorldgenConfig {
   public static final ForgeConfigSpec CONFIG_SPEC = SPEC_PAIR.getRight();
 
   public WorldgenConfig(final ForgeConfigSpec.Builder builder){
-    builder.push("Worldgen");
-    
     builder.push("Ruby Ore");
     generate_ruby    = builder.define("generate", true);
     ruby_min_height  = worldgen(builder, "minimum height", DEFAULT_MIN_HEIGHT);
@@ -229,8 +227,6 @@ public final class WorldgenConfig {
     rose_quartz_min_height  = worldgen(builder, "minimum height", DEFAULT_MIN_HEIGHT);
     rose_quartz_max_height  = worldgen(builder, "maximum height", DEFAULT_ROSE_QUARTZ_MAX_HEIGHT);
     rose_quartz_spawn_tries = tries(builder, 1);
-    builder.pop();
-
     builder.pop();
   }
 

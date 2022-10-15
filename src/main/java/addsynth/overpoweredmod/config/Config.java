@@ -16,11 +16,11 @@ public final class Config {
   public static ForgeConfigSpec.BooleanValue blend_working_item;
 
   public static ForgeConfigSpec.ConfigValue<Integer> unknown_dimension_id;
-  public static ForgeConfigSpec.ConfigValue<Integer> weird_biome_id;
+  public static ForgeConfigSpec.IntValue weird_biome_id;
 
-  public static ForgeConfigSpec.ConfigValue<Integer> default_laser_distance;
+  public static ForgeConfigSpec.IntValue     default_laser_distance;
   public static ForgeConfigSpec.BooleanValue lasers_emit_light;
-  public static ForgeConfigSpec.ConfigValue<Integer> laser_light_level;
+  public static ForgeConfigSpec.IntValue     laser_light_level;
   public static ForgeConfigSpec.BooleanValue lasers_set_entities_on_fire;
   public static ForgeConfigSpec.BooleanValue laser_damage_depends_on_world_difficulty;
   
@@ -39,16 +39,16 @@ public final class Config {
   
   public static ForgeConfigSpec.BooleanValue randomize_black_hole_radius;
   public static ForgeConfigSpec.BooleanValue black_hole_radius_depends_on_world_difficulty;
-  public static ForgeConfigSpec.ConfigValue<Integer> black_hole_radius;
-  public static ForgeConfigSpec.ConfigValue<Integer> minimum_black_hole_radius;
-  public static ForgeConfigSpec.ConfigValue<Integer> maximum_black_hole_radius;
+  public static ForgeConfigSpec.IntValue black_hole_radius;
+  public static ForgeConfigSpec.IntValue minimum_black_hole_radius;
+  public static ForgeConfigSpec.IntValue maximum_black_hole_radius;
   public static ForgeConfigSpec.BooleanValue alert_players_of_black_hole;
   public static ForgeConfigSpec.BooleanValue black_holes_erase_bedrock;
   public static ForgeConfigSpec.ConfigValue<List<Integer>> black_hole_dimension_blacklist;
   public static ForgeConfigSpec.DoubleValue black_hole_max_tick_time;
 
   private static final int DEFAULT_ENERGY_BRIDGE_DISTANCE = 250;
-  public static ForgeConfigSpec.ConfigValue<Integer> energy_bridge_max_distance;
+  public static ForgeConfigSpec.IntValue energy_bridge_max_distance;
 
   public static ForgeConfigSpec.BooleanValue rings_have_particle_effects;
 
@@ -96,8 +96,6 @@ public final class Config {
   public static final ForgeConfigSpec CONFIG_SPEC = SPEC_PAIR.getRight();
 
   public Config(final ForgeConfigSpec.Builder builder){
-
-    builder.push("Main");
 
     builder.push("Client");
     blend_working_item = builder.define("Blend Center Item in Guis", true);
@@ -220,8 +218,6 @@ public final class Config {
       "we encourage you to leave these values at their defaults. (However, modpack authors may want to adjust these\n"+
       "values in order to create a balanced gameplay.)")
                                   .define("Show Advanced Config in Client Gui", false);
-    builder.pop();
-
     builder.pop();
   }
 

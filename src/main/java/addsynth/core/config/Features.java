@@ -30,8 +30,6 @@ public final class Features {
 
   public Features(final ForgeConfigSpec.Builder builder){
 
-    builder.push("Feature Disable");
-
     caution_block = builder.define("Caution Block", true);
     music_box     = builder.define("Music Box",     true);
     music_sheet   = builder.define("Music Sheet",   true);
@@ -49,8 +47,6 @@ public final class Features {
     zombie_raid_command     = builder.define("Zombie Raid",     true);
     blackout_command        = builder.define("Blackout",        true);
     lightning_storm_command = builder.define("Lightning Storm", true);
-    builder.pop();
-    
     builder.pop();
   }
 

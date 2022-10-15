@@ -40,6 +40,8 @@ CHANGED:
   Changed Energy Storage Container's default maximum energy from 1,000,000 to 200,000.
     - This is mainly because I plan to add different types of batteries in the future.
   Some Machine State status messages are now color-coded.
+  Removed any top-level sections in Config files.
+   - This will cause most of your config files to be reset. Sorry!
 FIXED:
   Fixed Unidentified Chainmail armor dropping as often as Gold armor.
   Optimized Lasers:

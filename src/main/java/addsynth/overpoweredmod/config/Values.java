@@ -17,8 +17,6 @@ public final class Values {
 
   public Values(final ForgeConfigSpec.Builder builder){
 
-    builder.push("Values");
-
     // float value, chance that ANYTHING will drop
     // all 4 ring weight values
     // all 5 armor weight values
@@ -30,8 +28,6 @@ public final class Values {
     unknown_dimension_tree_spawn_chance = builder.comment(
       "This float value determines the chance a weird tree will spawn for each chunk\nin the Unknown Dimension.")
       .defineInRange("Weird Tree Spawn Chance", DEFAULT_UNKNOWN_TREE_SPAWN_CHANCE, Float.MIN_NORMAL, 1.0f);
-    builder.pop();
-
     builder.pop();
   }
 
