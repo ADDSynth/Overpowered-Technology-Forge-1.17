@@ -29,9 +29,11 @@ public final class StringUtil {
     return false;
   }
 
-  public static final String build(String ... strings){
+  /** Accepts any object. Objects will be converted to their String representations.
+   *  Null values will cause "null" to be added.  */
+  public static final String build(Object ... objects){
     final StringBuilder b = new StringBuilder();
-    for(String s : strings){
+    for(Object s : objects){
       b.append(s);
     }
     return b.toString();

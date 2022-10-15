@@ -249,11 +249,11 @@ public final class ShowOresCommand {
         }
       }
       if(blocks > 0){
-        final String text = StringUtil.build("Found ", Integer.toString(blocks), " ", block_name, " in ", Integer.toString(chunks), " chunks. Average: ", String.format("%.2f", ((float)blocks/chunks)), " per chunk.");
+        final String text = StringUtil.build("Found ", blocks, " ", block_name, " in ", chunks, " chunks. Average: ", String.format("%.2f", ((float)blocks/chunks)), " per chunk.");
         source.sendSuccess(new TextComponent(text), true);
       }
       else{
-        final String text = StringUtil.build("No ", block_name, " found in ", Integer.toString(chunks), " chunks.");
+        final String text = StringUtil.build("No ", block_name, " found in ", chunks, " chunks.");
         source.sendSuccess(new TextComponent(text), true);
       }
     }

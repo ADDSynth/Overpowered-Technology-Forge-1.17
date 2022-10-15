@@ -1,5 +1,7 @@
 package addsynth.core.gui.util;
 
+import addsynth.core.util.StringUtil;
+
 /** Used to define sections on a Gui to assist in positioning widgets.
  *  You must add <code>guiLeft</code> and <code>guiTop</code> to the
  *  dimensions, or extend from an existing GuiSection that already has
@@ -42,7 +44,8 @@ public final class GuiSection {
 
   @Override
   public final String toString(){
-    return "GuiSection{X="+x+", Y="+y+", Width="+width+", Height="+height+", Right="+right+", Bottom="+bottom+"}";
+    return StringUtil.build(GuiSection.class.getSimpleName(), "{X=", x, ", Y=", y,
+      ", Width=", width, ", Height=", height, ", Right=", right, ", Bottom=", bottom, "}");
   }
 
 }
