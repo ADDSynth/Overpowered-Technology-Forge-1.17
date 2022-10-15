@@ -2,7 +2,7 @@ package addsynth.core.container.slots;
 
 import javax.annotation.Nonnull;
 import addsynth.core.game.inventory.IInputInventory;
-import addsynth.core.game.items.ItemUtil;
+import addsynth.core.game.item.ItemUtil;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.items.SlotItemHandler;

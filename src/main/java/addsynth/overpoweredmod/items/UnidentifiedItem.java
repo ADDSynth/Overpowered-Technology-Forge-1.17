@@ -1,8 +1,8 @@
 package addsynth.overpoweredmod.items;
 
 import javax.annotation.Nonnull;
-import addsynth.core.game.items.ArmorMaterial;
-import addsynth.core.game.items.EquipmentType;
+import addsynth.core.game.item.constants.ArmorMaterial;
+import addsynth.core.game.item.constants.EquipmentType;
 import addsynth.overpoweredmod.OverpoweredTechnology;
 import addsynth.overpoweredmod.assets.CreativeTabs;
 import addsynth.overpoweredmod.game.reference.Names;

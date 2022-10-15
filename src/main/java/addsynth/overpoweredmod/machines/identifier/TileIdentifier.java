@@ -1,7 +1,7 @@
 package addsynth.overpoweredmod.machines.identifier;
 
 import javax.annotation.Nullable;
-import addsynth.core.game.items.ItemUtil;
+import addsynth.core.game.item.ItemUtil;
 import addsynth.core.util.game.data.AdvancementUtil;
 import addsynth.core.util.java.ArrayUtil;
 import addsynth.core.util.player.PlayerUtil;

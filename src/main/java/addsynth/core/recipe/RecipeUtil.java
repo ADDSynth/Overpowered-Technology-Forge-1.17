@@ -7,7 +7,7 @@ import java.util.Set;
 import javax.annotation.Nullable;
 import addsynth.core.ADDSynthCore;
 import addsynth.core.game.inventory.InventoryUtil;
-import addsynth.core.game.items.ItemUtil;
+import addsynth.core.game.item.ItemUtil;
 import addsynth.core.util.server.ServerUtils;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.Container;

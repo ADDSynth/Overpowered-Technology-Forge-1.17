@@ -1,5 +1,7 @@
-package addsynth.core.game.items;
+package addsynth.core.game.item;
 
+import addsynth.core.game.item.constants.ArmorMaterial;
+import addsynth.core.game.item.constants.EquipmentType;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;

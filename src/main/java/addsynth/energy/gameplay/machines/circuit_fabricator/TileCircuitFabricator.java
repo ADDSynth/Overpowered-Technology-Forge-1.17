@@ -3,7 +3,7 @@ package addsynth.energy.gameplay.machines.circuit_fabricator;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import addsynth.core.container.slots.InputSlot;
-import addsynth.core.game.items.ItemUtil;
+import addsynth.core.game.item.ItemUtil;
 import addsynth.energy.ADDSynthEnergy;
 import addsynth.energy.gameplay.Config;
 import addsynth.energy.gameplay.EnergyItems;

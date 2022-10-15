@@ -1,6 +1,6 @@
 package addsynth.overpoweredmod.game.core;
 
-import addsynth.core.game.items.ItemUtil;
+import addsynth.core.game.item.ItemUtil;
 import addsynth.overpoweredmod.game.reference.Names;
 import addsynth.overpoweredmod.items.basic.LensItem;
 import net.minecraft.ChatFormatting;

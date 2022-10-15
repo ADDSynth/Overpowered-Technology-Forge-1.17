@@ -3,9 +3,9 @@ package addsynth.core.util.constants;
 import addsynth.core.util.color.ColorCode;
 import net.minecraft.world.level.block.Blocks;
 
-/** @see addsynth.core.game.items.HarvestLevel
- *  @see addsynth.core.game.items.ItemValue
- *  @see addsynth.core.game.items.ToolConstants
+/** @see addsynth.core.game.item.constants.HarvestLevel
+ *  @see addsynth.core.game.item.constants.ItemValue
+ *  @see addsynth.core.game.item.constants.ToolConstants
  *  @see addsynth.core.util.command.PermissionLevel
  *  @see addsynth.core.util.world.WorldConstants
  *  @see addsynth.core.util.time.TimeConstants

@@ -2,7 +2,7 @@ package addsynth.overpoweredmod.items;
 
 import java.util.List;
 import javax.annotation.Nullable;
-import addsynth.core.game.items.ItemValue;
+import addsynth.core.game.item.constants.ItemValue;
 import addsynth.overpoweredmod.compatability.curios.RingEffects;
 import addsynth.overpoweredmod.game.reference.Names;
 import net.minecraft.network.chat.Component;

@@ -1,4 +1,4 @@
-package addsynth.core.game.items.enchantment;
+package addsynth.core.game.item.enchantment;
 
 import net.minecraft.world.item.enchantment.Enchantment;
 

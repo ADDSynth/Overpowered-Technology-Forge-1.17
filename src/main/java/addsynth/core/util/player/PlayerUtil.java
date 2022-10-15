@@ -3,7 +3,7 @@ package addsynth.core.util.player;
 import java.util.function.Consumer;
 import javax.annotation.Nullable;
 import addsynth.core.ADDSynthCore;
-import addsynth.core.game.items.ItemUtil;
+import addsynth.core.game.item.ItemUtil;
 import addsynth.core.util.math.block.BlockMath;
 import addsynth.core.util.server.ServerUtils;
 import net.minecraft.core.BlockPos;

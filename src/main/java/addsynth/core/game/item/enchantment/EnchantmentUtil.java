@@ -1,8 +1,8 @@
-package addsynth.core.game.items.enchantment;
+package addsynth.core.game.item.enchantment;
 
 import java.util.Arrays;
 import java.util.List;
-import addsynth.core.game.items.ItemUtil;
+import addsynth.core.game.item.ItemUtil;
 import addsynth.core.util.java.ArrayUtil;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.resources.ResourceLocation;

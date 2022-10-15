@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.function.BiFunction;
 import javax.annotation.Nonnull;
 import addsynth.core.ADDSynthCore;
-import addsynth.core.game.items.ItemUtil;
+import addsynth.core.game.item.ItemUtil;
 import addsynth.core.recipe.shapeless.RecipeCollection;
 import addsynth.core.util.player.PlayerUtil;
 import addsynth.core.util.world.WorldUtil;
