@@ -24,10 +24,7 @@ public final class CustomAdvancements {
     new ResourceLocation(OverpoweredTechnology.MOD_ID, "overpowered/convert_a_thousand_gems");
 
   public static final ResourceLocation FUSION_ENERGY =
-    new ResourceLocation(OverpoweredTechnology.MOD_ID, "overpowered/fusion_energ");
-
-  public static final ResourceLocation WORLD_DESTROYER =
-    new ResourceLocation(OverpoweredTechnology.MOD_ID, "overpowered/world_destroyer");
+    new ResourceLocation(OverpoweredTechnology.MOD_ID, "overpowered/fusion_energy");
 
   public static final ResourceLocation SURVIVOR =
     new ResourceLocation(OverpoweredTechnology.MOD_ID, "overpowered/survivor");

@@ -64,6 +64,7 @@ FIXED:
   Fixed Energy Suspension Bridge maximum length was actually 1 less than what is set
     in the configuration.
   Fix not loading MachineValues config correctly. Yay! Sorry about that!
+  Fix the Fusion Energy advancement was never being awarded to players. God Dammit.
 REMOVED:
   Before now, you could still edit the config to seperate Tools into their own Creative Tab,
     we've finally removed that.
