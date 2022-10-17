@@ -1,8 +1,9 @@
 {
-  "parent": "block/cube_bottom_top",
+  "parent": "block/orientable_with_bottom",
   "textures": {
-    "bottom":   "overpowered:blocks/machines/default_machine_texture",
-    "top":      "overpowered:blocks/machines/top_texture2",
-    "side":     "overpowered:blocks/machines/plasma_generator"
+    "front":  "overpowered:blocks/machines/plasma_generator/plasma_generator_front",
+    "bottom": "overpowered:blocks/machines/default_machine_texture",
+    "top":    "overpowered:blocks/machines/top_texture2",
+    "side":   "overpowered:blocks/machines/plasma_generator/plasma_generator_side"
   }
 }
