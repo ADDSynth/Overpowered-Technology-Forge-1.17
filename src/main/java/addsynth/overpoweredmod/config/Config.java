@@ -52,43 +52,6 @@ public final class Config {
 
   public static ForgeConfigSpec.BooleanValue rings_have_particle_effects;
 
-  // Undead
-  public static ForgeConfigSpec.BooleanValue drop_for_zombie;
-  public static ForgeConfigSpec.BooleanValue drop_for_zombie_villager;
-  public static ForgeConfigSpec.BooleanValue drop_for_husk;
-  public static ForgeConfigSpec.BooleanValue drop_for_skeleton;
-  public static ForgeConfigSpec.BooleanValue drop_for_stray;
-  public static ForgeConfigSpec.BooleanValue drop_for_phantom;
-  public static ForgeConfigSpec.BooleanValue drop_for_drowned;
-  public static ForgeConfigSpec.BooleanValue drop_for_skeleton_horse;
-
-  // Illagers
-  public static ForgeConfigSpec.BooleanValue drop_for_vex;
-  public static ForgeConfigSpec.BooleanValue drop_for_evoker;
-  public static ForgeConfigSpec.BooleanValue drop_for_vindicator;
-  public static ForgeConfigSpec.BooleanValue drop_for_illusioner;
-  public static ForgeConfigSpec.BooleanValue drop_for_pillager;
-  public static ForgeConfigSpec.BooleanValue drop_for_ravager;
-
-  // Overworld Mobs
-  public static ForgeConfigSpec.BooleanValue drop_for_creeper;
-  public static ForgeConfigSpec.BooleanValue drop_for_spider;
-  public static ForgeConfigSpec.BooleanValue drop_for_cave_spider;
-  public static ForgeConfigSpec.BooleanValue drop_for_witch;
-  public static ForgeConfigSpec.BooleanValue drop_for_guardian;
-  public static ForgeConfigSpec.BooleanValue drop_for_elder_guardian;
-
-  // Nether Mobs
-  public static ForgeConfigSpec.BooleanValue drop_for_zombie_pigman;
-  public static ForgeConfigSpec.BooleanValue drop_for_blaze;
-  public static ForgeConfigSpec.BooleanValue drop_for_ghast;
-  public static ForgeConfigSpec.BooleanValue drop_for_magma_cube;
-  public static ForgeConfigSpec.BooleanValue drop_for_wither_skeleton;
-
-  // End Mobs
-  public static ForgeConfigSpec.BooleanValue drop_for_enderman;
-  public static ForgeConfigSpec.BooleanValue drop_for_shulker;
-
   public static ForgeConfigSpec.BooleanValue show_advanced_config;
 
   private static final Pair<Config, ForgeConfigSpec> SPEC_PAIR = new ForgeConfigSpec.Builder().configure(Config::new);
@@ -169,46 +132,6 @@ public final class Config {
       rings_have_particle_effects = builder.define("Rings Have Particle Effects", false);
     builder.pop();
 
-    builder.push("Unidentified Mob Drops");
-      builder.push("Overworld Mobs");
-        builder.push("Undead");
-          drop_for_zombie          = builder.define("Drop for Zombie",          true);
-          drop_for_zombie_villager = builder.define("Drop for Zombie Villager", true);
-          drop_for_husk            = builder.define("Drop for Husk",            true);
-          drop_for_skeleton        = builder.define("Drop for Skeleton",        true);
-          drop_for_stray           = builder.define("Drop for Stray",           true);
-          drop_for_drowned         = builder.define("Drop for Drowned",         true);
-          drop_for_phantom         = builder.define("Drop for Phantom",         true);
-          drop_for_skeleton_horse  = builder.define("Drop for Skeleton Horse",  true);
-        builder.pop();
-        builder.push("Illagers");
-          drop_for_vex        = builder.define("Drop for Vex",        true);
-          drop_for_evoker     = builder.define("Drop for Evoker",     true);
-          drop_for_vindicator = builder.define("Drop for Vindicator", true);
-          drop_for_illusioner = builder.define("Drop for Illusioner", true);
-          drop_for_pillager   = builder.define("Drop for Pillager",   true);
-          drop_for_ravager    = builder.define("Drop for Ravager",    true);
-        builder.pop();
-        drop_for_spider          = builder.define("Drop for Spider",          true);
-        drop_for_cave_spider     = builder.define("Drop for Cave Spider",     true);
-        drop_for_creeper         = builder.define("Drop for Creeper",         true);
-        drop_for_witch           = builder.define("Drop for Witch",           true);
-        drop_for_guardian        = builder.define("Drop for Guardian",        true);
-        drop_for_elder_guardian  = builder.define("Drop for Elder Guardian",  true);
-      builder.pop();
-      builder.push("Nether Mobs");
-        drop_for_zombie_pigman   = builder.define("Drop for Zombie Pigman",   true);
-        drop_for_magma_cube      = builder.define("Drop for Magma Cube",      true);
-        drop_for_ghast           = builder.define("Drop for Ghast",           true);
-        drop_for_blaze           = builder.define("Drop for Blaze",           true);
-        drop_for_wither_skeleton = builder.define("Drop for Wither Skeleton", true);
-      builder.pop();
-      builder.push("End Mobs");
-        drop_for_enderman        = builder.define("Drop for Enderman",        true);
-        drop_for_shulker         = builder.define("Drop for Shulker",         true);
-      builder.pop();
-    builder.pop();
-    
     builder.push("Advanced");
     show_advanced_config = builder.comment(
       "Enabling this will grant you access to advanced configuration options in the Mod's Configuration screen.\n"+

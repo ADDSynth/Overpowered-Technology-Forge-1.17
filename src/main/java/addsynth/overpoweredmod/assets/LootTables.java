@@ -3,8 +3,9 @@ package addsynth.overpoweredmod.assets;
 import addsynth.core.game.item.constants.ArmorMaterial;
 import addsynth.overpoweredmod.OverpoweredTechnology;
 import addsynth.overpoweredmod.compatability.CompatabilityManager;
-import addsynth.overpoweredmod.config.Config;
 import addsynth.overpoweredmod.config.Features;
+import addsynth.overpoweredmod.config.UnidentifiedItemDropConfig;
+import addsynth.overpoweredmod.config.Values;
 import addsynth.overpoweredmod.game.reference.OverpoweredItems;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
@@ -22,39 +23,17 @@ public final class LootTables {
 // https://minecraft.gamepedia.com/Status_effect#Luck
 // https://github.com/Vazkii/Botania/blob/master/src/main/java/vazkii/botania/common/core/loot/LootHandler.java
 
-  private static final float default_spawn_chance = 1.0f / 100.0f; // before, it was just with rings and it was 1 / 15 chance.
-  private static final float spawn_chance = default_spawn_chance;
-
-  private static final int armor_weight = 3;
-  private static final int leather_weight   = armor_weight * 10;
-  private static final int gold_weight      = armor_weight * 6;
-  private static final int chainmail_weight = armor_weight * 3;
-  private static final int iron_weight      = armor_weight * 3;
-  private static final int diamond_weight   = armor_weight * 1;
-  private static final int ring_weight      = 1;
-  /*
-  Without Rings:
-      Leather: 10 / 23 (43%)
-         Gold:  6 / 23 (26%)
-    Chainmail:  3 / 23 (13%)
-         Iron:  3 / 23 (13%)
-      Diamond:  1 / 23 ( 4%)
-  With Rings:
-    Armor: 69 / 73 (95%)
-        Leather: 30 / 73 (41%)
-           Gold: 18 / 73 (25%)
-      Chainmail:  9 / 73 (12%)
-           Iron:  9 / 73 (12%)
-        Diamond:  3 / 73 ( 4%)
-    Rings:  4 / 73 (5%)
-  You get 1 custom loot drop every 100 mobs on average.
-  You get 1 Ring every 1,825 mobs on average.
-  */
-
-  private static final LootPool custom_loot_pool = build_loot_pool();
-  
-  private static final LootPool build_loot_pool(){
+  private static final LootPool build_loot_pool(final float drop_chance){
+    final int   leather_weight = Values.leather_armor_drop_weight.get();
+    final int      gold_weight = Values.gold_armor_drop_weight.get();
+    final int chainmail_weight = Values.chainmail_armor_drop_weight.get();
+    final int      iron_weight = Values.iron_armor_drop_weight.get();
+    final int   diamond_weight = Values.diamond_armor_drop_weight.get();
     final LootPool.Builder loot = new LootPool.Builder();
+    // Not how I would've designed it, but this is the best I can do.
+    // As long as items of the same type have the same weight, and each type has
+    // the same number of items, then they all have an equal chance of being picked.
+    // For instance: [30, 18, 9, 9, 3, 4] is the same as [120, 72, 36, 36, 12, 16]
     loot.add(LootItem.lootTableItem(OverpoweredItems.unidentified_armor[ArmorMaterial.LEATHER.ordinal()][0]).setWeight(leather_weight));
     loot.add(LootItem.lootTableItem(OverpoweredItems.unidentified_armor[ArmorMaterial.LEATHER.ordinal()][1]).setWeight(leather_weight));
     loot.add(LootItem.lootTableItem(OverpoweredItems.unidentified_armor[ArmorMaterial.LEATHER.ordinal()][2]).setWeight(leather_weight));
@@ -76,64 +55,68 @@ public final class LootTables {
     loot.add(LootItem.lootTableItem(OverpoweredItems.unidentified_armor[ArmorMaterial.DIAMOND.ordinal()][2]).setWeight(diamond_weight));
     loot.add(LootItem.lootTableItem(OverpoweredItems.unidentified_armor[ArmorMaterial.DIAMOND.ordinal()][3]).setWeight(diamond_weight));
     if(CompatabilityManager.are_rings_enabled()){
+      final int      ring_weight = Values.ring_drop_weight.get();
       loot.add(LootItem.lootTableItem(OverpoweredItems.ring_0).setWeight(ring_weight));
       loot.add(LootItem.lootTableItem(OverpoweredItems.ring_1).setWeight(ring_weight));
       loot.add(LootItem.lootTableItem(OverpoweredItems.ring_2).setWeight(ring_weight));
       loot.add(LootItem.lootTableItem(OverpoweredItems.ring_3).setWeight(ring_weight));
     }
     loot.when(LootItemKilledByPlayerCondition.killedByPlayer());
-    loot.when(LootItemRandomChanceCondition.randomChance(spawn_chance));
+    loot.when(LootItemRandomChanceCondition.randomChance(drop_chance));
     loot.name("overpowered_custom_loot_table");
     return loot.build();
   }
 
   private static final boolean debug_loot_tables = false;
+  private static final String prefix = "minecraft:entities/";
   
   @SubscribeEvent
   public static final void inject_loot(final LootTableLoadEvent event){
     if(Features.identifier.get()){
-      final String prefix = "minecraft:entities/";
       final String name = event.getName().toString();
       if(name.startsWith(prefix)){
         if(debug_loot_tables){
           OverpoweredTechnology.log.info("Loading Loot Table: "+name);
         }
         final String mob = name.substring(prefix.length());
-        boolean add_loot_drops = false;
-        if(mob.equals("zombie")            && Config.drop_for_zombie.get()){            add_loot_drops = true; }
-        if(mob.equals("zombie_villager")   && Config.drop_for_zombie_villager.get()){   add_loot_drops = true; }
-        if(mob.equals("husk")              && Config.drop_for_husk.get()){              add_loot_drops = true; }
-        if(mob.equals("spider")            && Config.drop_for_spider.get()){            add_loot_drops = true; }
-        if(mob.equals("cave_spider")       && Config.drop_for_cave_spider.get()){       add_loot_drops = true; }
-        if(mob.equals("creeper")           && Config.drop_for_creeper.get()){           add_loot_drops = true; }
-        if(mob.equals("skeleton")          && Config.drop_for_skeleton.get()){          add_loot_drops = true; }
-        if(mob.equals("zombie_pigman")     && Config.drop_for_zombie_pigman.get()){     add_loot_drops = true; }
-        if(mob.equals("blaze")             && Config.drop_for_blaze.get()){             add_loot_drops = true; }
-        if(mob.equals("witch")             && Config.drop_for_witch.get()){             add_loot_drops = true; }
-        if(mob.equals("ghast")             && Config.drop_for_ghast.get()){             add_loot_drops = true; }
-        if(mob.equals("enderman")          && Config.drop_for_enderman.get()){          add_loot_drops = true; }
-        if(mob.equals("stray")             && Config.drop_for_stray.get()){             add_loot_drops = true; }
-        if(mob.equals("guardian")          && Config.drop_for_guardian.get()){          add_loot_drops = true; }
-        if(mob.equals("elder_guardian")    && Config.drop_for_elder_guardian.get()){    add_loot_drops = true; }
-        if(mob.equals("wither_skeleton")   && Config.drop_for_wither_skeleton.get()){   add_loot_drops = true; }
-        if(mob.equals("magma_cube")        && Config.drop_for_magma_cube.get()){        add_loot_drops = true; }
-        if(mob.equals("shulker")           && Config.drop_for_shulker.get()){           add_loot_drops = true; }
-        if(mob.equals("vex")               && Config.drop_for_vex.get()){               add_loot_drops = true; }
-        if(mob.equals("evoker")            && Config.drop_for_evoker.get()){            add_loot_drops = true; }
-        if(mob.equals("vindicator")        && Config.drop_for_vindicator.get()){        add_loot_drops = true; }
-        if(mob.equals("illusioner")        && Config.drop_for_illusioner.get()){        add_loot_drops = true; }
-        if(mob.equals("drowned")           && Config.drop_for_drowned.get()){           add_loot_drops = true; }
-        if(mob.equals("phantom")           && Config.drop_for_phantom.get()){           add_loot_drops = true; }
-        if(mob.equals("skeleton_horse")    && Config.drop_for_skeleton_horse.get()){    add_loot_drops = true; }
-        if(mob.equals("pillager")          && Config.drop_for_pillager.get()){          add_loot_drops = true; }
-        if(mob.equals("ravager")           && Config.drop_for_ravager.get()){           add_loot_drops = true; }
+        if(mob.equals("zombie")         ){addDrops(Values.MOBS.ZOMBIE,          event); return;}
+        if(mob.equals("zombie_villager")){addDrops(Values.MOBS.ZOMBIE_VILLAGER, event); return;}
+        if(mob.equals("husk")           ){addDrops(Values.MOBS.HUSK,            event); return;}
+        if(mob.equals("spider")         ){addDrops(Values.MOBS.SPIDER,          event); return;}
+        if(mob.equals("cave_spider")    ){addDrops(Values.MOBS.CAVE_SPIDER,     event); return;}
+        if(mob.equals("creeper")        ){addDrops(Values.MOBS.CREEPER,         event); return;}
+        if(mob.equals("skeleton")       ){addDrops(Values.MOBS.SKELETON,        event); return;}
+        if(mob.equals("zombie_pigman")  ){addDrops(Values.MOBS.ZOMBIE_PIGMAN,   event); return;}
+        if(mob.equals("blaze")          ){addDrops(Values.MOBS.BLAZE,           event); return;}
+        if(mob.equals("witch")          ){addDrops(Values.MOBS.WITCH,           event); return;}
+        if(mob.equals("ghast")          ){addDrops(Values.MOBS.GHAST,           event); return;}
+        if(mob.equals("enderman")       ){addDrops(Values.MOBS.ENDERMAN,        event); return;}
+        if(mob.equals("stray")          ){addDrops(Values.MOBS.STRAY,           event); return;}
+        if(mob.equals("guardian")       ){addDrops(Values.MOBS.GUARDIAN,        event); return;}
+        if(mob.equals("elder_guardian") ){addDrops(Values.MOBS.ELDER_GUARDIAN,  event); return;}
+        if(mob.equals("wither_skeleton")){addDrops(Values.MOBS.WITHER_SKELETON, event); return;}
+        if(mob.equals("magma_cube")     ){addDrops(Values.MOBS.MAGMA_CUBE,      event); return;}
+        if(mob.equals("shulker")        ){addDrops(Values.MOBS.SHULKER,         event); return;}
+        if(mob.equals("vex")            ){addDrops(Values.MOBS.VEX,             event); return;}
+        if(mob.equals("evoker")         ){addDrops(Values.MOBS.EVOKER,          event); return;}
+        if(mob.equals("vindicator")     ){addDrops(Values.MOBS.VINDICATOR,      event); return;}
+        if(mob.equals("illusioner")     ){addDrops(Values.MOBS.ILLUSIONER,      event); return;}
+        if(mob.equals("drowned")        ){addDrops(Values.MOBS.DROWNED,         event); return;}
+        if(mob.equals("phantom")        ){addDrops(Values.MOBS.PHANTOM,         event); return;}
+        if(mob.equals("skeleton_horse") ){addDrops(Values.MOBS.SKELETON_HORSE,  event); return;}
+        if(mob.equals("pillager")       ){addDrops(Values.MOBS.PILLAGER,        event); return;}
+        if(mob.equals("ravager")        ){addDrops(Values.MOBS.RAVAGER,         event); return;}
+        if(mob.equals("ender_dragon")   ){addDrops(Values.MOBS.END_DRAGON,      event); return;}
+        if(mob.equals("wither")         ){addDrops(Values.MOBS.WITHER,          event); return;}
+      }
+    }
+  }
 
-        if(add_loot_drops){
-          event.getTable().addPool(custom_loot_pool);
-          if(debug_loot_tables){
-            OverpoweredTechnology.log.info("Successfully injected custom loot pool into Loot Table for: "+mob);
-          }
-        }
+  private static final void addDrops(final UnidentifiedItemDropConfig config, final LootTableLoadEvent event){
+    if(config.drop.get()){
+      event.getTable().addPool(build_loot_pool(config.chance.get().floatValue()));
+      if(debug_loot_tables){
+        OverpoweredTechnology.log.info("  Successfully injected custom loot pool into Loot Table for: "+config.mob_name);
       }
     }
   }

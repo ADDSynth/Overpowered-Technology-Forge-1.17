@@ -31,6 +31,15 @@ NEW:
   Added additional machine states to indicate output is full or machine isn't getting energy.
   Added a config option to ADDSynthCore that let's you change whether Project E EMC values
     are defined by the developer, or calculated accurately.
+  Unidentified Item Mob Drop configuration settings:
+   - Has moved to the Values config file.
+   - You can now configure the drop chance for each enemy mob.
+   - You can now also configure the weight values for the different types of drops.
+   - You can now configure the Ring type weights for when you identify a Ring.
+   - Mini-boss mobs such as the Elder Guardian, Evoker, and Ravager will now always drop
+       an unidentified item.
+   // - Now drop for boss mobs, and will always drop 7 unidentified items by default.
+   - TODO: doesn't drop more than once! Need to use something other than LootItemRandomChanceCondition.
 CHANGED:
   Increased the chance to drop an Unidentified Ring when killing enemy mobs.
   The Dimensional Anchor is now registered as a Curios Charm, if you
