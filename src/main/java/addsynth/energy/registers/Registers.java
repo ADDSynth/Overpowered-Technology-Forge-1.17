@@ -2,9 +2,9 @@ package addsynth.energy.registers;
 
 import addsynth.core.game.RegistryUtil;
 import addsynth.energy.ADDSynthEnergy;
-import addsynth.energy.gameplay.Config;
 import addsynth.energy.gameplay.EnergyBlocks;
 import addsynth.energy.gameplay.EnergyItems;
+import addsynth.energy.gameplay.config.Config;
 import addsynth.energy.gameplay.machines.circuit_fabricator.recipe.CircuitFabricatorRecipes;
 import addsynth.energy.gameplay.machines.compressor.recipe.CompressorRecipes;
 import net.minecraft.world.inventory.MenuType;

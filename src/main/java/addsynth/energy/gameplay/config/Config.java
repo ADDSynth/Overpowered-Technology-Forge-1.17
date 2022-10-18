@@ -1,4 +1,4 @@
-package addsynth.energy.gameplay;
+package addsynth.energy.gameplay.config;
 
 import org.apache.commons.lang3.tuple.Pair;
 import addsynth.energy.lib.config.MachineDataConfig;
