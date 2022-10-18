@@ -40,6 +40,7 @@ NEW:
        an unidentified item.
    // - Now drop for boss mobs, and will always drop 7 unidentified items by default.
    - TODO: doesn't drop more than once! Need to use something other than LootItemRandomChanceCondition.
+  Mouse scrollwheel can now scroll the lists next to scrollbars.
 CHANGED:
   Increased the chance to drop an Unidentified Ring when killing enemy mobs.
   The Dimensional Anchor is now registered as a Curios Charm, if you

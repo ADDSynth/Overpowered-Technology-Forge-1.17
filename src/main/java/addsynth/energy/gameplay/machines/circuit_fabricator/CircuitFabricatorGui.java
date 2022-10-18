@@ -70,21 +70,20 @@ public final class CircuitFabricatorGui extends GuiEnergyBase<TileCircuitFabrica
     item_scrollbar.setResponder(this::onItemSelected);
     addRenderableWidget(item_scrollbar);
     
-    // setup data   (I know there's a better way to do this, but it's like this for now.)
+    // setup data
     tile.updateGui(); // update displayed recipe, in case player opens another Circuit Fabricator
-    updateSelectedItem(tile.getRecipeOutput());
+    final ItemStack output = tile.getRecipeOutput();
+    selected_item = StringUtil.translate(output.getDescriptionId());
+    item_scrollbar.setSelected(output, false);
   }
 
   private final void onItemSelected(final ItemStack item, final int index){
-    @SuppressWarnings("null")
-    final String item_name = item.getItem().getRegistryName().toString();
-    NetworkHandler.INSTANCE.sendToServer(new ChangeCircuitFabricatorRecipe(tile.getBlockPos(), item_name));
-    selected_item = StringUtil.translate(item.getDescriptionId());
-  }
-
-  private final void updateSelectedItem(final ItemStack output){
-    selected_item = StringUtil.translate(output.getDescriptionId());
-    item_scrollbar.setSelected(output);
+    if(item != null){
+      @SuppressWarnings("null")
+      final String item_name = item.getItem().getRegistryName().toString();
+      NetworkHandler.INSTANCE.sendToServer(new ChangeCircuitFabricatorRecipe(tile.getBlockPos(), item_name));
+      selected_item = StringUtil.translate(item.getDescriptionId());
+    }
   }
 
   /** Called when the player changes the selected recipe on the server side.

@@ -1,6 +1,7 @@
 package addsynth.core.gui.widgets.scrollbar;
 
 import java.util.function.BiConsumer;
+import javax.annotation.Nonnull;
 
 /** <p>A Scrollbar is a widget that goes beside a list of values which the player can
  *     move up or down to scroll a list of values. It automatically adjusts its position
@@ -18,7 +19,7 @@ import java.util.function.BiConsumer;
  *     Scrollbar to call the responder you assigned, call {@link #setSelected(int, boolean, boolean)}.
  *     Absolutely be careful you don't have Scrollbar responders call each other otherwise that will
  *     create an infinite loop!
- *  <p>Call {@link #setSelected(int)} with any negative value to unselect.
+ *  <p>Call {@link #unSelect} or {@link #setSelected(int)} with any negative value to unselect.
  * @author ADDSynth
  */
 public final class TextScrollbar extends AbstractScrollbar<String, ListEntry> {
@@ -32,21 +33,9 @@ public final class TextScrollbar extends AbstractScrollbar<String, ListEntry> {
   }
   
   @Override
+  @Nonnull
   protected String[] createEmptyValueArray(){
     return new String[0];
   }
   
-  /** Attempt to set this scrollbar's selected index to one of the values in the list. */
-  @Override
-  public void setSelected(final String value){
-    int i;
-    for(i = 0; i < values.length; i++){
-      if(values[i].equals(value)){
-        setSelected(i);
-        return;
-      }
-    }
-    unSelect();
-  }
-
 }

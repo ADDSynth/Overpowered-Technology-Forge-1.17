@@ -1,11 +1,11 @@
 package addsynth.core.gui.widgets.scrollbar;
 
 import java.util.function.BiConsumer;
+import javax.annotation.Nonnull;
 import addsynth.core.ADDSynthCore;
 import addsynth.core.gui.widgets.Dimensions;
 import addsynth.core.gui.widgets.WidgetUtil;
 import addsynth.core.util.java.ArrayUtil;
-import addsynth.core.util.math.CommonMath;
 import addsynth.core.util.math.MathUtility;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.gui.components.AbstractWidget;
@@ -13,24 +13,25 @@ import net.minecraft.client.gui.narration.NarrationElementOutput;
 import net.minecraft.client.sounds.SoundManager;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.Mth;
 
 /** <p>A Scrollbar is a widget that goes beside a list of values which the player can
  *     move up or down to scroll a list of values. It automatically adjusts its position
  *     and size based on how many list items there are.
  *  <p>First define an array of {@link ListEntry}s and place them on your gui, and add them as buttons.
- *     Then create the Scrollbar. Place it in the gui where you want, give it your full array of string
- *     values, and your array of {@link ListEntry}s.
+ *     Then create the Scrollbar. Place it in the gui where you want, give it your full array of values,
+ *     and your array of {@link ListEntry}s.
  *  <p>When any {@link ListEntry} is clicked, that value will be selected in the list. Only one value
  *     can be selected at any time.
  *  <p>You can assign a {@link BiConsumer} as a responder, which will be called whenever a list item
- *     is selected. The first argument is the string value. The second is the index in the array of values.
+ *     is selected. The first argument is the value. The second is the index in the array of values.
  *  <p>You can manually get the selected value by called {@link #getSelected}, or the index by calling
  *     {@link #getSelectedIndex}.
  *  <p>To manually set which entry is selected call {@link #setSelected(int)}. If you don't want the
  *     Scrollbar to call the responder you assigned, call {@link #setSelected(int, boolean, boolean)}.
  *     Absolutely be careful you don't have Scrollbar responders call each other otherwise that will
  *     create an infinite loop!
- *  <p>Call {@link #setSelected(int)} with any negative value to unselect.
+ *  <p>Call {@link #unSelect} or {@link #setSelected(int)} with any negative value to unselect.
  * @author ADDSynth
  */
 public abstract class AbstractScrollbar<E, L extends AbstractListEntry<E>> extends AbstractWidget {
@@ -102,14 +103,14 @@ public abstract class AbstractScrollbar<E, L extends AbstractListEntry<E>> exten
   private L[] list_items;
   /** Number of visible List Entries. */
   private int visible_elements;
-  /** Full list of values. */
+  /** Full list of values. NEVER CHANGE DIRECTLY. Call {@link #updateScrollbar} to set. */
   protected E[] values;
-  /** Number of string values in the full list. */
-  private int list_length;
-  /** The selected string value in the full list. */
+  /** Number of values in the full list. Use this instead of <code>values.length</code>. */
+  protected int list_length;
+  /** The selected index. */
   private int selected = -1;
 
-  /** This is passed the new Selection Index every time it is changed,
+  /** This is passed the new selected Index every time it is changed,
    *  even if it is changed to an invalid value. */
   private BiConsumer<E, Integer> onSelected;
 
@@ -132,14 +133,12 @@ public abstract class AbstractScrollbar<E, L extends AbstractListEntry<E>> exten
     list_length = this.values.length;
     
     recalculateScrollbar();
-
-    // set list entries
     updateList();
   }
   
+  @Nonnull
   protected abstract E[] createEmptyValueArray();
   
-  @SuppressWarnings("deprecation")
   private final void recalculateScrollbar(){
     try{
       // recalculate everything for now. it doesn't hurt.
@@ -149,7 +148,7 @@ public abstract class AbstractScrollbar<E, L extends AbstractListEntry<E>> exten
         final double ratio = (double)visible_elements / list_length;
         scrollbar_height = Math.max((int)Math.round(height * ratio), 6);
         max_positions = list_length - visible_elements + 1;
-        index_position = CommonMath.clamp(index_position, 0, max_positions - 1);
+        index_position = Mth.clamp(index_position, 0, max_positions - 1);
       }
       else{
         scrollbar_height = this.height;
@@ -197,13 +196,8 @@ public abstract class AbstractScrollbar<E, L extends AbstractListEntry<E>> exten
 
   @Override
   protected final void onDrag(double gui_x, double gui_y, double screen_x, double screen_y){
-    move_scrollbar((int)Math.round(gui_y));
-  }
-
-  @SuppressWarnings("deprecation")
-  protected final void move_scrollbar(final int new_scrollbar_y_position){
-    center_y = new_scrollbar_y_position;
-    position_y = CommonMath.clamp(center_y - scrollbar_half_height, this.y, max_position_y);
+    center_y = (int)Math.round(gui_y); // center of scrollbar follows mouse
+    position_y = Mth.clamp(center_y - scrollbar_half_height, this.y, max_position_y);
     
     temp_index = MathUtility.getPositionIndex(position_y, index_positions);
     if(temp_index != index_position){
@@ -212,6 +206,17 @@ public abstract class AbstractScrollbar<E, L extends AbstractListEntry<E>> exten
     }
   }
 
+  /** Adjusts the scrollbar's position based on the provided index position,
+   *  and also updates the displayed list. */
+  private final void setScrollbarPosition(final int scrollbar_position_index){
+    if(ArrayUtil.isInsideBounds(scrollbar_position_index, index_positions.length)){
+      index_position = scrollbar_position_index;
+      position_y = index_positions[scrollbar_position_index];
+      updateList();
+    }
+  }
+
+  /** Used to update the displayed list entries. Must be called every time the scrollbar's position changes. */
   private void updateList(){
     int i;
     int id;
@@ -236,19 +241,27 @@ public abstract class AbstractScrollbar<E, L extends AbstractListEntry<E>> exten
     this.onSelected = responder;
   }
 
+  /** Shortcut to unselect the Index. Does not move scrollbar. */
   public void unSelect(){
     setSelected(-1, true, false);
   }
 
-  public void setSelected(int list_entry){
-    setSelected(list_entry, true, true);
+  /** Shortcut to set the Index. Always responds and adjusts scrollbar. */
+  public void setSelected(int list_entry_index){
+    setSelected(list_entry_index, true, true);
   }
   
-  public void setSelected(int list_entry, boolean respond, boolean adjust_scrollbar){
+  /** Primary function to set the selected Index. Can also Unselect the index.
+   *  Calls the {@link #onSelected} BiConsumer, if available, to respond to changes.
+   * @param list_entry_index Set to any index outside of range to unselect
+   * @param respond Whether to call the onSelected BiConsumer to respond to changes
+   * @param adjust_scrollbar
+   */
+  public void setSelected(int list_entry_index, boolean respond, boolean adjust_scrollbar){
     // MAYBE: responding to selection changes now happens all the time by default, consider removing
     //        the parameter. But I may want to control this in the future, so it's left as-is for now.
     //        Remove this in 2027 if it's no longer necessary.
-    selected = list_entry;
+    selected = list_entry_index;
     for(final L e : list_items){
       e.setSelected(selected);
     }
@@ -259,21 +272,63 @@ public abstract class AbstractScrollbar<E, L extends AbstractListEntry<E>> exten
       }
     }
     
+    // TODO: Always scroll by default, only scroll if we select a valid index, add a reset function that unselects and scrolls to position 0.
     if(adjust_scrollbar){
       scroll_to_value();
     }
   }
 
-  /** Attempt to set this scrollbar's selected index to one of the values in the list. */
-  public abstract void setSelected(final E value);
+  /** Set this scrollbar's selected index to the value that you specify.
+   *  Unselects the index if we didn't find your value. */
+  public final void setSelected(final E value){
+    setSelected(find(value));
+  }
 
+  /** Set this scrollbar's selected index to the value that you specify.
+   *  Unselects the index if we didn't find your value.
+   * @param respond Whether to call the onSelected BiConsumer to respond to changes
+   */
+  public final void setSelected(final E value, final boolean respond){
+    setSelected(find(value), respond, true);
+  }
+
+  /** Searches through the list of values and returns the index if we find the value
+   *  you're looking for. Returns -1 if we did not find it in the list. */
+  public int find(final E value){
+    if(values != null){
+      int i;
+      for(i = 0; i < list_length; i++){
+        if(values[i].equals(value)){
+          return i;
+        }
+      }
+    }
+    return -1;
+  }
+
+  @Override
+  public final boolean mouseScrolled(double mouse_x, double mouse_y, double scroll_direction){
+    mouseScrollWheel((int)scroll_direction);
+    return true;
+  }
+
+  /** Call this to respond to scrollwheel actions. Positive values scroll up, negative values scroll down. */
+  public final void mouseScrollWheel(int direction){
+    final int temp_index = Mth.clamp(index_position - direction, 0, max_positions - 1);
+    if(index_position != temp_index){
+      setScrollbarPosition(temp_index);
+    }
+  }
+
+  /** Moves scrollbar so that the selected value is shown in the middle.
+   *  If there is no selection then scrollbar moves to first position. */
   private final void scroll_to_value(){ // seperate as a function in case we need to call it externally?
     if(hasValidSelection()){
-      final double index = (double)selected / values.length;
-      move_scrollbar(y + (int)Math.round(index * height));
+      final int index = Mth.clamp(selected - (visible_elements / 2), 0, index_positions.length - 1);
+      setScrollbarPosition(index);
     }
     else{
-      move_scrollbar(y);
+      setScrollbarPosition(0);
     }
   }
 
@@ -286,7 +341,7 @@ public abstract class AbstractScrollbar<E, L extends AbstractListEntry<E>> exten
   }
 
   public final boolean hasValidSelection(){
-    return ArrayUtil.isInsideBounds(selected, values.length);
+    return ArrayUtil.isInsideBounds(selected, list_length);
   }
 
   @Override

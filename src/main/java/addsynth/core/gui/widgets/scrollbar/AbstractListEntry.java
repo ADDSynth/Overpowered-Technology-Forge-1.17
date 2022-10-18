@@ -50,6 +50,15 @@ public abstract class AbstractListEntry<E> extends AbstractButton {
     }
   }
 
+  @Override
+  public final boolean mouseScrolled(double mouse_x, double mouse_y, double scroll_direction){
+    if(responder != null){
+      responder.mouseScrollWheel((int)scroll_direction);
+      return true;
+    }
+    return false;
+  }
+
   public abstract void set(final int entry_id, final E value);
 
   /** Do not use this to set the selected entry. Use Scrollbar.setSelected(). */
