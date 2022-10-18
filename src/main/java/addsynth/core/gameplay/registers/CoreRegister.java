@@ -5,6 +5,7 @@ import addsynth.core.config.Features;
 import addsynth.core.game.RegistryUtil;
 import addsynth.core.gameplay.Core;
 import addsynth.core.gameplay.Trophy;
+import addsynth.core.gameplay.reference.Names;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;

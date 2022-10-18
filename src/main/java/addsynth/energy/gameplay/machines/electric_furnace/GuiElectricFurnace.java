@@ -2,18 +2,14 @@ package addsynth.energy.gameplay.machines.electric_furnace;
 
 import addsynth.core.gui.util.GuiUtil;
 import addsynth.core.gui.widgets.ProgressBar;
-import addsynth.energy.ADDSynthEnergy;
+import addsynth.energy.gameplay.reference.GuiReference;
 import addsynth.energy.lib.gui.GuiEnergyBase;
 import addsynth.energy.lib.gui.widgets.WorkProgressBar;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
 public final class GuiElectricFurnace extends GuiEnergyBase<TileElectricFurnace, ContainerElectricFurnace> {
-
-  private static final ResourceLocation electric_furnace_gui_texture =
-    new ResourceLocation(ADDSynthEnergy.MOD_ID,"textures/gui/electric_furnace.png");
 
   private final WorkProgressBar work_progress_bar = new WorkProgressBar(80, 60, 14, 14, 200, 2);
   
@@ -21,7 +17,7 @@ public final class GuiElectricFurnace extends GuiEnergyBase<TileElectricFurnace,
   private static final int time_left_y = 78;
 
   public GuiElectricFurnace(final ContainerElectricFurnace container, final Inventory player_inventory, final Component title){
-    super(176, 172, container, player_inventory, title, electric_furnace_gui_texture);
+    super(176, 172, container, player_inventory, title, GuiReference.electric_furnace);
   }
 
   @Override

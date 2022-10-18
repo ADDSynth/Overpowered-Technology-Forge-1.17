@@ -3,6 +3,7 @@ package addsynth.core.gui.widgets.scrollbar;
 import java.util.function.BiConsumer;
 import javax.annotation.Nonnull;
 import addsynth.core.ADDSynthCore;
+import addsynth.core.gameplay.reference.GuiReference;
 import addsynth.core.gui.widgets.Dimensions;
 import addsynth.core.gui.widgets.WidgetUtil;
 import addsynth.core.util.java.ArrayUtil;
@@ -12,7 +13,6 @@ import net.minecraft.client.gui.components.AbstractWidget;
 import net.minecraft.client.gui.narration.NarrationElementOutput;
 import net.minecraft.client.sounds.SoundManager;
 import net.minecraft.network.chat.TextComponent;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 
 /** <p>A Scrollbar is a widget that goes beside a list of values which the player can
@@ -35,8 +35,6 @@ import net.minecraft.util.Mth;
  * @author ADDSynth
  */
 public abstract class AbstractScrollbar<E, L extends AbstractListEntry<E>> extends AbstractWidget {
-
-  private static final ResourceLocation texture = new ResourceLocation(ADDSynthCore.MOD_ID, "textures/gui/scrollbar.png");
 
   // texture coordinates
   /** Main scrollbar X texture coordinate. */
@@ -175,7 +173,7 @@ public abstract class AbstractScrollbar<E, L extends AbstractListEntry<E>> exten
 
   @Override
   public void render(PoseStack matrix, int p_render_1_, int p_render_2_, float p_render_3_){
-    WidgetUtil.common_button_render_setup(texture);
+    WidgetUtil.common_button_render_setup(GuiReference.scrollbar);
 
     // Background
     WidgetUtil.verticalSplitRender(matrix,

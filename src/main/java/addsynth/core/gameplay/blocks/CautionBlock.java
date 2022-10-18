@@ -2,7 +2,7 @@ package addsynth.core.gameplay.blocks;
 
 import addsynth.core.ADDSynthCore;
 import addsynth.core.game.RegistryUtil;
-import addsynth.core.gameplay.registers.Names;
+import addsynth.core.gameplay.reference.Names;
 import addsynth.core.util.constants.Constants;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;

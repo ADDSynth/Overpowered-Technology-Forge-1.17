@@ -5,18 +5,15 @@ import addsynth.core.gui.widgets.buttons.AdjustableButton;
 import addsynth.energy.lib.gui.GuiEnergyBase;
 import addsynth.energy.lib.gui.widgets.WorkProgressBar;
 import addsynth.material.Material;
-import addsynth.overpoweredmod.OverpoweredTechnology;
 import addsynth.overpoweredmod.config.Config;
 import addsynth.overpoweredmod.game.NetworkHandler;
+import addsynth.overpoweredmod.game.reference.GuiReference;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.item.ItemStack;
 
 public final class GuiGemConverter extends GuiEnergyBase<TileGemConverter, ContainerGemConverter> {
-
-  private static final ResourceLocation gem_converter_gui_texture = new ResourceLocation(OverpoweredTechnology.MOD_ID,"textures/gui/gem_converter.png");
 
   private static final ItemStack[] gem = new ItemStack[] {
     new ItemStack(Material.RUBY.gem, 1),
@@ -43,7 +40,7 @@ public final class GuiGemConverter extends GuiEnergyBase<TileGemConverter, Conta
   private final WorkProgressBar work_progress_bar = new WorkProgressBar(43, 89, 122, 5, 40, 199);
   
   public GuiGemConverter(final ContainerGemConverter container, final Inventory player_inventory, final Component title){
-    super(176, 194, container, player_inventory, title, gem_converter_gui_texture);
+    super(176, 194, container, player_inventory, title, GuiReference.gem_converter);
   }
 
   private static final class CycleGemButton extends AdjustableButton {

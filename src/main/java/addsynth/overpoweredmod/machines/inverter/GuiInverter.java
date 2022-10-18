@@ -3,24 +3,21 @@ package addsynth.overpoweredmod.machines.inverter;
 import addsynth.core.gui.util.GuiUtil;
 import addsynth.energy.lib.gui.GuiEnergyBase;
 import addsynth.energy.lib.gui.widgets.WorkProgressBar;
-import addsynth.overpoweredmod.OverpoweredTechnology;
 import addsynth.overpoweredmod.config.Config;
+import addsynth.overpoweredmod.game.reference.GuiReference;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.item.ItemStack;
 
 public final class GuiInverter extends GuiEnergyBase<TileInverter, ContainerInverter> {
-
-  private static final ResourceLocation inverter_gui_texture = new ResourceLocation(OverpoweredTechnology.MOD_ID,"textures/gui/inverter.png");
 
   private final WorkProgressBar work_progress_bar = new WorkProgressBar(8, 84, 160, 5, 8, 194);
   
   private static final int work_percentage_text_y = 70;
 
   public GuiInverter(final ContainerInverter container, final Inventory player_inventory, final Component title){
-    super(176, 187, container, player_inventory, title, inverter_gui_texture);
+    super(176, 187, container, player_inventory, title, GuiReference.inverter);
   }
 
   @Override

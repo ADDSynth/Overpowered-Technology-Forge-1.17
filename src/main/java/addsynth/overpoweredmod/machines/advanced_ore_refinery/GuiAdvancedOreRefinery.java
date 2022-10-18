@@ -3,22 +3,18 @@ package addsynth.overpoweredmod.machines.advanced_ore_refinery;
 import addsynth.core.gui.util.GuiUtil;
 import addsynth.energy.lib.gui.GuiEnergyBase;
 import addsynth.energy.lib.gui.widgets.WorkProgressBar;
-import addsynth.overpoweredmod.OverpoweredTechnology;
+import addsynth.overpoweredmod.game.reference.GuiReference;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
 public final class GuiAdvancedOreRefinery extends GuiEnergyBase<TileAdvancedOreRefinery, ContainerOreRefinery> {
-
-  private static final ResourceLocation advanced_ore_refinery_gui_texture =
-    new ResourceLocation(OverpoweredTechnology.MOD_ID,"textures/gui/advanced_ore_refinery.png");
 
   private final WorkProgressBar work_progress_bar = new WorkProgressBar(8, 83, 160, 5, 8, 194);
   private static final int work_percentage_text_y = 69;
 
   public GuiAdvancedOreRefinery(final ContainerOreRefinery container, final Inventory player_inventory, final Component title){
-    super(176, 186, container, player_inventory, title, advanced_ore_refinery_gui_texture);
+    super(176, 186, container, player_inventory, title, GuiReference.advanced_ore_refinery);
   }
 
   @Override

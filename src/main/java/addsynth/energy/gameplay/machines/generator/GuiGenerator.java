@@ -2,17 +2,15 @@ package addsynth.energy.gameplay.machines.generator;
 
 import addsynth.core.gui.util.GuiUtil;
 import addsynth.core.util.StringUtil;
-import addsynth.energy.ADDSynthEnergy;
+import addsynth.energy.gameplay.reference.GuiReference;
 import addsynth.energy.lib.gui.GuiEnergyBase;
 import addsynth.energy.lib.gui.widgets.EnergyProgressBar;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
 public final class GuiGenerator extends GuiEnergyBase<TileGenerator, ContainerGenerator> {
 
-  private static final ResourceLocation generator_gui_texture = new ResourceLocation(ADDSynthEnergy.MOD_ID, "textures/gui/generator.png");
   private final String input_text   = StringUtil.translate("gui.addsynth_energy.generator.input");
   private final EnergyProgressBar energy_progress_bar = new EnergyProgressBar(8, 80, 168, 20, 8, 194);
 
@@ -24,7 +22,7 @@ public final class GuiGenerator extends GuiEnergyBase<TileGenerator, ContainerGe
   private static final int line_3 = 68;
 
   public GuiGenerator(ContainerGenerator container, Inventory player_inventory, Component title){
-    super(184, 188, container, player_inventory, title, generator_gui_texture);
+    super(184, 188, container, player_inventory, title, GuiReference.generator);
   }
 
   @Override

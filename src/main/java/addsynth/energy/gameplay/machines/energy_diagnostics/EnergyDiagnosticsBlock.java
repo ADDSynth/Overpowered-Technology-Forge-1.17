@@ -6,7 +6,7 @@ import addsynth.core.game.blocks.TileEntityBlock;
 import addsynth.core.util.game.MinecraftUtility;
 import addsynth.energy.ADDSynthEnergy;
 import addsynth.energy.gameplay.client.GuiProvider;
-import addsynth.energy.registers.Names;
+import addsynth.energy.gameplay.reference.Names;
 import addsynth.energy.registers.Tiles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;

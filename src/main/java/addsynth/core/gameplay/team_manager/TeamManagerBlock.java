@@ -3,7 +3,7 @@ package addsynth.core.gameplay.team_manager;
 import addsynth.core.ADDSynthCore;
 import addsynth.core.game.RegistryUtil;
 import addsynth.core.gameplay.client.GuiProvider;
-import addsynth.core.gameplay.registers.Names;
+import addsynth.core.gameplay.reference.Names;
 import addsynth.core.util.command.PermissionLevel;
 import addsynth.core.util.constants.Constants;
 import net.minecraft.core.BlockPos;

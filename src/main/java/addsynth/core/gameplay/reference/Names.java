@@ -1,4 +1,4 @@
-package addsynth.core.gameplay.registers;
+package addsynth.core.gameplay.reference;
 
 import addsynth.core.ADDSynthCore;
 import net.minecraft.resources.ResourceLocation;

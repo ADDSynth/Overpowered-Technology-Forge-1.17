@@ -3,25 +3,21 @@ package addsynth.core.gameplay.music_box.gui;
 import com.mojang.blaze3d.platform.GlStateManager;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
-import addsynth.core.ADDSynthCore;
 import addsynth.core.gameplay.NetworkHandler;
 import addsynth.core.gameplay.music_box.TileMusicBox;
 import addsynth.core.gameplay.music_box.network_messages.ChangeInstrumentMessage;
 import addsynth.core.gameplay.music_box.network_messages.MusicBoxMessage;
+import addsynth.core.gameplay.reference.GuiReference;
 import addsynth.core.gui.widgets.WidgetUtil;
 import addsynth.core.gui.widgets.buttons.AdjustableButton;
 import addsynth.core.util.StringUtil;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.components.AbstractButton;
 import net.minecraft.client.gui.narration.NarrationElementOutput;
 import net.minecraft.client.sounds.SoundManager;
 import net.minecraft.network.chat.TextComponent;
-import net.minecraft.resources.ResourceLocation;
 
 public final class MusicButtons {
 
-  private static final ResourceLocation widgets = new ResourceLocation(ADDSynthCore.MOD_ID, "textures/gui/gui_textures.png");
-  private static final ResourceLocation instruments_texture = new ResourceLocation(ADDSynthCore.MOD_ID, "textures/gui/instruments.png");
   private static final int instrument_texture_size = 64;
 
   public static final class PlayButton extends AdjustableButton {
@@ -110,7 +106,7 @@ public final class MusicButtons {
     @Override
     public final void renderButton(PoseStack matrix, final int mouseX, final int mouseY, final float partial_ticks){
       mute = tile.get_mute(track);
-      WidgetUtil.common_button_render_setup(widgets);
+      WidgetUtil.common_button_render_setup(GuiReference.widgets);
       blit(matrix, x, y, button_size, button_size, mute ? texture_x + texture_size : texture_x, texture_y, texture_size, texture_size, 256, 256);
     }
   
@@ -148,7 +144,7 @@ public final class MusicButtons {
       final int texture_x = instrument_texture_size * (instrument % 4);
       final int texture_y = instrument_texture_size * (instrument / 4);
     
-      RenderSystem.setShaderTexture(0, instruments_texture);
+      RenderSystem.setShaderTexture(0, GuiReference.instruments);
       RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
 
       RenderSystem.enableBlend();
@@ -190,7 +186,7 @@ public final class MusicButtons {
   
     @Override
     public final void renderButton(PoseStack matrix, final int mouse_x, final int mouse_y, final float partial_ticks){
-      RenderSystem.setShaderTexture(0, instruments_texture);
+      RenderSystem.setShaderTexture(0, GuiReference.instruments);
       RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
 
       RenderSystem.enableBlend();
@@ -234,7 +230,7 @@ public final class MusicButtons {
     
     @Override
     public final void renderButton(PoseStack matrix, final int mouse_x, final int mouse_y, final float partial_ticks){
-      WidgetUtil.renderButton(matrix, this, widgets, texture_x, isHovered ? texture_y + texture_height : texture_y, button_width, button_height, texture_width, texture_height);
+      WidgetUtil.renderButton(matrix, this, GuiReference.widgets, texture_x, isHovered ? texture_y + texture_height : texture_y, button_width, button_height, texture_width, texture_height);
     }
     
     @Override

@@ -2,18 +2,14 @@ package addsynth.energy.gameplay.machines.energy_storage;
 
 import addsynth.core.gui.util.GuiUtil;
 import addsynth.core.util.StringUtil;
-import addsynth.energy.ADDSynthEnergy;
+import addsynth.energy.gameplay.reference.GuiReference;
 import addsynth.energy.lib.gui.GuiEnergyBase;
 import addsynth.energy.lib.gui.widgets.EnergyProgressBar;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
 public final class GuiEnergyStorageContainer extends GuiEnergyBase<TileEnergyStorage, ContainerEnergyStorage> {
-
-  private static final ResourceLocation energy_storage_gui_texture =
-    new ResourceLocation(ADDSynthEnergy.MOD_ID,"textures/gui/energy_storage.png");
 
   private final String energy_stored_text = StringUtil.translate("gui.addsynth_energy.common.energy_stored");
 
@@ -25,7 +21,7 @@ public final class GuiEnergyStorageContainer extends GuiEnergyBase<TileEnergySto
   private final EnergyProgressBar energy_bar = new EnergyProgressBar(9, 59, 174, 17, 9, 106);
 
   public GuiEnergyStorageContainer(final ContainerEnergyStorage container, final Inventory player_inventory, final Component title){
-    super(190, 94, container, player_inventory, title, energy_storage_gui_texture);
+    super(190, 94, container, player_inventory, title, GuiReference.energy_storage);
   }
 
   @Override

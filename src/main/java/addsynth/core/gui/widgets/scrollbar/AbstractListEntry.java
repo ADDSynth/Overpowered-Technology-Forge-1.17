@@ -1,6 +1,6 @@
 package addsynth.core.gui.widgets.scrollbar;
 
-import addsynth.core.ADDSynthCore;
+import addsynth.core.gameplay.reference.GuiReference;
 import addsynth.core.util.StringUtil;
 import com.mojang.blaze3d.platform.GlStateManager;
 import com.mojang.blaze3d.systems.RenderSystem;
@@ -9,11 +9,9 @@ import net.minecraft.client.gui.components.AbstractButton;
 import net.minecraft.client.gui.narration.NarrationElementOutput;
 import net.minecraft.client.sounds.SoundManager;
 import net.minecraft.network.chat.TextComponent;
-import net.minecraft.resources.ResourceLocation;
 
 public abstract class AbstractListEntry<E> extends AbstractButton {
 
-  private final ResourceLocation highlight_texture = new ResourceLocation(ADDSynthCore.MOD_ID, "textures/gui/gui_textures.png");
   private final int texture_x = 0;
   private final int texture_y = 224;
 
@@ -34,7 +32,7 @@ public abstract class AbstractListEntry<E> extends AbstractButton {
    *  whenever the player mouses over this list entry or it is selected.   */
   protected final void drawListEntryHighlight(final PoseStack matrix){
     if((isHovered && StringUtil.StringExists(getMessage().getString())) || selected){
-      RenderSystem.setShaderTexture(0, highlight_texture);
+      RenderSystem.setShaderTexture(0, GuiReference.highlight);
       RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
       RenderSystem.enableBlend();
       RenderSystem.defaultBlendFunc();

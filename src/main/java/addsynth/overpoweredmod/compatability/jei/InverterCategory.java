@@ -1,6 +1,6 @@
 package addsynth.overpoweredmod.compatability.jei;
 
-import addsynth.overpoweredmod.OverpoweredTechnology;
+import addsynth.overpoweredmod.game.reference.GuiReference;
 import addsynth.overpoweredmod.game.reference.Names;
 import addsynth.overpoweredmod.game.reference.OverpoweredBlocks;
 import addsynth.overpoweredmod.machines.inverter.InverterRecipe;
@@ -19,12 +19,11 @@ import mezz.jei.api.recipe.category.IRecipeCategory;
 public final class InverterCategory implements IRecipeCategory<InverterRecipe> {
 
   public static final ResourceLocation id = Names.INVERTER;
-  private static final ResourceLocation gui_texture = new ResourceLocation(OverpoweredTechnology.MOD_ID, "textures/gui/gui_textures.png");
   private final IDrawable background;
   private final IDrawable icon;
 
   public InverterCategory(final IGuiHelper gui_helper){
-    background = gui_helper.createDrawable(gui_texture, 18, 16, 74, 18);
+    background = gui_helper.createDrawable(GuiReference.jei_recipe_background, 18, 16, 74, 18);
     icon = gui_helper.createDrawableIngredient(new ItemStack(OverpoweredBlocks.inverter));
   }
 

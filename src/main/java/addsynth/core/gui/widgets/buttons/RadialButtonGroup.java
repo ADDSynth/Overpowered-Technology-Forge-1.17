@@ -1,7 +1,7 @@
 package addsynth.core.gui.widgets.buttons;
 
 import java.util.function.Consumer;
-import addsynth.core.ADDSynthCore;
+import addsynth.core.gameplay.reference.GuiReference;
 import addsynth.core.gui.util.GuiUtil;
 import addsynth.core.gui.widgets.WidgetUtil;
 import com.mojang.blaze3d.vertex.PoseStack;
@@ -9,11 +9,8 @@ import net.minecraft.client.gui.components.AbstractButton;
 import net.minecraft.client.gui.narration.NarrationElementOutput;
 import net.minecraft.client.sounds.SoundManager;
 import net.minecraft.network.chat.TextComponent;
-import net.minecraft.resources.ResourceLocation;
 
 public final class RadialButtonGroup extends AbstractButton {
-
-  private static final ResourceLocation texture = new ResourceLocation(ADDSynthCore.MOD_ID, "textures/gui/gui_textures.png");
 
   public static final int radial_gui_size = 12;
   public static final int line_spacing = 3;
@@ -59,7 +56,7 @@ public final class RadialButtonGroup extends AbstractButton {
 
   @Override
   public void renderButton(PoseStack matrix, int p_renderButton_1_, int p_renderButton_2_, float p_renderButton_3_){
-    WidgetUtil.common_button_render_setup(texture);
+    WidgetUtil.common_button_render_setup(GuiReference.widgets);
     for(i = 0; i < buttons; i++){
       blit(matrix, x, y + (line_height*i), radial_gui_size, radial_gui_size, radial_texture_x, i == option_selected ? radial_selected_texture_y : radial_texture_y, radial_texture_size, radial_texture_size, 256, 256);
     }

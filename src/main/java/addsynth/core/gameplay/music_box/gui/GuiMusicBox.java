@@ -1,9 +1,9 @@
 package addsynth.core.gameplay.music_box.gui;
 
 import org.lwjgl.glfw.GLFW;
-import addsynth.core.ADDSynthCore;
 import addsynth.core.gameplay.music_box.TileMusicBox;
 import addsynth.core.gameplay.music_box.data.MusicGrid;
+import addsynth.core.gameplay.reference.GuiReference;
 import addsynth.core.gui.GuiBase;
 import addsynth.core.gui.util.GuiUtil;
 import addsynth.core.util.StringUtil;
@@ -11,12 +11,8 @@ import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
 
 public final class GuiMusicBox extends GuiBase {
-
-  private static final ResourceLocation music_box_gui_texture = new ResourceLocation(ADDSynthCore.MOD_ID,"textures/gui/music_box.png");
-  private static final ResourceLocation widget_texture        = new ResourceLocation(ADDSynthCore.MOD_ID,"textures/gui/gui_textures.png");
 
   private final TileMusicBox tile;
 
@@ -98,7 +94,7 @@ public final class GuiMusicBox extends GuiBase {
   private static final int track_swap_button_y = music_grid_y + (track_height / 2);
 
   public GuiMusicBox(final TileMusicBox tileEntity, final Component title){
-    super(gui_width, gui_height, title, music_box_gui_texture);
+    super(gui_width, gui_height, title, GuiReference.music_box_gui);
     this.tile = tileEntity;
   }
 
@@ -186,7 +182,7 @@ public final class GuiMusicBox extends GuiBase {
   private final void draw_playhead(final PoseStack matrix){
     if(tile != null){
       if(tile.is_playing()){
-        RenderSystem.setShaderTexture(0, widget_texture);
+        RenderSystem.setShaderTexture(0, GuiReference.widgets);
         blit(matrix, guiUtil.guiLeft + playhead_x + (tile.playhead * track_width), guiUtil.guiTop + playhead_y,
                                        playhead_texture_x, playhead_texture_y, 16, 8);
       }
@@ -202,7 +198,7 @@ public final class GuiMusicBox extends GuiBase {
   }
 
   private final void draw_instrument_selected(final PoseStack matrix){
-    RenderSystem.setShaderTexture(0, widget_texture);
+    RenderSystem.setShaderTexture(0, GuiReference.widgets);
     final int texture_x = 112;
     final int texture_y = 32;
     final int texture_size = 40;

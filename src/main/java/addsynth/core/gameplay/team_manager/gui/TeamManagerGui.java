@@ -1,9 +1,9 @@
 package addsynth.core.gameplay.team_manager.gui;
 
 import java.util.function.BiConsumer;
-import addsynth.core.ADDSynthCore;
 import addsynth.core.gameplay.Core;
 import addsynth.core.gameplay.NetworkHandler;
+import addsynth.core.gameplay.reference.GuiReference;
 import addsynth.core.gameplay.team_manager.data.TeamData;
 import addsynth.core.gameplay.team_manager.network_messages.RequestPlayerScoreMessage;
 import addsynth.core.gameplay.team_manager.network_messages.TeamManagerCommand;
@@ -18,12 +18,8 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.TranslatableComponent;
-import net.minecraft.resources.ResourceLocation;
 
 public final class TeamManagerGui extends GuiBase {
-
-  // private static final String[] temp_values = {"I once again call upon", "a temporary array of", "string values", "in order to", "test the scrollbar", "to ensure it works", "as expected in", "all scenarios.", "And just as before,", "the string array must be", "large enough", "to surpass the", "scrollbar's height.", "It is still", "not enough!", "I must keep typing!", "I am also afraid", "that some of", "these strings", "are too long.", "They may", "extend past", "the scrollbar's width."};
-  private static final ResourceLocation gui_texture = new ResourceLocation(ADDSynthCore.MOD_ID, "textures/gui/team_manager.png");
 
   private final String         team_header_text = StringUtil.translate("gui.addsynthcore.team_manager.main.teams");
   private final String  all_players_header_text = StringUtil.translate("gui.addsynthcore.team_manager.main.all_players");
@@ -111,7 +107,7 @@ public final class TeamManagerGui extends GuiBase {
   private static boolean player_score_can_be_changed;
 
   public TeamManagerGui(){
-    super(442, 326, new TranslatableComponent(Core.team_manager.getDescriptionId()), gui_texture);
+    super(442, 326, new TranslatableComponent(Core.team_manager.getDescriptionId()), GuiReference.team_manager);
     // team_selected = null;
     // player_selected = null;
     // objective_selected = null;

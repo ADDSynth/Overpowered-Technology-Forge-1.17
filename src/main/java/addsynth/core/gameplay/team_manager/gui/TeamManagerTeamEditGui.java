@@ -1,7 +1,7 @@
 package addsynth.core.gameplay.team_manager.gui;
 
-import addsynth.core.ADDSynthCore;
 import addsynth.core.gameplay.NetworkHandler;
+import addsynth.core.gameplay.reference.GuiReference;
 import addsynth.core.gameplay.team_manager.data.TeamData;
 import addsynth.core.gameplay.team_manager.data.TeamDataUnit;
 import addsynth.core.gameplay.team_manager.network_messages.TeamManagerCommand;
@@ -14,11 +14,8 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.TranslatableComponent;
-import net.minecraft.resources.ResourceLocation;
 
 public final class TeamManagerTeamEditGui extends GuiBase {
-
-  private static final ResourceLocation texture = new ResourceLocation(ADDSynthCore.MOD_ID, "textures/gui/team_manager_team_edit.png");
 
   private final String        team_id_name_text = StringUtil.translate("gui.addsynthcore.team_manager.team_edit.id_name");
   private final String   team_display_name_text = StringUtil.translate("gui.addsynthcore.team_manager.team_edit.display_name");
@@ -44,7 +41,7 @@ public final class TeamManagerTeamEditGui extends GuiBase {
   private TeamManagerGuiButtons.FinishButton finish_button;
 
   public TeamManagerTeamEditGui(final boolean new_team){
-    super(274, 244, new TranslatableComponent("gui.addsynthcore.team_manager.team_edit.gui_title"), texture);
+    super(274, 244, new TranslatableComponent("gui.addsynthcore.team_manager.team_edit.gui_title"), GuiReference.edit_team_gui);
     this.new_team = new_team;
   }
 

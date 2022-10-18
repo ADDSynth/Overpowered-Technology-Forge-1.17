@@ -4,7 +4,7 @@ import java.util.List;
 import javax.annotation.Nullable;
 import addsynth.core.gameplay.Core;
 import addsynth.core.gameplay.items.CoreItem;
-import addsynth.core.gameplay.registers.Names;
+import addsynth.core.gameplay.reference.Names;
 import addsynth.core.util.game.MessageUtil;
 import addsynth.core.util.player.PlayerUtil;
 import net.minecraft.core.BlockPos;

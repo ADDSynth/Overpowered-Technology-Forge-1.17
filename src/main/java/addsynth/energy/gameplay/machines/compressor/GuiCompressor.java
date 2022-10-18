@@ -1,17 +1,14 @@
 package addsynth.energy.gameplay.machines.compressor;
 
 import addsynth.core.gui.util.GuiUtil;
-import addsynth.energy.ADDSynthEnergy;
+import addsynth.energy.gameplay.reference.GuiReference;
 import addsynth.energy.lib.gui.GuiEnergyBase;
 import addsynth.energy.lib.gui.widgets.WorkProgressBar;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
 public final class GuiCompressor extends GuiEnergyBase<TileCompressor, ContainerCompressor> {
-
-  private static final ResourceLocation compressor_gui_texture = new ResourceLocation(ADDSynthEnergy.MOD_ID,"textures/gui/compressor.png");
 
   private static final int work_percentage_text_y = 67;
   private static final int time_left_y = 88;
@@ -19,7 +16,7 @@ public final class GuiCompressor extends GuiEnergyBase<TileCompressor, Container
   private final WorkProgressBar work_progress_bar = new WorkProgressBar(8, 79, 160, 5, 8, 194);
   
   public GuiCompressor(final ContainerCompressor container, final Inventory player_inventory, final Component title){
-    super(176, 182, container, player_inventory, title, compressor_gui_texture);
+    super(176, 182, container, player_inventory, title, GuiReference.compressor);
   }
 
   @Override

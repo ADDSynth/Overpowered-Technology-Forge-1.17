@@ -1,7 +1,7 @@
 package addsynth.energy.lib.gui.widgets;
 
-import addsynth.energy.ADDSynthEnergy;
 import addsynth.energy.gameplay.NetworkHandler;
+import addsynth.energy.gameplay.reference.GuiReference;
 import addsynth.energy.lib.network_messages.SwitchMachineMessage;
 import addsynth.energy.lib.tiles.machines.ISwitchableMachine;
 import com.mojang.blaze3d.platform.GlStateManager;
@@ -14,7 +14,6 @@ import net.minecraft.client.gui.narration.NarrationElementOutput;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.TranslatableComponent;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.entity.BlockEntity;
 
 /**
@@ -25,7 +24,6 @@ public final class OnOffSwitch<T extends BlockEntity & ISwitchableMachine> exten
 
   private final T tile;
   private boolean power_state;
-  private static final ResourceLocation gui_switch = new ResourceLocation(ADDSynthEnergy.MOD_ID,"textures/gui/gui_textures.png");
 
   private final TranslatableComponent  on_text = new TranslatableComponent("gui.addsynth_energy.switch.on");
   private final TranslatableComponent off_text = new TranslatableComponent("gui.addsynth_energy.switch.off");
@@ -74,7 +72,7 @@ public final class OnOffSwitch<T extends BlockEntity & ISwitchableMachine> exten
     }
 
     // Draw Power Switch
-    RenderSystem.setShaderTexture(0, gui_switch);
+    RenderSystem.setShaderTexture(0, GuiReference.widgets);
     RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
 
     // this.hovered = mouseX >= this.xPosition && mouseY >= this.yPosition && mouseX < this.xPosition + this.width && mouseY < this.yPosition + this.height;

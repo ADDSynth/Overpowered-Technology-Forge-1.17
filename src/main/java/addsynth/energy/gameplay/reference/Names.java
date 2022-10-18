@@ -1,4 +1,4 @@
-package addsynth.energy.registers;
+package addsynth.energy.gameplay.reference;
 
 import addsynth.energy.ADDSynthEnergy;
 import net.minecraft.resources.ResourceLocation;

@@ -3,20 +3,16 @@ package addsynth.energy.gameplay.machines.universal_energy_interface;
 import addsynth.core.gui.util.GuiUtil;
 import addsynth.core.gui.widgets.buttons.AdjustableButton;
 import addsynth.core.util.StringUtil;
-import addsynth.energy.ADDSynthEnergy;
 import addsynth.energy.gameplay.NetworkHandler;
+import addsynth.energy.gameplay.reference.GuiReference;
 import addsynth.energy.lib.gui.GuiEnergyBase;
 import addsynth.energy.lib.gui.widgets.EnergyProgressBar;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
 public final class GuiUniversalEnergyInterface extends GuiEnergyBase<TileUniversalEnergyInterface, ContainerUniversalEnergyInterface> {
-
-  private static final ResourceLocation universal_interface_gui_texture =
-    new ResourceLocation(ADDSynthEnergy.MOD_ID,"textures/gui/universal_energy_interface.png");
 
   private final String mode_text   = StringUtil.translate("gui.addsynth_energy.common.mode");
   private final String energy_text = StringUtil.translate("gui.addsynth_energy.common.energy");
@@ -28,7 +24,7 @@ public final class GuiUniversalEnergyInterface extends GuiEnergyBase<TileUnivers
   private static final int line_2 = 41;
 
   public GuiUniversalEnergyInterface(final ContainerUniversalEnergyInterface container, final Inventory player_inventory, final Component title){
-    super(176, 60, container, player_inventory, title, universal_interface_gui_texture);
+    super(176, 60, container, player_inventory, title, GuiReference.universal_interface);
   }
 
   private static final class CycleTransferModeButton extends AdjustableButton {

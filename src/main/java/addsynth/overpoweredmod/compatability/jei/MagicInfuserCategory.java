@@ -1,6 +1,6 @@
 package addsynth.overpoweredmod.compatability.jei;
 
-import addsynth.overpoweredmod.OverpoweredTechnology;
+import addsynth.overpoweredmod.game.reference.GuiReference;
 import addsynth.overpoweredmod.game.reference.Names;
 import addsynth.overpoweredmod.game.reference.OverpoweredBlocks;
 import addsynth.overpoweredmod.machines.magic_infuser.recipes.MagicInfuserRecipe;
@@ -19,12 +19,11 @@ import mezz.jei.api.recipe.category.IRecipeCategory;
 public final class MagicInfuserCategory implements IRecipeCategory<MagicInfuserRecipe> {
 
   public static final ResourceLocation id = Names.MAGIC_INFUSER;
-  private static final ResourceLocation gui_texture = new ResourceLocation(OverpoweredTechnology.MOD_ID, "textures/gui/gui_textures.png");
   private final IDrawable background;
   private final IDrawable icon;
 
   public MagicInfuserCategory(final IGuiHelper gui_helper){
-    background = gui_helper.createDrawable(gui_texture, 0, 16, 92, 18);
+    background = gui_helper.createDrawable(GuiReference.jei_recipe_background, 0, 16, 92, 18);
           icon = gui_helper.createDrawableIngredient(new ItemStack(OverpoweredBlocks.magic_infuser));
   }
 

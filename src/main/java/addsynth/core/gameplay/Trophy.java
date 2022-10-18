@@ -4,7 +4,7 @@ import addsynth.core.ADDSynthCore;
 import addsynth.core.game.RegistryUtil;
 import addsynth.core.gameplay.blocks.TrophyBlock;
 import addsynth.core.gameplay.items.CoreItem;
-import addsynth.core.gameplay.registers.Names;
+import addsynth.core.gameplay.reference.Names;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;

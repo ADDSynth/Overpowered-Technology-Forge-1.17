@@ -3,23 +3,19 @@ package addsynth.overpoweredmod.machines.crystal_matter_generator;
 import addsynth.energy.lib.gui.GuiEnergyBase;
 import addsynth.energy.lib.gui.widgets.OnOffSwitch;
 import addsynth.energy.lib.gui.widgets.WorkProgressBar;
-import addsynth.overpoweredmod.OverpoweredTechnology;
+import addsynth.overpoweredmod.game.reference.GuiReference;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
 public final class GuiCrystalMatterGenerator extends GuiEnergyBase<TileCrystalMatterGenerator, ContainerCrystalGenerator> {
-
-  private static final ResourceLocation crystal_matter_generator_gui_texture =
-    new ResourceLocation(OverpoweredTechnology.MOD_ID,"textures/gui/crystal_matter_generator.png");
 
   private final WorkProgressBar work_progress_bar = new WorkProgressBar(8, 89, 160, 5, 11, 194);
   
   private static final int work_percentage_text_y = 77; // OPTIMIZE any guis that have this variable and only use it once.
 
   public GuiCrystalMatterGenerator(final ContainerCrystalGenerator container, final Inventory player_inventory, final Component title){
-    super(176, 192, container, player_inventory, title, crystal_matter_generator_gui_texture);
+    super(176, 192, container, player_inventory, title, GuiReference.crystal_matter_generator);
   }
 
   @Override
