@@ -10,7 +10,6 @@ public final class DebugUtil {
   @Nullable
   @SuppressWarnings("resource")
   public static final ProfilerFiller getProfiler(){
-    @SuppressWarnings("deprecation")
     final MinecraftServer server = ServerUtils.getServer();
     return server != null ? server.getProfiler() : null;
   }
@@ -19,7 +18,7 @@ public final class DebugUtil {
    *  You can see your profiler sections when you press F3+L in a
    *  single-player world, or /perf in the server console. */
   public static final void beginSection(final String name){
-    @SuppressWarnings({ "deprecation", "resource" })
+    @SuppressWarnings("resource")
     final MinecraftServer server = ServerUtils.getServer();
     if(server != null){
       server.getProfiler().push(name);
@@ -28,7 +27,7 @@ public final class DebugUtil {
 
   /** Use this only if you don't have the server readily available. */
   public static final void endSection(){
-    @SuppressWarnings({ "deprecation", "resource" })
+    @SuppressWarnings("resource")
     final MinecraftServer server = ServerUtils.getServer();
     if(server != null){
       server.getProfiler().pop();

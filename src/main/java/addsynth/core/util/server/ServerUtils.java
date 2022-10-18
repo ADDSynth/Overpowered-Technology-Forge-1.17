@@ -16,7 +16,7 @@ public final class ServerUtils {
   // of the game, such as when a player quits a multiplayer world and starts a singleplayer world.
 
   /** DO NOT CACHE THE SERVER!!!
-   *  @deprecated Use {@link Level#getServer()} whenever possible. */
+   *  Please Use {@link Level#getServer()} whenever possible. */
   @Nullable
   public static final MinecraftServer getServer(){
     final MinecraftServer server = ServerLifecycleHooks.getCurrentServer();

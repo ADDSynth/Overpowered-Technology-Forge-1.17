@@ -64,7 +64,7 @@ public final class TeamData {
 
   /** Gets data from server. */
   public static final void sync(){
-    @SuppressWarnings({ "deprecation", "resource" })
+    @SuppressWarnings("resource")
     final MinecraftServer server = ServerUtils.getServer();
     if(server != null){
       final Scoreboard scoreboard = server.getScoreboard();

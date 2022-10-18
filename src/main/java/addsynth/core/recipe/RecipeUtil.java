@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map.Entry;
 import java.util.Set;
-import javax.annotation.Nullable;
 import addsynth.core.ADDSynthCore;
 import addsynth.core.game.inventory.InventoryUtil;
 import addsynth.core.game.item.ItemUtil;
@@ -28,10 +27,7 @@ import net.minecraftforge.items.ItemStackHandler;
 @EventBusSubscriber(modid = ADDSynthCore.MOD_ID, bus = Bus.FORGE)
 public final class RecipeUtil {
 
-  @Nullable
   @Deprecated
-  private static RecipeManager recipe_manager;
-
   private static HashMap<Item, ItemStack> furnace_recipes;
 
   public static final Item[] getFurnaceIngredients(){
@@ -130,39 +126,32 @@ public final class RecipeUtil {
   public static final void onRecipesUpdated(final RecipesUpdatedEvent event){
     ADDSynthCore.log.info("Recipes were reloaded. Sending update events...");
   
-    recipe_manager = event.getRecipeManager();
-    update_furnace_recipes();
+    update_furnace_recipes(event.getRecipeManager());
     dispatchEvent();
 
     ADDSynthCore.log.info("Done responding to Recipe reload.");
   }
 
-  /** Attempts to get an instance of the RecipeManager from the server. */
-  @SuppressWarnings({ "deprecation", "resource" })
-  private static final boolean updateRecipeManager(){
-    if(recipe_manager == null){
-      final MinecraftServer server = ServerUtils.getServer(); // PRIORITY: safely try to get Server!
-      if(server != null){
-        recipe_manager = server.getRecipeManager();
-      }
-    }
-    return recipe_manager != null;
-  }
-
-  public static final ArrayList<Recipe> getRecipesofType(final RecipeType type){
-    updateRecipeManager();
+  public static final ArrayList<Recipe> getRecipesofType(final RecipeManager recipe_manager, final RecipeType type){
     final ArrayList<Recipe> list = new ArrayList<>(200);
-    if(recipe_manager != null){
-      for(Recipe recipe : recipe_manager.getRecipes()){
-        if(recipe.getType() == type){
-          list.add(recipe);
-        }
+    for(Recipe recipe : recipe_manager.getRecipes()){
+      if(recipe.getType() == type){
+        list.add(recipe);
       }
     }
     return list;
   }
 
+  @Deprecated
   private static final void update_furnace_recipes(){
+    @SuppressWarnings("resource")
+    final MinecraftServer server = ServerUtils.getServer();
+    if(server != null){
+      update_furnace_recipes(server.getRecipeManager());
+    }
+  }
+
+  private static final void update_furnace_recipes(final RecipeManager recipe_manager){
     if(furnace_recipes == null){
       furnace_recipes = new HashMap<>(300);
     }
@@ -172,7 +161,7 @@ public final class RecipeUtil {
     SmeltingRecipe furnace_recipe;
     Ingredient ingredient;
     ItemStack result;
-    for(final Recipe recipe : getRecipesofType(RecipeType.SMELTING)){
+    for(final Recipe recipe : getRecipesofType(recipe_manager, RecipeType.SMELTING)){
       if(recipe instanceof SmeltingRecipe){ // only for safety reasons
         furnace_recipe = (SmeltingRecipe)recipe;
         ingredient = furnace_recipe.getIngredients().get(0); // furnace recipes only have 1 ingredient
