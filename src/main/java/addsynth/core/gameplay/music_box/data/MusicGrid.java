@@ -60,7 +60,7 @@ public final class MusicGrid {
 
   public final void load_from_nbt(final CompoundTag nbt){
     final CompoundTag music_tag = nbt.getCompound("MusicGrid");
-    final ListTag track_list = music_tag.getList("Tracks", Tag.TAG_COMPOUND); // PRIORITY: constant TAG_COMPOUNT is 10, but we're supposed to be using ListTag which is 9?
+    final ListTag track_list = music_tag.getList("Tracks", Tag.TAG_COMPOUND);
     tempo = music_tag.getByte("Tempo");
     byte j;
     for(j = 0; j < tracks; j++){
