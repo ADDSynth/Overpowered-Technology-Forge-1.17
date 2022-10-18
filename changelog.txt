@@ -81,6 +81,9 @@ KNOWN PROBLEMS:
 DEVELOPER ONLY:
   Magic Infuser recipes are now defined by .json recipe files in a DataPack. You can define
   your own recipes, as long as they are formatted properly.
+   - I would've much preferred to allow people to add recipes using the config, but I couldn't
+     figure out how to do that, and didn't have much time.
+   - TODO: Perhaps I could've just used a custom JSON config file.
 
 
 

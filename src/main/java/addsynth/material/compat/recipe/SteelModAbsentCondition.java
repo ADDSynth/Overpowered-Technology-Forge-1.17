@@ -26,6 +26,7 @@ public final class SteelModAbsentCondition implements ICondition {
 
   public static final class Serializer implements IConditionSerializer<SteelModAbsentCondition> {
 
+    @SuppressWarnings("hiding")
     public static final Serializer INSTANCE = new Serializer();
 
     @Override

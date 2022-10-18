@@ -50,7 +50,7 @@ public final class Config {
     builder.push("Advanced");
     show_advanced_config = builder.comment(
       "Enabling this will grant you access to advanced configuration options in the Mod's Configuration screen.\n"+
-      "Advanced configuration options such as those in the worldgen.cfg file allow you access to internal game values,\n"+
+      "Advanced configuration options such as those in the worldgen.toml file allow you access to internal game values,\n"+
       "and adjusting them will vastly alter gameplay. They are only intended to be used for debug, testing, or\n"+
       "experimental purposes. In order to maintain a standard gameplay experience (the way the author intended)\n"+
       "we encourage you to leave these values at their defaults. (However, modpack authors may want to adjust these\n"+

@@ -11,7 +11,7 @@ import net.minecraft.world.item.crafting.RecipeType;
 
 public final class CircuitFabricatorRecipe extends AbstractRecipe {
 
-  public CircuitFabricatorRecipe(ResourceLocation id, String group, ItemStack output, NonNullList<Ingredient> input) {
+  public CircuitFabricatorRecipe(ResourceLocation id, String group, ItemStack output, NonNullList<Ingredient> input){
     super(id, group, output, input);
     CircuitFabricatorRecipes.INSTANCE.addRecipe(this);
   }

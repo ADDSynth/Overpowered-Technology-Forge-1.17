@@ -26,6 +26,7 @@ public final class BronzeModAbsentCondition implements ICondition {
 
   public static final class Serializer implements IConditionSerializer<BronzeModAbsentCondition> {
 
+    @SuppressWarnings("hiding")
     public static final Serializer INSTANCE = new Serializer();
 
     @Override

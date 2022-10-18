@@ -4,10 +4,10 @@ import net.minecraftforge.common.ForgeConfigSpec;
 
 public final class MachineDataConfig extends MachineData {
 
-  public ForgeConfigSpec.IntValue    work_time_config;
-  public ForgeConfigSpec.DoubleValue energy_usage_config;
-  public ForgeConfigSpec.DoubleValue idle_energy_config;
-  public ForgeConfigSpec.IntValue    power_on_time_config;
+  private ForgeConfigSpec.IntValue    work_time_config;
+  private ForgeConfigSpec.DoubleValue energy_usage_config;
+  private ForgeConfigSpec.DoubleValue idle_energy_config;
+  private ForgeConfigSpec.IntValue    power_on_time_config;
 
   public MachineDataConfig(int default_work_time, double default_energy, double default_idle_energy, int default_power_on_time){
     super(MachineType.STANDARD, default_work_time, default_energy, default_idle_energy, default_power_on_time);

@@ -188,7 +188,7 @@ public final class TileBlackHole extends BlockEntity implements ITickingTileEnti
     }
   }
 
-  @SuppressWarnings({ "null", "resource" })
+  @SuppressWarnings("null")
   private final void delete_blocks(){
     final BlockPos.MutableBlockPos position = new BlockPos.MutableBlockPos();
     Block block;

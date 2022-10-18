@@ -44,7 +44,7 @@ public final class Values {
   // add Legendary?
 
   private static final int   DEFAULT_PORTAL_SPAWN_TIME = 40;
-  private static final float DEFAULT_UNKNOWN_TREE_SPAWN_CHANCE = 0.0005f; // 1 / 2000
+  private static final double DEFAULT_UNKNOWN_TREE_SPAWN_CHANCE = 0.0005; // 1 / 2000
 
   public static final class MOBS {
     // Undead

@@ -118,7 +118,7 @@ public final class Config {
       "is a percentage of how much of a tick is allocated to the Black Hole algorithm. The algorithm is\n"+
       "self balancing, meaning it will slow down if it detects the algorithm is taking too long to process in\n"+
       "a single tick. One block per tick will always be deleted, no matter how low you specify this value.")
-      .defineInRange("Black Hole Max Tick Time", DEFAULT_BLACK_HOLE_SPEED, (double)1 / TimeConstants.tick_time_in_nanoseconds, 1.0);
+      .defineInRange("Black Hole Max Tick Time", DEFAULT_BLACK_HOLE_SPEED, 1.0 / TimeConstants.tick_time_in_nanoseconds, 1.0);
     builder.pop();
 
     builder.push("Energy Suspension Bridge");
@@ -135,7 +135,7 @@ public final class Config {
     builder.push("Advanced");
     show_advanced_config = builder.comment(
       "Enabling this will grant you access to advanced configuration options in the Mod's Configuration screen.\n"+
-      "Advanced configuration options such as those in the values.cfg file allow you access to internal game values,\n"+
+      "Advanced configuration options such as those in the values.toml file allow you access to internal game values,\n"+
       "and adjusting them will vastly alter gameplay. They are only intended to be used for debug, testing, or\n"+
       "experimental purposes. In order to maintain a standard gameplay experience (the way the author intended)\n"+
       "we encourage you to leave these values at their defaults. (However, modpack authors may want to adjust these\n"+

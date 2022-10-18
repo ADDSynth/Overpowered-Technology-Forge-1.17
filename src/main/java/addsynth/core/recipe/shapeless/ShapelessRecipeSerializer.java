@@ -40,7 +40,7 @@ public class ShapelessRecipeSerializer<T extends AbstractRecipe> extends ForgeRe
   // Start Here
   @Override
   public T fromJson(ResourceLocation recipeId, JsonObject json){
-    String s = GsonHelper.getAsString(json, "group", "");
+    final String group = GsonHelper.getAsString(json, "group", "");
     NonNullList<Ingredient> nonnulllist = readIngredients(GsonHelper.getAsJsonArray(json, "ingredients"));
     if(nonnulllist.isEmpty()){
       throw new JsonParseException("No ingredients for "+recipe_type.getSimpleName()+" recipe");
@@ -49,13 +49,13 @@ public class ShapelessRecipeSerializer<T extends AbstractRecipe> extends ForgeRe
       throw new JsonParseException("Too many ingredients for "+recipe_type.getSimpleName()+" recipe. There can only be a max of "+max_size+" ingredients.");
     }
     ItemStack itemstack = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(json, "result"));
-    return JavaUtils.InvokeConstructor(recipe_type, recipeId, s, itemstack, nonnulllist);
+    return JavaUtils.InvokeConstructor(recipe_type, recipeId, group, itemstack, nonnulllist);
   }
 
   @Override
   @Nullable
   public T fromNetwork(ResourceLocation recipeId, FriendlyByteBuf buffer){
-    final String s = buffer.readUtf(32767);
+    final String group = buffer.readUtf(32767);
     final int i = buffer.readVarInt();
     NonNullList<Ingredient> nonnulllist = NonNullList.withSize(i, Ingredient.EMPTY);
 
@@ -64,7 +64,7 @@ public class ShapelessRecipeSerializer<T extends AbstractRecipe> extends ForgeRe
     }
 
     ItemStack itemstack = buffer.readItem();
-    return JavaUtils.InvokeConstructor(recipe_type, recipeId, s, itemstack, nonnulllist);
+    return JavaUtils.InvokeConstructor(recipe_type, recipeId, group, itemstack, nonnulllist);
   }
 
   @Override

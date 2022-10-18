@@ -67,7 +67,7 @@ public final class CoreRegister {
       if(Features.platinum_trophy.get()){ game.register(Trophy.PLATINUM.item_block); }
     }
     
-    // game.register(RegistryUtil.getItemBlock(Core.test_block);
+    // game.register(RegistryUtil.getItemBlock(Core.test_block));
 
     ADDSynthCore.log.info("Done registering items.");
   }

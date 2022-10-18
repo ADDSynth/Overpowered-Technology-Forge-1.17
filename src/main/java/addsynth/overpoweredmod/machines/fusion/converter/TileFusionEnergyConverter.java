@@ -20,7 +20,7 @@ import net.minecraft.world.level.block.state.BlockState;
 public final class TileFusionEnergyConverter extends TileBase implements IEnergyGenerator, ITickingTileEntity {
 
   private final Generator energy = new Generator(MachineValues.fusion_energy_output_per_tick.get());
-  private static final int sync_timer = 4; // TODO: remove sync timer in version 1.4
+  private static final int sync_timer = 4; // TODO: remove sync timer in version 1.7
   private final ArrayList<DataCableNetwork> data_cable_networks = new ArrayList<>(1);
   private TileFusionChamber fusion_chamber;
   private boolean activated;

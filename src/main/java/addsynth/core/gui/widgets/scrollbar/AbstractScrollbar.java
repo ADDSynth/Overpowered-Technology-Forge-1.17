@@ -18,10 +18,10 @@ import net.minecraft.util.Mth;
 /** <p>A Scrollbar is a widget that goes beside a list of values which the player can
  *     move up or down to scroll a list of values. It automatically adjusts its position
  *     and size based on how many list items there are.
- *  <p>First define an array of {@link ListEntry}s and place them on your gui, and add them as buttons.
+ *  <p>First define an array of {@link AbstractListEntry}s and place them on your gui, and add them as buttons.
  *     Then create the Scrollbar. Place it in the gui where you want, give it your full array of values,
- *     and your array of {@link ListEntry}s.
- *  <p>When any {@link ListEntry} is clicked, that value will be selected in the list. Only one value
+ *     and your array of {@link AbstractListEntry}s.
+ *  <p>When any {@link AbstractListEntry} is clicked, that value will be selected in the list. Only one value
  *     can be selected at any time.
  *  <p>You can assign a {@link BiConsumer} as a responder, which will be called whenever a list item
  *     is selected. The first argument is the value. The second is the index in the array of values.
