@@ -27,7 +27,6 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
-import net.minecraftforge.common.world.ForgeWorldType;
 
 public final class TileBlackHole extends BlockEntity implements ITickingTileEntity {
 
@@ -130,14 +129,12 @@ public final class TileBlackHole extends BlockEntity implements ITickingTileEnti
       //       try to destroy itself, spawning hundreds of particle effects.
       return false;
     }
-    /* TODO: Do dimensions not have int IDs anymore? How do we specify a dimension blacklist now?
-    final int dimension_id = world.dimensionType().getId();
-    for(int id_check : Config.black_hole_dimension_blacklist.get()){
-      if(dimension_id == id_check){
+    final String location = world.dimension().location().toString();
+    for(String dimension : Config.black_hole_dimension_blacklist.get()){
+      if(dimension.equals(location)){
         return false;
       }
     }
-    */
     return true;
   }
 

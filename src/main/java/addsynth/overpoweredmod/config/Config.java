@@ -44,7 +44,7 @@ public final class Config {
   public static ForgeConfigSpec.IntValue maximum_black_hole_radius;
   public static ForgeConfigSpec.BooleanValue alert_players_of_black_hole;
   public static ForgeConfigSpec.BooleanValue black_holes_erase_bedrock;
-  public static ForgeConfigSpec.ConfigValue<List<Integer>> black_hole_dimension_blacklist;
+  public static ForgeConfigSpec.ConfigValue<List<String>> black_hole_dimension_blacklist;
   public static ForgeConfigSpec.DoubleValue black_hole_max_tick_time;
 
   private static final int DEFAULT_ENERGY_BRIDGE_DISTANCE = 250;
@@ -107,7 +107,7 @@ public final class Config {
                                             .define("Black Holes erase Bedrock", false);
 
     black_hole_dimension_blacklist = builder.comment(
-      "Specify a list of Dimension IDs you don't want the Black Hole to destroy. Placing a Black Hole\n"+
+      "Specify a list of Dimension String IDs you don't want the Black Hole to destroy. Placing a Black Hole\n"+
       "in these dimensions will not do anything. By default, the Black Hole is allowed in all dimensions.")
                                             .define("Black Hole Dimension ID Blacklist", new ArrayList<>());
 

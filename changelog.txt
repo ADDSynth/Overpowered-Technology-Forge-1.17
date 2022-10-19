@@ -64,8 +64,12 @@ FIXED:
     See: https://github.com/ADDSynth/Overpowered-Forge-1.14/commit/5f4418eadb862447e4b58be2b637d0f230d717f4
   Fixed Energy Suspension Bridge maximum length was actually 1 less than what is set
     in the configuration.
+    - Maybe. I'm still not sure exactly.
   Fix not loading MachineValues config correctly. Yay! Sorry about that!
   Fix the Fusion Energy advancement was never being awarded to players. God Dammit.
+  Since Dimension IDs have switched to using ResourceLocations instead of integers starting
+    with Minecraft version 1.16, the Black Hole has been updated to accept a list of String IDs
+    to blacklist dimensions specified in the config file.
 REMOVED:
   Before now, you could still edit the config to seperate Tools into their own Creative Tab,
     we've finally removed that.
