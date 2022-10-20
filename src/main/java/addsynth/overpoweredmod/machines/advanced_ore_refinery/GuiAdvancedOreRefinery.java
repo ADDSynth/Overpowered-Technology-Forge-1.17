@@ -11,7 +11,6 @@ import net.minecraft.world.entity.player.Inventory;
 public final class GuiAdvancedOreRefinery extends GuiEnergyBase<TileAdvancedOreRefinery, ContainerOreRefinery> {
 
   private final WorkProgressBar work_progress_bar = new WorkProgressBar(8, 83, 160, 5, 8, 194);
-  private static final int work_percentage_text_y = 69;
 
   public GuiAdvancedOreRefinery(final ContainerOreRefinery container, final Inventory player_inventory, final Component title){
     super(176, 186, container, player_inventory, title, GuiReference.advanced_ore_refinery);
@@ -30,7 +29,7 @@ public final class GuiAdvancedOreRefinery extends GuiEnergyBase<TileAdvancedOreR
     draw_status(matrix, tile.getStatus());
     // RenderHelper.enableGUIStandardItemLighting();
     GuiUtil.drawItemStack(tile.getWorkingInventory().getStackInSlot(0), 76, 43);
-    GuiUtil.draw_text_center(matrix, work_progress_bar.getWorkTimeProgress(), guiUtil.center_x, work_percentage_text_y);
+    GuiUtil.draw_text_center(matrix, work_progress_bar.getWorkTimeProgress(), guiUtil.center_x, 69);
     draw_time_left(matrix, 92);
   }
 

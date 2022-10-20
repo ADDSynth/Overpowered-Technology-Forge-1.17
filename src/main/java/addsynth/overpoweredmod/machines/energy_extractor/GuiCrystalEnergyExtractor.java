@@ -14,9 +14,7 @@ public final class GuiCrystalEnergyExtractor extends GuiEnergyBase<TileCrystalEn
   private final String input_text   = StringUtil.translate("gui.overpowered.crystal_energy_generator.input");
   private final EnergyProgressBar energy_progress_bar = new EnergyProgressBar(8, 80, 168, 20, 8, 194);
 
-  private static final int input_text_x = 79;
   private static final int input_text_y = 24;
-
   private static final int line_1 = 44;
   private static final int line_2 = 56;
   private static final int line_3 = 68;
@@ -34,7 +32,7 @@ public final class GuiCrystalEnergyExtractor extends GuiEnergyBase<TileCrystalEn
   @Override
   protected final void renderLabels(PoseStack matrix, final int mouseX, final int mouseY){
     guiUtil.draw_title(matrix, this.title);
-    GuiUtil.draw_text_right(matrix, input_text+":", input_text_x, input_text_y);
+    GuiUtil.draw_text_right(matrix, input_text+":", 79, input_text_y);
     
     draw_energy(matrix, 6, line_1);
     draw_energy_extraction(matrix, line_2);

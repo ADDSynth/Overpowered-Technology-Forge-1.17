@@ -10,8 +10,6 @@ import net.minecraft.world.entity.player.Inventory;
 
 public final class GuiMagicInfuser extends GuiEnergyBase<TileMagicInfuser, ContainerMagicInfuser> {
 
-  private static final int work_percentage_text_y = 72;
-
   private final WorkProgressBar work_progress_bar = new WorkProgressBar(8, 84, 160, 5, 8, 194);
   
   public GuiMagicInfuser(final ContainerMagicInfuser container, final Inventory player_inventory, final Component title){
@@ -31,7 +29,7 @@ public final class GuiMagicInfuser extends GuiEnergyBase<TileMagicInfuser, Conta
     draw_status(matrix, tile.getStatus());
     GuiUtil.drawItemStack(tile.getWorkingInventory().getStackInSlot(0), 78, 44);
     GuiUtil.drawItemStack(tile.getWorkingInventory().getStackInSlot(1), 95, 44);
-    GuiUtil.draw_text_center(matrix, work_progress_bar.getWorkTimeProgress(), guiUtil.center_x, work_percentage_text_y);
+    GuiUtil.draw_text_center(matrix, work_progress_bar.getWorkTimeProgress(), guiUtil.center_x, 72);
     draw_time_left(matrix, 93);
   }
 

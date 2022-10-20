@@ -26,10 +26,6 @@ public final class GuiGemConverter extends GuiEnergyBase<TileGemConverter, Conta
     new ItemStack(Material.QUARTZ.gem, 1)
   };
 
-  private static final int work_percentage_x = 25;
-  private static final int work_percentage_y = 88;
-  private static final int time_left_y = 99;
-
   private static final int left_button_x = 64;
   private static final int cycle_button_y = 64;
   private static final int cycle_button_width = 10;
@@ -90,8 +86,8 @@ public final class GuiGemConverter extends GuiEnergyBase<TileGemConverter, Conta
       GuiUtil.drawItemStack(s1, 76, 45);
     }
     
-    GuiUtil.draw_text_center(matrix, work_progress_bar.getWorkTimeProgress(), work_percentage_x, work_percentage_y);
-    draw_time_left(matrix, time_left_y);
+    GuiUtil.draw_text_center(matrix, work_progress_bar.getWorkTimeProgress(), 25, 88);
+    draw_time_left(matrix, 99);
   }
 
 }

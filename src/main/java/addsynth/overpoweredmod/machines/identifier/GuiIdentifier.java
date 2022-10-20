@@ -10,8 +10,6 @@ import net.minecraft.world.entity.player.Inventory;
 
 public final class GuiIdentifier extends GuiEnergyBase<TileIdentifier, ContainerIdentifier> {
 
-  private static final int work_percentage_y = 63;
-
   private final WorkProgressBar work_progress_bar = new WorkProgressBar(8, 75, 160, 5, 11, 184);
 
   public GuiIdentifier(final ContainerIdentifier container, final Inventory player_inventory, final Component title){
@@ -30,7 +28,7 @@ public final class GuiIdentifier extends GuiEnergyBase<TileIdentifier, Container
     draw_energy_usage(matrix);
     draw_status(matrix, tile.getStatus());
     GuiUtil.drawItemStack(tile.getWorkingInventory().getStackInSlot(0), 76, 41);
-    GuiUtil.draw_text_center(matrix, work_progress_bar.getWorkTimeProgress(), guiUtil.center_x, work_percentage_y);
+    GuiUtil.draw_text_center(matrix, work_progress_bar.getWorkTimeProgress(), guiUtil.center_x, 63);
   }
 
 }

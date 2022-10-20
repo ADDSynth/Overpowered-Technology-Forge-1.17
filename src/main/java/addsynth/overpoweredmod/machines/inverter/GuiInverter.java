@@ -14,8 +14,6 @@ public final class GuiInverter extends GuiEnergyBase<TileInverter, ContainerInve
 
   private final WorkProgressBar work_progress_bar = new WorkProgressBar(8, 84, 160, 5, 8, 194);
   
-  private static final int work_percentage_text_y = 70;
-
   public GuiInverter(final ContainerInverter container, final Inventory player_inventory, final Component title){
     super(176, 187, container, player_inventory, title, GuiReference.inverter);
   }
@@ -41,7 +39,7 @@ public final class GuiInverter extends GuiEnergyBase<TileInverter, ContainerInve
       GuiUtil.drawItemStack(s1, 77, 44);
     }
     
-    GuiUtil.draw_text_center(matrix, work_progress_bar.getWorkTimeProgress(), guiUtil.center_x, work_percentage_text_y);
+    GuiUtil.draw_text_center(matrix, work_progress_bar.getWorkTimeProgress(), guiUtil.center_x, 70);
     draw_time_left(matrix, 93);
   }
 
