@@ -6,8 +6,8 @@
     {"tag": "forge:dyes/yellow"},
     {"item": "minecraft:redstone_torch"},
     {"tag": "forge:silicon"},
-    {"tag": "forge:plates/silver"},
-    {"tag": "forge:plates/gold"}
+    {"tag": "forge:plates/gold"},
+    {"tag": "forge:plates/silver"}
   ],
   "result": {
     "item": "addsynth_energy:circuit_tier_3"

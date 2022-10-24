@@ -26,5 +26,6 @@ public final class Names {
   public static final ResourceLocation CIRCUIT_TIER_6 = new ResourceLocation(ADDSynthEnergy.MOD_ID, "circuit_tier_6");
   public static final ResourceLocation CIRCUIT_TIER_7 = new ResourceLocation(ADDSynthEnergy.MOD_ID, "circuit_tier_7");
   public static final ResourceLocation CIRCUIT_TIER_8 = new ResourceLocation(ADDSynthEnergy.MOD_ID, "circuit_tier_8");
+  public static final ResourceLocation CIRCUIT_TIER_9 = new ResourceLocation(ADDSynthEnergy.MOD_ID, "circuit_tier_9");
 
 }

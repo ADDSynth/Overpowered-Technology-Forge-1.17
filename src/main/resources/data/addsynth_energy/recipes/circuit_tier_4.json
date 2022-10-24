@@ -6,8 +6,8 @@
     {"tag": "forge:dyes/blue"},
     {"item": "minecraft:repeater"},
     {"tag": "forge:silicon"},
-    {"tag": "forge:plates/silver"},
     {"tag": "forge:plates/gold"},
+    {"tag": "forge:plates/silver"},
     {"tag": "forge:dusts/glowstone"}
   ],
   "result": {

@@ -19,9 +19,10 @@ public final class EnergyItems {
   public static final Item            circuit_tier_6           = register(Names.CIRCUIT_TIER_6);
   public static final Item            circuit_tier_7           = register(Names.CIRCUIT_TIER_7);
   public static final Item            circuit_tier_8           = register(Names.CIRCUIT_TIER_8);
+  public static final Item            circuit_tier_9           = register(Names.CIRCUIT_TIER_9);
   public static final Item[] circuit = {
     circuit_tier_1, circuit_tier_2, circuit_tier_3, circuit_tier_4, circuit_tier_5,
-    circuit_tier_6, circuit_tier_7, circuit_tier_8
+    circuit_tier_6, circuit_tier_7, circuit_tier_8, circuit_tier_9
   };
   
   private static final Item register(final ResourceLocation name){

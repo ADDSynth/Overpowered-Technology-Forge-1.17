@@ -34,11 +34,13 @@ public final class EMCValue {
   public static final long heart_of_the_sea = 32768;
 
   public static final long paper          =   32;
+  public static final long slimeball      =   32;
   public static final long coal           =  128;
   public static final long glowstone_dust =  384;
   public static final long ender_pearl    = 1024;
   public static final long blaze_rod      = 1536;
   public static final long blaze_powder   =  768;
+  public static final long magma_cream    =  800;
   public static final long ender_eye      = 1792;
   
   // Dyes are not the same! But most of them are 16.
@@ -55,6 +57,7 @@ public final class EMCValue {
   public static final long redstone            =   64;
   public static final long redstone_torch      =   68;
   public static final long redstone_repeater   =  203;
+  public static final long observer            =  390;
   public static final long redstone_comparator =  463;
   public static final long redstone_lamp       = 1792;
   

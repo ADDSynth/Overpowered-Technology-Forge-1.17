@@ -7,6 +7,7 @@ INFO:
 NEW:
   Added new items.
   Added 5 new beam emitter type items.
+  Added Circuit Tier 9.
   Added Plasma Generator machine.
    - Deleted the crafting recipe for Plasma that was added in version 1.4.
   ReAdded Ring drops, if you have the Curios mod loaded.

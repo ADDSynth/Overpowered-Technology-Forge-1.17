@@ -59,6 +59,7 @@ public final class Registers {
     game.register(EnergyItems.circuit_tier_6);
     game.register(EnergyItems.circuit_tier_7);
     game.register(EnergyItems.circuit_tier_8);
+    game.register(EnergyItems.circuit_tier_9);
   }
 
   @SubscribeEvent

@@ -4,10 +4,10 @@
     {"item": "minecraft:paper"},
     {"tag": "forge:plates/iron"},
     {"tag": "forge:dyes/purple"},
-    {"item": "minecraft:comparator"},
+    {"item": "minecraft:observer"},
     {"tag": "forge:silicon"},
-    {"tag": "forge:plates/silver"},
     {"tag": "forge:plates/gold"},
+    {"tag": "forge:plates/silver"},
     {"tag": "forge:ender_pearls"}
   ],
   "result": {

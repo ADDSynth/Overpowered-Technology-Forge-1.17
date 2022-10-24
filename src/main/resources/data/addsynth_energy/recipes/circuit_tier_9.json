@@ -1,16 +1,16 @@
 {
   "type": "addsynth_energy:circuit_fabricator",
   "ingredients": [
-    {"item": "minecraft:paper"},
+    {"tag": "forge:plates/aluminum"},
     {"tag": "forge:plates/iron"},
-    {"tag": "forge:dyes/black"},
-    {"item": "minecraft:repeater"},
+    {"tag": "forge:dyes/cyan"},
+    {"item": "minecraft:redstone_lamp"},
     {"tag": "forge:silicon"},
     {"tag": "forge:plates/gold"},
     {"tag": "forge:plates/silver"},
-    {"tag": "forge:gems/diamond"}
+    {"item": "minecraft:heart_of_the_sea"}
   ],
   "result": {
-    "item": "addsynth_energy:circuit_tier_5"
+    "item": "addsynth_energy:circuit_tier_9"
   }
 }

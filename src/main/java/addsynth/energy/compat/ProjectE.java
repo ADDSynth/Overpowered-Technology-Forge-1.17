@@ -45,18 +45,23 @@ public final class ProjectE {
     ));
     InterModComms.sendTo(sender, mod, message, () -> new CustomEMCRegistration(NSSItem.createItem(EnergyItems.circuit_tier_6),
       Config.emcDeveloperDefined() ? 6400L :
-      EMCValue.paper         + EMCValue.common_metal   + EMCValue.purple_dye     + EMCValue.redstone_comparator +
+      EMCValue.paper         + EMCValue.common_metal   + EMCValue.purple_dye     + EMCValue.observer +
       EMCValue.silicon       + EMCValue.uncommon_metal + EMCValue.uncommon_metal + EMCValue.ender_pearl
     ));
     InterModComms.sendTo(sender, mod, message, () -> new CustomEMCRegistration(NSSItem.createItem(EnergyItems.circuit_tier_7),
       Config.emcDeveloperDefined() ? 8100L :
       EMCValue.paper         + EMCValue.common_metal   + EMCValue.orange_dye     + EMCValue.redstone_comparator +
-      EMCValue.silicon       + EMCValue.uncommon_metal + EMCValue.uncommon_metal + EMCValue.ender_eye
+      EMCValue.silicon       + EMCValue.uncommon_metal + EMCValue.uncommon_metal + EMCValue.magma_cream
     ));
     InterModComms.sendTo(sender, mod, message, () -> new CustomEMCRegistration(NSSItem.createItem(EnergyItems.circuit_tier_8),
       Config.emcDeveloperDefined() ? 10_000L :
-      EMCValue.common_metal  + EMCValue.common_metal   + EMCValue.white_dye      + EMCValue.redstone_lamp +
+      EMCValue.common_metal  + EMCValue.common_metal   + EMCValue.white_dye      + EMCValue.redstone_comparator +
       EMCValue.silicon       + EMCValue.uncommon_metal + EMCValue.uncommon_metal + EMCValue.ender_eye
+    ));
+    InterModComms.sendTo(sender, mod, message, () -> new CustomEMCRegistration(NSSItem.createItem(EnergyItems.circuit_tier_9),
+      Config.emcDeveloperDefined() ? 12_100L :
+      EMCValue.common_metal  + EMCValue.common_metal   + EMCValue.cyan_dye       + EMCValue.redstone_lamp +
+      EMCValue.silicon       + EMCValue.uncommon_metal + EMCValue.uncommon_metal + EMCValue.heart_of_the_sea
     ));
 
   }
