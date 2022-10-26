@@ -24,6 +24,7 @@ public final class OverpoweredItems {
   public static final Item nullified_power_core      = new OverpoweredItem(Names.NULLIFIED_POWER_CORE);
   public static final Item energy_grid               = new OverpoweredItem(Names.ENERGY_GRID);
   public static final Item vacuum_container          = new OverpoweredItem(Names.VACUUM_CONTAINER);
+  public static final Item reinforced_container      = new OverpoweredItem(Names.REINFORCED_CONTAINER);
   
   public static final Item beam_emitter              = new OverpoweredItem(Names.BEAM_EMITTER);
   public static final Item destructive_laser         = new OverpoweredItem(Names.DESTRUCTIVE_LASER);
@@ -38,6 +39,7 @@ public final class OverpoweredItems {
   public static final Item matter_energy_converter   = new OverpoweredItem(Names.MATTER_ENERGY_CONVERTER);
   public static final Item dimensional_flux          = new DimensionalFlux();
   public static final Item dimensional_anchor        = new DimensionalAnchor();
+  public static final Item unimatter                 = new OverpoweredItem(Names.UNIMATTER);
   
   public static final SwordItem   celestial_sword   = new OverpoweredSword();
   public static final ShovelItem  celestial_shovel  = new OverpoweredShovel();

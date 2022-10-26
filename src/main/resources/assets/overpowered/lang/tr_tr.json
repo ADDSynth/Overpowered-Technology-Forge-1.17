@@ -25,6 +25,7 @@
 "item.overpowered.nullified_power_core": "negatif güç çekirdeği",
 "item.overpowered.energy_grid": "Enerji Şebekesi",
 "item.overpowered.vacuum_container": "konteyner",
+"item.overpowered.reinforced_container": "Reinforced Container",
 
 "item.overpowered.beam_emitter": "Işın yayıcı",
 "item.overpowered.destructive_laser": "High-Intensity Laser",
@@ -40,6 +41,7 @@
 "item.overpowered.matter_energy_converter": "Matter/Energy Converter",
 "item.overpowered.dimensional_flux": "Dimensional Flux",
 "item.overpowered.dimensional_anchor": "Boyutlu Çapa",
+"item.overpowered.unimatter": "Unimatter",
 
 "block.overpowered.data_cable": "Data Cable",
 "block.overpowered.crystal_energy_extractor": "Crystal Energy Extractor",
@@ -54,6 +56,7 @@
 "block.overpowered.plasma_generator": "Plasma Generator",
 "block.overpowered.crystal_matter_generator": "Kristal Madde Üreticisi",
 "block.overpowered.advanced_ore_refinery": "Gelişmiş Cevher Rafinerisi",
+"block.overpowered.matter_compressor": "Matter Compressor",
 
 "block.overpowered.fusion_chamber": "Füzyon Odası",
 "block.overpowered.fusion_control_unit": "Füzyon Kontrol Ünitesi",
@@ -183,6 +186,7 @@
 "gui.overpowered.portal_message.creative_mode": "Oynatıcı yaratıcı modda.",
 "gui.overpowered.portal_message.ready": "Portal hazır.",
 "gui.overpowered.portal_warning_message": "§cDikkat§r: Bilinmeyen boyutla ilgili hala bazı sorunlar var. Oraya giderseniz, havada görünme ve ölümünüze düşme şansınız vardır. Portalı yaratıcı moda girmenizi veya yapılandırma dosyasında portalı devre dışı bırakmanızı öneririz. Bunun için üzgünüz ve bunu daha sonraki bir güncellemede düzeltmeyi umuyoruz.",
+"gui.overpowered.matter_compressor.matter": "Matter",
 "gui.overpowered.ring_effect.strength": "kuvvet",
 "gui.overpowered.ring_effect.speed": "hız",
 "gui.overpowered.ring_effect.haste": "Madencilik hızı",
@@ -270,5 +274,8 @@
 "advancements.overpowered.world_destroyer.title": "Dünya muhripleri",
 "advancements.overpowered.world_destroyer.description": "Dünyanın bir bölümünü yok etmek için bir kara delik kullanın",
 "advancements.overpowered.survivor.title": "Survivor",
-"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole"
+"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole",
+
+"advancements.overpowered.unimatter.title": "Unimatter",
+"advancements.overpowered.unimatter.description": "Use the Matter Compressor to obtain Unimatter."
 }

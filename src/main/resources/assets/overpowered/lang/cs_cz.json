@@ -25,6 +25,7 @@
 "item.overpowered.nullified_power_core": "záporné jádro výkonu",
 "item.overpowered.energy_grid": "Energetická rozvodná síť",
 "item.overpowered.vacuum_container": "Vakuový kontejner",
+"item.overpowered.reinforced_container": "Reinforced Container",
 
 "item.overpowered.beam_emitter": "vysílače paprsků",
 "item.overpowered.destructive_laser": "High-Intensity Laser",
@@ -40,6 +41,7 @@
 "item.overpowered.matter_energy_converter": "Matter/Energy Converter",
 "item.overpowered.dimensional_flux": "Dimensional Flux",
 "item.overpowered.dimensional_anchor": "Rozměrová kotva",
+"item.overpowered.unimatter": "Unimatter",
 
 "block.overpowered.data_cable": "Datový kabel",
 "block.overpowered.crystal_energy_extractor": "Crystal Energy Extractor",
@@ -54,6 +56,7 @@
 "block.overpowered.plasma_generator": "Plasma Generator",
 "block.overpowered.crystal_matter_generator": "Generátor krystalové hmoty",
 "block.overpowered.advanced_ore_refinery": "Pokročilé rudní rafinerie",
+"block.overpowered.matter_compressor": "Matter Compressor",
 
 "block.overpowered.fusion_chamber": "Fúzní komora",
 "block.overpowered.fusion_control_unit": "Jednotka řízení fúze",
@@ -183,6 +186,7 @@
 "gui.overpowered.portal_message.creative_mode": "Hráč je v kreativním režimu.",
 "gui.overpowered.portal_message.ready": "Portál je připraven.",
 "gui.overpowered.portal_warning_message": "§cPozor§r: S neznámou dimenzí stále existují problémy. Pokud tam půjdete, je tu šance, že se budete objevovat ve vzduchu a padnete do své smrti. Doporučujeme vstupovat do portálu v kreativním režimu nebo deaktivovat portál v konfiguračním souboru. Je nám to líto a doufáme, že to vyřešíme v pozdější aktualizaci.",
+"gui.overpowered.matter_compressor.matter": "Matter",
 "gui.overpowered.ring_effect.strength": "Síla",
 "gui.overpowered.ring_effect.speed": "Rychlost",
 "gui.overpowered.ring_effect.haste": "Rychlost těžby",
@@ -270,5 +274,8 @@
 "advancements.overpowered.world_destroyer.title": "Světový torpédoborec",
 "advancements.overpowered.world_destroyer.description": "Pomocí černé díry zničte část světa",
 "advancements.overpowered.survivor.title": "Survivor",
-"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole"
+"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole",
+
+"advancements.overpowered.unimatter.title": "Unimatter",
+"advancements.overpowered.unimatter.description": "Use the Matter Compressor to obtain Unimatter."
 }

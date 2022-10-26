@@ -25,6 +25,7 @@
 "item.overpowered.nullified_power_core": "Nullified Power Core",
 "item.overpowered.energy_grid": "Energy Grid",
 "item.overpowered.vacuum_container": "Container",
+"item.overpowered.reinforced_container": "Reinforced Container",
 
 "item.overpowered.beam_emitter": "Beam Emitter",
 "item.overpowered.destructive_laser": "High-Intensity Laser",
@@ -40,6 +41,7 @@
 "item.overpowered.matter_energy_converter": "Matter/Energy Converter",
 "item.overpowered.dimensional_flux": "Dimensional Flux",
 "item.overpowered.dimensional_anchor": "Dimensional Anchor",
+"item.overpowered.unimatter": "Unimatter",
 
 "block.overpowered.data_cable": "Data Cable",
 "block.overpowered.crystal_energy_extractor": "Crystal Energy Extractor",
@@ -54,6 +56,7 @@
 "block.overpowered.plasma_generator": "Plasma Generator",
 "block.overpowered.crystal_matter_generator": "Crystal Matter Generator",
 "block.overpowered.advanced_ore_refinery": "Advanced Ore Refinery",
+"block.overpowered.matter_compressor": "Matter Compressor",
 
 "block.overpowered.fusion_chamber": "Fusion Chamber",
 "block.overpowered.fusion_control_unit": "Fusion Control Unit",
@@ -183,6 +186,7 @@
 "gui.overpowered.portal_message.creative_mode": "Player is in Creative Mode.",
 "gui.overpowered.portal_message.ready": "Portal is Ready.",
 "gui.overpowered.portal_warning_message": "§cBeware§r: Traveling to the Unknown Dimension is still buggy. There's a chance you may spawn in the air and fall to your death! (I believe this occurs when you enter for the first time because the dimension hasn't loaded yet.) We recommend entering the portal in Creative Mode, or disabling the Portal in the config. (Boots with Feather Falling IV won't work. I've tried.) If you're quick to enter the portal a second time before the portal goes away you might spawn on the ground. Enter at your own risk! This will get fixed in a later update.",
+"gui.overpowered.matter_compressor.matter": "Matter",
 "gui.overpowered.ring_effect.strength": "Strength",
 "gui.overpowered.ring_effect.speed": "Speed",
 "gui.overpowered.ring_effect.haste": "Haste",
@@ -270,5 +274,8 @@
 "advancements.overpowered.world_destroyer.title": "World Destroyer",
 "advancements.overpowered.world_destroyer.description": "Use a Black Hole to destroy part of the world",
 "advancements.overpowered.survivor.title": "Survivor",
-"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole"
+"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole",
+
+"advancements.overpowered.unimatter.title": "Unimatter",
+"advancements.overpowered.unimatter.description": "Use the Matter Compressor to obtain Unimatter."
 }

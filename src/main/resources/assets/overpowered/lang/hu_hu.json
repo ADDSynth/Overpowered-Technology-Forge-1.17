@@ -25,6 +25,7 @@
 "item.overpowered.nullified_power_core": "Megszüntetett teljesítmény mag",
 "item.overpowered.energy_grid": "Energiahálózat",
 "item.overpowered.vacuum_container": "Vákuumos tartály",
+"item.overpowered.reinforced_container": "Reinforced Container",
 
 "item.overpowered.beam_emitter": "sugárterelőt",
 "item.overpowered.destructive_laser": "High-Intensity Laser",
@@ -40,6 +41,7 @@
 "item.overpowered.matter_energy_converter": "Matter/Energy Converter",
 "item.overpowered.dimensional_flux": "Dimensional Flux",
 "item.overpowered.dimensional_anchor": "Dimenziós horgony",
+"item.overpowered.unimatter": "Unimatter",
 
 "block.overpowered.data_cable": "Adatkábel",
 "block.overpowered.crystal_energy_extractor": "Crystal Energy Extractor",
@@ -54,6 +56,7 @@
 "block.overpowered.plasma_generator": "Plasma Generator",
 "block.overpowered.crystal_matter_generator": "kristály Anyaggenerátor",
 "block.overpowered.advanced_ore_refinery": "Haladó Ore Finomító",
+"block.overpowered.matter_compressor": "Matter Compressor",
 
 "block.overpowered.fusion_chamber": "Fúziós kamara",
 "block.overpowered.fusion_control_unit": "Fúziós vezérlő egység",
@@ -183,6 +186,7 @@
 "gui.overpowered.portal_message.creative_mode": "A játékos kreatív módban van.",
 "gui.overpowered.portal_message.ready": "A portál készen áll.",
 "gui.overpowered.portal_warning_message": "§cÓvakodik§r: Még mindig vannak problémák az ismeretlen dimenzióval. Ha odamegy, van egy esély arra, hogy megjelenik a levegőben, és halálához eshet. Javasoljuk, hogy lépjen be a portálba kreatív módban, vagy tiltsa le a portált a konfigurációs fájlban. Sajnáljuk ezt, és reméljük, hogy ezt egy későbbi frissítésben kijavíthatjuk.",
+"gui.overpowered.matter_compressor.matter": "Matter",
 "gui.overpowered.ring_effect.strength": "Erő",
 "gui.overpowered.ring_effect.speed": "Sebesség",
 "gui.overpowered.ring_effect.haste": "Bányászati sebesség",
@@ -270,5 +274,8 @@
 "advancements.overpowered.world_destroyer.title": "Világpusztító",
 "advancements.overpowered.world_destroyer.description": "Használj egy fekete lyukat a világ egy részének elpusztításához",
 "advancements.overpowered.survivor.title": "Survivor",
-"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole"
+"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole",
+
+"advancements.overpowered.unimatter.title": "Unimatter",
+"advancements.overpowered.unimatter.description": "Use the Matter Compressor to obtain Unimatter."
 }

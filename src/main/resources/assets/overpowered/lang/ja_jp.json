@@ -25,6 +25,7 @@
 "item.overpowered.nullified_power_core": "ヌルパワーコア",
 "item.overpowered.energy_grid": "エネルギーグリッド",
 "item.overpowered.vacuum_container": "真空容器",
+"item.overpowered.reinforced_container": "Reinforced Container",
 
 "item.overpowered.beam_emitter": "ビームエミッタ",
 "item.overpowered.destructive_laser": "High-Intensity Laser",
@@ -40,6 +41,7 @@
 "item.overpowered.matter_energy_converter": "Matter/Energy Converter",
 "item.overpowered.dimensional_flux": "Dimensional Flux",
 "item.overpowered.dimensional_anchor": "寸法アンカー",
+"item.overpowered.unimatter": "Unimatter",
 
 "block.overpowered.data_cable": "データケーブル",
 "block.overpowered.crystal_energy_extractor": "Crystal Energy Extractor",
@@ -54,6 +56,7 @@
 "block.overpowered.plasma_generator": "Plasma Generator",
 "block.overpowered.crystal_matter_generator": "クリスタルマタージェネレータ",
 "block.overpowered.advanced_ore_refinery": "先進鉱石精錬所",
+"block.overpowered.matter_compressor": "Matter Compressor",
 
 "block.overpowered.fusion_chamber": "融合チャンバー",
 "block.overpowered.fusion_control_unit": "フュージョンコントロールユニット",
@@ -183,6 +186,7 @@
 "gui.overpowered.portal_message.creative_mode": "プレーヤーはクリエイティブモードです。",
 "gui.overpowered.portal_message.ready": "ポータルの準備が整いました。",
 "gui.overpowered.portal_warning_message": "§c注意してください§r: 未知の次元にはまだいくつかの問題があります。そこに行くと、空中に現れて倒れてしまう可能性があります。ポータルをクリエイティブモードで入力するか、設定ファイルでポータルを無効にすることをお勧めします。申し訳ありませんが、今後のアップデートで修正される予定です。",
+"gui.overpowered.matter_compressor.matter": "Matter",
 "gui.overpowered.ring_effect.strength": "力",
 "gui.overpowered.ring_effect.speed": "速度",
 "gui.overpowered.ring_effect.haste": "採掘速度",
@@ -270,5 +274,8 @@
 "advancements.overpowered.world_destroyer.title": "世界の駆逐艦",
 "advancements.overpowered.world_destroyer.description": "ブラックホールを使用して、世界の一部を破壊します",
 "advancements.overpowered.survivor.title": "Survivor",
-"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole"
+"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole",
+
+"advancements.overpowered.unimatter.title": "Unimatter",
+"advancements.overpowered.unimatter.description": "Use the Matter Compressor to obtain Unimatter."
 }

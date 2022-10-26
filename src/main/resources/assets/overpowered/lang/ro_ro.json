@@ -25,6 +25,7 @@
 "item.overpowered.nullified_power_core": "miez de putere negativ",
 "item.overpowered.energy_grid": "Grilă energetică",
 "item.overpowered.vacuum_container": "rezervor de vid",
+"item.overpowered.reinforced_container": "Reinforced Container",
 
 "item.overpowered.beam_emitter": "Emițător de fascicul",
 "item.overpowered.destructive_laser": "High-Intensity Laser",
@@ -40,6 +41,7 @@
 "item.overpowered.matter_energy_converter": "Matter/Energy Converter",
 "item.overpowered.dimensional_flux": "Dimensional Flux",
 "item.overpowered.dimensional_anchor": "Ancora dimensională",
+"item.overpowered.unimatter": "Unimatter",
 
 "block.overpowered.data_cable": "Cablu de date",
 "block.overpowered.crystal_energy_extractor": "Crystal Energy Extractor",
@@ -54,6 +56,7 @@
 "block.overpowered.plasma_generator": "Plasma Generator",
 "block.overpowered.crystal_matter_generator": "generator de materiale de cristal",
 "block.overpowered.advanced_ore_refinery": "rafinărie avansată de minereu",
+"block.overpowered.matter_compressor": "Matter Compressor",
 
 "block.overpowered.fusion_chamber": "Camera de fuziune",
 "block.overpowered.fusion_control_unit": "Unitatea de control al fuziunii",
@@ -183,6 +186,7 @@
 "gui.overpowered.portal_message.creative_mode": "Jucătorul este în modul creativ.",
 "gui.overpowered.portal_message.ready": "Portalul este gata.",
 "gui.overpowered.portal_warning_message": "§cAi grijă§r: Există încă unele probleme cu dimensiunea necunoscută. Dacă te duci acolo, ai șansa să apari în aer și să cadă la moarte. Vă recomandăm să introduceți portalul în modul creativ sau să dezactivați portalul în fișierul de configurare. Ne pare rău pentru acest lucru și sperăm să remediem acest lucru într-o actualizare ulterioară.",
+"gui.overpowered.matter_compressor.matter": "Matter",
 "gui.overpowered.ring_effect.strength": "Putere",
 "gui.overpowered.ring_effect.speed": "Viteză",
 "gui.overpowered.ring_effect.haste": "Viteza de exploatare",
@@ -270,5 +274,8 @@
 "advancements.overpowered.world_destroyer.title": "Distrugător mondial",
 "advancements.overpowered.world_destroyer.description": "Folosiți o gaură neagră pentru a distruge o parte a lumii",
 "advancements.overpowered.survivor.title": "Survivor",
-"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole"
+"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole",
+
+"advancements.overpowered.unimatter.title": "Unimatter",
+"advancements.overpowered.unimatter.description": "Use the Matter Compressor to obtain Unimatter."
 }

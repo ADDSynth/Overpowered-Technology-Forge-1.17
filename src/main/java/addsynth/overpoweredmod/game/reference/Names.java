@@ -25,6 +25,7 @@ public final class Names {
   public static final ResourceLocation NULLIFIED_POWER_CORE    = new ResourceLocation(OverpoweredTechnology.MOD_ID, "nullified_power_core");
   public static final ResourceLocation ENERGY_GRID             = new ResourceLocation(OverpoweredTechnology.MOD_ID, "energy_grid");
   public static final ResourceLocation VACUUM_CONTAINER        = new ResourceLocation(OverpoweredTechnology.MOD_ID, "vacuum_container");
+  public static final ResourceLocation REINFORCED_CONTAINER    = new ResourceLocation(OverpoweredTechnology.MOD_ID, "reinforced_container");
 
   public static final ResourceLocation BEAM_EMITTER            = new ResourceLocation(OverpoweredTechnology.MOD_ID, "beam_emitter");
   public static final ResourceLocation DESTRUCTIVE_LASER       = new ResourceLocation(OverpoweredTechnology.MOD_ID, "destructive_laser");
@@ -39,6 +40,7 @@ public final class Names {
   public static final ResourceLocation MATTER_ENERGY_CONVERTER = new ResourceLocation(OverpoweredTechnology.MOD_ID, "matter_energy_converter");
   public static final ResourceLocation DIMENSIONAL_FLUX        = new ResourceLocation(OverpoweredTechnology.MOD_ID, "dimensional_flux");
   public static final ResourceLocation DIMENSIONAL_ANCHOR      = new ResourceLocation(OverpoweredTechnology.MOD_ID, "dimensional_anchor");
+  public static final ResourceLocation UNIMATTER               = new ResourceLocation(OverpoweredTechnology.MOD_ID, "unimatter");
 
   public static final ResourceLocation FOCUS_LENS              = new ResourceLocation(OverpoweredTechnology.MOD_ID, "focus_lens");
   public static final ResourceLocation RED_LENS                = new ResourceLocation(OverpoweredTechnology.MOD_ID, "red_lens");
@@ -59,6 +61,7 @@ public final class Names {
   public static final ResourceLocation CRYSTAL_MATTER_GENERATOR = new ResourceLocation(OverpoweredTechnology.MOD_ID, "crystal_matter_generator");
   public static final ResourceLocation ENERGY_SUSPENSION_BRIDGE = new ResourceLocation(OverpoweredTechnology.MOD_ID, "energy_suspension_bridge");
   public static final ResourceLocation PLASMA_GENERATOR         = new ResourceLocation(OverpoweredTechnology.MOD_ID, "plasma_generator");
+  public static final ResourceLocation MATTER_COMPRESSOR        = new ResourceLocation(OverpoweredTechnology.MOD_ID, "matter_compressor");
 
   public static final ResourceLocation PORTAL_CONTROL_PANEL     = new ResourceLocation(OverpoweredTechnology.MOD_ID, "portal_control_panel");
   public static final ResourceLocation PORTAL_FRAME             = new ResourceLocation(OverpoweredTechnology.MOD_ID, "portal_frame");
@@ -71,31 +74,31 @@ public final class Names {
   // different color beams, but all the beams can be merged into a single block and use a color property.
 
   public static final ResourceLocation[] LASER = {
-    new ResourceLocation(OverpoweredTechnology.MOD_ID, "white_laser"),
-    new ResourceLocation(OverpoweredTechnology.MOD_ID, "red_laser"),
-    new ResourceLocation(OverpoweredTechnology.MOD_ID, "orange_laser"),
-    new ResourceLocation(OverpoweredTechnology.MOD_ID, "yellow_laser"),
-    new ResourceLocation(OverpoweredTechnology.MOD_ID, "green_laser"),
-    new ResourceLocation(OverpoweredTechnology.MOD_ID, "cyan_laser"),
-    new ResourceLocation(OverpoweredTechnology.MOD_ID, "blue_laser"),
+    new ResourceLocation(OverpoweredTechnology.MOD_ID,   "white_laser"),
+    new ResourceLocation(OverpoweredTechnology.MOD_ID,     "red_laser"),
+    new ResourceLocation(OverpoweredTechnology.MOD_ID,  "orange_laser"),
+    new ResourceLocation(OverpoweredTechnology.MOD_ID,  "yellow_laser"),
+    new ResourceLocation(OverpoweredTechnology.MOD_ID,   "green_laser"),
+    new ResourceLocation(OverpoweredTechnology.MOD_ID,    "cyan_laser"),
+    new ResourceLocation(OverpoweredTechnology.MOD_ID,    "blue_laser"),
     new ResourceLocation(OverpoweredTechnology.MOD_ID, "magenta_laser")
   };
 
   public static final ResourceLocation[] LASER_BEAM = {
-    new ResourceLocation(OverpoweredTechnology.MOD_ID, "white_laser_beam"),
-    new ResourceLocation(OverpoweredTechnology.MOD_ID, "red_laser_beam"),
-    new ResourceLocation(OverpoweredTechnology.MOD_ID, "orange_laser_beam"),
-    new ResourceLocation(OverpoweredTechnology.MOD_ID, "yellow_laser_beam"),
-    new ResourceLocation(OverpoweredTechnology.MOD_ID, "green_laser_beam"),
-    new ResourceLocation(OverpoweredTechnology.MOD_ID, "cyan_laser_beam"),
-    new ResourceLocation(OverpoweredTechnology.MOD_ID, "blue_laser_beam"),
+    new ResourceLocation(OverpoweredTechnology.MOD_ID,   "white_laser_beam"),
+    new ResourceLocation(OverpoweredTechnology.MOD_ID,     "red_laser_beam"),
+    new ResourceLocation(OverpoweredTechnology.MOD_ID,  "orange_laser_beam"),
+    new ResourceLocation(OverpoweredTechnology.MOD_ID,  "yellow_laser_beam"),
+    new ResourceLocation(OverpoweredTechnology.MOD_ID,   "green_laser_beam"),
+    new ResourceLocation(OverpoweredTechnology.MOD_ID,    "cyan_laser_beam"),
+    new ResourceLocation(OverpoweredTechnology.MOD_ID,    "blue_laser_beam"),
     new ResourceLocation(OverpoweredTechnology.MOD_ID, "magenta_laser_beam")
   };
 
-  public static final ResourceLocation FUSION_CONVERTER         = new ResourceLocation(OverpoweredTechnology.MOD_ID, "fusion_energy_converter");
-  public static final ResourceLocation FUSION_CHAMBER           = new ResourceLocation(OverpoweredTechnology.MOD_ID, "fusion_chamber");
-  public static final ResourceLocation FUSION_CONTROL_UNIT      = new ResourceLocation(OverpoweredTechnology.MOD_ID, "fusion_control_unit");
-  public static final ResourceLocation FUSION_CONTROL_LASER     = new ResourceLocation(OverpoweredTechnology.MOD_ID, "fusion_control_laser");
+  public static final ResourceLocation FUSION_CONVERTER          = new ResourceLocation(OverpoweredTechnology.MOD_ID, "fusion_energy_converter");
+  public static final ResourceLocation FUSION_CHAMBER            = new ResourceLocation(OverpoweredTechnology.MOD_ID, "fusion_chamber");
+  public static final ResourceLocation FUSION_CONTROL_UNIT       = new ResourceLocation(OverpoweredTechnology.MOD_ID, "fusion_control_unit");
+  public static final ResourceLocation FUSION_CONTROL_LASER      = new ResourceLocation(OverpoweredTechnology.MOD_ID, "fusion_control_laser");
   public static final ResourceLocation FUSION_CONTROL_LASER_BEAM = new ResourceLocation(OverpoweredTechnology.MOD_ID, "fusion_control_laser_beam");
 
   public static final ResourceLocation CELESTIAL_SWORD   = new ResourceLocation(OverpoweredTechnology.MOD_ID, "celestial_sword");

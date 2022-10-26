@@ -25,6 +25,7 @@
 "item.overpowered.nullified_power_core": "lõi điện âm",
 "item.overpowered.energy_grid": "Lưới năng lượng",
 "item.overpowered.vacuum_container": "thùng chứa chân không",
+"item.overpowered.reinforced_container": "Reinforced Container",
 
 "item.overpowered.beam_emitter": "Phát xạ chùm",
 "item.overpowered.destructive_laser": "High-Intensity Laser",
@@ -40,6 +41,7 @@
 "item.overpowered.matter_energy_converter": "Matter/Energy Converter",
 "item.overpowered.dimensional_flux": "Dimensional Flux",
 "item.overpowered.dimensional_anchor": "Neo chiều",
+"item.overpowered.unimatter": "Unimatter",
 
 "block.overpowered.data_cable": "Cáp dữ liệu",
 "block.overpowered.crystal_energy_extractor": "Crystal Energy Extractor",
@@ -54,6 +56,7 @@
 "block.overpowered.plasma_generator": "Plasma Generator",
 "block.overpowered.crystal_matter_generator": "máy phát điện vật liệu tinh thể",
 "block.overpowered.advanced_ore_refinery": "Nhà máy luyện quặng cao cấp",
+"block.overpowered.matter_compressor": "Matter Compressor",
 
 "block.overpowered.fusion_chamber": "buồng nhiệt hạch",
 "block.overpowered.fusion_control_unit": "máy điều khiển nhiệt hạch",
@@ -183,6 +186,7 @@
 "gui.overpowered.portal_message.creative_mode": "Người chơi đang ở chế độ sáng tạo.",
 "gui.overpowered.portal_message.ready": "Cổng thông tin đã sẵn sàng.",
 "gui.overpowered.portal_warning_message": "§cCảnh báo§r: Vẫn còn một số vấn đề với kích thước chưa biết. Nếu bạn đến đó, có khả năng bạn có thể xuất hiện trên không và rơi vào cái chết của bạn. Chúng tôi khuyên bạn nên nhập cổng thông tin ở chế độ sáng tạo hoặc vô hiệu hóa cổng thông tin trong tệp cấu hình. Chúng tôi xin lỗi về điều này và chúng tôi hy vọng sẽ sửa lỗi này trong bản cập nhật sau.",
+"gui.overpowered.matter_compressor.matter": "Matter",
 "gui.overpowered.ring_effect.strength": "Sức mạnh",
 "gui.overpowered.ring_effect.speed": "Tốc độ",
 "gui.overpowered.ring_effect.haste": "Tốc độ khai thác",
@@ -270,5 +274,8 @@
 "advancements.overpowered.world_destroyer.title": "Tàu khu trục thế giới",
 "advancements.overpowered.world_destroyer.description": "Sử dụng một lỗ đen để phá hủy một phần của thế giới",
 "advancements.overpowered.survivor.title": "Survivor",
-"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole"
+"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole",
+
+"advancements.overpowered.unimatter.title": "Unimatter",
+"advancements.overpowered.unimatter.description": "Use the Matter Compressor to obtain Unimatter."
 }

@@ -25,6 +25,7 @@
 "item.overpowered.nullified_power_core": "Отрицательное силовое ядро",
 "item.overpowered.energy_grid": "Энергетическая сеть",
 "item.overpowered.vacuum_container": "Вакуумный контейнер",
+"item.overpowered.reinforced_container": "Reinforced Container",
 
 "item.overpowered.beam_emitter": "Излучатель луча",
 "item.overpowered.destructive_laser": "High-Intensity Laser",
@@ -40,6 +41,7 @@
 "item.overpowered.matter_energy_converter": "Matter/Energy Converter",
 "item.overpowered.dimensional_flux": "Dimensional Flux",
 "item.overpowered.dimensional_anchor": "Габаритный анкер",
+"item.overpowered.unimatter": "Unimatter",
 
 "block.overpowered.data_cable": "Кабель для передачи данных",
 "block.overpowered.crystal_energy_extractor": "Crystal Energy Extractor",
@@ -54,6 +56,7 @@
 "block.overpowered.plasma_generator": "Plasma Generator",
 "block.overpowered.crystal_matter_generator": "Генератор кристаллической материи",
 "block.overpowered.advanced_ore_refinery": "Расширенный рудный нефтеперерабатывающий завод",
+"block.overpowered.matter_compressor": "Matter Compressor",
 
 "block.overpowered.fusion_chamber": "фьюжн палата",
 "block.overpowered.fusion_control_unit": "Контрольная машина",
@@ -183,6 +186,7 @@
 "gui.overpowered.portal_message.creative_mode": "Плеер находится в творческом режиме.",
 "gui.overpowered.portal_message.ready": "Портал готов.",
 "gui.overpowered.portal_warning_message": "§cберегись§r: Есть еще некоторые проблемы с неизвестным измерением. Если вы идете туда, есть шанс, что вы можете появиться в воздухе и упасть до смерти. Мы рекомендуем войти в портал в творческом режиме или отключить портал в файле конфигурации. Мы сожалеем об этом и надеемся исправить это в более позднем обновлении.",
+"gui.overpowered.matter_compressor.matter": "Matter",
 "gui.overpowered.ring_effect.strength": "Прочность",
 "gui.overpowered.ring_effect.speed": "скорость",
 "gui.overpowered.ring_effect.haste": "Скорость добычи",
@@ -270,5 +274,8 @@
 "advancements.overpowered.world_destroyer.title": "Разрушитель мира",
 "advancements.overpowered.world_destroyer.description": "Используйте черную дыру, чтобы уничтожить часть мира",
 "advancements.overpowered.survivor.title": "Survivor",
-"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole"
+"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole",
+
+"advancements.overpowered.unimatter.title": "Unimatter",
+"advancements.overpowered.unimatter.description": "Use the Matter Compressor to obtain Unimatter."
 }

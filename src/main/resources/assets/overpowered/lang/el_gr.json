@@ -25,6 +25,7 @@
 "item.overpowered.nullified_power_core": "πυρήνα αρνητικής ισχύος",
 "item.overpowered.energy_grid": "Ενεργειακό δίκτυο",
 "item.overpowered.vacuum_container": "Δοχείο κενού",
+"item.overpowered.reinforced_container": "Reinforced Container",
 
 "item.overpowered.beam_emitter": "εκπομπό δέσμης",
 "item.overpowered.destructive_laser": "High-Intensity Laser",
@@ -40,6 +41,7 @@
 "item.overpowered.matter_energy_converter": "Matter/Energy Converter",
 "item.overpowered.dimensional_flux": "Dimensional Flux",
 "item.overpowered.dimensional_anchor": "Διαστατική άγκυρα",
+"item.overpowered.unimatter": "Unimatter",
 
 "block.overpowered.data_cable": "Καλώδιο δεδομένων",
 "block.overpowered.crystal_energy_extractor": "Crystal Energy Extractor",
@@ -54,6 +56,7 @@
 "block.overpowered.plasma_generator": "Plasma Generator",
 "block.overpowered.crystal_matter_generator": "Κατασκευαστής πολύτιμων λίθων",
 "block.overpowered.advanced_ore_refinery": "προηγμένο διυλιστήριο μεταλλευμάτων",
+"block.overpowered.matter_compressor": "Matter Compressor",
 
 "block.overpowered.fusion_chamber": "θάλαμο σύντηξης",
 "block.overpowered.fusion_control_unit": "Μονάδα ελέγχου σύντηξης",
@@ -183,6 +186,7 @@
 "gui.overpowered.portal_message.creative_mode": "Το πρόγραμμα αναπαραγωγής βρίσκεται σε λειτουργία δημιουργικού.",
 "gui.overpowered.portal_message.ready": "Η πύλη είναι έτοιμη.",
 "gui.overpowered.portal_warning_message": "§cΠροσοχή§r: Υπάρχουν ακόμα ορισμένα προβλήματα με την άγνωστη διάσταση. Αν πάτε εκεί, υπάρχει πιθανότητα να εμφανιστεί στον αέρα και να πέσει στο θάνατό σας. Σας συνιστούμε να εισαγάγετε την πύλη σε λειτουργία δημιουργικού ή να απενεργοποιήσετε την πύλη στο αρχείο διαμόρφωσης. Λυπούμαστε για αυτό και ελπίζουμε να το διορθώσουμε σε μια μεταγενέστερη ενημέρωση.",
+"gui.overpowered.matter_compressor.matter": "Matter",
 "gui.overpowered.ring_effect.strength": "Δύναμη",
 "gui.overpowered.ring_effect.speed": "Ταχύτητα",
 "gui.overpowered.ring_effect.haste": "Ταχύτητα εξόρυξης",
@@ -270,5 +274,8 @@
 "advancements.overpowered.world_destroyer.title": "Παγκόσμιος καταστροφέας",
 "advancements.overpowered.world_destroyer.description": "Χρησιμοποιήστε μια μαύρη τρύπα για να καταστρέψετε μέρος του κόσμου",
 "advancements.overpowered.survivor.title": "Survivor",
-"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole"
+"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole",
+
+"advancements.overpowered.unimatter.title": "Unimatter",
+"advancements.overpowered.unimatter.description": "Use the Matter Compressor to obtain Unimatter."
 }

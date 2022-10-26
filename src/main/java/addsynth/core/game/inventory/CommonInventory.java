@@ -56,6 +56,13 @@ public class CommonInventory extends ItemStackHandler {
     }
   }
 
+  /** <p>Alias for {@link #insertItem(int, ItemStack, boolean)} with {@code simulate} set to false.
+   *     Commonly used right after calling {@link OutputInventory#can_add(int, ItemStack)}.
+   *  <p>Deprecated: Try to use {@link #insertItem(int, ItemStack, boolean)} whenever possible. */
+  public final void add(final int slot, final @Nonnull ItemStack stack){
+    insertItem(slot, stack, false);
+  }
+
   /** Extracts the entire ItemStack from the slot. */
   public final ItemStack extractItemStack(final int slot){
     final ItemStack stack = getStackInSlot(slot);

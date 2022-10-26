@@ -50,6 +50,9 @@ public final class Config {
   private static final int DEFAULT_ENERGY_BRIDGE_DISTANCE = 250;
   public static ForgeConfigSpec.IntValue energy_bridge_max_distance;
 
+  private static final int DEFAULT_MAX_REQUIRED_MATTER = 64_000;
+  public static ForgeConfigSpec.IntValue max_matter;
+
   public static ForgeConfigSpec.BooleanValue rings_have_particle_effects;
 
   public static ForgeConfigSpec.BooleanValue show_advanced_config;
@@ -126,6 +129,11 @@ public final class Config {
       "This determines the maximum distance Energy Suspension Bridges can reach. Energy Suspension Bridges only\n"+
       "connect to other Energy Suspension Bridges if they are within range. Increasing this may increase load on\n"+
       "your computer's processor.").defineInRange("Maximum Distance", DEFAULT_ENERGY_BRIDGE_DISTANCE, 20, 500);
+    builder.pop();
+
+    builder.push("Matter Compressor");
+    max_matter = builder.comment("How many items are required to create 1 Unimatter in the Matter Compressor?")
+                        .defineInRange("Matter Required", DEFAULT_MAX_REQUIRED_MATTER, 1, 1_280_000);
     builder.pop();
 
     builder.push("Other");

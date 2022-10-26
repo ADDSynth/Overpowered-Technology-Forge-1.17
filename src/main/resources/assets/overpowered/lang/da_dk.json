@@ -25,6 +25,7 @@
 "item.overpowered.nullified_power_core": "negativ kraftkerne",
 "item.overpowered.energy_grid": "Energi nettet",
 "item.overpowered.vacuum_container": "Vakuumbeholder",
+"item.overpowered.reinforced_container": "Reinforced Container",
 
 "item.overpowered.beam_emitter": "Stråle emitter",
 "item.overpowered.destructive_laser": "High-Intensity Laser",
@@ -40,6 +41,7 @@
 "item.overpowered.matter_energy_converter": "Matter/Energy Converter",
 "item.overpowered.dimensional_flux": "Dimensional Flux",
 "item.overpowered.dimensional_anchor": "Dimensionelt anker",
+"item.overpowered.unimatter": "Unimatter",
 
 "block.overpowered.data_cable": "Datakabel",
 "block.overpowered.crystal_energy_extractor": "Crystal Energy Extractor",
@@ -54,6 +56,7 @@
 "block.overpowered.plasma_generator": "Plasma Generator",
 "block.overpowered.crystal_matter_generator": "lav ædelsten stykke",
 "block.overpowered.advanced_ore_refinery": "avanceret malmraffinaderi",
+"block.overpowered.matter_compressor": "Matter Compressor",
 
 "block.overpowered.fusion_chamber": "Fusionskammer",
 "block.overpowered.fusion_control_unit": "Fusionskontrol enhed",
@@ -183,6 +186,7 @@
 "gui.overpowered.portal_message.creative_mode": "Afspilleren er i kreativ tilstand.",
 "gui.overpowered.portal_message.ready": "Portalen er klar.",
 "gui.overpowered.portal_warning_message": "§cPas på§r: Der er stadig nogle problemer med den ukendte dimension. Hvis du går der, er der en chance for, at du måske vises i luften og falder til din død. Vi anbefaler at gå ind i portalen i kreativ tilstand eller deaktivere portalen i konfigurationsfilen. Vi beklager dette, og vi håber at fikse det i en senere opdatering.",
+"gui.overpowered.matter_compressor.matter": "Matter",
 "gui.overpowered.ring_effect.strength": "Styrke",
 "gui.overpowered.ring_effect.speed": "Hastighed",
 "gui.overpowered.ring_effect.haste": "minedrift hastighed",
@@ -270,5 +274,8 @@
 "advancements.overpowered.world_destroyer.title": "Verden ødelægger",
 "advancements.overpowered.world_destroyer.description": "Brug et sort hul til at ødelægge en del af verden",
 "advancements.overpowered.survivor.title": "Survivor",
-"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole"
+"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole",
+
+"advancements.overpowered.unimatter.title": "Unimatter",
+"advancements.overpowered.unimatter.description": "Use the Matter Compressor to obtain Unimatter."
 }

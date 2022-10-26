@@ -21,6 +21,7 @@ import addsynth.overpoweredmod.machines.inverter.InverterBlock;
 import addsynth.overpoweredmod.machines.laser.cannon.LaserCannon;
 import addsynth.overpoweredmod.machines.laser.machine.LaserHousingBlock;
 import addsynth.overpoweredmod.machines.magic_infuser.MagicInfuserBlock;
+import addsynth.overpoweredmod.machines.matter_compressor.MatterCompressorBlock;
 import addsynth.overpoweredmod.machines.plasma_generator.PlasmaGeneratorBlock;
 import addsynth.overpoweredmod.machines.portal.control_panel.PortalControlPanelBlock;
 import addsynth.overpoweredmod.machines.portal.frame.PortalFrameBlock;
@@ -48,6 +49,7 @@ public final class OverpoweredBlocks {
   public static final CrystalMatterGeneratorBlock crystal_matter_generator  = new CrystalMatterGeneratorBlock();
   public static final AdvancedOreRefineryBlock    advanced_ore_refinery     = new AdvancedOreRefineryBlock();
   public static final PlasmaGeneratorBlock        plasma_generator          = new PlasmaGeneratorBlock();
+  public static final MatterCompressorBlock       matter_compressor         = new MatterCompressorBlock();
 
   public static final FusionEnergyConverterBlock  fusion_converter          = new FusionEnergyConverterBlock();
   public static final FusionChamberBlock          fusion_chamber            = new FusionChamberBlock();

@@ -13,6 +13,7 @@ import addsynth.overpoweredmod.machines.identifier.TileIdentifier;
 import addsynth.overpoweredmod.machines.inverter.TileInverter;
 import addsynth.overpoweredmod.machines.laser.machine.TileLaserHousing;
 import addsynth.overpoweredmod.machines.magic_infuser.TileMagicInfuser;
+import addsynth.overpoweredmod.machines.matter_compressor.TileMatterCompressor;
 import addsynth.overpoweredmod.machines.plasma_generator.TilePlasmaGenerator;
 import addsynth.overpoweredmod.machines.portal.control_panel.TilePortalControlPanel;
 import addsynth.overpoweredmod.machines.portal.frame.TilePortalFrame;
@@ -72,5 +73,8 @@ public final class Tiles {
 
   public static final BlockEntityType<TilePlasmaGenerator> PLASMA_GENERATOR =
     BlockEntityType.Builder.of(TilePlasmaGenerator::new, OverpoweredBlocks.plasma_generator).build(null);
+
+  public static final BlockEntityType<TileMatterCompressor> MATTER_COMPRESSOR =
+    BlockEntityType.Builder.of(TileMatterCompressor::new, OverpoweredBlocks.matter_compressor).build(null);
 
 }

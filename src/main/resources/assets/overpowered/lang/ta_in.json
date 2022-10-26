@@ -25,6 +25,7 @@
 "item.overpowered.nullified_power_core": "எதிர்மறை சக்தி மையம்",
 "item.overpowered.energy_grid": "எரிசக்தி கட்டம்",
 "item.overpowered.vacuum_container": "வெற்றிடக் கொள்கலன்",
+"item.overpowered.reinforced_container": "Reinforced Container",
 
 "item.overpowered.beam_emitter": "பீம் எமிட்டர்",
 "item.overpowered.destructive_laser": "High-Intensity Laser",
@@ -40,6 +41,7 @@
 "item.overpowered.matter_energy_converter": "Matter/Energy Converter",
 "item.overpowered.dimensional_flux": "Dimensional Flux",
 "item.overpowered.dimensional_anchor": "பரிமாண ஆங்கர்",
+"item.overpowered.unimatter": "Unimatter",
 
 "block.overpowered.data_cable": "தரவு கேபிள்",
 "block.overpowered.crystal_energy_extractor": "Crystal Energy Extractor",
@@ -54,6 +56,7 @@
 "block.overpowered.plasma_generator": "Plasma Generator",
 "block.overpowered.crystal_matter_generator": "கிரிஸ்டல் மேட்டர் ஜெனரேட்டர்",
 "block.overpowered.advanced_ore_refinery": "மேம்பட்ட தாது சுத்திகரிப்பு",
+"block.overpowered.matter_compressor": "Matter Compressor",
 
 "block.overpowered.fusion_chamber": "ஃப்யூஷன் சேம்பர்",
 "block.overpowered.fusion_control_unit": "இணைவு கட்டுப்பாட்டு பிரிவு",
@@ -183,6 +186,7 @@
 "gui.overpowered.portal_message.creative_mode": "பிளேயர் கிரியேட்டிவ் பயன்முறையில் உள்ளது.",
 "gui.overpowered.portal_message.ready": "போர்டல் தயாராக உள்ளது.",
 "gui.overpowered.portal_warning_message": "§cஜாக்கிரதை§r: அறியப்படாத பரிமாணத்தில் இன்னும் சில சிக்கல்கள் உள்ளன. நீங்கள் அங்கு சென்றால், நீங்கள் காற்றில் தோன்றி உங்கள் மரணத்திற்கு விழ வாய்ப்பு உள்ளது. கிரியேட்டிவ் பயன்முறையில் போர்ட்டலை உள்ளிட அல்லது உள்ளமைவு கோப்பில் போர்ட்டலை முடக்க பரிந்துரைக்கிறோம். இதைப் பற்றி வருந்துகிறோம், பின்னர் புதுப்பித்தலில் இதை சரிசெய்ய நம்புகிறோம்.",
+"gui.overpowered.matter_compressor.matter": "Matter",
 "gui.overpowered.ring_effect.strength": "வலிமை",
 "gui.overpowered.ring_effect.speed": "வேகம்",
 "gui.overpowered.ring_effect.haste": "சுரங்க வேகம்",
@@ -270,5 +274,8 @@
 "advancements.overpowered.world_destroyer.title": "உலக அழிப்பான்",
 "advancements.overpowered.world_destroyer.description": "உலகின் ஒரு பகுதியை அழிக்க கருந்துளையைப் பயன்படுத்துங்கள்.",
 "advancements.overpowered.survivor.title": "Survivor",
-"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole"
+"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole",
+
+"advancements.overpowered.unimatter.title": "Unimatter",
+"advancements.overpowered.unimatter.description": "Use the Matter Compressor to obtain Unimatter."
 }

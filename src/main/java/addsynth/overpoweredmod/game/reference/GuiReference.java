@@ -21,5 +21,6 @@ public final class GuiReference {
   public static final ResourceLocation portal_control_panel     = new ResourceLocation(OverpoweredTechnology.MOD_ID, "textures/gui/portal_control_panel.png");
   public static final ResourceLocation portal_frame             = new ResourceLocation(OverpoweredTechnology.MOD_ID, "textures/gui/portal_frame.png");
   public static final ResourceLocation energy_suspension_bridge = new ResourceLocation(OverpoweredTechnology.MOD_ID, "textures/gui/energy_suspension_bridge.png");
+  public static final ResourceLocation matter_compressor        = new ResourceLocation(OverpoweredTechnology.MOD_ID, "textures/gui/matter_compressor.png");
 
 }

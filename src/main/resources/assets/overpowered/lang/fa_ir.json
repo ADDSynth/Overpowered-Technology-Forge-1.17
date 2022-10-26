@@ -25,6 +25,7 @@
 "item.overpowered.nullified_power_core": "هسته قدرت صفر",
 "item.overpowered.energy_grid": "شبکه انرژی",
 "item.overpowered.vacuum_container": "ظرف خلاء",
+"item.overpowered.reinforced_container": "Reinforced Container",
 
 "item.overpowered.beam_emitter": "امیتر پرتو",
 "item.overpowered.destructive_laser": "High-Intensity Laser",
@@ -40,6 +41,7 @@
 "item.overpowered.matter_energy_converter": "Matter/Energy Converter",
 "item.overpowered.dimensional_flux": "Dimensional Flux",
 "item.overpowered.dimensional_anchor": "لنگر ابعاد",
+"item.overpowered.unimatter": "Unimatter",
 
 "block.overpowered.data_cable": "کابل داده",
 "block.overpowered.crystal_energy_extractor": "Crystal Energy Extractor",
@@ -54,6 +56,7 @@
 "block.overpowered.plasma_generator": "Plasma Generator",
 "block.overpowered.crystal_matter_generator": "ژنراتور ماده کریستال",
 "block.overpowered.advanced_ore_refinery": "پالایشگاه سنگ معدن پیشرفته",
+"block.overpowered.matter_compressor": "Matter Compressor",
 
 "block.overpowered.fusion_chamber": "اتاق همجوشی",
 "block.overpowered.fusion_control_unit": "واحد کنترل فیوژن",
@@ -183,6 +186,7 @@
 "gui.overpowered.portal_message.creative_mode": "پخش کننده در حالت خلاق است.",
 "gui.overpowered.portal_message.ready": "پورتال آماده است.",
 "gui.overpowered.portal_warning_message": "§cبرحذر بودن§r: در بعد ناشناخته هنوز مشکلاتی وجود دارد. اگر به آنجا بروید ، احتمال دارد در هوا ظاهر شوید و به مرگ خود بیفتید. توصیه می کنیم پورتال را در حالت خلاقانه وارد کنید یا پورتال را در پرونده پیکربندی غیرفعال کنید. ما از این بابت پشیمان هستیم و امیدواریم این مسئله را در به روزرسانی بعدی برطرف کند.",
+"gui.overpowered.matter_compressor.matter": "Matter",
 "gui.overpowered.ring_effect.strength": "استحکام - قدرت",
 "gui.overpowered.ring_effect.speed": "سرعت",
 "gui.overpowered.ring_effect.haste": "سرعت معدن",
@@ -270,5 +274,8 @@
 "advancements.overpowered.world_destroyer.title": "ناوشکن جهان",
 "advancements.overpowered.world_destroyer.description": "برای از بین بردن بخشی از جهان از یک سیاه چاله استفاده کنید",
 "advancements.overpowered.survivor.title": "Survivor",
-"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole"
+"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole",
+
+"advancements.overpowered.unimatter.title": "Unimatter",
+"advancements.overpowered.unimatter.description": "Use the Matter Compressor to obtain Unimatter."
 }

@@ -85,6 +85,7 @@ public final class Registers {
       game.register(OverpoweredBlocks.fusion_control_laser);
       game.register(OverpoweredBlocks.fusion_control_laser_beam);
     }
+    game.register(OverpoweredBlocks.matter_compressor);
     
     OverpoweredTechnology.log.info("Finished Block Registration Event.");
   }
@@ -106,6 +107,7 @@ public final class Registers {
     game.register(OverpoweredItems.nullified_power_core);
     game.register(OverpoweredItems.energy_grid);
     game.register(OverpoweredItems.vacuum_container);
+    game.register(OverpoweredItems.reinforced_container);
     
     game.register(OverpoweredItems.beam_emitter);
     game.register(OverpoweredItems.destructive_laser);
@@ -123,6 +125,7 @@ public final class Registers {
     game.register(OverpoweredItems.matter_energy_converter);
     game.register(OverpoweredItems.dimensional_flux);
     if(Features.dimensional_anchor.get()){ game.register(OverpoweredItems.dimensional_anchor); }
+    game.register(OverpoweredItems.unimatter);
     
     game.register(RegistryUtil.getItemBlock(OverpoweredBlocks.data_cable));
     if(Features.crystal_energy_extractor.get()){ game.register(RegistryUtil.getItemBlock(OverpoweredBlocks.crystal_energy_extractor)); }
@@ -158,6 +161,8 @@ public final class Registers {
       game.register(RegistryUtil.getItemBlock(OverpoweredBlocks.fusion_chamber));
       game.register(RegistryUtil.getItemBlock(OverpoweredBlocks.fusion_control_laser));
     }
+    
+    game.register(RegistryUtil.getItemBlock(OverpoweredBlocks.matter_compressor));
     
     if(Features.iron_frame_block.get()){ game.register(RegistryUtil.getItemBlock(OverpoweredBlocks.iron_frame_block)); }
     if(Features.black_hole.get()){       game.register(RegistryUtil.getItemBlock(OverpoweredBlocks.black_hole)); }
@@ -225,6 +230,7 @@ public final class Registers {
     RegistryUtil.register(game, Tiles.FUSION_ENERGY_CONVERTER,    Names.FUSION_CONVERTER);
     RegistryUtil.register(game, Tiles.FUSION_CHAMBER,             Names.FUSION_CHAMBER);
     RegistryUtil.register(game, Tiles.BLACK_HOLE,                 Names.BLACK_HOLE);
+    RegistryUtil.register(game, Tiles.MATTER_COMPRESSOR,          Names.MATTER_COMPRESSOR);
   }
 
   @SubscribeEvent
@@ -244,6 +250,7 @@ public final class Registers {
     RegistryUtil.register(game, Containers.FUSION_CHAMBER,             Names.FUSION_CHAMBER);
     RegistryUtil.register(game, Containers.PORTAL_CONTROL_PANEL,       Names.PORTAL_CONTROL_PANEL);
     RegistryUtil.register(game, Containers.PORTAL_FRAME,               Names.PORTAL_FRAME);
+    RegistryUtil.register(game, Containers.MATTER_COMPRESSOR,          Names.MATTER_COMPRESSOR);
   }
 
   @SubscribeEvent

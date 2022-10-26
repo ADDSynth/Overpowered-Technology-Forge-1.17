@@ -25,6 +25,7 @@
 "item.overpowered.nullified_power_core": "ujemny rdzeń zasilania",
 "item.overpowered.energy_grid": "Sieć energetyczna",
 "item.overpowered.vacuum_container": "Pojemnik próżniowy",
+"item.overpowered.reinforced_container": "Reinforced Container",
 
 "item.overpowered.beam_emitter": "Belka wiązki",
 "item.overpowered.destructive_laser": "High-Intensity Laser",
@@ -40,6 +41,7 @@
 "item.overpowered.matter_energy_converter": "Matter/Energy Converter",
 "item.overpowered.dimensional_flux": "Dimensional Flux",
 "item.overpowered.dimensional_anchor": "kotwica wymiarowa",
+"item.overpowered.unimatter": "Unimatter",
 
 "block.overpowered.data_cable": "Kabel do transmisji danych",
 "block.overpowered.crystal_energy_extractor": "Crystal Energy Extractor",
@@ -54,6 +56,7 @@
 "block.overpowered.plasma_generator": "Plasma Generator",
 "block.overpowered.crystal_matter_generator": "Narzędzie do tworzenia klejnotów",
 "block.overpowered.advanced_ore_refinery": "Zaawansowana rafineria rud",
+"block.overpowered.matter_compressor": "Matter Compressor",
 
 "block.overpowered.fusion_chamber": "Komora Fuzji",
 "block.overpowered.fusion_control_unit": "Jednostka sterująca Fuzje",
@@ -183,6 +186,7 @@
 "gui.overpowered.portal_message.creative_mode": "Odtwarzacz jest w trybie kreatywnym.",
 "gui.overpowered.portal_message.ready": "Portal jest gotowy.",
 "gui.overpowered.portal_warning_message": "§cStrzec się§r: Nadal występują problemy z nieznanym wymiarem. Jeśli tam pojedziesz, może pojawić się w powietrzu i spaść na śmierć. Zalecamy wejście do portalu w trybie kreatywnym lub wyłączenie portalu w pliku konfiguracyjnym. Przykro nam z tego powodu i mamy nadzieję to naprawić w późniejszej aktualizacji.",
+"gui.overpowered.matter_compressor.matter": "Matter",
 "gui.overpowered.ring_effect.strength": "siła",
 "gui.overpowered.ring_effect.speed": "Prędkość",
 "gui.overpowered.ring_effect.haste": "Szybkość wydobycia",
@@ -270,5 +274,8 @@
 "advancements.overpowered.world_destroyer.title": "Światowy niszczyciel",
 "advancements.overpowered.world_destroyer.description": "Użyj czarnej dziury, aby zniszczyć część świata",
 "advancements.overpowered.survivor.title": "Survivor",
-"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole"
+"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole",
+
+"advancements.overpowered.unimatter.title": "Unimatter",
+"advancements.overpowered.unimatter.description": "Use the Matter Compressor to obtain Unimatter."
 }

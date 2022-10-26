@@ -25,6 +25,7 @@
 "item.overpowered.nullified_power_core": "nul kracht kern",
 "item.overpowered.energy_grid": "energienet",
 "item.overpowered.vacuum_container": "Vacuümcontainer",
+"item.overpowered.reinforced_container": "Reinforced Container",
 
 "item.overpowered.beam_emitter": "balk",
 "item.overpowered.destructive_laser": "High-Intensity Laser",
@@ -40,6 +41,7 @@
 "item.overpowered.matter_energy_converter": "Matter/Energy Converter",
 "item.overpowered.dimensional_flux": "Dimensional Flux",
 "item.overpowered.dimensional_anchor": "Dimensionaal anker",
+"item.overpowered.unimatter": "Unimatter",
 
 "block.overpowered.data_cable": "Datakabel",
 "block.overpowered.crystal_energy_extractor": "Crystal Energy Extractor",
@@ -54,6 +56,7 @@
 "block.overpowered.plasma_generator": "Plasma Generator",
 "block.overpowered.crystal_matter_generator": "generator van kristalmateriaal",
 "block.overpowered.advanced_ore_refinery": "geavanceerde ertsraffinaderij",
+"block.overpowered.matter_compressor": "Matter Compressor",
 
 "block.overpowered.fusion_chamber": "fusie container",
 "block.overpowered.fusion_control_unit": "fusie controle machine",
@@ -183,6 +186,7 @@
 "gui.overpowered.portal_message.creative_mode": "De speler bevindt zich in de creatieve modus.",
 "gui.overpowered.portal_message.ready": "De portal is klaar.",
 "gui.overpowered.portal_warning_message": "§cPas op§r: Er zijn nog steeds enkele problemen met de onbekende dimensie. Als je daarheen gaat, bestaat de kans dat je in de lucht verschijnt en je dood valt. We raden aan om de portal in creatieve modus in te voeren of de portal uit te schakelen in het configuratiebestand. Het spijt ons en we hopen dit in een latere update te verhelpen.",
+"gui.overpowered.matter_compressor.matter": "Matter",
 "gui.overpowered.ring_effect.strength": "Sterkte",
 "gui.overpowered.ring_effect.speed": "Snelheid",
 "gui.overpowered.ring_effect.haste": "Mijnbouwsnelheid",
@@ -270,5 +274,8 @@
 "advancements.overpowered.world_destroyer.title": "Wereldvernietiger",
 "advancements.overpowered.world_destroyer.description": "Gebruik een zwart gat om een ​​deel van de wereld te vernietigen",
 "advancements.overpowered.survivor.title": "Survivor",
-"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole"
+"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole",
+
+"advancements.overpowered.unimatter.title": "Unimatter",
+"advancements.overpowered.unimatter.description": "Use the Matter Compressor to obtain Unimatter."
 }

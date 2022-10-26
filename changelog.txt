@@ -26,6 +26,7 @@ NEW:
       on the Energy Network.
     - Only supports a maximum of 16 machines right now.
   The Circuit Fabricator now supports additional recipes than just the circuit items.
+  Added a new item called Unimatter, which is made from a new machine called the Matter Compressor.
   Portal spawn time can now be configured.
   Added an advancement that is awarded when you activate an Energy Suspension Bridge
     with the maximum possible length.
@@ -102,7 +103,7 @@ NEW:
     valid Gem Blocks that can be accepted in the Portal Frames, and also show
     an Item tooltip if you mouse over them, just like the drawn ItemStacks in
     the Circuit Fabricator gui.
-  Added Issue Tracker to the mods.toml file.
+  Added Issue Tracker link to the mods.toml file.
 CHANGED:
   The Fusion Core is now crafted with Blaze Powder instead of Fire Charges.
   Power Cycle time (Portal Control Panel & Crystal Matter Generator) is now
@@ -381,7 +382,7 @@ v1.3 - July 1, 2020
    - Fixed for the Minecraft 1.14 version.
   The Magic Infuser can now produce the new Enchantments from Minecraft 1.13 and 1.14.
   Improved the Portal Control Panel:
-   - Now has more safety checks to ensure the Portal is constructed properly.
+   - Now has more checks to ensure the Portal is constructed properly.
    - Players in Creative Mode can generate a portal without having the proper items or
        required energy.
    - Added an option in the configuration file to "Disable the Unknown Dimension". This
@@ -391,7 +392,7 @@ v1.3 - July 1, 2020
        does this anyway.
    - The message that indicates the status of the Portal is now Color Coded.
    - Automatically turns itself off after generating a portal.
-  Increased Caution block texture from 256x256 to 512x512.
+  Increased Caution block texture size from 256x256 to 512x512.
   Custom Mob Drops now drop for the Vex, Illusioner, Drowned, Phantom, Skeleton Horse,
     Pillager, and Ravager.
   Added logo images when you select any of my mods in the Mods List in Forge.

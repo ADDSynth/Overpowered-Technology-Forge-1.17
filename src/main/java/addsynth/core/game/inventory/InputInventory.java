@@ -71,10 +71,6 @@ public final class InputInventory extends CommonInventory {
     return ItemStack.EMPTY;
   }
 
-  public final void add(final int slot, final ItemStack stack){
-    insertItem(slot, stack, false);
-  }
-
   public final void decrease(final int slot){
     decrease(slot, 1);
   }

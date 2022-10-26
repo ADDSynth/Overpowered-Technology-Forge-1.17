@@ -25,6 +25,7 @@
 "item.overpowered.nullified_power_core": "नलिफाइड पावर कोर",
 "item.overpowered.energy_grid": "ऊर्जा ग्रिड",
 "item.overpowered.vacuum_container": "वैक्यूम कंटेनर",
+"item.overpowered.reinforced_container": "Reinforced Container",
 
 "item.overpowered.beam_emitter": "बीम एमिटर",
 "item.overpowered.destructive_laser": "High-Intensity Laser",
@@ -40,6 +41,7 @@
 "item.overpowered.matter_energy_converter": "Matter/Energy Converter",
 "item.overpowered.dimensional_flux": "Dimensional Flux",
 "item.overpowered.dimensional_anchor": "आयामी एंकर",
+"item.overpowered.unimatter": "Unimatter",
 
 "block.overpowered.data_cable": "डेटा केबल",
 "block.overpowered.crystal_energy_extractor": "Crystal Energy Extractor",
@@ -54,6 +56,7 @@
 "block.overpowered.plasma_generator": "Plasma Generator",
 "block.overpowered.crystal_matter_generator": "क्रिस्टल मैटर जेनरेटर",
 "block.overpowered.advanced_ore_refinery": "उन्नत अयस्क रिफाइनरी",
+"block.overpowered.matter_compressor": "Matter Compressor",
 
 "block.overpowered.fusion_chamber": "फ़्यूज़न चैम्बर",
 "block.overpowered.fusion_control_unit": "फ़्यूज़न कंट्रोल यूनिट",
@@ -183,6 +186,7 @@
 "gui.overpowered.portal_message.creative_mode": "खिलाड़ी रचनात्मक मोड में है।",
 "gui.overpowered.portal_message.ready": "पोर्टल तैयार है।",
 "gui.overpowered.portal_warning_message": "§cखबरदार§r: अज्ञात आयाम के साथ अभी भी कुछ समस्याएं हैं। यदि आप वहां जाते हैं, तो एक मौका है कि आप हवा में दिखाई दें और आपकी मृत्यु हो जाए। हम रचनात्मक मोड में पोर्टल में प्रवेश करने या कॉन्फ़िगरेशन फ़ाइल में पोर्टल को अक्षम करने की सलाह देते हैं। हमें इस बारे में खेद है और हमें बाद में अपडेट में इसे ठीक करने की उम्मीद है।",
+"gui.overpowered.matter_compressor.matter": "Matter",
 "gui.overpowered.ring_effect.strength": "शक्ति",
 "gui.overpowered.ring_effect.speed": "गति",
 "gui.overpowered.ring_effect.haste": "खनन की गति",
@@ -270,5 +274,8 @@
 "advancements.overpowered.world_destroyer.title": "संसार का नाश करनेवाला",
 "advancements.overpowered.world_destroyer.description": "दुनिया के हिस्से को नष्ट करने के लिए एक ब्लैक होल का उपयोग करें।",
 "advancements.overpowered.survivor.title": "Survivor",
-"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole"
+"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole",
+
+"advancements.overpowered.unimatter.title": "Unimatter",
+"advancements.overpowered.unimatter.description": "Use the Matter Compressor to obtain Unimatter."
 }

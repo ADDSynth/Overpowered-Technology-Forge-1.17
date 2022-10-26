@@ -25,6 +25,7 @@
 "item.overpowered.nullified_power_core": "無效的核心",
 "item.overpowered.energy_grid": "能源網",
 "item.overpowered.vacuum_container": "真空容器",
+"item.overpowered.reinforced_container": "Reinforced Container",
 
 "item.overpowered.beam_emitter": "光束髮射器",
 "item.overpowered.destructive_laser": "High-Intensity Laser",
@@ -40,6 +41,7 @@
 "item.overpowered.matter_energy_converter": "Matter/Energy Converter",
 "item.overpowered.dimensional_flux": "Dimensional Flux",
 "item.overpowered.dimensional_anchor": "尺寸錨",
+"item.overpowered.unimatter": "Unimatter",
 
 "block.overpowered.data_cable": "數據線",
 "block.overpowered.crystal_energy_extractor": "Crystal Energy Extractor",
@@ -54,6 +56,7 @@
 "block.overpowered.plasma_generator": "Plasma Generator",
 "block.overpowered.crystal_matter_generator": "水晶物質發生器",
 "block.overpowered.advanced_ore_refinery": "先進的礦石煉油廠",
+"block.overpowered.matter_compressor": "Matter Compressor",
 
 "block.overpowered.fusion_chamber": "融合室",
 "block.overpowered.fusion_control_unit": "融合控制單元",
@@ -183,6 +186,7 @@
 "gui.overpowered.portal_message.creative_mode": "播放器處於創作模式。",
 "gui.overpowered.portal_message.ready": "門戶已準備就緒。",
 "gui.overpowered.portal_warning_message": "§c謹防§r: 未知尺寸仍然存在一些問題。 如果您去那裡，有可能您會出現在空中並墜入死亡。 我們建議以創意方式輸入門戶或在配置文件中禁用門戶。 我們對此感到抱歉，並希望在以後的更新中修復此問題。",
+"gui.overpowered.matter_compressor.matter": "Matter",
 "gui.overpowered.ring_effect.strength": "強度",
 "gui.overpowered.ring_effect.speed": "速度",
 "gui.overpowered.ring_effect.haste": "挖掘速度",
@@ -270,5 +274,8 @@
 "advancements.overpowered.world_destroyer.title": "世界驅逐艦",
 "advancements.overpowered.world_destroyer.description": "使用黑洞破壞世界的一部分",
 "advancements.overpowered.survivor.title": "Survivor",
-"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole"
+"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole",
+
+"advancements.overpowered.unimatter.title": "Unimatter",
+"advancements.overpowered.unimatter.description": "Use the Matter Compressor to obtain Unimatter."
 }

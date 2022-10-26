@@ -1,9 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " g ",
+    "tgt",
     "gsg",
-    " g "
+    "tgt"
   ],
   "key": {
     "g": {
@@ -11,9 +11,12 @@
     },
     "s": {
       "tag": "forge:slimeballs"
+    },
+    "t": {
+      "tag": "forge:plates/titanium"
     }
   },
   "result": {
-    "item": "overpowered:vacuum_container"
+    "item": "overpowered:reinforced_container"
   }
 }

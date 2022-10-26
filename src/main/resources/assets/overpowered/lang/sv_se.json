@@ -25,6 +25,7 @@
 "item.overpowered.nullified_power_core": "negativ kraftkärna",
 "item.overpowered.energy_grid": "Energistöd",
 "item.overpowered.vacuum_container": "Vakuumbehållare",
+"item.overpowered.reinforced_container": "Reinforced Container",
 
 "item.overpowered.beam_emitter": "strål emitter",
 "item.overpowered.destructive_laser": "High-Intensity Laser",
@@ -40,6 +41,7 @@
 "item.overpowered.matter_energy_converter": "Matter/Energy Converter",
 "item.overpowered.dimensional_flux": "Dimensional Flux",
 "item.overpowered.dimensional_anchor": "Dimensionellt ankare",
+"item.overpowered.unimatter": "Unimatter",
 
 "block.overpowered.data_cable": "Datakabel",
 "block.overpowered.crystal_energy_extractor": "Crystal Energy Extractor",
@@ -54,6 +56,7 @@
 "block.overpowered.plasma_generator": "Plasma Generator",
 "block.overpowered.crystal_matter_generator": "Ädelstenstillverkare",
 "block.overpowered.advanced_ore_refinery": "avancerat malmraffinaderi",
+"block.overpowered.matter_compressor": "Matter Compressor",
 
 "block.overpowered.fusion_chamber": "Fusionskammare",
 "block.overpowered.fusion_control_unit": "Fusionskontrollenhet",
@@ -183,6 +186,7 @@
 "gui.overpowered.portal_message.creative_mode": "Spelaren är i kreativt läge.",
 "gui.overpowered.portal_message.ready": "Portalen är klar.",
 "gui.overpowered.portal_warning_message": "§cAkta sig§r: Det finns fortfarande några problem med den okända dimensionen. Om du åker dit, finns det en chans att du kan dyka upp i luften och falla till din död. Vi rekommenderar att du går in i portalen i kreativt läge eller inaktiverar portalen i konfigurationsfilen. Vi är ledsna för detta och vi hoppas kunna fixa det i en senare uppdatering.",
+"gui.overpowered.matter_compressor.matter": "Matter",
 "gui.overpowered.ring_effect.strength": "Styrka",
 "gui.overpowered.ring_effect.speed": "Fart",
 "gui.overpowered.ring_effect.haste": "Gruvhastighet",
@@ -270,5 +274,8 @@
 "advancements.overpowered.world_destroyer.title": "Världsdödare",
 "advancements.overpowered.world_destroyer.description": "Använd ett svart hål för att förstöra en del av världen",
 "advancements.overpowered.survivor.title": "Survivor",
-"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole"
+"advancements.overpowered.survivor.description": "Use a Dimensional Anchor to survive a Black Hole",
+
+"advancements.overpowered.unimatter.title": "Unimatter",
+"advancements.overpowered.unimatter.description": "Use the Matter Compressor to obtain Unimatter."
 }
