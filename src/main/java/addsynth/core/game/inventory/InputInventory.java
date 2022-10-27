@@ -71,35 +71,39 @@ public final class InputInventory extends CommonInventory {
     return ItemStack.EMPTY;
   }
 
+  /**
+   * Decreases the ItemStack count in the slot by 1.
+   * @param slot
+   */
   public final void decrease(final int slot){
     decrease(slot, 1);
   }
 
+  /**
+   * Decreases the ItemStack count in the slot you want by the amount that you want.
+   * @param slot
+   * @param amount
+   */
   public final void decrease(final int slot, final int amount){
-    try{
-      if(stacks.get(slot) != null){
-        if(stacks.get(slot).isEmpty() == false){
-          stacks.get(slot).shrink(amount);
-        }
+    if(is_valid_slot(slot)){
+      if(stacks.get(slot).isEmpty() == false){
+        stacks.get(slot).shrink(amount);
       }
-    }
-    catch(IndexOutOfBoundsException e){
-      ADDSynthCore.log.error("InputInventory -> decrease() function: slot argument is out of bounds. Must be within 0 and "+(stacks.size() - 1)+".");
-      e.printStackTrace();
-    }
-    catch(NullPointerException e){
-      e.printStackTrace();
     }
   }
 
+  /** Decreases all input slots by 1. */
   public final void decrease_input(){
     decrease_input(1);
   }
 
+  /** Decreases all input slots by the amount that you specify. */
   public final void decrease_input(final int amount){
     int i;
     for(i = 0; i < stacks.size(); i++){
-      decrease(i,amount);
+      if(stacks.get(i).isEmpty() == false){
+        stacks.get(i).shrink(amount);
+      }
     }
   }
 
