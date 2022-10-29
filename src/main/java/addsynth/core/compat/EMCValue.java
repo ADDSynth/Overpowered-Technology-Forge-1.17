@@ -83,11 +83,13 @@ public final class EMCValue {
     checkEMC(emcProxy, Items.HEART_OF_THE_SEA, heart_of_the_sea);
     // Basic Items
     checkEMC(emcProxy, Items.PAPER,          paper);
+    checkEMC(emcProxy, Items.SLIME_BALL,     slimeball);
     checkEMC(emcProxy, Items.COAL,           coal);
     checkEMC(emcProxy, Items.GLOWSTONE_DUST, glowstone_dust);
     checkEMC(emcProxy, Items.ENDER_PEARL,    ender_pearl);
     checkEMC(emcProxy, Items.BLAZE_ROD,      blaze_rod);
     checkEMC(emcProxy, Items.BLAZE_POWDER,   blaze_powder);
+    checkEMC(emcProxy, Items.MAGMA_CREAM,    magma_cream);
     checkEMC(emcProxy, Items.ENDER_EYE,      ender_eye);
     // Dyes
     checkEMC(emcProxy, Items.GREEN_DYE,  green_dye);
@@ -103,6 +105,7 @@ public final class EMCValue {
     checkEMC(emcProxy, Items.REDSTONE,       redstone);
     checkEMC(emcProxy, Items.REDSTONE_TORCH, redstone_torch);
     checkEMC(emcProxy, Items.REPEATER,       redstone_repeater);
+    checkEMC(emcProxy, Items.OBSERVER,       observer);
     checkEMC(emcProxy, Items.COMPARATOR,     redstone_comparator);
     checkEMC(emcProxy, Items.REDSTONE_LAMP,  redstone_lamp);
   }
@@ -114,9 +117,9 @@ public final class EMCValue {
         StringUtil.build(
           "Project E reports the EMC for ",
           StringUtil.getName(item),
-          " is ", Long.toString(emc),
+          " is ", emc,
           ", however we have it saved internally as ",
-          Long.toString(value),
+          value,
           ". This value needs to be updated if the developers of Project E changed this value.",
           " If this was intentionally modified by a player or modpack then you can ignore this."
         )

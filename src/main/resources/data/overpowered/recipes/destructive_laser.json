@@ -6,6 +6,7 @@
     {"item": "overpowered:beam_emitter"}
   ],
   "result": {
-    "item": "overpowered:destructive_laser"
+    "item": "overpowered:destructive_laser",
+    "count": 2
   }
 }

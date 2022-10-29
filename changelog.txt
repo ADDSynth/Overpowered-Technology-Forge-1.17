@@ -3,7 +3,7 @@ INFO:
   I was originally planning to split the mod into 3 seperate files, starting with
     this version. However, development is taking longer than expected, and that's
     why I've decided to delay some of the things I was planning for this version
-    until the next major relase.
+    until the next major release.
 NEW:
   Added new items.
   Added 5 new beam emitter type items.

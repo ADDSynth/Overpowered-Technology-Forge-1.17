@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "overpowered:black_hole"
+      "item": "minecraft:ender_pearl"
     },
     "title": {
       "translate": "advancements.overpowered.survivor.title"
