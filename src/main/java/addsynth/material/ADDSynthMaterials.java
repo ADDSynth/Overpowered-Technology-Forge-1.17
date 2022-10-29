@@ -33,7 +33,7 @@ public final class ADDSynthMaterials {
   public static final String MOD_NAME = "ADDSynth Materials";
   public static final String VERSION = "1.0";
   public static final String VERSION_DATE = ADDSynthCore.VERSION_DATE;
-  public static final DevStage DEV_STAGE = DevStage.DEVELOPMENT;
+  public static final DevStage DEV_STAGE = ADDSynthCore.DEV_STAGE;
 
   public static final Logger log = LogManager.getLogger(MOD_NAME);
   private static boolean config_loaded;
