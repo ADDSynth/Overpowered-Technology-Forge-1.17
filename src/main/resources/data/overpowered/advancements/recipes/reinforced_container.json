@@ -1,48 +1,32 @@
 {
   "parent": "overpowered:recipes/root",
   "criteria": {
-    "focus_lens": {
+    "slimeball": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": [
-              "overpowered:focus_lens"
-            ]
+            "tag": "forge:slimeballs"
           }
         ]
       }
     },
-    "energy_stabilizer": {
+    "glass_panes": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": [
-              "overpowered:energy_stabilizer"
-            ]
+            "tag": "forge:glass_panes/colorless"
           }
         ]
       }
     },
-    "data_cable": {
+    "titanium": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": [
-              "overpowered:data_cable"
-            ]
-          }
-        ]
-      }
-    },
-    "steel_plate": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "tag": "forge:plates/steel"
+            "tag": "forge:ingots/titanium"
           }
         ]
       }
@@ -50,16 +34,16 @@
     "has_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "overpowered:fusion_control_laser"
+        "recipe": "overpowered:reinforced_container"
       }
     },
-    "has_control_laser": {
+    "has_reinforced_container": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "overpowered:fusion_control_laser"
+              "overpowered:reinforced_container"
             ]
           }
         ]
@@ -68,17 +52,16 @@
   },
   "requirements": [
     [
-      "focus_lens",
-      "energy_stabilizer",
-      "data_cable",
-      "steel_plate",
+      "slimeball",
+      "glass_panes",
+      "titanium",
       "has_recipe",
-      "has_control_laser"
+      "has_reinforced_container"
     ]
   ],
   "rewards": {
     "recipes": [
-      "overpowered:fusion_control_laser"
+      "overpowered:reinforced_container"
     ]
   }
 }

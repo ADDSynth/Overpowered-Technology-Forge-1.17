@@ -11,6 +11,18 @@
         ]
       }
     },
+    "matter_energy_transformer": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "overpowered:matter_energy_transformer"
+            ]
+          }
+        ]
+      }
+    },
     "nullified_power_core": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
@@ -45,6 +57,7 @@
   "requirements": [
     [
       "platinum_plate",
+      "matter_energy_transformer",
       "nullified_power_core",
       "has_recipe",
       "has_machine"

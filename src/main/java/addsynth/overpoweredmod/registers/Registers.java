@@ -110,10 +110,10 @@ public final class Registers {
     game.register(OverpoweredItems.reinforced_container);
     
     game.register(OverpoweredItems.beam_emitter);
+    game.register(OverpoweredItems.scanning_laser);
     game.register(OverpoweredItems.destructive_laser);
     game.register(OverpoweredItems.heavy_light_emitter);
     game.register(OverpoweredItems.energy_stabilizer);
-    game.register(OverpoweredItems.scanning_laser);
     game.register(OverpoweredItems.matter_energy_transformer);
     game.register(OverpoweredItems.high_frequency_beam);
     

@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {"item": "overpowered:beam_emitter"},
-    {"item": "overpowered:beam_emitter"},
+    {"item": "addsynth_energy:power_core"},
     {"item": "overpowered:beam_emitter"}
   ],
   "result": {

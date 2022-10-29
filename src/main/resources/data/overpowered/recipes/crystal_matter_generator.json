@@ -10,7 +10,7 @@
       "tag": "forge:plates/platinum"
     },
     "s": {
-      "item": "overpowered:matter_energy_converter"
+      "item": "overpowered:matter_energy_transformer"
     },
     "e": {
       "item": "overpowered:energized_power_core"

@@ -41,7 +41,8 @@
   ],
   "rewards": {
     "recipes": [
-      "overpowered:inverter"
+      "overpowered:inverter",
+      "overpowered:inverter_alternate"
     ]
   }
 }

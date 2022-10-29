@@ -210,7 +210,7 @@ public final class WorldgenConfig {
     generate_titanium    = builder.define("generate", true);
     titanium_min_height  = worldgen(builder, "minimum height", DEFAULT_MIN_HEIGHT);
     titanium_max_height  = worldgen(builder, "maximum height", DEFAULT_RARE_METAL_MAX_HEIGHT);
-    titanium_spawn_tries = tries(builder, DEFAULT_RARE_METAL_TRIES);
+    titanium_spawn_tries = tries(builder, 3);
     titanium_ore_size    = size(builder, DEFAULT_RARE_METAL_ORE_SIZE);
     builder.pop();
 

@@ -1,11 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "aea",
+    "ata",
     "bcb",
     "aea"
   ],
   "key": {
+    "t": {
+      "item": "overpowered:matter_energy_transformer"
+    },
     "a": {
       "tag": "forge:plates/aluminum"
     },

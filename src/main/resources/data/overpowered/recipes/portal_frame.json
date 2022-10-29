@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "ioi",
-    "oeo",
+    "oco",
     "ioi"
   ],
   "key": {
@@ -12,8 +12,8 @@
     "o": {
       "tag": "forge:obsidian"
     },
-    "e": {
-      "item": "overpowered:energy_crystal"
+    "c": {
+      "item": "overpowered:vacuum_container"
     }
   },
   "result": {

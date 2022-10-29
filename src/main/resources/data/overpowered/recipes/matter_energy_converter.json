@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " s ",
+    "rec",
+    " s "
+  ],
+  "key": {
+    "s": {
+      "tag": "forge:plates/steel"
+    },
+    "r": {
+      "item": "addsynth_energy:power_regulator"
+    },
+    "e": {
+      "item": "overpowered:energy_crystal"
+    },
+    "c": {
+      "tag": "forge:silicon"
+    }
+  },
+  "result": {
+    "item": "overpowered:matter_energy_converter"
+  }
+}

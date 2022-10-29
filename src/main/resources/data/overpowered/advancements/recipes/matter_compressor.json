@@ -1,47 +1,47 @@
 {
-  "parent": "addsynth_energy:recipes/root",
+  "parent": "overpowered:recipes/root",
   "criteria": {
-    "energy_wire": {
+    "titanium_plate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:plates/titanium"
+          }
+        ]
+      }
+    },
+    "reinforced_container": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "addsynth_energy:energy_wire"
+              "overpowered:reinforced_container"
             ]
           }
         ]
       }
     },
-    "diamond": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "tag": "forge:gems/diamond"
-          }
-        ]
-      }
-    },
-    "advanced_power_core": {
+    "circuit_tier_9": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "addsynth_energy:advanced_power_core"
+              "addsynth_energy:circuit_tier_9"
             ]
           }
         ]
       }
     },
-    "power_regulator": {
+    "nullified_power_core": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "addsynth_energy:power_regulator"
+              "overpowered:nullified_power_core"
             ]
           }
         ]
@@ -50,16 +50,28 @@
     "has_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "addsynth_energy:universal_energy_interface"
+        "recipe": "overpowered:matter_compressor"
       }
     },
-    "has_interface": {
+    "has_matter_compressor": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "addsynth_energy:universal_energy_interface"
+              "overpowered:matter_compressor"
+            ]
+          }
+        ]
+      }
+    },
+    "has_unimatter": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "overpowered:unimatter"
             ]
           }
         ]
@@ -68,17 +80,18 @@
   },
   "requirements": [
     [
-      "energy_wire",
-      "diamond",
-      "advanced_power_core",
-      "power_regulator",
+      "titanium_plate",
+      "reinforced_container",
+      "circuit_tier_9",
+      "nullified_power_core",
       "has_recipe",
-      "has_interface"
+      "has_matter_compressor",
+      "has_unimatter"
     ]
   ],
   "rewards": {
     "recipes": [
-      "addsynth_energy:universal_energy_interface"
+      "overpowered:matter_compressor"
     ]
   }
 }

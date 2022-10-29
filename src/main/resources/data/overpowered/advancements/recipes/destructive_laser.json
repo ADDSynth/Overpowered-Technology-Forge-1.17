@@ -1,7 +1,37 @@
 {
   "parent": "overpowered:recipes/root",
   "criteria": {
-    "destructive_laser": {
+    "beam_emitter": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "overpowered:beam_emitter"
+            ]
+          }
+        ]
+      }
+    },
+    "power_core": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "addsynth_energy:power_core"
+            ]
+          }
+        ]
+      }
+    },
+    "has_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "overpowered:destructive_laser"
+      }
+    },
+    "has_destructive_laser": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -12,49 +42,19 @@
           }
         ]
       }
-    },
-    "focus_lens": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "overpowered:focus_lens"
-            ]
-          }
-        ]
-      }
-    },
-    "laser_housing": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "overpowered:laser_housing"
-            ]
-          }
-        ]
-      }
     }
   },
   "requirements": [
     [
-      "destructive_laser",
-      "focus_lens",
-      "laser_housing"
+      "beam_emitter",
+      "power_core",
+      "has_recipe",
+      "has_destructive_laser"
     ]
   ],
   "rewards": {
     "recipes": [
-      "overpowered:red_laser",
-      "overpowered:orange_laser",
-      "overpowered:yellow_laser",
-      "overpowered:green_laser",
-      "overpowered:cyan_laser",
-      "overpowered:blue_laser",
-      "overpowered:magenta_laser",
-      "overpowered:white_laser"
+      "overpowered:destructive_laser"
     ]
   }
 }

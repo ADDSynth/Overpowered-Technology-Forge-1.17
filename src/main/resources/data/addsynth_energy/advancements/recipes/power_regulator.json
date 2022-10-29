@@ -1,6 +1,40 @@
 {
   "parent": "addsynth_energy:recipes/root",
   "criteria": {
+    "circuit_tier_1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "addsynth_energy:circuit_tier_1"
+            ]
+          }
+        ]
+      }
+    },
+    "steel_plate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:plates/steel"
+          }
+        ]
+      }
+    },
+    "power_core": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "addsynth_energy:power_core"
+            ]
+          }
+        ]
+      }
+    },
     "energy_wire": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
@@ -13,29 +47,13 @@
         ]
       }
     },
-    "diamond": {
-      "trigger": "minecraft:inventory_changed",
+    "has_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "items": [
-          {
-            "tag": "forge:gems/diamond"
-          }
-        ]
+        "recipe": "addsynth_energy:power_regulator"
       }
     },
-    "advanced_power_core": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "addsynth_energy:advanced_power_core"
-            ]
-          }
-        ]
-      }
-    },
-    "power_regulator": {
+    "has_power_regulator": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -46,39 +64,21 @@
           }
         ]
       }
-    },
-    "has_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "addsynth_energy:universal_energy_interface"
-      }
-    },
-    "has_interface": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "addsynth_energy:universal_energy_interface"
-            ]
-          }
-        ]
-      }
     }
   },
   "requirements": [
     [
+      "circuit_tier_1",
+      "steel_plate",
+      "power_core",
       "energy_wire",
-      "diamond",
-      "advanced_power_core",
-      "power_regulator",
       "has_recipe",
-      "has_interface"
+      "has_power_regulator"
     ]
   ],
   "rewards": {
     "recipes": [
-      "addsynth_energy:universal_energy_interface"
+      "addsynth_energy:power_regulator"
     ]
   }
 }

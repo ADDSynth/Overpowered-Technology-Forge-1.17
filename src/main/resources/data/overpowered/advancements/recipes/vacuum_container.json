@@ -1,14 +1,22 @@
 {
   "parent": "overpowered:recipes/root",
   "criteria": {
-    "dimensional_flux": {
+    "slimeball": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": [
-              "overpowered:dimensional_flux"
-            ]
+            "tag": "forge:slimeballs"
+          }
+        ]
+      }
+    },
+    "glass_panes": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:glass_panes/colorless"
           }
         ]
       }
@@ -16,16 +24,16 @@
     "has_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "overpowered:black_hole"
+        "recipe": "overpowered:vacuum_container"
       }
     },
-    "has_black_hole": {
+    "has_container": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "overpowered:black_hole"
+              "overpowered:vacuum_container"
             ]
           }
         ]
@@ -34,14 +42,15 @@
   },
   "requirements": [
     [
-      "dimensional_flux",
+      "slimeball",
+      "glass_panes",
       "has_recipe",
-      "has_black_hole"
+      "has_container"
     ]
   ],
   "rewards": {
     "recipes": [
-      "overpowered:black_hole"
+      "overpowered:vacuum_container"
     ]
   }
 }

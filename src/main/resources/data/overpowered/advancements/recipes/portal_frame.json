@@ -21,13 +21,13 @@
         ]
       }
     },
-    "energy_crystal": {
+    "container": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "overpowered:energy_crystal"
+              "overpowered:vacuum_container"
             ]
           }
         ]
@@ -56,7 +56,7 @@
     [
       "iron_ingot",
       "obsidian",
-      "energy_crystal",
+      "container",
       "has_recipe",
       "has_portal_frame"
     ]
