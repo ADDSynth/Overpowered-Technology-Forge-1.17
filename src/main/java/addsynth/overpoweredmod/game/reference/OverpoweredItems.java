@@ -1,5 +1,6 @@
 package addsynth.overpoweredmod.game.reference;
 
+import addsynth.core.compat.Compatibility;
 import addsynth.core.game.RegistryUtil;
 import addsynth.core.game.item.constants.ArmorMaterial;
 import addsynth.core.game.item.constants.EquipmentType;
@@ -69,10 +70,19 @@ public final class OverpoweredItems {
   public static final Item ring_2 = new UnidentifiedItem(2);
   public static final Item ring_3 = new UnidentifiedItem(3);
   
-  public static final Item magic_ring_0 = new Ring(0);
-  public static final Item magic_ring_1 = new Ring(1);
-  public static final Item magic_ring_2 = new Ring(2);
-  public static final Item magic_ring_3 = new Ring(3);
+  public static Item magic_ring_0;
+  public static Item magic_ring_1;
+  public static Item magic_ring_2;
+  public static Item magic_ring_3;
+
+  static {
+    if(Compatibility.CURIOS.loaded){
+      magic_ring_0 = new Ring(0);
+      magic_ring_1 = new Ring(1);
+      magic_ring_2 = new Ring(2);
+      magic_ring_3 = new Ring(3);
+    }
+  }
 
   /** Item form of Portal, used only for Achievement icon. Does not show up in jei or creative tab.
    *  But players can still get it by using the /give command. */
