@@ -127,6 +127,7 @@ public abstract class GuiEnergyBase<T extends BlockEntity & IEnergyUser, C exten
     GuiUtil.draw_text_left(matrix, status_text+": "+status, 6, 37);
   }
 
+  /** Draws machine time left at the bottom-left corner of the gui. */
   protected final void draw_time_left(PoseStack matrix, final int draw_y){
     if(energy != null){
       final double rate = energy.getDifference();
@@ -141,6 +142,25 @@ public abstract class GuiEnergyBase<T extends BlockEntity & IEnergyUser, C exten
     }
     else{
       GuiUtil.draw_text_left(matrix, time_left_text+": "+null_energy_reference, 6, draw_y);
+    }
+  }
+
+  /** Draws machine time left at the bottom-center of the gui. */
+  protected final void draw_time_left_center(PoseStack matrix, final int draw_y){
+    final int draw_x = imageWidth/2;
+    if(energy != null){
+      final double rate = energy.getDifference();
+      final String time_left;
+      if(tile instanceof IMachineInventory){
+        time_left = StringUtil.print_time((((IMachineInventory)tile).getJobs() * energy.getCapacity()) + energy.getEnergyNeeded(), rate);
+      }
+      else{
+        time_left = StringUtil.print_time(energy.getEnergyNeeded(), rate);
+      }
+      GuiUtil.draw_text_center(matrix, time_left_text+": "+time_left, draw_x, draw_y);
+    }
+    else{
+      GuiUtil.draw_text_center(matrix, time_left_text+": "+null_energy_reference, draw_x, draw_y);
     }
   }
 
@@ -164,7 +184,7 @@ public abstract class GuiEnergyBase<T extends BlockEntity & IEnergyUser, C exten
     }
   }
 
-  /** Draws charge time at bottom-center of gui. I think this is generally not used. */
+  /** Draws charge time at bottom-center of gui. */
   protected final void draw_energy_difference_center(PoseStack matrix, final int draw_y){
     final int draw_x = imageWidth/2;
     if(energy == null){
