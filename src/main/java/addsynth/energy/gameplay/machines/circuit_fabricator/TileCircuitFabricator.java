@@ -44,12 +44,14 @@ public final class TileCircuitFabricator extends TileStandardWorkMachine impleme
     new InputSlot(this, 7, 216, 94)
   };
 
+  // NBT Labels
   private static final String legacyNBTSaveTag = "Circuit to Craft";
   private static final String saveTag = "Recipe";
 
   public TileCircuitFabricator(BlockPos position, BlockState blockstate){
     super(Tiles.CIRCUIT_FABRICATOR, position, blockstate, 8, null, 1, Config.circuit_fabricator_data);
     inventory.setRecipeProvider(CircuitFabricatorRecipes.INSTANCE);
+    rebuild_filters(); // sets default filter, before we load the previously saved selected recipe.
   }
 
   public final void change_recipe(final String new_recipe){
