@@ -222,10 +222,10 @@ public abstract class TileStandardWorkMachine extends TileSwitchableMachine
       return inventory.can_add_to_output() ? MachineState.IDLE.getStatus() : MachineState.OUTPUT_FULL.getStatus();
     }
     if(state == MachineState.RUNNING){
-      if(energy.hasEnergy()){
+      // if(energy.hasEnergy()){
         return energy.getDifference() != 0 ? MachineState.RUNNING.getStatus() : MachineState.NOT_RECEIVING_ENERGY.getStatus();
-      }
-      return MachineState.NO_ENERGY.getStatus();
+      // }
+      // return MachineState.NO_ENERGY.getStatus();
     }
     return super.getStatus();
   }
