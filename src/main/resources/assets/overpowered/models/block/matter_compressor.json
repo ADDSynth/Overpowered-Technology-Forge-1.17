@@ -2,7 +2,7 @@
     "parent": "block/cube_bottom_top",
     "textures": {
         "particle": "overpowered:blocks/machines/matter_compressor",
-        "bottom":   "overpowered:blocks/machines/default_machine_texture",
+        "bottom":   "overpowered:blocks/machines/dark_bottom_texture",
         "top":      "overpowered:blocks/machines/dark_top_texture",
         "side":     "overpowered:blocks/machines/matter_compressor"
     }
