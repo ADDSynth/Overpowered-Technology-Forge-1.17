@@ -56,6 +56,7 @@ CHANGED:
    - This will cause most of your config files to be reset. Sorry!
   Raised generation of Titanium back up to where it was in versions 1.3.x.
   Increased Silicon Ore generation. (mainly because a lot of crafting recipes have changed as well.)
+  Also adjusted machine values.
 FIXED:
   Fixed Unidentified Chainmail armor dropping as often as Gold armor.
   Optimized Lasers:

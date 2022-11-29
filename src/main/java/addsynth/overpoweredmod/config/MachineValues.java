@@ -15,20 +15,20 @@ public final class MachineValues {
   public static ForgeConfigSpec.IntValue light_block_max_extract;
 
   // Standard Machines
-  public static final MachineDataConfig gem_converter = new MachineDataConfig( 600,  35,   0.06 ,  60); // 21,000
-  public static final MachineDataConfig inverter      = new MachineDataConfig(4000,  22.5, 0.1  , 200); // 90,000
-  public static final MachineDataConfig magic_infuser = new MachineDataConfig(1200,  50,   0.075,  60); // 60,000
-  public static final MachineDataConfig identifier    = new MachineDataConfig( 500,  16,   0.05 ,  10); //  8,000
+  public static final MachineDataConfig gem_converter = new MachineDataConfig(   800,  28,    0.06 ,  60); // 22,400 for 40 seconds (allowing 12 conversions per Energy Crystal.)
+  public static final MachineDataConfig inverter      = new MachineDataConfig(18_000,  15,    0.1  , 200); // 1 full energy crystal for 15 minutes
+  public static final MachineDataConfig magic_infuser = new MachineDataConfig( 1_200,  50,    0.075,  60); // 60,000
+  public static final MachineDataConfig identifier    = new MachineDataConfig(   500,  16,    0.05 ,  10); //  8,000
 
   // Passive Machines
   public static final MachineDataConfig crystal_matter_generator =
     new MachineDataConfig(MachineType.PASSIVE, 16_000,  31.25, 0,  600); // 500,000 energy for 1 shard every 13.3 minutes
   public static final MachineDataConfig plasma_generator =
-    new MachineDataConfig(MachineType.PASSIVE, 24_000, 4, 0.08, 300); // 4 energy per tick for 20 minutes = 96,000 Energy
+    new MachineDataConfig(MachineType.PASSIVE, 6_000, 80, 0.08, 300); // 80 energy per tick for 5 minutes = 480,000 Energy (5 Plasma per Light Block.)
 
   // Manual Activation Machines
   public static final MachineDataConfig portal =
-    new MachineDataConfig(MachineType.MANUAL_ACTIVATION, 50_000, 100, 0, 1200); // 42 minutes to generate
+    new MachineDataConfig(MachineType.MANUAL_ACTIVATION, 50_000, 100, 0, 1200); // 5 million Energy, 42 minutes to generate
 
   // Always On Machines
   public static final MachineDataConfig advanced_ore_refinery =
@@ -40,9 +40,9 @@ public final class MachineValues {
 
   public static ForgeConfigSpec.IntValue fusion_energy_output_per_tick;
 
-  //    20,000      25,000      30,000      40,000
-  //   180,000     225,000     270,000     360,000
-  // 1,620,000   2,025,000   2,430,000   3,240,000
+  //    20,000      25,000     |    30,000 |        40,000
+  //   180,000     225,000     |   270,000 |       360,000
+  // 1,620,000   2,025,000     | 2,430,000 |     3,240,000
   private static final int DEFAULT_ENERGY_CRYSTAL_SHARDS_ENERGY      = 30_000;
   private static final int DEFAULT_ENERGY_CRYSTAL_SHARDS_MAX_EXTRACT = 40;
   private static final int DEFAULT_ENERGY_CRYSTAL_ENERGY             = DEFAULT_ENERGY_CRYSTAL_SHARDS_ENERGY * 9;
