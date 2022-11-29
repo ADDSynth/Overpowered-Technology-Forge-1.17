@@ -33,24 +33,31 @@ public final class WorldgenConfig {
   // Rare: 3x (0 - 96) every 32 levels.
   
   private static final int DEFAULT_SILICON_MAX_HEIGHT = 128;
-  private static final int DEFAULT_SILICON_TRIES = 11;
+  private static final int DEFAULT_SILICON_TRIES = 14;
   private static final int DEFAULT_SILICON_ORE_SIZE = 4; // Keep this at 4. Good number.
   /* December 2021 Silicon tests. All these use a Range of 5 to 128.
   Tested in Minecraft 1.16.5   World seed: -6884434917911476714
   Size: Tries: Count:  Density:       Notes:
     3      6    [265]    1.778    Definitely not enough! 1.4 Test 1
     3     12     530     2.356    Not enough! 1.4 Test 3 (final settings used for 1.4 release)
+    3     40    1839     8.173
+    3     50    2340    10.400
+  Size: Tries: Count:  Density:       Notes: Linear Regression for Count: y=209.286*x-58
+                                             Linear Regression for Density: y=0.930036*x-0.25675
     4      6    1185     5.267    Just barely enough. Need more for future use.
     4      7   [1408]    6.258
     4      8    1631     7.249    *Perfect-ish amount, but still need more for future use.
     4      9   [1832]    8.142    
-    3     40    1839     8.173
-    5      6    1846     8.204
     4     10    2033     9.035    
-    4     11   [2241]    9.960    *Changed silicon generation settings to use these values.
-    3     50    2340    10.400
+    4     11   [2241]    9.960    *versions 1.4.1 and 1.4.2 uses these values.
     4     12    2449    10.884
+    4     13   [2663]  [11.384]    (Calculated using linear regression of existing data points.)
+    4     14   [2872]  [12.764]   *(Calculated using linear regression of existing data points.) Now set to these values.
+  Size: Tries: Count:  Density:       Notes:
+    5      6    1846     8.204
+    5      7   [2206]   [9.804]
     5      8    2566    11.404    Might be too much. (untested)
+  Size: Tries: Count:  Density:       Notes:
     6      9    3518    15.636    Way too much! 1.4 Test 2
   */
 
