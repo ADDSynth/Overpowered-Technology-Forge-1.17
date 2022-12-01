@@ -2,23 +2,13 @@
   "type": "minecraft:crafting_shaped",
   "group": "dimensional_anchor",
   "pattern": [
-    "eve",
-    "cpc",
-    "eve"
+    " p ",
+    "pdp",
+    " p "
   ],
   "key": {
-    "e": {
-      "tag": "forge:ender_pearls"
-    },
-    "p": {
-      "item": "overpowered:plasma"
-    },
-    "c": {
-      "item": "overpowered:energy_crystal"
-    },
-    "v": {
-      "item": "overpowered:void_crystal"
-    }
+    "p": {"item": "overpowered:plasma"},
+    "d": {"item": "overpowered:dimensional_flux"}
   },
   "result": {
     "item": "overpowered:dimensional_anchor"

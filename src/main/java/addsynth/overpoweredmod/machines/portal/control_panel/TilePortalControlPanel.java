@@ -290,7 +290,7 @@ public final class TilePortalControlPanel extends TileManualMachine implements I
         }
         if(Features.unknown_dimension.get() == false){
         }
-        WorldUtil.spawnItemStack(level, center, start_y, start_z, new ItemStack(OverpoweredItems.void_crystal, 1), false);
+        WorldUtil.spawnItemStack(level, center, start_y, start_z, new ItemStack(OverpoweredItems.dimensional_flux, 1), false);
         break;
       case Z:
         start_x = lowest_portal_frame.getX();
@@ -305,7 +305,7 @@ public final class TilePortalControlPanel extends TileManualMachine implements I
         }
         if(Features.unknown_dimension.get() == false){
         }
-        WorldUtil.spawnItemStack(level, start_x, start_y, center, new ItemStack(OverpoweredItems.void_crystal, 1), false);
+        WorldUtil.spawnItemStack(level, start_x, start_y, center, new ItemStack(OverpoweredItems.dimensional_flux, 1), false);
         break;
       }
 

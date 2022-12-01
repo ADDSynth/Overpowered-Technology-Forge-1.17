@@ -1,25 +1,25 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "sms",
-    "tct",
-    "ses"
+    "sds",
+    "tet",
+    "scs"
   ],
   "key": {
     "s": {
       "tag": "forge:plates/silver"
     },
     "e": {
-      "item": "overpowered:energized_power_core"
+      "item": "overpowered:vacuum_container"
     },
     "c": {
-      "item": "addsynth_energy:circuit_tier_8"
+      "item": "addsynth_energy:circuit_tier_6"
     },
     "t": {
       "item": "overpowered:energy_stabilizer"
     },
-    "m": {
-      "item": "overpowered:matter_energy_transformer"
+    "d": {
+      "item": "overpowered:destructive_laser"
     }
   },
   "result": {

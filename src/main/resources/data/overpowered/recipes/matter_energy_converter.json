@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     " s ",
-    "rec",
+    "rep",
     " s "
   ],
   "key": {
@@ -13,10 +13,10 @@
       "item": "addsynth_energy:power_regulator"
     },
     "e": {
-      "item": "overpowered:energy_crystal"
+      "item": "overpowered:energized_power_core"
     },
-    "c": {
-      "tag": "forge:silicon"
+    "p": {
+      "item": "overpowered:plasma"
     }
   },
   "result": {

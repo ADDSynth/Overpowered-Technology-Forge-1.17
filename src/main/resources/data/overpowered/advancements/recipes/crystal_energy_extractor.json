@@ -47,6 +47,18 @@
         ]
       }
     },
+    "vacuum_container": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "overpowered:vacuum_container"
+            ]
+          }
+        ]
+      }
+    },
     "has_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
@@ -72,6 +84,7 @@
       "aluminum_plate",
       "matter_energy_transformer",
       "circuit",
+      "vacuum_container",
       "has_recipe",
       "has_machine"
     ]

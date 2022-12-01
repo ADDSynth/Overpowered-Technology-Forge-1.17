@@ -33,7 +33,7 @@ public final class WorldgenConfig {
   // Rare: 3x (0 - 96) every 32 levels.
   
   private static final int DEFAULT_SILICON_MAX_HEIGHT = 128;
-  private static final int DEFAULT_SILICON_TRIES = 14;
+  private static final int DEFAULT_SILICON_TRIES = 13;
   private static final int DEFAULT_SILICON_ORE_SIZE = 4; // Keep this at 4. Good number.
   /* December 2021 Silicon tests. All these use a Range of 5 to 128.
   Tested in Minecraft 1.16.5   World seed: -6884434917911476714

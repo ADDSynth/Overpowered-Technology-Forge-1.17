@@ -1,25 +1,13 @@
 {
   "parent": "overpowered:recipes/root",
   "criteria": {
-    "plasma": {
+    "dimensional_flux": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "overpowered:plasma"
-            ]
-          }
-        ]
-      }
-    },
-    "blaze_powder": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "minecraft:blaze_powder"
+              "overpowered:dimensional_flux"
             ]
           }
         ]
@@ -28,16 +16,16 @@
     "has_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "overpowered:fusion_core"
+        "recipe": "overpowered:dimensional_flux"
       }
     },
-    "has_fusion_core": {
+    "has_void_crystal": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "overpowered:fusion_core"
+              "overpowered:void_crystal"
             ]
           }
         ]
@@ -46,15 +34,14 @@
   },
   "requirements": [
     [
-      "plasma",
-      "blaze_powder",
+      "dimensional_flux",
       "has_recipe",
-      "has_fusion_core"
+      "has_void_crystal"
     ]
   ],
   "rewards": {
     "recipes": [
-      "overpowered:fusion_core"
+      "overpowered:void_crystal"
     ]
   }
 }

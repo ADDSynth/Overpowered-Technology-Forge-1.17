@@ -1,6 +1,40 @@
 {
-  "parent": "overpowered:recipes/root",
+  "parent": "addsynth_energy:recipes/root",
   "criteria": {
+    "iron_plates": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:plates/iron"
+          }
+        ]
+      }
+    },
+    "energy_wire": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "addsynth_energy:energy_wire"
+            ]
+          }
+        ]
+      }
+    },
+    "observer": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:observer"
+            ]
+          }
+        ]
+      }
+    },
     "power_regulator": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
@@ -13,35 +47,13 @@
         ]
       }
     },
-    "energized_power_core": {
+    "circuit_tier_2": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "overpowered:energized_power_core"
-            ]
-          }
-        ]
-      }
-    },
-    "steel_plate": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "tag": "forge:plates/steel"
-          }
-        ]
-      }
-    },
-    "plasma": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "overpowered:plasma"
+              "addsynth_energy:circuit_tier_2"
             ]
           }
         ]
@@ -50,16 +62,16 @@
     "has_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "overpowered:matter_energy_converter"
+        "recipe": "addsynth_energy:universal_energy_interface"
       }
     },
-    "has_matter_energy_converter": {
+    "has_interface": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "overpowered:matter_energy_converter"
+              "addsynth_energy:universal_energy_interface"
             ]
           }
         ]
@@ -68,17 +80,18 @@
   },
   "requirements": [
     [
+      "iron_plates",
+      "energy_wire",
+      "observer",
       "power_regulator",
-      "energized_power_core",
-      "steel_plate",
-      "plasma",
+      "circuit_tier_2",
       "has_recipe",
-      "has_matter_energy_converter"
+      "has_interface"
     ]
   ],
   "rewards": {
     "recipes": [
-      "overpowered:matter_energy_converter"
+      "addsynth_energy:universal_energy_interface"
     ]
   }
 }

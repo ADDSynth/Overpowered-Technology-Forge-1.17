@@ -5,8 +5,9 @@ INFO:
     why I've decided to delay some of the things I was planning for this version
     until the next major release.
 NEW:
-  Added new items.
-  Added 5 new beam emitter type items.
+  Added new items. (Power Regulator, Dimensional Flux, and Matter/Energy Converter)
+  Added 5 new beam emitter type items, but 1 is unused.
+   - Heavy-Light Emitter, Energy Stabilizer, Matter/Energy Transformer, and High-Intensity Laser.
   Added Circuit Tier 9.
   Added Plasma Generator machine.
    - Deleted the crafting recipe for Plasma that was added in version 1.4.
@@ -45,16 +46,13 @@ NEW:
   Mouse scrollwheel can now scroll the lists next to scrollbars.
 CHANGED:
   Increased the chance to drop an Unidentified Ring when killing enemy mobs.
-  The Dimensional Anchor is now registered as a Curios Charm, if you
-    have the Curios mod installed.
-  The Energized Power Core and Nullified Power Core are now crafted using the
-    Circuit Fabricator from ADDSynth Energy.
+  The Dimensional Anchor is now registered as a Curios Charm, if you have the Curios mod installed.
   Changed Energy Storage Container's default maximum energy from 1,000,000 to 200,000.
     - This is mainly because I plan to add different types of batteries in the future.
   Some Machine State status messages are now color-coded.
   Removed any top-level sections in Config files.
    - This will cause most of your config files to be reset. Sorry!
-  Raised generation of Titanium back up to where it was in versions 1.3.x.
+  Raised the generation of Titanium Ore back up to where it was in versions 1.3.x.
   Increased Silicon Ore generation. (mainly because a lot of crafting recipes have changed as well.)
   Also adjusted machine values.
 FIXED:

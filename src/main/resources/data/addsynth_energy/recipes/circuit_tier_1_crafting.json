@@ -6,7 +6,7 @@
     {"tag": "forge:dyes/green"},
     {"tag": "forge:dusts/redstone"},
     {"tag": "forge:gems/quartz"},
-    {"tag": "forge:plates/copper"}
+    {"item": "minecraft:copper_ingot"}
   ],
   "result": {
     "item": "addsynth_energy:circuit_tier_1"

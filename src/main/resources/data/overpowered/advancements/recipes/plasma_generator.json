@@ -11,13 +11,25 @@
         ]
       }
     },
-    "matter_energy_transformer": {
+    "destructive_laser": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "overpowered:matter_energy_transformer"
+              "overpowered:destructive_laser"
+            ]
+          }
+        ]
+      }
+    },
+    "energy_stabilizer": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "overpowered:energy_stabilizer"
             ]
           }
         ]
@@ -29,19 +41,19 @@
         "items": [
           {
             "items": [
-              "addsynth_energy:circuit_tier_8"
+              "addsynth_energy:circuit_tier_6"
             ]
           }
         ]
       }
     },
-    "energized_power_core": {
+    "vacuum_container": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "overpowered:energized_power_core"
+              "overpowered:vacuum_container"
             ]
           }
         ]
@@ -81,9 +93,10 @@
   "requirements": [
     [
       "silver_plate",
-      "matter_energy_transformer",
+      "destructive_laser",
       "circuit",
-      "energized_power_core",
+      "energy_stabilizer",
+      "vacuum_container",
       "has_recipe",
       "has_plasma_generator",
       "has_plasma"

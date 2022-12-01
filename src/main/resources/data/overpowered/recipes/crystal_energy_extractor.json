@@ -19,7 +19,7 @@
       "item": "addsynth_energy:circuit_tier_5"
     },
     "g": {
-      "tag": "forge:glass_panes/colorless"
+      "item": "overpowered:vacuum_container"
     }
   },
   "result": {

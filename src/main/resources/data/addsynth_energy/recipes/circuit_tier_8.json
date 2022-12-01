@@ -6,8 +6,8 @@
     {"tag": "forge:dyes/white"},
     {"item": "minecraft:comparator"},
     {"tag": "forge:silicon"},
-    {"tag": "forge:plates/gold"},
-    {"tag": "forge:plates/silver"},
+    {"tag": "forge:ingots/gold"},
+    {"tag": "forge:ingots/silver"},
     {"item": "minecraft:ender_eye"}
   ],
   "result": {

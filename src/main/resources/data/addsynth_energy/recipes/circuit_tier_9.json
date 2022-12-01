@@ -6,8 +6,8 @@
     {"tag": "forge:dyes/cyan"},
     {"item": "minecraft:redstone_lamp"},
     {"tag": "forge:silicon"},
-    {"tag": "forge:plates/gold"},
-    {"tag": "forge:plates/silver"},
+    {"tag": "forge:ingots/gold"},
+    {"tag": "forge:ingots/silver"},
     {"item": "minecraft:heart_of_the_sea"}
   ],
   "result": {

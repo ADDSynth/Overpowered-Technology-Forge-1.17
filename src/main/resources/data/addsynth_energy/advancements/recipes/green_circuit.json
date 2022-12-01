@@ -53,12 +53,14 @@
         ]
       }
     },
-    "copper_plate": {
+    "copper": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "tag": "forge:plates/copper"
+            "items": [
+              "minecraft:copper_ingot"
+            ]
           }
         ]
       }
@@ -89,7 +91,7 @@
       "green_dye",
       "redstone",
       "quartz",
-      "copper_plate",
+      "copper",
       "has_recipe",
       "has_green_circuit"
     ]

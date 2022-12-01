@@ -1,18 +1,9 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "vvv",
-    "vfv",
-    "vvv"
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "overpowered:fusion_core"},
+    {"item": "overpowered:dimensional_flux"}
   ],
-  "key": {
-    "v": {
-      "item": "overpowered:void_crystal"
-    },
-    "f": {
-      "item": "overpowered:dimensional_flux"
-    }
-  },
   "result": {
     "item": "overpowered:black_hole"
   }

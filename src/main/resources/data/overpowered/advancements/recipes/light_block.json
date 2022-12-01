@@ -42,6 +42,7 @@
   "rewards": {
     "recipes": [
       "overpowered:light_block",
+      "overpowered:light_block_2",
       "overpowered:celestial_gem_from_block"
     ]
   }

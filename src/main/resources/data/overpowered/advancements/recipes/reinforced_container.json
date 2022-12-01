@@ -1,26 +1,6 @@
 {
   "parent": "overpowered:recipes/root",
   "criteria": {
-    "slimeball": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "tag": "forge:slimeballs"
-          }
-        ]
-      }
-    },
-    "glass_panes": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "tag": "forge:glass_panes/colorless"
-          }
-        ]
-      }
-    },
     "titanium": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
@@ -52,8 +32,6 @@
   },
   "requirements": [
     [
-      "slimeball",
-      "glass_panes",
       "titanium",
       "has_recipe",
       "has_reinforced_container"

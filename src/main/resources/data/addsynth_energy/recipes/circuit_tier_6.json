@@ -6,8 +6,8 @@
     {"tag": "forge:dyes/purple"},
     {"item": "minecraft:observer"},
     {"tag": "forge:silicon"},
-    {"tag": "forge:plates/gold"},
-    {"tag": "forge:plates/silver"},
+    {"tag": "forge:ingots/gold"},
+    {"tag": "forge:ingots/silver"},
     {"tag": "forge:ender_pearls"}
   ],
   "result": {

@@ -1,10 +1,14 @@
 {
-  "type": "addsynth_energy:circuit_fabricator",
-  "ingredients": [
-    {"item": "addsynth_energy:advanced_power_core"},
-    {"tag": "forge:silicon"},
-    {"item": "overpowered:energy_crystal"}
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " s ",
+    "sas",
+    " s "
   ],
+  "key": {
+    "s": {"item": "overpowered:energy_crystal_shards"},
+    "a": {"item": "addsynth_energy:advanced_power_core"}
+  },
   "result": {
     "item": "overpowered:energized_power_core"
   }
