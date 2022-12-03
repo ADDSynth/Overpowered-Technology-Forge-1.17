@@ -11,9 +11,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
 
-/** <p>This is your typical machine-type block with a silver appearance and metallic properties.
- *  <p>THIS DOES NOT REGISTER YOUR BLOCKS! Mods that extend from this class must register
- *     their individual blocks using that mod's {@link addsynth.core.game.RegistryUtil} instance.
+/** This is your typical machine-type block with a silver appearance and metallic properties.
  * @author ADDSynth
  */
 public abstract class MachineBlock extends TileEntityBlock {
