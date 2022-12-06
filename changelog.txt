@@ -28,6 +28,8 @@ NEW:
     - Only supports a maximum of 16 machines right now.
   The Circuit Fabricator now supports additional recipes than just the circuit items.
   Added a new item called Unimatter, which is made from a new machine called the Matter Compressor.
+   - As is always the case with my work, new stuff is sort of considered as beta content.
+     Unimatter currently doesn't do anything.
   Portal spawn time can now be configured.
   Added an advancement that is awarded when you activate an Energy Suspension Bridge
     with the maximum possible length.
@@ -44,6 +46,7 @@ NEW:
    // - Now drop for boss mobs, and will always drop 7 unidentified items by default.
    - TODO: doesn't drop more than once! Need to use something other than LootItemRandomChanceCondition.
   Mouse scrollwheel can now scroll the lists next to scrollbars.
+  Magic Infuser recipes now show up in JEI.
 CHANGED:
   Increased the chance to drop an Unidentified Ring when killing enemy mobs.
   The Dimensional Anchor is now registered as a Curios Charm, if you have the Curios mod installed.
@@ -85,6 +88,8 @@ KNOWN PROBLEMS:
     - I will try to fix this as soon as I can!
   Passive Machines (Crystal Matter Generator and Plasma Generator) will continue consuming energy
     even though the output slot is full and can't insert any more items.
+  The Electric Furnace doesn't take burn-time into consideration, and will always smelt items
+    at the default speed of 10 seconds.
 DEVELOPER ONLY:
   Magic Infuser recipes are now defined by .json recipe files in a DataPack. You can define
   your own recipes, as long as they are formatted properly.
