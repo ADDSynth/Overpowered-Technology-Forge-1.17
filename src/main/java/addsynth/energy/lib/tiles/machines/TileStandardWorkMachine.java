@@ -63,7 +63,7 @@ public abstract class TileStandardWorkMachine extends TileSwitchableMachine
   }
 
   @Override
-  protected void machine_tick(){
+  protected final void machine_tick(){
     switch(state){
     case OFF:
       if(power_switch){
@@ -125,10 +125,15 @@ public abstract class TileStandardWorkMachine extends TileSwitchableMachine
           turn_off();
         }
       }
+      machine_running();
 
       break;
     }
   }
+
+  /** Override this to specify additional instructions while the machine is actively working on something.
+   *  This is called every tick on the server side. There is no need to call the super method! */
+  protected void machine_running(){}
 
   /** Called multiple times a tick. Returns whether the machine can perform work.
    *  Override to specify non-default behaviour.

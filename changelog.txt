@@ -58,6 +58,7 @@ CHANGED:
   Raised the generation of Titanium Ore back up to where it was in versions 1.3.x.
   Increased Silicon Ore generation. (mainly because a lot of crafting recipes have changed as well.)
   Also adjusted machine values.
+  Reduced the volume of the Compressor since it WAS too loud. Also randomized the pitch slightly.
 FIXED:
   Fixed Unidentified Chainmail armor dropping as often as Gold armor.
   Optimized Lasers:

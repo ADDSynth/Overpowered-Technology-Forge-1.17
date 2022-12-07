@@ -33,4 +33,31 @@ public final class RandomUtil {
     return list[random.nextInt(list.length)];
   }
 
+  /** Returns a random value between -1.0 and 1.0 (so the total range is 2), with most values being picked
+   *  closer to 0. The probability graph is in a shape of a triangle. It's not quite a normal distribution
+   *  graph, but it's pretty similar. I would normally get this by adding 2 random values then dividing by 2,
+   *  which would give a value between 0 and 1, but subtracting 2 values is computationally faster. Divide
+   *  or Multiply the result to expand or shrink, and add or subtract to shift the center.
+   * @param random
+   * @return
+   */
+  public static final float getCentralDistribution(final Random random){
+    return random.nextFloat() - random.nextFloat();
+  }
+
+  /** Returns a random value between -1.0 and 1.0 (so the total range is 2), with most values being picked
+   *  closer to 0. The probability graph is in a shape of a triangle. It's not quite a normal distribution
+   *  graph, but it's pretty similar. I would normally get this by adding 2 random values then dividing by 2,
+   *  which would give a value between 0 and 1, but subtracting 2 values is computationally faster. Divide
+   *  or Multiply the result to expand or shrink, and add or subtract to shift the center.
+   * @param random
+   * @param scale Use default value of 1 for no scaling, Values between 0 and 1 to shrink, and higher values
+   *        to scale up. Remember the default range is between -1.0 and 1.0, so a total range of 2.
+   * @param shift Positive values to shift right, and negative values to shift left.
+   * @return
+   */
+  public static final float getCentralDistribution(final Random random, final float scale, final float shift){
+    return ((random.nextFloat() - random.nextFloat()) * scale) + shift;
+  }
+
 }
