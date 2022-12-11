@@ -56,6 +56,8 @@
 "gui.addsynth_energy.jei_description.compressor": "압축기는 금속 잉곳을 금속판으로 압축하는 데 사용됩니다.",
 "gui.addsynth_energy.jei_description.circuit_fabricator": "Uses Silicon, Redstone, and various metals to produce electronic circuits, which are then used to craft other machines.",
 "gui.addsynth_energy.jei_description.universal_energy_interface": "이 기계는 다른 에너지 시스템과 인터페이스하여 다른 기계와 에너지를주고받을 수 있습니다.",
+"gui.addsynth_energy.jei_description.energy_diagnostics_block": "This can be attached to an Energy Wire to display the energy Input & Output of all the machines attached to the Energy Wire. It can only read one Energy Network at a time, and only shows a maximum of 16 machines right now.",
+"gui.addsynth_energy.jei_description.power_regulator": "This is a crafting item. Primarily used in places where energy needs to be tightly controlled and regulated.",
 "gui.addsynth_energy.machine_state.off": "떨어져서",
 "gui.addsynth_energy.machine_state.powering_on": "전원 켜기",
 "gui.addsynth_energy.machine_state.powering_off": "전원 끄기",

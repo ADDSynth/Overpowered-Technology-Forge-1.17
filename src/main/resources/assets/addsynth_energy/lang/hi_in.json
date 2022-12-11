@@ -56,6 +56,8 @@
 "gui.addsynth_energy.jei_description.compressor": "कंप्रेसर का उपयोग धातु के सिल्लियों को धातु प्लेटों में संपीड़ित करने के लिए किया जाता है।",
 "gui.addsynth_energy.jei_description.circuit_fabricator": "Uses Silicon, Redstone, and various metals to produce electronic circuits, which are then used to craft other machines.",
 "gui.addsynth_energy.jei_description.universal_energy_interface": "यह मशीन अन्य ऊर्जा प्रणालियों के साथ इंटरफेस कर सकती है और अन्य मशीनों से ऊर्जा स्थानांतरित कर सकती है।",
+"gui.addsynth_energy.jei_description.energy_diagnostics_block": "This can be attached to an Energy Wire to display the energy Input & Output of all the machines attached to the Energy Wire. It can only read one Energy Network at a time, and only shows a maximum of 16 machines right now.",
+"gui.addsynth_energy.jei_description.power_regulator": "This is a crafting item. Primarily used in places where energy needs to be tightly controlled and regulated.",
 "gui.addsynth_energy.machine_state.off": "बंद",
 "gui.addsynth_energy.machine_state.powering_on": "पॉवरिंग ऑन",
 "gui.addsynth_energy.machine_state.powering_off": "बिजली बंद",

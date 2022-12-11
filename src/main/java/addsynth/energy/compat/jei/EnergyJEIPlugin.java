@@ -2,6 +2,7 @@ package addsynth.energy.compat.jei;
 
 import addsynth.energy.ADDSynthEnergy;
 import addsynth.energy.gameplay.EnergyBlocks;
+import addsynth.energy.gameplay.EnergyItems;
 import addsynth.energy.gameplay.machines.circuit_fabricator.recipe.CircuitFabricatorRecipes;
 import addsynth.energy.gameplay.machines.compressor.recipe.CompressorRecipes;
 import mezz.jei.api.IModPlugin;
@@ -52,6 +53,9 @@ public final class EnergyJEIPlugin implements IModPlugin {
     registry.addIngredientInfo(new ItemStack(EnergyBlocks.compressor),         VanillaTypes.ITEM, new TranslatableComponent("gui.addsynth_energy.jei_description.compressor"));
     registry.addIngredientInfo(new ItemStack(EnergyBlocks.circuit_fabricator), VanillaTypes.ITEM, new TranslatableComponent("gui.addsynth_energy.jei_description.circuit_fabricator"));
     registry.addIngredientInfo(new ItemStack(EnergyBlocks.universal_energy_machine), VanillaTypes.ITEM, new TranslatableComponent("gui.addsynth_energy.jei_description.universal_energy_interface"));
+    registry.addIngredientInfo(new ItemStack(EnergyBlocks.energy_diagnostics_block), VanillaTypes.ITEM, new TranslatableComponent("gui.addsynth_energy.jei_description.energy_diagnostics_block"));
+    
+    registry.addIngredientInfo(new ItemStack(EnergyItems.power_regulator), VanillaTypes.ITEM, new TranslatableComponent("gui.addsynth_energy.jei_description.power_regulator"));
   }
 
   @Override

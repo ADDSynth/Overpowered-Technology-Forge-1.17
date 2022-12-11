@@ -56,6 +56,8 @@
 "gui.addsynth_energy.jei_description.compressor": "Kompresor sa používa na lisovanie kovových ingotov do kovových dosiek.",
 "gui.addsynth_energy.jei_description.circuit_fabricator": "Uses Silicon, Redstone, and various metals to produce electronic circuits, which are then used to craft other machines.",
 "gui.addsynth_energy.jei_description.universal_energy_interface": "Tento stroj môže byť prepojený s inými energetickými systémami a prenášať energiu do az iných strojov.",
+"gui.addsynth_energy.jei_description.energy_diagnostics_block": "This can be attached to an Energy Wire to display the energy Input & Output of all the machines attached to the Energy Wire. It can only read one Energy Network at a time, and only shows a maximum of 16 machines right now.",
+"gui.addsynth_energy.jei_description.power_regulator": "This is a crafting item. Primarily used in places where energy needs to be tightly controlled and regulated.",
 "gui.addsynth_energy.machine_state.off": "preč",
 "gui.addsynth_energy.machine_state.powering_on": "Zapínanie",
 "gui.addsynth_energy.machine_state.powering_off": "vypínanie",
