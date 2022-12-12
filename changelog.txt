@@ -77,6 +77,8 @@ FIXED:
   Since Dimension IDs have switched to using ResourceLocations instead of integers starting
     with Minecraft version 1.16, the Black Hole has been updated to accept a list of String IDs
     to blacklist dimensions specified in the config file.
+  Fix being able to mine ores with any tool in the Minecraft 1.16 version.
+  Fix not being able to mine Light Blocks in the Minecraft 1.17 version.
 REMOVED:
   Before now, you could still edit the config to seperate Tools into their own Creative Tab,
     we've finally removed that.

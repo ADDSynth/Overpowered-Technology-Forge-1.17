@@ -24,6 +24,7 @@
     "addsynth_materials:titanium_ore",
     "addsynth_materials:platinum_ore",
     "addsynth_materials:rose_quartz_ore",
-    "addsynth_materials:silicon_ore"
+    "addsynth_materials:silicon_ore",
+    "overpowered:light_block"
   ]
 }
