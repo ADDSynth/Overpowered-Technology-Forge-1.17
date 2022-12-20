@@ -59,6 +59,7 @@ CHANGED:
   Increased Silicon Ore generation. (mainly because a lot of crafting recipes have changed as well.)
   Also adjusted machine values.
   Reduced the volume of the Compressor since it WAS too loud. Also randomized the pitch slightly.
+  Increased the number of Energy Wires you get from crafting them from 8 to 12.
 FIXED:
   Fixed Unidentified Chainmail armor dropping as often as Gold armor.
   Optimized Lasers:

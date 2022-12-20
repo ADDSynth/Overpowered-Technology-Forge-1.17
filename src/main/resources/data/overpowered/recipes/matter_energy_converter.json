@@ -1,24 +1,11 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    " s ",
-    "rep",
-    " s "
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"tag": "forge:plates/steel"},
+    {"item": "overpowered:energized_power_core"},
+    {"item": "addsynth_energy:power_regulator"},
+    {"item": "overpowered:plasma"}
   ],
-  "key": {
-    "s": {
-      "tag": "forge:plates/steel"
-    },
-    "r": {
-      "item": "addsynth_energy:power_regulator"
-    },
-    "e": {
-      "item": "overpowered:energized_power_core"
-    },
-    "p": {
-      "item": "overpowered:plasma"
-    }
-  },
   "result": {
     "item": "overpowered:matter_energy_converter"
   }

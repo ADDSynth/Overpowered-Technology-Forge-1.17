@@ -51,7 +51,7 @@ public final class EnergySuspensionBridgeBlock extends MachineBlock {
 
   @Override
   public final void appendHoverText(ItemStack stack, @Nullable BlockGetter worldIn, List<Component> tooltip, TooltipFlag flagIn){
-    tooltip.add(new TranslatableComponent("gui.addsynth_energy.tooltip.class_2_machine"));
+    tooltip.add(new TranslatableComponent("gui.addsynth_energy.tooltip.class_3_machine"));
   }
 
   @Override

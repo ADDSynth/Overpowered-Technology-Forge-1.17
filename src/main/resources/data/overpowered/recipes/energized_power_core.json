@@ -1,14 +1,9 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    " s ",
-    "sas",
-    " s "
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "overpowered:energy_crystal"},
+    {"item": "addsynth_energy:advanced_power_core"}
   ],
-  "key": {
-    "s": {"item": "overpowered:energy_crystal_shards"},
-    "a": {"item": "addsynth_energy:advanced_power_core"}
-  },
   "result": {
     "item": "overpowered:energized_power_core"
   }
