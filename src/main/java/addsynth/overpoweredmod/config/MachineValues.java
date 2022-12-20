@@ -24,7 +24,8 @@ public final class MachineValues {
   public static final MachineDataConfig crystal_matter_generator =
     new MachineDataConfig(MachineType.PASSIVE, 16_000,  31.25, 0,  600); // 500,000 energy for 1 shard every 13.3 minutes
   public static final MachineDataConfig plasma_generator =
-    new MachineDataConfig(MachineType.PASSIVE, 6_000, 80, 0.08, 300); // 80 energy per tick for 5 minutes = 480,000 Energy (5 Plasma per Light Block.)
+    new MachineDataConfig(MachineType.PASSIVE, 4_800, 50, 0.08, 300); // 50 energy per tick for 4 minutes = 240,000 Energy (1 Plasma per Energy Crystal.)
+    // First Plasma will require 30 Coal or Charcoal to produce.
 
   // Manual Activation Machines
   public static final MachineDataConfig portal =
