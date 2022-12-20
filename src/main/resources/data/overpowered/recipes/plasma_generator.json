@@ -10,7 +10,7 @@
       "tag": "forge:plates/silver"
     },
     "e": {
-      "item": "overpowered:vacuum_container"
+      "item": "overpowered:energized_power_core"
     },
     "c": {
       "item": "addsynth_energy:circuit_tier_4"

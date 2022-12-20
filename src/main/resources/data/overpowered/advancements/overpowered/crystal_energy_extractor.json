@@ -1,24 +1,25 @@
 {
   "display": {
     "icon": {
-      "item": "overpowered:gem_converter"
+      "item": "overpowered:crystal_energy_extractor"
     },
     "title": {
-      "translate": "advancements.overpowered.gem_converter.title"
+      "translate": "advancements.overpowered.crystal_energy_extractor.title"
     },
     "description": {
-      "translate": "advancements.overpowered.gem_converter.description"
-    }
+      "translate": "advancements.overpowered.crystal_energy_extractor.description"
+    },
+    "frame": "goal"
   },
   "parent": "overpowered:overpowered/matter_energy_converter",
   "criteria": {
-    "gem_converter": {
+    "crystal_energy_extractor": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "overpowered:gem_converter"
+              "overpowered:crystal_energy_extractor"
             ]
           }
         ]
@@ -28,7 +29,7 @@
   "conditions": [
     {
       "type": "forge:item_exists",
-      "item": "overpowered:gem_converter"
+      "item": "overpowered:crystal_energy_extractor"
     }
   ]
 }

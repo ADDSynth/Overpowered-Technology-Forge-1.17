@@ -10,7 +10,7 @@
       "translate": "advancements.overpowered.dimensional_anchor.description"
     }
   },
-  "parent": "overpowered:overpowered/plasma",
+  "parent": "overpowered:overpowered/inverter",
   "criteria": {
     "dimensional_anchor": {
       "trigger": "minecraft:inventory_changed",

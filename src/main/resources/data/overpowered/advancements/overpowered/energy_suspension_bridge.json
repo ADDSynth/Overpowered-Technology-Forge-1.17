@@ -10,7 +10,7 @@
       "translate": "advancements.overpowered.energy_suspension_bridge.description"
     }
   },
-  "parent": "overpowered:overpowered/energy_crystal",
+  "parent": "overpowered:overpowered/matter_energy_converter",
   "criteria": {
     "energy_suspension_bridge": {
       "trigger": "minecraft:inventory_changed",

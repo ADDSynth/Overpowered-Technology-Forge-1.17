@@ -11,7 +11,7 @@
     },
     "frame": "goal"
   },
-  "parent": "overpowered:overpowered/portal",
+  "parent": "overpowered:overpowered/dimensional_flux",
   "criteria": {
     "void_crystal": {
       "trigger": "minecraft:inventory_changed",

@@ -10,7 +10,7 @@
       "translate": "advancements.overpowered.magic_infuser.description"
     }
   },
-  "parent": "overpowered:overpowered/energy_crystal",
+  "parent": "overpowered:overpowered/matter_energy_converter",
   "criteria": {
     "magic_infuser": {
       "trigger": "minecraft:inventory_changed",

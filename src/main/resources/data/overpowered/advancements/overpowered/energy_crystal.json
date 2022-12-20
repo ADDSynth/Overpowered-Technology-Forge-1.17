@@ -19,7 +19,8 @@
         "items": [
           {
             "items": [
-              "overpowered:energy_crystal"
+              "overpowered:energy_crystal",
+              "overpowered:energy_crystal_shards"
             ]
           }
         ]

@@ -47,13 +47,13 @@
         ]
       }
     },
-    "vacuum_container": {
+    "energized_power_core": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "overpowered:vacuum_container"
+              "overpowered:energized_power_core"
             ]
           }
         ]
@@ -96,7 +96,7 @@
       "destructive_laser",
       "circuit",
       "energy_stabilizer",
-      "vacuum_container",
+      "energized_power_core",
       "has_recipe",
       "has_plasma_generator",
       "has_plasma"

@@ -1,25 +1,25 @@
 {
   "display": {
     "icon": {
-      "item": "overpowered:plasma"
+      "item": "overpowered:dimensional_flux"
     },
     "title": {
-      "translate": "advancements.overpowered.plasma.title"
+      "translate": "advancements.overpowered.dimensional_flux.title"
     },
     "description": {
-      "translate": "advancements.overpowered.plasma.description"
+      "translate": "advancements.overpowered.dimensional_flux.description"
     },
     "frame": "goal"
   },
-  "parent": "overpowered:overpowered/inverter",
+  "parent": "overpowered:overpowered/portal",
   "criteria": {
-    "plasma": {
+    "dimensional_flux": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "overpowered:plasma"
+              "overpowered:dimensional_flux"
             ]
           }
         ]

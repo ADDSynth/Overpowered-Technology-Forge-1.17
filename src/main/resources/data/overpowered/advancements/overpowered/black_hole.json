@@ -10,7 +10,7 @@
       "translate": "advancements.overpowered.black_hole.description"
     }
   },
-  "parent": "overpowered:overpowered/plasma",
+  "parent": "overpowered:overpowered/inverter",
   "criteria": {
     "black_hole": {
       "trigger": "minecraft:inventory_changed",

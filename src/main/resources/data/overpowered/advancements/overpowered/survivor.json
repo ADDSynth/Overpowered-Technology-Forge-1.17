@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:ender_eye"
+      "item": "minecraft:totem_of_undying"
     },
     "title": {
       "translate": "advancements.overpowered.survivor.title"

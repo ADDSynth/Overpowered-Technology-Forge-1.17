@@ -47,6 +47,7 @@ NEW:
    - TODO: doesn't drop more than once! Need to use something other than LootItemRandomChanceCondition.
   Mouse scrollwheel can now scroll the lists next to scrollbars.
   Magic Infuser recipes now show up in JEI.
+  Added an advancement for the Crystal Energy Extractor.
 CHANGED:
   Increased the chance to drop an Unidentified Ring when killing enemy mobs.
   The Dimensional Anchor is now registered as a Curios Charm, if you have the Curios mod installed.
