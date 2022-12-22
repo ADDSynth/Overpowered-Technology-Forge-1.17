@@ -21,8 +21,10 @@ apply plugin: 'maven-publish'
 
 
 
-def mod_version = "v1.5-Beta"
+def mod_version = "v1.5"
+
 version = "Forge-1.17.1-"+mod_version
+
 group = 'addsynth.overpowered' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'OverpoweredTechnology'
 

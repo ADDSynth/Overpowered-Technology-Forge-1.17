@@ -40,8 +40,8 @@ public class ADDSynthEnergy {
   public static final String MOD_ID = "addsynth_energy";
   public static final String MOD_NAME = "ADDSynth Energy";
   public static final String VERSION = "1.0";
-  public static final String VERSION_DATE = "October 30, 2022";
-  public static final DevStage DEV_STAGE = DevStage.BETA;
+  public static final String VERSION_DATE = "December 22, 2022";
+  public static final DevStage DEV_STAGE = DevStage.STABLE;
     
   public static final Logger log = LogManager.getLogger(MOD_NAME);
 
