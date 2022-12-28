@@ -1,6 +1,6 @@
 v1.5 - December 22, 2022
 INFO:
-  I was originally planning to split the mod into 3 seperate files, starting with
+  I was originally planning to split the mod into 3 separate files, starting with
     this version. However, development is taking longer than expected, and that's
     why I've decided to delay some of the things I was planning for this version
     until the next major release.
@@ -50,8 +50,10 @@ NEW:
   Added an advancement for the Crystal Energy Extractor.
 CHANGED:
   Increased the chance to drop an Unidentified Ring when killing enemy mobs.
+   - But decreased the chance of dropping unidentified things overall? I have no idea actually.
+     I don't have the time to fully test this.
   The Dimensional Anchor is now registered as a Curios Charm, if you have the Curios mod installed.
-  Changed Energy Storage Container's default maximum energy from 1,000,000 to 200,000.
+  Changed Energy Storage Container's default maximum capacity from 1,000,000 to 200,000.
     - This is mainly because I plan to add different types of batteries in the future.
   Some Machine State status messages are now color-coded.
   Removed any top-level sections in Config files.
@@ -75,20 +77,21 @@ FIXED:
     in the configuration.
     - Maybe. I'm still not sure exactly.
   Fix not loading MachineValues config correctly. Yay! Sorry about that!
-  Fix the Fusion Energy advancement was never being awarded to players. God Dammit.
+  Fix the Fusion Energy advancement was never being awarded to players.
+   - I misspelled one character. Of course I did. God Dammit.
   Since Dimension IDs have switched to using ResourceLocations instead of integers starting
     with Minecraft version 1.16, the Black Hole has been updated to accept a list of String IDs
     to blacklist dimensions specified in the config file.
   Fix being able to mine ores with any tool in the Minecraft 1.16 version.
   Fix not being able to mine Light Blocks in the Minecraft 1.17 version.
 REMOVED:
-  Before now, you could still edit the config to seperate Tools into their own Creative Tab,
+  Before now, you could still edit the config to separate Tools into their own Creative Tab,
     we've finally removed that.
 KNOWN PROBLEMS:
   If you edit the configuration option that changes the Maximum Energy Suspension Bridge
     Length to a lower value, while you have a bridge active in your world, then the
     Energy Suspension Bridge will not recognize it, and won't be able to turn it off.
-    The energy bridge will exist as actual indestructable blocks in the world, not controlled
+    The energy bridge will exist as actual indestructible blocks in the world, not controlled
     by the Energy Suspsension Bridge.
     - I will try to fix this as soon as I can!
   Passive Machines (Crystal Matter Generator and Plasma Generator) will continue consuming energy
@@ -155,8 +158,8 @@ CHANGED:
     be able to break the Black Hole to stop it from erasing the world.
 FIXED:
   Fixed the Fusion Chamber not dropping when mined.
-  Fixed Ores that drop an item not being affected by Pickaxes with the Fortune effect.
-  Fixed gem ores generating in a straight line at coordinates 0x0 in a chunk.
+  Fixed Ores that drop an item not being affected by Pickaxes with the Fortune enchantment.
+  Fixed gem ores generating in a straight line at coordinates (0,0) in a chunk.
     - Error only occurred in the Minecraft 1.16 version.
   Finally added the Job system. Now the Magic Infuser and Circuit Fabricator
     (machines with more than 1 input slot) will now show their Time Remaining correctly.
