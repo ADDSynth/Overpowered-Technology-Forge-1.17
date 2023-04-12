@@ -1,4 +1,7 @@
 v1.5.1 - TBD
+FIXED:
+  Minecraft 1.17 version only: Fix Dimensional Anchor not sending "anchored in this dimension"
+    message to clients.
 
 
 
