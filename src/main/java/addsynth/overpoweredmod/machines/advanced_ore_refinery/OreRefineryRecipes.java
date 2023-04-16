@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import addsynth.core.game.item.ItemUtil;
 import addsynth.core.recipe.RecipeUtil;
-import addsynth.material.MaterialsUtil;
+import addsynth.material.util.MaterialsUtil;
 import addsynth.overpoweredmod.OverpoweredTechnology;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
