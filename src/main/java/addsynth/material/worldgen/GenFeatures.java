@@ -110,12 +110,12 @@ public final class GenFeatures {
   );
 
   private static final ConfiguredFeature<?, ?> gen_single_ore(final OreMaterial material, int tries, int min_level, int max_level){
-    final ReplaceBlockConfiguration replace_block_config = new ReplaceBlockConfiguration(Blocks.STONE.defaultBlockState(), material.ore.defaultBlockState());
+    final ReplaceBlockConfiguration replace_block_config = new ReplaceBlockConfiguration(Blocks.STONE.defaultBlockState(), material.getOre().defaultBlockState());
     return Feature.REPLACE_SINGLE_BLOCK.configured(replace_block_config).rangeUniform(VerticalAnchor.absolute(min_level), VerticalAnchor.absolute(max_level)).squared().count(tries);
   }
 
   private static final ConfiguredFeature<?, ?> gen_standard_ore(final OreMaterial material, int size, int tries, int min_level, int max_level){
-    final OreConfiguration ore_feature = new OreConfiguration(OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, material.ore.defaultBlockState(), size);
+    final OreConfiguration ore_feature = new OreConfiguration(OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, material.getOre().defaultBlockState(), size);
     return Feature.ORE.configured(ore_feature).rangeUniform(VerticalAnchor.absolute(min_level), VerticalAnchor.absolute(max_level)).squared().count(tries);
   }
 
