@@ -1,6 +1,9 @@
 v1.5.1 - TBD
 NEW:
   Added JEI info for Dimensional Flux.
+CHANGES:
+  Explicitly unlock the recipes for Matter/Energy Converter and Plasma Generator when you
+    pick up an Energy Crystal.
 FIXED:
   Minecraft 1.17 version only: Fix Dimensional Anchor not sending "anchored in this dimension"
     message to clients.
