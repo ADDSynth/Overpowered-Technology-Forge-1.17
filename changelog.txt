@@ -5,6 +5,8 @@ CHANGES:
   Explicitly unlock the recipes for Matter/Energy Converter and Plasma Generator when you
     pick up an Energy Crystal.
 FIXED:
+  Fixed not showing a message to players that can't access the Team Manager because they
+    don't have the required permission level.
   Minecraft 1.17 version only: Fix Dimensional Anchor not sending "anchored in this dimension"
     message to clients.
   Minecraft 1.17 version only: Fix not being able to mine trophies.

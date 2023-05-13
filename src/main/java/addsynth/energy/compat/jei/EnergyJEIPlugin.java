@@ -5,6 +5,7 @@ import addsynth.energy.gameplay.EnergyBlocks;
 import addsynth.energy.gameplay.EnergyItems;
 import addsynth.energy.gameplay.machines.circuit_fabricator.recipe.CircuitFabricatorRecipes;
 import addsynth.energy.gameplay.machines.compressor.recipe.CompressorRecipes;
+import addsynth.energy.gameplay.reference.TextReference;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.constants.VanillaRecipeCategoryUid;
@@ -14,7 +15,6 @@ import mezz.jei.api.helpers.IJeiHelpers;
 import mezz.jei.api.registration.IRecipeCatalystRegistration;
 import mezz.jei.api.registration.IRecipeCategoryRegistration;
 import mezz.jei.api.registration.IRecipeRegistration;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 
@@ -46,16 +46,16 @@ public final class EnergyJEIPlugin implements IModPlugin {
   }
 
   private static void add_information(IRecipeRegistration registry){
-    registry.addIngredientInfo(new ItemStack(EnergyBlocks.wire),               VanillaTypes.ITEM, new TranslatableComponent("gui.addsynth_energy.jei_description.wire"));
-    registry.addIngredientInfo(new ItemStack(EnergyBlocks.generator),          VanillaTypes.ITEM, new TranslatableComponent("gui.addsynth_energy.jei_description.generator"));
-    registry.addIngredientInfo(new ItemStack(EnergyBlocks.energy_storage),     VanillaTypes.ITEM, new TranslatableComponent("gui.addsynth_energy.jei_description.energy_storage"));
-    registry.addIngredientInfo(new ItemStack(EnergyBlocks.electric_furnace),   VanillaTypes.ITEM, new TranslatableComponent("gui.addsynth_energy.jei_description.electric_furnace"));
-    registry.addIngredientInfo(new ItemStack(EnergyBlocks.compressor),         VanillaTypes.ITEM, new TranslatableComponent("gui.addsynth_energy.jei_description.compressor"));
-    registry.addIngredientInfo(new ItemStack(EnergyBlocks.circuit_fabricator), VanillaTypes.ITEM, new TranslatableComponent("gui.addsynth_energy.jei_description.circuit_fabricator"));
-    registry.addIngredientInfo(new ItemStack(EnergyBlocks.universal_energy_machine), VanillaTypes.ITEM, new TranslatableComponent("gui.addsynth_energy.jei_description.universal_energy_interface"));
-    registry.addIngredientInfo(new ItemStack(EnergyBlocks.energy_diagnostics_block), VanillaTypes.ITEM, new TranslatableComponent("gui.addsynth_energy.jei_description.energy_diagnostics_block"));
+    registry.addIngredientInfo(new ItemStack(EnergyBlocks.wire),               VanillaTypes.ITEM, TextReference.wire_description);
+    registry.addIngredientInfo(new ItemStack(EnergyBlocks.generator),          VanillaTypes.ITEM, TextReference.generator_description);
+    registry.addIngredientInfo(new ItemStack(EnergyBlocks.energy_storage),     VanillaTypes.ITEM, TextReference.energy_storage_description);
+    registry.addIngredientInfo(new ItemStack(EnergyBlocks.electric_furnace),   VanillaTypes.ITEM, TextReference.electric_furnace_description);
+    registry.addIngredientInfo(new ItemStack(EnergyBlocks.compressor),         VanillaTypes.ITEM, TextReference.compressor_description);
+    registry.addIngredientInfo(new ItemStack(EnergyBlocks.circuit_fabricator), VanillaTypes.ITEM, TextReference.circuit_fabricator_description);
+    registry.addIngredientInfo(new ItemStack(EnergyBlocks.universal_energy_machine), VanillaTypes.ITEM, TextReference.energy_interface_description);
+    registry.addIngredientInfo(new ItemStack(EnergyBlocks.energy_diagnostics_block), VanillaTypes.ITEM, TextReference.energy_diagnostics_description);
     
-    registry.addIngredientInfo(new ItemStack(EnergyItems.power_regulator), VanillaTypes.ITEM, new TranslatableComponent("gui.addsynth_energy.jei_description.power_regulator"));
+    registry.addIngredientInfo(new ItemStack(EnergyItems.power_regulator), VanillaTypes.ITEM, TextReference.power_regulator_description);
   }
 
   @Override
