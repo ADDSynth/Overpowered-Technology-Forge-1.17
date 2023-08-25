@@ -1,6 +1,7 @@
 package addsynth.overpoweredmod.machines.identifier;
 
 import javax.annotation.Nullable;
+import addsynth.core.compat.Compatibility;
 import addsynth.core.game.item.ItemUtil;
 import addsynth.core.util.game.data.AdvancementUtil;
 import addsynth.core.util.java.ArrayUtil;
@@ -8,7 +9,6 @@ import addsynth.core.util.player.PlayerUtil;
 import addsynth.energy.lib.tiles.machines.TileStandardWorkMachine;
 import addsynth.overpoweredmod.assets.CustomAdvancements;
 import addsynth.overpoweredmod.assets.CustomStats;
-import addsynth.overpoweredmod.compatability.CompatabilityManager;
 import addsynth.overpoweredmod.compatability.curios.RingEffects;
 import addsynth.overpoweredmod.config.MachineValues;
 import addsynth.overpoweredmod.game.reference.OverpoweredItems;
@@ -38,7 +38,7 @@ public final class TileIdentifier extends TileStandardWorkMachine implements Men
   private static final Item[] rings = {
     OverpoweredItems.ring_0, OverpoweredItems.ring_1, OverpoweredItems.ring_2, OverpoweredItems.ring_3
   };
-  public static final Item[] input_filter = CompatabilityManager.are_rings_enabled() ?
+  public static final Item[] input_filter = Compatibility.CURIOS.loaded ?
     ArrayUtil.combine_arrays(unidentified_armor, rings) : unidentified_armor;
 
   public TileIdentifier(BlockPos position, BlockState blockstate){
