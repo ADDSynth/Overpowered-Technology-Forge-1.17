@@ -6,6 +6,7 @@ import addsynth.core.game.item.constants.ArmorMaterial;
 import addsynth.core.game.item.constants.EquipmentType;
 import addsynth.overpoweredmod.items.*;
 import addsynth.overpoweredmod.items.basic.*;
+import addsynth.overpoweredmod.items.register.OverpoweredItem;
 import addsynth.overpoweredmod.items.tools.*;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.HoeItem;

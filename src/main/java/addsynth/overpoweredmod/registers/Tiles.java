@@ -56,7 +56,7 @@ public final class Tiles {
   public static final BlockEntityType<TilePortalFrame> PORTAL_FRAME =
     BlockEntityType.Builder.of(TilePortalFrame::new, OverpoweredBlocks.portal_frame).build(null);
 
-  public static final BlockEntityType<TilePortal> PORTAL_BLOCK =
+  public static final BlockEntityType<TilePortal> PORTAL_RIFT =
     BlockEntityType.Builder.of(TilePortal::new, OverpoweredBlocks.portal).build(null);
 
   public static final BlockEntityType<TileLaserHousing> LASER_MACHINE =

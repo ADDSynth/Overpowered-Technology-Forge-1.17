@@ -6,6 +6,7 @@ import addsynth.overpoweredmod.OverpoweredTechnology;
 import addsynth.overpoweredmod.assets.CreativeTabs;
 import addsynth.overpoweredmod.game.reference.Names;
 import addsynth.overpoweredmod.game.reference.OverpoweredItems;
+import addsynth.overpoweredmod.items.register.OverpoweredItem;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Inventory;

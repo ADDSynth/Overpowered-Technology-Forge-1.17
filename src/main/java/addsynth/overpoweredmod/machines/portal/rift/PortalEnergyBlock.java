@@ -80,7 +80,7 @@ public final class PortalEnergyBlock extends TileEntityBlock {
   @Override
   @Nullable
   public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level world, BlockState blockstate, BlockEntityType<T> type){
-    return standardTicker(world, type, Tiles.PORTAL_BLOCK);
+    return standardTicker(world, type, Tiles.PORTAL_RIFT);
   }
 
   // Portal Energy block doesn't need it for some reason?

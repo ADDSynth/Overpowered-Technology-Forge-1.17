@@ -206,7 +206,7 @@ public final class Registers {
     RegistryUtil.register(game, Tiles.DATA_CABLE,                 Names.DATA_CABLE);
     RegistryUtil.register(game, Tiles.PORTAL_CONTROL_PANEL,       Names.PORTAL_CONTROL_PANEL);
     RegistryUtil.register(game, Tiles.PORTAL_FRAME,               Names.PORTAL_FRAME);
-    RegistryUtil.register(game, Tiles.PORTAL_BLOCK,               Names.PORTAL_RIFT);
+    RegistryUtil.register(game, Tiles.PORTAL_RIFT,                Names.PORTAL_RIFT);
     RegistryUtil.register(game, Tiles.PLASMA_GENERATOR,           Names.PLASMA_GENERATOR);
     RegistryUtil.register(game, Tiles.CRYSTAL_MATTER_REPLICATOR,  Names.CRYSTAL_MATTER_GENERATOR);
     RegistryUtil.register(game, Tiles.ADVANCED_ORE_REFINERY,      Names.ADVANCED_ORE_REFINERY);

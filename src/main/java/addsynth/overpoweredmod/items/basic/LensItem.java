@@ -1,6 +1,6 @@
 package addsynth.overpoweredmod.items.basic;
 
-import addsynth.overpoweredmod.items.OverpoweredItem;
+import addsynth.overpoweredmod.items.register.OverpoweredItem;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;

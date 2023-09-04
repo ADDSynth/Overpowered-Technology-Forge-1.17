@@ -130,7 +130,7 @@ public final class TileCircuitFabricator extends TileStandardWorkMachine impleme
     
     // handle old saves
     if(nbt.contains(legacyNBTSaveTag)){
-      final int circuit = nbt.getInt(legacyNBTSaveTag);
+      final int circuit = nbt.getInt(legacyNBTSaveTag); // loads 0 by default
       change_recipe(EnergyItems.circuit[circuit].getRegistryName());
       return;
     }

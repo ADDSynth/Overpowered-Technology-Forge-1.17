@@ -51,13 +51,14 @@ public final class TileFusionChamber extends TileStorageMachine implements MenuP
     if(on != state){ // Only run on state change
       int i;
       BlockPos position;
+      final BlockState fusion_beam = OverpoweredBlocks.fusion_control_laser_beam.defaultBlockState();
       for(Direction side: Direction.values()){
         for(i = 1; i < container_radius - 1; i++){
           position = worldPosition.relative(side, i);
           if(state){
             // TODO: DO NOT INSERT a Laser Effect block in the world! Replace this with some sort of
             //       OpenGL special effects that doesn't touch the world and immune to player interference.
-            level.setBlock(position, OverpoweredBlocks.fusion_control_laser_beam.defaultBlockState(), 3);
+            level.setBlock(position, fusion_beam, 3);
             // TEST why would we need block updates for this? Can this just be set to 2 for Client updates?
             AdvancementUtil.grantAdvancement(player_name, level, CustomAdvancements.FUSION_ENERGY);
           }
