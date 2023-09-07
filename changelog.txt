@@ -14,6 +14,7 @@ FIXED:
   Energy Suspension Bridge lengths are now saved with the world. If players change the
     maximum length in the config and load a world with an Energy Suspension Bridge already
     active, it will check if the new maximum length is shorter and shut itself off.
+  Fixed elements in a gui window was not being repositioned after the game window was resized.
   Minecraft 1.17 version only: Fix Dimensional Anchor not sending "anchored in this dimension"
     message to clients.
   Minecraft 1.17 version only: Fix not being able to mine trophies.
