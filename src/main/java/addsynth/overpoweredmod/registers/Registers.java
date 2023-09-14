@@ -239,7 +239,7 @@ public final class Registers {
   @SubscribeEvent
   public static final void registerRecipeSerializers(final RegistryEvent.Register<RecipeSerializer<?>> event){
     final IForgeRegistry<RecipeSerializer<?>> game = event.getRegistry();
-    RegistryUtil.register(game, MagicInfuserRecipes.serializer, Names.MAGIC_INFUSER);
+    RegistryUtil.register(game, MagicInfuserRecipes.INSTANCE.serializer, Names.MAGIC_INFUSER);
   }
 
   @SubscribeEvent

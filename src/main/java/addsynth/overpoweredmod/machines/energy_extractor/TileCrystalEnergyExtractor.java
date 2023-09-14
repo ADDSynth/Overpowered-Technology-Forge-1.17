@@ -1,7 +1,7 @@
 package addsynth.overpoweredmod.machines.energy_extractor;
 
 import javax.annotation.Nullable;
-import addsynth.core.game.RegistryUtil;
+import addsynth.core.game.inventory.filter.BasicFilter;
 import addsynth.energy.lib.tiles.energy.TileStandardGenerator;
 import addsynth.overpoweredmod.config.MachineValues;
 import addsynth.overpoweredmod.game.reference.OverpoweredBlocks;
@@ -18,11 +18,11 @@ import net.minecraft.world.level.block.state.BlockState;
 
 public final class TileCrystalEnergyExtractor extends TileStandardGenerator implements MenuProvider {
 
-  public static final Item[] input_filter = new Item[] {
+  public static final BasicFilter input_filter = new BasicFilter(
     OverpoweredItems.energy_crystal_shards,
     OverpoweredItems.energy_crystal,
-    Item.BY_BLOCK.get(OverpoweredBlocks.light_block)
-  };
+    OverpoweredBlocks.light_block.asItem()
+  );
 
   public TileCrystalEnergyExtractor(BlockPos position, BlockState blockstate){
     super(Tiles.CRYSTAL_ENERGY_EXTRACTOR, position, blockstate, input_filter);
@@ -39,7 +39,7 @@ public final class TileCrystalEnergyExtractor extends TileStandardGenerator impl
       energy.setEnergyAndCapacity(MachineValues.energy_crystal_shards_energy.get());
       energy.setMaxExtract(MachineValues.energy_crystal_shards_max_extract.get());
     }
-    if(item == RegistryUtil.getItemBlock(OverpoweredBlocks.light_block)){
+    if(item == OverpoweredBlocks.light_block.asItem()){
       energy.setEnergyAndCapacity(MachineValues.light_block_energy.get());
       energy.setMaxExtract(MachineValues.light_block_max_extract.get());
     }

@@ -1,10 +1,9 @@
 package addsynth.overpoweredmod.machines.identifier;
 
+import java.util.function.Predicate;
 import javax.annotation.Nullable;
-import addsynth.core.compat.Compatibility;
 import addsynth.core.game.item.ItemUtil;
 import addsynth.core.util.game.data.AdvancementUtil;
-import addsynth.core.util.java.ArrayUtil;
 import addsynth.core.util.player.PlayerUtil;
 import addsynth.energy.lib.tiles.machines.TileStandardWorkMachine;
 import addsynth.overpoweredmod.assets.CustomAdvancements;
@@ -28,21 +27,13 @@ import net.minecraft.world.level.block.state.BlockState;
 
 public final class TileIdentifier extends TileStandardWorkMachine implements MenuProvider {
 
-  private static final Item[] unidentified_armor = ArrayUtil.combine_arrays(
-    OverpoweredItems.unidentified_armor[0],
-    OverpoweredItems.unidentified_armor[1],
-    OverpoweredItems.unidentified_armor[2],
-    OverpoweredItems.unidentified_armor[3],
-    OverpoweredItems.unidentified_armor[4]
-  );
-  private static final Item[] rings = {
-    OverpoweredItems.ring_0, OverpoweredItems.ring_1, OverpoweredItems.ring_2, OverpoweredItems.ring_3
+  public static final Predicate<ItemStack> filter = (ItemStack stack) -> {
+    final Item item = stack.getItem();
+    return item instanceof UnidentifiedItem;
   };
-  public static final Item[] input_filter = Compatibility.CURIOS.loaded ?
-    ArrayUtil.combine_arrays(unidentified_armor, rings) : unidentified_armor;
 
   public TileIdentifier(BlockPos position, BlockState blockstate){
-    super(Tiles.IDENTIFIER, position, blockstate, 1, input_filter, 1, MachineValues.identifier);
+    super(Tiles.IDENTIFIER, position, blockstate, 1, filter, 1, MachineValues.identifier);
   }
 
   @Override

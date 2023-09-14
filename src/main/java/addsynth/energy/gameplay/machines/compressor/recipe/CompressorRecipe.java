@@ -13,7 +13,6 @@ public final class CompressorRecipe extends AbstractRecipe {
 
   public CompressorRecipe(ResourceLocation id, String group, ItemStack output, NonNullList<Ingredient> input){
     super(id, group, output, input);
-    CompressorRecipes.INSTANCE.addRecipe(this);
   }
 
   @Override

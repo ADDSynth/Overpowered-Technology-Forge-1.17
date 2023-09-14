@@ -2,7 +2,7 @@ package addsynth.energy.gameplay.machines.circuit_fabricator.recipe;
 
 import java.util.ArrayList;
 import java.util.function.BiConsumer;
-import addsynth.core.recipe.shapeless.RecipeCollection;
+import addsynth.core.recipe.RecipeCollection;
 import addsynth.core.recipe.shapeless.ShapelessRecipeSerializer;
 import addsynth.energy.ADDSynthEnergy;
 import addsynth.energy.gameplay.EnergyItems;
@@ -16,7 +16,9 @@ public final class CircuitFabricatorRecipes {
   }
   
   public static final RecipeCollection<CircuitFabricatorRecipe> INSTANCE = new RecipeCollection<CircuitFabricatorRecipe>(
-    new CircuitFabricatorRecipeType(), new ShapelessRecipeSerializer<CircuitFabricatorRecipe>(CircuitFabricatorRecipe.class, 8)
+    new CircuitFabricatorRecipeType(),
+    new ShapelessRecipeSerializer<CircuitFabricatorRecipe>(CircuitFabricatorRecipe.class, 8),
+    8
   );
 
   /** This is used by the CircuitFabricatorGui to populate the Item list. */
@@ -27,7 +29,7 @@ public final class CircuitFabricatorRecipes {
       output.add(new ItemStack(circuit));
     }
     // add all other items
-    final ArrayList<CircuitFabricatorRecipe> recipes = new ArrayList<>(INSTANCE.recipes);
+    final ArrayList<CircuitFabricatorRecipe> recipes = new ArrayList<>(INSTANCE.getRecipes());
     recipes.removeIf(
       (CircuitFabricatorRecipe r) -> {
         return r.getId().getNamespace().equals(ADDSynthEnergy.MOD_ID);

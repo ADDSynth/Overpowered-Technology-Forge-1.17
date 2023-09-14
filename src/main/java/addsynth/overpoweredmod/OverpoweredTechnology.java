@@ -1,11 +1,9 @@
 package addsynth.overpoweredmod;
 
 import java.io.File;
-import addsynth.core.recipe.RecipeUtil;
 import addsynth.core.util.CommonUtil;
 import addsynth.core.util.constants.DevStage;
 import addsynth.core.util.game.Game;
-import addsynth.material.util.MaterialsUtil;
 import addsynth.overpoweredmod.assets.CustomStats;
 import addsynth.overpoweredmod.compatability.CompatabilityManager;
 import addsynth.overpoweredmod.config.*;
@@ -13,7 +11,6 @@ import addsynth.overpoweredmod.game.NetworkHandler;
 import addsynth.overpoweredmod.game.OverpoweredSavedData;
 import addsynth.overpoweredmod.game.core.Laser;
 import addsynth.overpoweredmod.game.reference.OverpoweredBlocks;
-import addsynth.overpoweredmod.machines.Filters;
 import addsynth.overpoweredmod.machines.advanced_ore_refinery.GuiAdvancedOreRefinery;
 import addsynth.overpoweredmod.machines.advanced_ore_refinery.OreRefineryRecipes;
 import addsynth.overpoweredmod.machines.crystal_matter_generator.GuiCrystalMatterGenerator;
@@ -24,6 +21,7 @@ import addsynth.overpoweredmod.machines.identifier.GuiIdentifier;
 import addsynth.overpoweredmod.machines.inverter.GuiInverter;
 import addsynth.overpoweredmod.machines.laser.machine.GuiLaserHousing;
 import addsynth.overpoweredmod.machines.magic_infuser.GuiMagicInfuser;
+import addsynth.overpoweredmod.machines.magic_infuser.recipes.MagicInfuserRecipes;
 import addsynth.overpoweredmod.machines.matter_compressor.GuiMatterCompressor;
 import addsynth.overpoweredmod.machines.plasma_generator.GuiPlasmaGenerator;
 import addsynth.overpoweredmod.machines.portal.control_panel.GuiPortalControlPanel;
@@ -85,10 +83,8 @@ public class OverpoweredTechnology {
     
     NetworkHandler.registerMessages();
     // WeirdDimension.register();
-    RecipeUtil.registerResponder(OreRefineryRecipes::refresh_ore_refinery_recipes);
-    RecipeUtil.registerResponder(Filters::regenerate_machine_filters);
-    MaterialsUtil.registerResponder(OreRefineryRecipes::refresh_ore_refinery_recipes);
-    MaterialsUtil.registerResponder(Filters::regenerate_machine_filters);
+    OreRefineryRecipes.registerResponders();
+    MagicInfuserRecipes.INSTANCE.registerResponders();
     
     // Register Stats
     // Can't add Overpowered Technology Name to stats because then the text overlaps the stat values.

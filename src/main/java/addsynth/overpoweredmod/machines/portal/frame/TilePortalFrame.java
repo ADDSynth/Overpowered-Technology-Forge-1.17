@@ -2,10 +2,10 @@ package addsynth.overpoweredmod.machines.portal.frame;
 
 import javax.annotation.Nullable;
 import addsynth.core.game.inventory.SlotData;
+import addsynth.core.game.inventory.filter.TagFilter;
 import addsynth.core.game.tiles.TileStorageMachine;
 import addsynth.material.util.MaterialTag;
-import addsynth.material.util.MaterialsUtil;
-import addsynth.overpoweredmod.machines.Filters;
+import addsynth.overpoweredmod.game.tags.OverpoweredItemTags;
 import addsynth.overpoweredmod.registers.Tiles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -16,25 +16,28 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.common.Tags;
 
 public final class TilePortalFrame extends TileStorageMachine implements MenuProvider {
 
+  public static final TagFilter filter = new TagFilter(OverpoweredItemTags.portal_fuel);
+
   public TilePortalFrame(BlockPos position, BlockState blockstate){
-    super(Tiles.PORTAL_FRAME, position, blockstate, new SlotData[]{new SlotData(Filters.portal_frame, 1)});
+    super(Tiles.PORTAL_FRAME, position, blockstate, new SlotData[]{new SlotData(filter, 1)});
   }
 
   public final int check_item(){
     final ItemStack stack = input_inventory.getStackInSlot(0);
     if(stack.isEmpty()){ return -1; }
     final Item item = stack.getItem();
-    if(MaterialsUtil.match(item, MaterialTag.RUBY.BLOCKS)){     return 0; }
-    if(MaterialsUtil.match(item, MaterialTag.TOPAZ.BLOCKS)){    return 1; }
-    if(MaterialsUtil.match(item, MaterialTag.CITRINE.BLOCKS)){  return 2; }
-    if(MaterialsUtil.match(item, MaterialTag.EMERALD.BLOCKS)){  return 3; }
-    if(MaterialsUtil.match(item, MaterialTag.DIAMOND.BLOCKS)){  return 4; }
-    if(MaterialsUtil.match(item, MaterialTag.SAPPHIRE.BLOCKS)){ return 5; }
-    if(MaterialsUtil.match(item, MaterialTag.AMETHYST.BLOCKS)){ return 6; }
-    if(MaterialsUtil.match(item, MaterialTag.QUARTZ.BLOCKS)){   return 7; }
+    if(MaterialTag.RUBY.BLOCKS.contains(item)){            return 0; }
+    if(MaterialTag.TOPAZ.BLOCKS.contains(item)){           return 1; }
+    if(MaterialTag.CITRINE.BLOCKS.contains(item)){         return 2; }
+    if(Tags.Items.STORAGE_BLOCKS_EMERALD.contains(item)){  return 3; }
+    if(Tags.Items.STORAGE_BLOCKS_DIAMOND.contains(item)){  return 4; }
+    if(MaterialTag.SAPPHIRE.BLOCKS.contains(item)){        return 5; }
+    if(MaterialTag.AMETHYST.BLOCKS.contains(item)){ return 6; }
+    if(Tags.Items.STORAGE_BLOCKS_QUARTZ.contains(item)){   return 7; }
     return -1;
   }
 

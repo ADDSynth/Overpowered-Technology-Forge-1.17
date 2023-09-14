@@ -2,6 +2,7 @@ package addsynth.overpoweredmod.machines.inverter;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import addsynth.core.game.inventory.filter.BasicFilter;
 import addsynth.energy.lib.tiles.machines.TileStandardWorkMachine;
 import addsynth.overpoweredmod.config.MachineValues;
 import addsynth.overpoweredmod.game.reference.OverpoweredItems;
@@ -18,10 +19,13 @@ import net.minecraft.world.level.block.state.BlockState;
 
 public final class TileInverter extends TileStandardWorkMachine implements MenuProvider {
 
-  public static final Item[] input_filter = new Item[] {OverpoweredItems.energy_crystal, OverpoweredItems.void_crystal};
+  public static final BasicFilter filter = new BasicFilter(
+    OverpoweredItems.energy_crystal,
+    OverpoweredItems.void_crystal
+  );
 
   public TileInverter(BlockPos position, BlockState blockstate){
-    super(Tiles.INVERTER, position, blockstate, 1, input_filter, 1, MachineValues.inverter);
+    super(Tiles.INVERTER, position, blockstate, 1, filter, 1, MachineValues.inverter);
     inventory.setRecipeProvider(TileInverter::getInverted);
   }
 
