@@ -41,7 +41,7 @@ public final class TileCircuitFabricator extends TileStandardWorkMachine impleme
   private static final String saveTag = "Recipe";
 
   public TileCircuitFabricator(BlockPos position, BlockState blockstate){
-    super(Tiles.CIRCUIT_FABRICATOR, position, blockstate, 8, null, 1, Config.circuit_fabricator_data);
+    super(Tiles.CIRCUIT_FABRICATOR, position, blockstate, 8, null, 1, Config.circuit_fabricator);
     inventory.setRecipeProvider(CircuitFabricatorRecipes.INSTANCE);
     rebuild_filters(); // sets default filter, before we load the previously saved selected recipe.
   }
