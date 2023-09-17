@@ -16,7 +16,6 @@ import addsynth.overpoweredmod.game.reference.OverpoweredBlocks;
 import addsynth.overpoweredmod.items.DimensionalAnchor;
 import addsynth.overpoweredmod.registers.Tiles;
 import net.minecraft.core.BlockPos;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.Mth;
 import net.minecraft.world.Difficulty;
@@ -63,16 +62,6 @@ public final class TileBlackHole extends BlockEntity implements ITickingTileEnti
 
   public TileBlackHole(BlockPos position, BlockState blockstate){
     super(Tiles.BLACK_HOLE, position, blockstate);
-  }
-
-  @Override
-  public final CompoundTag save(final CompoundTag compound){
-    return super.save(compound);
-  }
-
-  @Override
-  public final void load(final CompoundTag compound){
-    super.load(compound);
   }
 
   @Override
