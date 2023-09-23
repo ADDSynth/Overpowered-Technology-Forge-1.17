@@ -1,17 +1,15 @@
 package addsynth.overpoweredmod.machines.advanced_ore_refinery;
 
 import java.util.ArrayList;
-import java.util.Collection;
+import java.util.List;
 import addsynth.core.game.item.ItemUtil;
-import addsynth.core.game.resource.ResourceUtil;
 import addsynth.core.recipe.FurnaceRecipes;
+import addsynth.core.recipe.RecipeUtil;
 import addsynth.overpoweredmod.OverpoweredTechnology;
+import addsynth.overpoweredmod.game.tags.OverpoweredItemTags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraftforge.client.event.RecipesUpdatedEvent;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.Tags;
+import net.minecraft.world.item.crafting.RecipeManager;
 
 public final class OreRefineryRecipes {
 
@@ -21,25 +19,22 @@ public final class OreRefineryRecipes {
 
   // https://github.com/skyboy/MineFactoryReloaded/blob/master/src/main/java/powercrystals/minefactoryreloaded/modhelpers/vanilla/Minecraft.java
   
-  public static final void registerResponders(){
-    ResourceUtil.addListener(OreRefineryRecipes::rebuild_recipes);
-    MinecraftForge.EVENT_BUS.addListener((RecipesUpdatedEvent event) -> rebuild_recipes());
+  public static final void register(){
+    RecipeUtil.addResponder(OreRefineryRecipes::rebuild_recipes);
+    // Still need to rebuild recipes on Resource reload for JEI.
   }
   
   /**
    * <p>This will only add an Ore recipe to the Advanced Ore Refinery if, other mods have registered their
    *    ore with the "ores" tag, and it has a Furnace Recipe.
    */
-  private static final void rebuild_recipes(){
+  private static final void rebuild_recipes(final RecipeManager recipe_manager){
     recipes.clear();
     try{
+      FurnaceRecipes.INSTANCE.rebuild(recipe_manager); // force rebuild Furnace recipes since we depend on them.
       final ArrayList<Item> list = new ArrayList<Item>(100);
       ItemStack result_check;
-      Collection<Item> ores = Tags.Items.ORES.getValues();
-      // Manually Add Raw Iron, Raw Copper, and Raw Gold for the Minecraft 1.17+ versions
-      ores.add(Items.RAW_IRON);
-      ores.add(Items.RAW_COPPER);
-      ores.add(Items.RAW_GOLD);
+      final List<Item> ores = OverpoweredItemTags.advanced_ore_refinery.getValues();
       for(final Item item : ores){
         if(FurnaceRecipes.isFurnaceIngredient(item)){
           result_check = FurnaceRecipes.getResult(item);
@@ -53,6 +48,7 @@ public final class OreRefineryRecipes {
       }
       
       valid_ores = list.toArray(new Item[list.size()]);
+      OverpoweredTechnology.log.info("Advanced Ore Refinery recipes were rebuilt.");
     }
     catch(Exception e){
       OverpoweredTechnology.log.error("An exception occured in OreRefineryRecipes.rebuild_recipes().", e);

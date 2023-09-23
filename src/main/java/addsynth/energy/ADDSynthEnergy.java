@@ -70,8 +70,8 @@ public class ADDSynthEnergy {
   private static final void main_setup(final FMLCommonSetupEvent event){
     CommonUtil.displayModInfo(log, MOD_NAME, "ADDSynth", VERSION, DEV_STAGE, VERSION_DATE);
     NetworkHandler.registerMessages();
-    CompressorRecipes.INSTANCE.registerResponders();
-    CircuitFabricatorRecipes.INSTANCE.registerResponders();
+    CompressorRecipes.INSTANCE.register();
+    CircuitFabricatorRecipes.INSTANCE.register();
   }
 
   private static final void client_setup(final FMLClientSetupEvent event){
