@@ -64,7 +64,7 @@ public final class LaserHousingBlock extends MachineBlock {
       if(tile != null){
         final LaserNetwork network = tile.getBlockNetwork();
         if(network != null){
-          network.updateClient();
+          network.updateClient(world);
           NetworkHooks.openGui((ServerPlayer)player, tile, pos);
         }
         else{
@@ -73,6 +73,11 @@ public final class LaserHousingBlock extends MachineBlock {
       }
     }
     return InteractionResult.SUCCESS;
+  }
+
+  @Override
+  public final void onRemove(BlockState state, Level world, BlockPos pos, BlockState newState, boolean isMoving){
+    BlockNetworkUtil.onRemove(super::onRemove, TileLaserHousing.class, LaserNetwork::new, state, world, pos, newState, isMoving);
   }
 
   @Override
