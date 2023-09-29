@@ -1,7 +1,7 @@
 package addsynth.core.compat;
 
 import addsynth.core.ADDSynthCore;
-import addsynth.core.util.StringUtil;
+import addsynth.core.util.java.StringUtil;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 // import moze_intel.projecte.api.ProjectEAPI;
