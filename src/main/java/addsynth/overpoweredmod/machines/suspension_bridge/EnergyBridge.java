@@ -3,11 +3,13 @@ package addsynth.overpoweredmod.machines.suspension_bridge;
 import addsynth.core.util.constants.Constants;
 import addsynth.overpoweredmod.OverpoweredTechnology;
 import addsynth.overpoweredmod.game.core.Lens;
+import addsynth.overpoweredmod.game.reference.OverpoweredBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
@@ -31,8 +33,27 @@ public final class EnergyBridge extends RotatedPillarBlock {
     setRegistryName(new ResourceLocation(OverpoweredTechnology.MOD_ID, name));
   }
 
-  public final BlockState getRotated(final Direction.Axis axis){
-    return defaultBlockState().setValue(AXIS, axis);
+  public static final BlockState get(final int index, final Direction direction, final Direction.Axis axis){
+    final Block block = switch(index){
+      case 0 -> OverpoweredBlocks.white_energy_bridge;
+      case 1 -> OverpoweredBlocks.red_energy_bridge;
+      case 2 -> OverpoweredBlocks.orange_energy_bridge;
+      case 3 -> OverpoweredBlocks.yellow_energy_bridge;
+      case 4 -> OverpoweredBlocks.green_energy_bridge;
+      case 5 -> OverpoweredBlocks.cyan_energy_bridge;
+      case 6 -> OverpoweredBlocks.blue_energy_bridge;
+      case 7 -> OverpoweredBlocks.magenta_energy_bridge;
+      default -> null;
+    };
+    if(block != null){
+      final BlockState block_state = block.defaultBlockState();
+      if(direction.getAxis() == Direction.Axis.Y){
+        block_state.setValue(AXIS, axis);
+      }
+      return block_state;
+    }
+    OverpoweredTechnology.log.error("Device color index ("+index+") is out-of-range for the getEnergyBridge() function.", new IllegalArgumentException());
+    return Blocks.AIR.defaultBlockState();
   }
 
   @Override
