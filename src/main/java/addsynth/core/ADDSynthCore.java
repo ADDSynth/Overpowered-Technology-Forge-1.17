@@ -13,6 +13,7 @@ import addsynth.core.recipe.FurnaceRecipes;
 import addsynth.core.recipe.RecipeUtil;
 import addsynth.core.util.CommonUtil;
 import addsynth.core.util.constants.DevStage;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -105,6 +106,10 @@ public final class ADDSynthCore {
   }
 
   public static void onServerStarted(final FMLServerStartedEvent event){
+    @SuppressWarnings("resource")
+    final MinecraftServer server = event.getServer();
+    FurnaceRecipes.INSTANCE.rebuild(server.getRecipeManager());
+
     if(Compatibility.PROJECT_E.loaded){
       // EMCValue.check_emc_values();
     }

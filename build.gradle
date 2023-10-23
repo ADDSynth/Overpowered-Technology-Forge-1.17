@@ -65,7 +65,7 @@ minecraft {
             // You can set various levels here.
             // can be (from least to most) fatal, error, warning, info, debug, or trace
             // Please read: https://stackoverflow.com/questions/2031163/when-to-use-the-different-log-levels
-            property 'forge.logging.console.level', 'info'
+            property 'forge.logging.console.level', 'debug'
 
             mods {
                 examplemod {
