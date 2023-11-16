@@ -31,6 +31,8 @@ FIXED:
   Minecraft 1.17 version only: Fix Dimensional Anchor not sending "anchored in this dimension"
     message to clients.
   Minecraft 1.17 version only: Fix not being able to mine trophies.
+  Minecraft 1.17 version only: Fix not being able to put Deepslate Ore variants into the
+    Advanced Ore Refinery. (Except Deepslate Gold Ore, that one was already accepted.)
 
 
 
