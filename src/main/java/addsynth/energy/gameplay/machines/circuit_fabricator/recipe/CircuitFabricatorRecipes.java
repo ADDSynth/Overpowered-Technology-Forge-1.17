@@ -6,6 +6,7 @@ import addsynth.core.recipe.RecipeCollection;
 import addsynth.core.recipe.shapeless.ShapelessRecipeSerializer;
 import addsynth.energy.ADDSynthEnergy;
 import addsynth.energy.gameplay.EnergyItems;
+import addsynth.energy.gameplay.machines.circuit_fabricator.CircuitFabricatorGui;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
@@ -21,7 +22,7 @@ public final class CircuitFabricatorRecipes {
     8
   );
 
-  /** This is used by the CircuitFabricatorGui to populate the Item list. */
+  /** This is used by the {@link CircuitFabricatorGui} to populate the Item list. */
   public static final ItemStack[] getRecipes(){
     // add circuits first
     final ArrayList<ItemStack> output = new ArrayList<>(30);

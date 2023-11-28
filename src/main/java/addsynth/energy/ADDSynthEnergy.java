@@ -35,6 +35,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
+import net.minecraftforge.fmlserverevents.FMLServerAboutToStartEvent;
 import net.minecraftforge.fmlserverevents.FMLServerStartedEvent;
 
 @Mod(value = ADDSynthEnergy.MOD_ID)
@@ -61,6 +62,7 @@ public class ADDSynthEnergy {
     bus.addListener(ADDSynthEnergy::main_setup);
     bus.addListener(ADDSynthEnergyCompat::sendIMCMessages);
     bus.addListener(ADDSynthEnergy::client_setup);
+    MinecraftForge.EVENT_BUS.addListener(ADDSynthEnergy::onServerAboutToStart);
     MinecraftForge.EVENT_BUS.addListener(ADDSynthEnergy::onServerStarted);
     init_config();
   }
@@ -79,7 +81,7 @@ public class ADDSynthEnergy {
     CircuitFabricatorRecipes.INSTANCE.register();
   }
 
-  public static void onServerStarted(final FMLServerStartedEvent event){
+  public static void onServerAboutToStart(final FMLServerAboutToStartEvent event){
     @SuppressWarnings("resource")
     final MinecraftServer server = event.getServer();
     
@@ -87,6 +89,9 @@ public class ADDSynthEnergy {
     final RecipeManager recipe_manager = server.getRecipeManager();
     CompressorRecipes.INSTANCE.rebuild(recipe_manager);
     CircuitFabricatorRecipes.INSTANCE.rebuild(recipe_manager);
+  }
+
+  public static void onServerStarted(final FMLServerStartedEvent event){
   }
 
   private static final void client_setup(final FMLClientSetupEvent event){
