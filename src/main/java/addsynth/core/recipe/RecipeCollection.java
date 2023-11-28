@@ -9,6 +9,7 @@ import addsynth.core.ADDSynthCore;
 import addsynth.core.game.inventory.filter.MachineFilter;
 import addsynth.core.util.java.StringUtil;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.Container;
 import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.StackedContents;
@@ -19,6 +20,10 @@ import net.minecraft.world.item.crafting.RecipeManager;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
+import net.minecraftforge.client.event.RecipesUpdatedEvent;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.TagsUpdatedEvent;
+import net.minecraftforge.fmllegacy.server.ServerLifecycleHooks;
 import net.minecraftforge.fmlserverevents.FMLServerAboutToStartEvent;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -27,6 +32,10 @@ import net.minecraftforge.registries.ForgeRegistries;
  *  filter that only allows an item in that slot if there's a recipe that
  *  needs an item in that slot. The recipe cache and item filter are
  *  automatically updated whenever resources are reloaded.
+ *  @see FurnaceRecipes
+ *  @see addsynth.energy.gameplay.machines.compressor.recipe.CompressorRecipes
+ *  @see addsynth.energy.gameplay.machines.circuit_fabricator.recipe.CircuitFabricatorRecipes
+ *  @see addsynth.overpoweredmod.machines.magic_infuser.recipes.MagicInfuserRecipes
  */
 public class RecipeCollection<T extends Recipe<Container>> {
 
@@ -44,13 +53,34 @@ public class RecipeCollection<T extends Recipe<Container>> {
   /** <p>RecipeCollections should be registered in your Mod's class constructor or main setup
    *  function. This will ensure they get rebuilt on server and client whenever resources
    *  are reloaded.
-   *  <p>I've discovered that the server isn't available when the TagsUpdatedEvent is first
-   *  sent on the server side, so we can't get the RecipeManager and upate the recipes.
-   *  You need to call {@link #rebuild(RecipeManager)} in the {@link FMLServerAboutToStartEvent}.
+   *  <p>I've discovered that the server isn't available when the {@link TagsUpdatedEvent} is
+   *  first sent on the server side, so we try again in the {@link FMLServerAboutToStartEvent}.
    *  This is literally the first moment the server is available, before a world loads.
+   *  This fixes the problem of not having RecipeCollections built before you need them in
+   *  either the TileEntity constructor or loading TileEntity data.
    */
   public final void register(){
-    RecipeUtil.addResponder(this::rebuild);
+    MinecraftForge.EVENT_BUS.addListener((TagsUpdatedEvent event) -> {
+      // Usually fires after all other resources have been loaded, on the server side.
+      @SuppressWarnings("resource")
+      final MinecraftServer server = ServerLifecycleHooks.getCurrentServer();
+      if(server != null){
+        rebuild(server.getRecipeManager());
+      }
+    });
+    MinecraftForge.EVENT_BUS.addListener((RecipesUpdatedEvent event) -> {
+      // Fires on the client side when Recipe data is sent from the server.
+      rebuild(event.getRecipeManager());
+    });
+    MinecraftForge.EVENT_BUS.addListener((FMLServerAboutToStartEvent event) -> {
+      // First time the TagsUpdatedEvent fires is before the server loads, so we get the
+      // server as soon as we can and rebuild the recipe cache, before the world loads.
+      if(recipes.isEmpty()){
+        @SuppressWarnings("resource")
+        final MinecraftServer server = event.getServer();
+        rebuild(server.getRecipeManager());
+      }
+    });
   }
 
   /** This rebuilds the recipe cache and ingredient filter. */
