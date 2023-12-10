@@ -6,7 +6,6 @@ import addsynth.core.util.game.data.AdvancementUtil;
 import addsynth.core.util.player.PlayerUtil;
 import addsynth.energy.lib.tiles.machines.TileStandardWorkMachine;
 import addsynth.material.Material;
-import addsynth.material.util.MaterialTag;
 import addsynth.overpoweredmod.assets.CustomAdvancements;
 import addsynth.overpoweredmod.assets.CustomStats;
 import addsynth.overpoweredmod.config.MachineValues;
@@ -23,10 +22,8 @@ import net.minecraft.world.MenuProvider;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.common.Tags;
 
 public final class TileGemConverter extends TileStandardWorkMachine implements MenuProvider {
 
@@ -54,7 +51,7 @@ public final class TileGemConverter extends TileStandardWorkMachine implements M
           selection = 7;
         }
       }
-      gem_selected = Gems.getItemStack(selection); // updates on server-side
+      gem_selected = Gems.getGem(selection); // updates on server-side
       changed = true;
     }
   }
@@ -72,7 +69,7 @@ public final class TileGemConverter extends TileStandardWorkMachine implements M
   public final void load(final CompoundTag nbt){
     super.load(nbt);
     selection = nbt.getByte("Gem Selected");
-    gem_selected = Gems.getItemStack(selection); // updates on client-side and server-side
+    gem_selected = Gems.getGem(selection); // updates on client-side and server-side
     converting_to = nbt.getByte("Converting To");
     loadPlayerData(nbt);
   }
@@ -93,25 +90,12 @@ public final class TileGemConverter extends TileStandardWorkMachine implements M
   private final boolean quick_transfer(){
     final ItemStack input_stack = inventory.getInputInventory().getStackInSlot(0);
     if(input_stack.isEmpty() == false){
-      if(match(input_stack.getItem(), selection) && inventory.getOutputInventory().can_add(0, gem_selected)){
+      if(Gems.getGemIndex(input_stack.getItem()) == selection && inventory.getOutputInventory().can_add(0, gem_selected)){
         final ItemStack insert = inventory.getInputInventory().extractItem(0, 1, false);
         inventory.getOutputInventory().insertItem(0, insert, false);
         return true;
       }
     }
-    return false;
-  }
-
-  /** Returns whether the input ItemStack matches the specified Gem Index. */
-  private static final boolean match(final Item item, final int id){
-    if(id == 0){ return MaterialTag.RUBY.GEMS.contains(item);     }
-    if(id == 1){ return MaterialTag.TOPAZ.GEMS.contains(item);    }
-    if(id == 2){ return MaterialTag.CITRINE.GEMS.contains(item);  }
-    if(id == 3){ return Tags.Items.GEMS_EMERALD.contains(item);  }
-    if(id == 4){ return Tags.Items.GEMS_DIAMOND.contains(item);  }
-    if(id == 5){ return MaterialTag.SAPPHIRE.GEMS.contains(item); }
-    if(id == 6){ return MaterialTag.AMETHYST.GEMS.contains(item); }
-    if(id == 7){ return Tags.Items.GEMS_QUARTZ.contains(item);   }
     return false;
   }
 
@@ -123,7 +107,7 @@ public final class TileGemConverter extends TileStandardWorkMachine implements M
 
   @Override
   protected final void perform_work(){
-    inventory.getOutputInventory().insertItem(0, Gems.getItemStack(converting_to), false);
+    inventory.getOutputInventory().insertItem(0, Gems.getGem(converting_to), false);
     
     increment_gems_stat(last_used_by);
     
