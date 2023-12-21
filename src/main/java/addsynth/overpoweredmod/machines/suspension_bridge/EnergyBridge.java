@@ -48,7 +48,7 @@ public final class EnergyBridge extends RotatedPillarBlock {
     if(block != null){
       final BlockState block_state = block.defaultBlockState();
       if(direction.getAxis() == Direction.Axis.Y){
-        block_state.setValue(AXIS, axis);
+        return block_state.setValue(AXIS, axis);
       }
       return block_state;
     }
